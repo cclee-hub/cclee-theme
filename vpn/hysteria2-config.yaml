@@ -1,0 +1,17 @@
+listen: :36712
+
+tls:
+  acme:
+    domains:
+      - vpn-sg.aigent.ren
+    email: leecc1531@gmail.com
+
+auth:
+  type: password
+  password: test88888
+
+masquerade:
+  type: proxy
+  proxy:
+    url: https://www.bing.com
+    rewriteHost: true

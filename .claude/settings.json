@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker --version)",
+      "Bash(npm --version)",
+      "Bash(php --version)",
+      "Bash(mysql --version)",
+      "Bash(grep -E \"^d.*\\(vpn|cn-site|wp\\)$\")",
+      "Read(//etc/**)",
+      "Read(//home/aptop/.config/**)",
+      "Bash(systemctl list-units:*)",
+      "Read(//home/aptop/**)",
+      "Bash(env)",
+      "Bash(ip route:*)",
+      "Bash(ip addr:*)",
+      "Bash(scp /home/aptop/workspace/yougu/vpn/hysteria2-config.yaml root@47.84.87.131:/opt/hysteria2/config.yaml)",
+      "WebSearch",
+      "Bash(ssh root@47.84.87.131 \"which dig +short vpn-sg.aigent.ren && echo ''--- DNS check ---'' && nslookup vpn-sg.aigent.ren && echo ''--- Server IP check ---'' && curl -s ifconfig https://api.ipify.org/v1/ip?format=text\")",
+      "Bash(echo '47.84.87.131'\" && echo ''--- Local resolution ==='' && getent hosts vpn-sg.aigent.ren | head -1 | awk ''{print $1}'' 2>/dev/null\")",
+      "Bash(host vpn-sg.aigent.ren)",
+      "Bash(python3 -c \"import socket; print\\(socket.gethostbyname\\(''vpn-sg.aigent.ren''\\)[0]\\)\")",
+      "Bash(docker info:*)",
+      "Bash(mv pbootcms/pbootcms/* .)",
+      "Bash(mv pbootcms/pbootcms/.* .)",
+      "Bash(mkdir -p backup)",
+      "Bash(mv pbootcms/pbootcms_*.sql pbootcms/说明.txt backup/)",
+      "Bash(rm -rf pbootcms/)"
+    ],
+    "additionalDirectories": [
+      "/home/aptop/workspace/yougu",
+      "/home/aptop/workspace/yougu/cn-site/pbootcms_N28t6"
+    ]
+  }
+}

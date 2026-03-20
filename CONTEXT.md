@@ -13,30 +13,22 @@
 
 | 本地 (WSL) | 服务器 |
 |------------|--------|
-| `~/yougu/cn-site/` | `/var/www/cn-site/` |
-| `~/yougu/vpn/` | `/opt/hysteria2/` |
-| `~/yougu/wp/` | `/var/www/wp/` |
+| `~/workspace/yougu/cn-site/` | `/var/www/cn-site/` |
+| `~/workspace/yougu/wp/` | `/var/www/wp/` |
 
 ## 子项目
 
 | 目录 | 类型 | 说明 |
 |------|------|------|
 | `cn-site/` | PbootCMS | PHP CMS 站点 |
-| `vpn/` | Hysteria2 | VPN 服务端配置 |
-| `wp/` | - | 待定 |
+| `wp/` | - | 待定 (WordPress) |
+| `docs/` | 文档 | 项目文档 (含 VPN 配置说明) |
 
-## VPN 服务 (Hysteria2)
+## 文档
 
-| 项目 | 信息 |
+| 文件 | 说明 |
 |------|------|
-| 安装路径 | `/opt/hysteria2/` |
-| 配置文件 | `/opt/hysteria2/config.yaml` |
-| 监听端口 | UDP 36712 |
-| 域名 | vpn-sg.aigent.ren |
-| 密码 | test88888 |
-| TLS 证书 | Let's Encrypt (自动续期) |
-| 服务名 | `hysteria2.service` |
-| 状态 | active (running) |
+| `docs/vpn-hysteria2.md` | Hysteria2 VPN 服务配置说明 |
 
 ## 本地环境 (WSL)
 
@@ -44,7 +36,7 @@
 |------|------|
 | Node.js | v24.13.1 (nvm) |
 | npm | 11.8.0 |
-| Docker | 未安装 |
+| Docker Desktop | 已安装 (WSL 集成未启用) |
 | PHP | 未安装 |
 | MySQL | 未安装 |
 

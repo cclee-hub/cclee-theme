@@ -29,6 +29,8 @@
 | 文件 | 说明 |
 |------|------|
 | `docs/vpn-hysteria2.md` | Hysteria2 VPN 服务配置说明 |
+| `docs/plans/2026-03-20-wp-soldering-site-design.md` | WP 焊接工具网站设计文档 |
+| `docs/plans/2026-03-20-wp-soldering-site-implementation.md` | WP 焊接工具网站实施计划 |
 
 ## 本地环境 (WSL)
 
@@ -65,6 +67,43 @@
 
 启动: `cd wp && docker-compose up -d`
 访问: http://localhost:8080
+
+### 已安装插件
+
+| 插件 | 说明 |
+|------|------|
+| WooCommerce | 电商核心插件 |
+| PayPal Payments | PayPal 支付网关 |
+| Google for WooCommerce | Google Ads & Analytics 集成 |
+| Astra Starter Templates | 模板导入 |
+| Contact Form 7 | 询盘表单 |
+
+### 主题
+
+| 主题 | 说明 |
+|------|------|
+| Astra | 父主题 |
+| Astra Child | 子主题，自定义样式和功能 |
+
+### 网站设计概要
+
+| 项目 | 内容 |
+|------|------|
+| 类型 | 外贸企业官网 + WooCommerce 商城 |
+| 产品 | 焊接工具（电烙铁、焊台、烙铁嘴） |
+| 市场 | 全球，英文，USD |
+| 风格 | 简洁现代 + 工业感（深蓝 + 橙色） |
+
+**页面结构：**
+- Home：Banner → 分类 → 热销 → 简介 → 评价 → CTA
+- About Us：公司介绍 → 数字亮点 → 工厂图
+- Products：WooCommerce 商店页
+- Contact：联系信息 + 询盘表单
+
+**核心功能：**
+- 产品详情页：购买按钮 + 询盘弹窗
+- 运费：询盘报价（暂不设置）
+- 支付：PayPal（后期扩展信用卡）
 
 ## WordPress 部署流程
 

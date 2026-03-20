@@ -1,2 +1,0 @@
-后台：域名/admin.php
-admin/baidu123

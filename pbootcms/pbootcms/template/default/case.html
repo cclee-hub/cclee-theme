@@ -1,0 +1,63 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{content:title}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/swiper.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.jcarousellite.min.js"></script>
+<script src="{pboot:sitedomain}/skin/js/pro.js"></script>
+<script src="{pboot:sitedomain}/skin/js/pro_article.js"></script>
+</head>
+<body>
+{include file=comm/head.html}
+<!--内页大图开始-->
+<div class="nybanner" aos="fade-up" aos-easing="ease" aos-duration="700">{pboot:sort scode={sort:tcode}}<img src="[sort:pic]">{/pboot:sort}</div>
+<!--内页大图结束-->
+<div class="submian">
+  <div class="w1200 clearfix">
+    <div class="sobtitle"><s class="ico"></s>{include file=comm/position.html}</div>
+      {include file=comm/left.html}
+    <div class="subright fr"> 
+      <!--文章内容开始-->
+      <div class="conBox">
+        <div class="ArticleTitle">
+          <h1>{content:title}</h1>
+        </div>
+        <div class="ArticleMessage"><span>发布时间：{content:date style=Y-m-d}</span><span>人气：<i id="hits">{content:visits}</i></span></div>
+        <div id="article" class="ArticleTencont">
+          <p><p>
+	{content:content}
+        </div>
+        <div class="clear"></div>
+        <div class="reLink clearfix">
+          <div class="prevLink">上一篇：{content:precontent} </div>
+          <div class="nextLink">下一篇：{content:nextcontent} </div>
+        </div>
+        
+        <!--推荐资讯开始-->
+        <h4 class="anlitopH4"><span>推荐资讯</span></h4>
+        <div class="divremmnews">
+          <ul class="clearfix">
+           {pboot:list scode=2 num=6 order=sorting}
+            <li><span class="fr">[list:date style=Y-m-d]</span><a href="[list:link]" title="[list:title]" >[list:title lencn=30]</a></li>
+             {/pboot:list}
+          </ul>
+        </div>
+        <!--推荐资讯结束--> 
+      </div>
+      <!--文章内容结束--> 
+    </div>
+  </div>
+</div>
+ 
+{include file=comm/foot.html}
+</body>
+</html>

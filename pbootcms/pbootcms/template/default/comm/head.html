@@ -1,0 +1,43 @@
+<!--页头开始-->
+<div class="top_bg">
+  <div class="w1200">
+    <div class="fl">{label:top}</div>
+    <div class="top_con"> <a href="{pboot:sitedomain}/sitemap.xml" title="网站地图">网站地图</a> {pboot:sort scode=10,11} <a href="[sort:link]" >[sort:name]</a> 
+ {/pboot:sort}
+    </div>
+      {pboot:if({pboot:islogin}==1)}<a class="text-secondary" href="{pboot:ucenter}" >个人中心</a>
+		     {else}
+		     	{pboot:2if({pboot:registerstatus})}<a class="text-secondary" href="{pboot:register}" >注册</a>{/pboot:2if}
+		     	/ {pboot:2if({pboot:loginstatus})}<a class="text-secondary" href="{pboot:login}" >登录</a>{/pboot:2if}
+		     {/pboot:if}
+    <div class="clearboth"></div>
+  </div>
+</div>
+<div class="header_main">
+  <div class="header w1200 clearfix"><a class="logo fl" href="{pboot:sitedomain}/" title="{pboot:companyname}" aos="fade-right" aos-easing="ease" aos-duration="700" aos-delay="100" aos-duration="700"> <img src="{pboot:sitelogo}" alt="{pboot:companyname}"></a>
+    <div class="tel fr" aos="fade-left" aos-easing="ease" aos-duration="700" aos-delay="100"><s class="ico"></s><span>{pboot:companyphone}</span><br />
+      <span>{pboot:companymobile}</span></div>
+  </div>
+</div>
+<!--页头结束--> 
+ 
+<!--导航开始-->
+<div class="nav_main" aos="fade-down" aos-easing="ease" aos-duration="700">
+  <div class="nav w1200">
+    <ul class="list clearfix" id="nav">
+      <li id="cur"   {pboot:if(0=='{sort:scode}')}class='hover'{/pboot:if} ><a href="{pboot:sitedomain}/" title="网站首页">网站首页</a></li>
+      {pboot:nav parent=0}
+      <li><a href="[nav:link]" title="[nav:name]" class='{pboot:if('[nav:scode]'=='{sort:tcode}')}hover{/pboot:if}'>[nav:name]</a> {pboot:if([nav:soncount]>0)}
+        <dl>
+          {pboot:2nav parent=[nav:scode]}
+          <dd><a href="[2nav:link]" title="[2nav:name]">[2nav:name]</a> </dd>
+          {/pboot:2nav}
+            
+        </dl>
+        {/pboot:if} </li>
+      {/pboot:nav}
+    </ul>
+    
+  </div>
+</div>
+<!--导航结束--> 

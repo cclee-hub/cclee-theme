@@ -1,0 +1,6 @@
+<section class="cateList"> <span class="goBack iconbef" id="goBack"></span>
+  <h3>{sort:parentname}<s class="iconn"></s></h3>
+  <!--栏目分类开始-->
+  <div class="box">  {pboot:nav num=10 parent={sort:tcode}} {pboot:if('[nav:scode]'=='{sort:scode}')}<a href='[nav:link]' class='on'>[nav:name]</a> {else}<a href="[nav:link]" title="[nav:name]">[nav:name]</a> {/pboot:if}{/pboot:nav} </div>
+  <!--栏目分类结束--> 
+</section>

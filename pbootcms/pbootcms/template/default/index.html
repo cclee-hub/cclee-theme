@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="zyymw.com K47" />
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+</head>
+<body>
+{include file=comm/head.html} 
+<!--幻灯片大图开始-->
+<div id="banner_main" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+  <div id="banner" class="banner">
+    <ul class="list clearfix">
+      {pboot:slide num=2 gid=1}
+      <li><a href="[slide:link]" title="[slide:title]"><img src="[slide:src]" alt="[slide:title]"/></a></li>
+      {/pboot:slide}
+    </ul>
+    <div class="tip"></div>
+    <a href="javascript:;" id="btn_prev" class="ico"></a> <a href="javascript:;" id="btn_next" class="ico"></a> </div>
+</div>
+<!--幻灯片大图结束-->
+<div class="search" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100">
+  <div class="w1200 clearfix">
+    <p aos="fade-right" aos-easing="ease" aos-duration="700"> 搜索关键词： <em id="commonHeaderkeywords">{pboot:nav parent={sort:tcode} parent=5 num=7}<a href="[nav:link]">[nav:name]</a>{/pboot:nav} </em> </p>
+    <div class="Input clearfix" aos="fade-left" aos-easing="ease" aos-duration="700">
+      <form action="{pboot:scaction}"  method="get">
+        <input type="text" name="keyword"  class="text" value="请输入搜索关键字" onBlur="if (value ==''){value='请输入搜索关键字'}" onClick="if(this.value=='请输入搜索关键字')this.value=''" />
+        <input class="submit" type="submit" name="submit" value="" onclick="SiteSearchkwf('#keywords');" />
+      </form>
+    </div>
+  </div>
+</div>
+<div class="index"> 
+  <!--产品中心开始-->
+  <div id="floor_2_main">
+    <div class="floor_2 w1200">
+      <div class="in_title clearfix" aos="fade-up" aos-easing="ease" aos-duration="700"> {pboot:sort scode=5}
+        <p class="entit" aos="fade-up" aos-easing="ease" aos-duration="700">[sort:subname]</p>
+        <h3 class="tit clearfix" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100"><em class="line fl"></em><span class="word">[sort:name]</span><em class="line fr"></em></h3>
+        {/pboot:sort} </div>
+      <!--产品分类开始-->
+      <div class="tab" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200"> {pboot:nav parent=5 num=7} <a href="[nav:link]" title="[nav:name]">[nav:name]</a> {/pboot:nav} </div>
+      <!--产品分类结束-->
+      <div class="proCenter" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200">
+        <ul class="list clearfix">
+          {pboot:list scode=5 num=6 order=sorting}
+          <li><a href="[list:link]" title="[list:title]"><img src="[list:ico]" alt="[list:title]"/>
+            <div class="title clearfix">
+              <h3 class="tit fl" >[list:title]</h3>
+              <em class="icon fr"></em></div>
+            </a></li>
+          {/pboot:list}
+        </ul>
+      </div>
+      <div class="more clearfix" aos="fade-up" aos-easing="ease" aos-duration="700">
+        <div class="line fl"></div>
+        {pboot:sort scode=5} <a class="look_more fl" href="[sort:link]" title="查看更多>>">查看更多>></a> {/pboot:sort}
+        <div class="line fl"></div>
+      </div>
+    </div>
+  </div>
+  <!--产品中心结束--> 
+  
+  <!--产品优势开始-->
+  <div class="floor_3_main">
+    <div class="in_title clearfix" aos="fade-up" aos-easing="ease" aos-duration="700">{pboot:sort scode=9}
+      <p class="entit txtwhite" aos="fade-up" aos-easing="ease" aos-duration="700">[sort:subname]</p>
+      <h3 class="tit txtwhite clearfix" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100"><em class="line fl"></em><span class="word">[sort:name]</span><em class="line fr"></em></h3>
+      {/pboot:sort} </div>
+    <div class="w1200">
+      <div class="mainCon">
+        <ul class="clearfix">
+          {pboot:list scode=9 num=4 order=sorting}
+          <li aos="fade-up" aos-easing="ease" aos-duration="700"> <span><img src="[list:ico]" width="292" height="180" alt=""><em>[list:title]</em></span>
+            <p>[list:content drophtml=1 lencn=100]</p>
+          </li>
+          {/pboot:list}
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <!--产品优势结束--> 
+  
+  <!--工程案例开始-->
+  <div id="floor_4_main">
+    <div class="floor_4 w1200">
+      <div class="in_title clearfix" aos="fade-up" aos-easing="ease" aos-duration="700"> {pboot:sort scode=8}
+        <p class="entit" aos="fade-up" aos-easing="ease" aos-duration="700">[sort:subname]</p>
+        <h3 class="tit clearfix" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100"><em class="line fl"></em><span class="word">[sort:name]</span><em class="line fr"></em></h3>
+        {/pboot:sort} </div>
+      <!--案例分类开始-->
+      <div class="tab" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200"> {pboot:nav parent=8 num=7} <a href="[nav:link]" title="[nav:name]">[nav:name]</a>{/pboot:nav}</div>
+      <!--案例分类结束-->
+      <div class="proCase" id="scroll" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200">
+        <div class="bd">
+          <ul class="list clearfix">
+            {pboot:list scode=8 num=9 order=sorting}
+            <li><a href="[list:link]" title="[list:title]"><img class="img" src="[list:ico]" alt="[list:title]"/>
+              <div class="title">
+                <h3 class="tit" >[list:title]</h3>
+                <p class="cont">[list:content drophtml=1 lencn=60]</p>
+              </div>
+              <p class="view_detail">详情>></p>
+              </a></li>
+            {/pboot:list}
+          </ul>
+        </div>
+        <div class="hd"><span class="prev ico"></span><span class="next ico"></span></div>
+      </div>
+      <div class="more clearfix" aos="fade-up" aos-easing="ease" aos-duration="700">
+        <div class="line fl"></div>
+        {pboot:sort scode=8} <a class="look_more fl" href="[sort:link]" title="查看更多>>">查看更多>></a>{/pboot:sort}
+        <div class="line fl"></div>
+      </div>
+    </div>
+  </div>
+  <!--工程案例结束--> 
+  
+  <!--关于我们开始-->
+  <div id="floor_1_main">
+    <div class="floor_1 w1200">
+      <div class="about clearfix">
+        <div class="item fr" aos="fade-right" aos-easing="ease" aos-duration="700">{pboot:sort scode=1}
+          <p>{pboot:companyname}</p>
+          <img src="[sort:ico]" alt="关于我们"/> </div>
+        <div class="contW fl">
+          <div class="title">
+            <p class="entit" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="300">[sort:subname]</p>
+            <h3 class="tit" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="400">[sort:name]</h3>
+          </div>
+          {/pboot:sort} {pboot:content id=1} <a  href="[content:link]">
+          <p class="cont" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="500"> [content:content drophtml=1 len=150]</p>
+          <p class="view_detail" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="600">详情>></p>
+          </a> </div>
+      </div>
+    </div>
+    {/pboot:content} </div>
+  <!--关于我们结束--> 
+  
+  <!--小banner开始-->
+  <div class="index_slip index_slip1" aos="fade-up" aos-easing="ease" aos-duration="700">
+    <div class="slip w1200">
+      <div class="slip_tit fl">
+        <h3 class="tit1" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="400">{label:case_banner1}</h3>
+        <p class="tit2" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="700">{label:case_banner2}</p>
+      </div>
+      <a class="slip_btn fl" aos="fade-left" aos-easing="ease" aos-duration="700" aos-delay="400" href="http://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes">立即咨询</a></div>
+  </div>
+  <!--小banner结束--> 
+  <!--新闻动态开始-->
+  <div id="floor_5_main">
+    <div class="floor_5 w1200">
+      <div class="in_title clearfix" aos="fade-up" aos-easing="ease" aos-duration="700">{pboot:sort scode=2}
+        <p class="entit" aos="fade-up" aos-easing="ease" aos-duration="700">[sort:subname]</p>
+        <h3 class="tit clearfix" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="100"><em class="line fl"></em><span class="word">[sort:name]</span><em class="line fr"></em></h3>
+        {/pboot:sort} </div>
+      <!--新闻分类开始-->
+      <div class="tab" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200"> {pboot:nav parent=2 num=7} <a href="[nav:link]" title="[nav:name]">[nav:name]</a> {/pboot:nav} </div>
+      <!--新闻分类结束-->
+      <div class="inews" id="inews" aos="fade-up" aos-easing="ease" aos-duration="700" aos-delay="200">
+        <div class="hd"><span class="prev ico"></span><span class="next ico"></span></div>
+        <div class="bd">
+          <div class="ulWrap clearfix">
+            <div class="list"> {pboot:list scode=2 num=12 order=sorting}
+              <li class='clearfix' {pboot:if([list:i]%2==0)}style='margin-right:0;'{else}{/pboot:if}> <a href="[list:link]" title="[list:title]">
+                <div class="time fl">
+                  <p class="day">[list:date style=d]</p>
+                  <p class="year">[list:date style=Y/m]</p>
+                </div>
+                <div class="title fl">
+                  <h3 class="tit"  >[list:title lencn=18]</h3>
+                  <p class="cont">[list:content drophtml=1 lencn=50]</p>
+                </div>
+                </a></li>
+              {/pboot:list} </div>
+          </div>
+        </div>
+      </div>
+      <div class="more clearfix" aos="fade-up" aos-easing="ease" aos-duration="700">
+        <div class="line fl"></div>
+        {pboot:sort scode=2} <a class="look_more fl" href="[sort:link]" title="查看更多>>">查看更多>></a> {/pboot:sort}
+        <div class="line fl"></div>
+      </div>
+    </div>
+  </div>
+  <!--新闻动态结束--> 
+</div>
+{include file=comm/foot.html}
+</body>
+</html>

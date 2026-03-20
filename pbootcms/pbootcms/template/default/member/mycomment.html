@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.validator.js"></script>
+<script src="{pboot:sitedomain}/skin/js/zh_cn.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.tips.js"></script>
+<script src="{pboot:sitedomain}/js/jquery-1.12.4.min.js" ></script>
+</head>
+<body>
+{include file=comm/head.html}
+
+<div class="submian">
+  <div class="w1200 clearfix">
+    <div class="sobtitle"><s class="ico"></s>{include file=comm/position.html}</div>
+     
+
+	
+	<div class="row mb-5">
+	
+        {include file=member/left.html}
+
+        <div class="col-12 col-md-10 mt-3">			
+			<table class="table">
+			  <thead>
+			  	<th>序号</th>
+			  	<th>文章</th>
+			  	<th>评论</th>
+			  	<th>状态</th>
+			  	<th>时间</th>
+			  	<th>操作</th>
+			  </thead>
+			  <tbody>
+			  	{pboot:mycomment num=10}
+			    <tr>
+			      <td>[mycomment:i]</td>
+			      <td>[mycomment:title]</td>
+			      <td>[mycomment:comment]</td>
+			      <td>{pboot:if([mycomment:status]==1)}已审核{else}<span style="color:red">待审核</span>{/pboot:if}</td>
+			      <td>[mycomment:date]</td>
+			      <td><span class="del" data-url="[mycomment:delaction]" style="cursor:pointer" >删除</span></td>
+			    </tr>
+			    {/pboot:mycomment}
+			  </tbody>
+			</table>
+			{include file=comm/page.html}
+        </div>
+   </div>
+ 
+</div>
+
+<script>
+$(".del").on("click",function(){
+
+	 if(!confirm("您确定要删除么？")){
+		 return;
+	 }
+	 
+	var url=$(this).data('url');
+	var el=$(this).parents("tr");
+	 $.ajax({
+	    type: 'GET',
+	    url: url,
+	    dataType: 'json',
+	    success: function (response, status) {
+	    	if(response.code==0){
+	    		alert(response.data);
+	    	}else{
+	    		el.remove();	
+	    	}
+	    },
+	    error:function(xhr,status,error){
+	      alert('返回数据异常！');
+	    }
+	  });
+});
+</script>
+
+{include file=comm/foot.html}
+</body>
+</html>

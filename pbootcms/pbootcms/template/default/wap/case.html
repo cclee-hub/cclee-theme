@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no" />
+<title>{content:title}</title>
+<meta name="keywords" content="{content:keywords}">
+<meta name="description" content="{content:description}">
+<link href="{pboot:sitedomain}/m/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/m/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/m/js/autofontsize.min.js"></script>
+<script src="{pboot:sitedomain}/m/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/m/js/clipboard.min.js"></script>
+<script src="{pboot:sitedomain}/m/js/common.js"></script>
+<script src="{pboot:sitedomain}/m/js/jquery.tips.js"></script>
+<script src="{pboot:sitedomain}/m/js/jquery.validator.js"></script>
+<script src="{pboot:sitedomain}/m/js/zh_cn.js"></script>
+</head>
+<body>
+{include file=comm/head.html}
+<!--位置开始--> 
+     {include file=comm/left.html}
+<!--位置结束--> 
+<!--图片内容开始-->
+<section class="content showInfo">
+  <div class="showTit">
+    <h1>{content:title}</h1>
+    <p class="mark">发布日期：{content:date style=Y-m-d}　浏览次数：<i id="hits">{content:visits}</i></p>
+  </div>
+  <div class="contxt"> 
+    
+    <!--组图开始-->
+    <div class="banner" id="banner">
+      <ul class="list">
+	   
+        <li class="item"><a href="javascript:;"><img src="{content:ico}" alt="{content:title}"></a></li>
+        
+       {pboot:pics num=10 id={content:id}}
+        <li class="item"><a href="javascript:;"><img src="[pics:src]" alt="{content:title}"></a></li>
+         {/pboot:pics}
+      </ul>
+      <div class="tip"></div>
+    </div>
+    <!--组图结束-->
+    <p>{content:content}</p>
+  </div>
+  <div class="clearfix"></div>
+  <div class="reLink clearfix">
+    <div class="prevLink fl">上一篇：{content:precontent}</div>
+    <div class="nextLink fl">下一篇：{content:nextcontent}</div>
+  </div>
+</section>
+<!--图片内容结束--> 
+{include file=comm/foot.html}
+</body>
+</html>

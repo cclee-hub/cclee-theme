@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜索结果-{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+</head>
+<body>
+{include file=comm/head.html}
+<!--内页大图开始-->
+<div class="nybanner" aos="fade-up" aos-easing="ease" aos-duration="700">{pboot:sort scode=1}<img src="[sort:pic]">{/pboot:sort}</div>
+<!--内页大图结束-->
+<div class="submian">
+  <div class="w1200 clearfix">
+    <div class="sobtitle"><s class="ico"></s>您的位置：搜索-{pboot:keyword} </div>
+    <div class="subleft fl"> 
+      <!--栏目分类开始-->
+      <div class="lefta bor9">
+        <div class="title">
+          <h2>搜索页</h2>
+        </div>
+      </div>
+      <!--栏目分类结束-->
+      <!--联系我们开始-->
+      <div class="leftnews bor9">
+        <div class="title"><i>联系我们</i></div>
+        <div class="leftcont">
+          <h2>{pboot:companyname}</h2>
+          <span>地址：{pboot:companyaddress}<br>
+          手机：{pboot:companymobile}<br>
+          </span>
+          <p>咨询热线<i>{pboot:companyphone}</i></p>
+        </div>
+      </div>
+      <!--联系我们结束--> 
+    </div>
+    <div class="subright fr"> 
+      <!--文章列表开始-->
+      <div class="thumblist">
+        <ul class="list clearfix">
+         {pboot:search num=12 order=sorting scode=5 field='title|content'}
+          <li class="item"><a class="clearfix" href="[search:link]" title="[search:title]">
+            <div class="txt fr">
+              <h3 >[search:title mark=1]</h3>
+              <div class="mark"><span>时间：[search:date]</span><span>浏览量：[search:visits]</span></div>
+              <p class="desc">[search:content drophtml=1 len=50]</p>
+            </div>
+            <div class="img"><img src="[search:ico]" alt="[search:title]"></div>
+            </a></li>
+          {/pboot:search}
+        </ul>
+        <div class="clear"></div>
+        <!--分页样式-->
+        
+        <div class="pglist">
+		{include file=comm/page.html}
+		</div>
+      </div>
+      <!--文章列表结束--> 
+      <!--推荐资讯开始-->
+        <h4 class="anlitopH4"><span>推荐资讯</span></h4>
+        <div class="divremmnews">
+          <ul class="clearfix">
+            {pboot:list scode=2 num=6 order=sorting}
+            <li><span class="fr">[list:date style=Y-m-d]</span><a href="[list:link]" title="[list:title]" >[list:title lencn=30]</a></li>
+             {/pboot:list}
+          </ul>
+        </div>
+        <!--推荐资讯结束--> 
+    </div>
+  </div>
+</div>
+{include file=comm/foot.html}
+</body>
+</html>

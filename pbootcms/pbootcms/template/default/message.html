@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.validator.js"></script>
+<script src="{pboot:sitedomain}/skin/js/zh_cn.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.tips.js"></script>
+<script src="{pboot:sitedomain}/js/jquery-1.12.4.min.js" ></script>
+</head>
+<body>
+{include file=comm/head.html}
+<!--内页大图开始-->
+<div class="nybanner" aos="fade-up" aos-easing="ease" aos-duration="700">{pboot:sort scode={sort:tcode}}<img src="[sort:pic]">{/pboot:sort}</div>
+<!--内页大图结束-->
+<div class="submian">
+  <div class="w1200 clearfix">
+    <div class="sobtitle"><s class="ico"></s>{include file=comm/position.html}</div>
+     {include file=comm/left.html}
+    <div class="subright fr"> 
+      
+      <!--留言框架开始-->
+      <div class="t2" id="formData">在线留言</div>
+      <div class="formData clearfix">
+	 <form action="{pboot:msgaction}"  method="post">
+                      <div class="form-group">
+                        <div>
+                          <input name='contacts' id='contacts' class="form-control" type="text" placeholder="请输入您的姓名">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div>
+                          <input name='mobile' id='mobile' class="form-control" type="text" placeholder="请输入您的电话号码">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div>
+                          <input  name='mail' id='mail'  class="form-control" type="text" placeholder="请输入您的邮箱">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div>
+                          <textarea name='content' id='content' class="form-control" data-fv-notempty="true" placeholder="留言内容" rows="5"></textarea>
+                        </div>
+                      </div>
+                       {pboot:if({pboot:logincodestatus})}
+                <div class="form-group">
+                    <label for="checkcode">验证码</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" name="checkcode" required id="checkcode" class="form-control" placeholder="请输入验证码">
+                        </div>
+                        <div class="col-6">
+                            <img title="点击刷新" style="height:33px;" id="codeimg" src="{pboot:checkcode}" onclick="this.src='{pboot:checkcode}?'+Math.round(Math.random()*10);" />
+                        </div>
+                    </div>
+                </div>
+                {/pboot:if}
+                      <div class="form-group margin-bottom-0">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block btn-squared" value="立即提交">
+                      </div>
+                </form>
+      </div>
+      <!--留言框架结束--> 
+    </div>
+  </div>
+</div>
+{include file=comm/foot.html}
+</body>
+</html>

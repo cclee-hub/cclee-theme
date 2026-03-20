@@ -1,0 +1,62 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<meta name="viewport" content="width=1380">
+<link href="{pboot:sitedomain}/skin/css/aos.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/skin/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/skin/js/jquery.superslide.2.1.1.js"></script>
+<script src="{pboot:sitedomain}/skin/js/common.js"></script>
+</head>
+<body>
+{include file=comm/head.html}
+<!--内页大图开始-->
+<div class="nybanner" aos="fade-up" aos-easing="ease" aos-duration="700">{pboot:sort scode={sort:tcode}}<img src="[sort:pic]">{/pboot:sort}</div>
+<!--内页大图结束-->
+<div class="submian">
+  <div class="w1200 clearfix">
+    <div class="sobtitle"><s class="ico"></s>{include file=comm/position.html}</div>
+   {include file=comm/left.html}
+    <div class="subright fr"> 
+      <!--文章列表开始-->
+       <div class="row">
+     {pboot:list num=10 order=date}
+     	<div class="mb-3 col-12 col-sm-6 col-lg-3">
+	      	<div class="card bg-light">
+			  <div class="card-header">招聘职位：[list:title]</div>
+			  <div class="card-body">
+			    <p class="card-text">[list:content drophtml=1 dropblank=1 lencn=50]</p>
+			    <a class="btn btn-info mt-2" href="[list:link]">查看详情</a>
+			  </div>
+			   <div class="card-footer">发布日期：[list:date style=Y-m-d]</div>
+			</div>
+		</div>
+     {/pboot:list}
+     </div>
+        <!--分页样式-->
+        
+        <div class="pglist">{include file=comm/page.html}</div>
+      </div>
+      <!--文章列表结束--> 
+  <!--推荐资讯开始-->
+      <h4 class="anlitopH4"><span>推荐资讯</span></h4>
+      <div class="divremmnews">
+        <ul class="clearfix">
+		 {pboot:list scode=2 num=8 order=sorting}
+          <li><span class="fr">[list:date style=Y-m-d]</span><a href="[list:link]" title="[list:title]" >[list:title]</a></li>
+		   {/pboot:list}
+        </ul>
+      </div>
+      <!--推荐资讯结束--> 
+    </div>
+  </div>
+</div>
+{include file=comm/foot.html}
+</body>
+</html>

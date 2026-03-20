@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no" />
+<title>搜索结果-{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<link href="{pboot:sitedomain}/m/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/m/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/m/js/autofontsize.min.js"></script>
+<script src="{pboot:sitedomain}/m/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/m/js/clipboard.min.js"></script>
+<script src="{pboot:sitedomain}/m/js/common.js"></script>
+</head>
+<body>
+<!--顶部开始--> 
+{include file=comm/head.html} 
+<!--右侧导航结束--> 
+<!--位置开始-->
+<section class="cateList"> <span class="goBack iconbef" id="goBack"></span>
+  <h3>搜索页<s class="iconn"></s></h3>
+</section>
+<!--位置结束--> 
+<!--文章列表开始-->
+<section class="content newsList">
+  <ul class="list-loop list clearfix">
+    {pboot:search num=12 order=sorting scode=5 field='title|content'}
+    <li class="loop item"><a href="[search:link]" title="[search:title]"><img src="[search:ico]" alt="[search:title]">
+      <h3 class="tit" >[search:title]</h3>
+      <p class="txt">[search:content drophtml=1 len=50]</p>
+      </a></li>
+    {/pboot:search}
+  </ul>
+  <div class="pglist"> {pboot:if({page:rows}>0)} <a class="page-item page-link" href="{page:pre}">上一页</a> {page:numbar}<!-- 数字条，小屏幕时自动隐藏--> 
+    <a class="page-item page-link" href="{page:next}">下一页</a> <a class="page-item page-link" href="{page:last}">尾页</a>{else}
+    <div class="text-center my-5 text-secondary">未搜索到任何数据！</div>
+    {/pboot:if} </div>
+</section>
+<!--文章列表结束--> 
+{include file=comm/foot.html}
+</body>
+</html>

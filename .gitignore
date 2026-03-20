@@ -1,0 +1,37 @@
+# PbootCMS
+/data/
+/runtime/
+*.log
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Uploads (optional, uncomment if needed)
+# /static/upload/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Dependencies (if any)
+/vendor/
+node_modules/
+
+# Env & sensitive
+.env
+.env.*
+!.env.example

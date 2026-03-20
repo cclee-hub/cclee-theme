@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+<meta name="format-detection" content="telephone=no" />
+<title>{sort:title}</title>
+<meta name="keywords" content="{sort:keywords}">
+<meta name="description" content="{sort:description}">
+<link href="{pboot:sitedomain}/m/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/m/css/common.css" rel="stylesheet">
+<script src="{pboot:sitedomain}/m/js/autofontsize.min.js"></script>
+<script src="{pboot:sitedomain}/m/js/jquery.js"></script>
+<script src="{pboot:sitedomain}/m/js/clipboard.min.js"></script>
+<script src="{pboot:sitedomain}/m/js/common.js"></script>
+</head>
+<body>
+{include file=comm/head.html}
+<!--位置开始--> 
+   {include file=comm/left.html}
+<!--位置结束--> 
+<!--文章列表开始-->
+<section class="content newsList">
+  <ul class="list-loop list clearfix">
+   {pboot:list num=10 order=date}
+    <li class="loop item"><a href="[list:link]" title="[list:title lencn=16]"><img src="[list:ico]" alt="[list:title]">
+      <h3 class="tit" >[list:title]</h3>
+      <p class="txt">[list:content drophtml=1 lencn=30]</p>
+      </a></li>
+    {/pboot:list}
+  </ul>
+  <div class="pglist"> {include file=comm/page.html}</div>
+</section>
+<!--文章列表结束--> 
+{include file=comm/foot.html}
+</body>
+</html>

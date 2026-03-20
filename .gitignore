@@ -1,0 +1,24 @@
+# WordPress core files
+wp/wordpress/
+
+# PbootCMS runtime (auto-generated)
+cn-site/runtime/
+
+# PbootCMS data copies
+cn-site/data/*副本*
+
+# Database backups
+cn-site/static/backup/sql/
+
+# Windows Zone files
+*:Zone.Identifier
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

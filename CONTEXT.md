@@ -21,7 +21,7 @@
 | 目录 | 类型 | 说明 |
 |------|------|------|
 | `cn-site/` | PbootCMS | PHP CMS 站点 |
-| `wp/` | - | 待定 (WordPress) |
+| `wp/` | WordPress | WooCommerce 本地开发环境 |
 | `docs/` | 文档 | 项目文档 (含 VPN 配置说明) |
 
 ## 文档
@@ -52,3 +52,24 @@
 - 仓库: https://github.com/cclee-hub/yougu
 - 可见性: 私有
 - SSH: `git@github.com:cclee-hub/yougu.git`
+
+## WordPress 本地开发环境
+
+| 配置 | 值 |
+|------|-----|
+| 目录 | `wp/` |
+| 端口 | 8080 |
+| MySQL | 8.0 |
+| WordPress | latest |
+| 数据库 | wordpress / wordpress / wordpress |
+
+启动: `cd wp && docker-compose up -d`
+访问: http://localhost:8080
+
+## WordPress 部署流程
+
+1. 导出本地数据库（SQL文件）
+2. 把 `wp/wordpress/` 目录推送到 GitHub
+3. 服务器 `git pull`
+4. 服务器导入 SQL
+5. 修改 WP 的 `siteurl` 为正式域名

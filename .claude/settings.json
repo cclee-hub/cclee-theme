@@ -24,7 +24,12 @@
       "Bash(mv pbootcms/pbootcms/.* .)",
       "Bash(mkdir -p backup)",
       "Bash(mv pbootcms/pbootcms_*.sql pbootcms/说明.txt backup/)",
-      "Bash(rm -rf pbootcms/)"
+      "Bash(rm -rf pbootcms/)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose -f /home/aptop/workspace/yougu/wp/docker-compose.yml ps)",
+      "Bash(docker-compose down:*)",
+      "Bash(docker-compose -f /home/aptop/workspace/yougu/wp/docker-compose.yml down)",
+      "Bash(docker-compose -f /home/aptop/workspace/yougu/wp/docker-compose.yml up -d)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/yougu",

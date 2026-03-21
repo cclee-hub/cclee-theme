@@ -1,6 +1,6 @@
 # CCLEE 主题开发现状
 
-_Last updated: 2026-03-21 14:10_
+_Last updated: 2026-03-21 14:25_
 
 ## 基本信息
 
@@ -26,6 +26,8 @@ _Last updated: 2026-03-21 14:10_
 - [x] 导航菜单配置
 - [x] SEO 支持 (OG 标签, Twitter Card, JSON-LD Schema)
 - [x] 预制 Patterns (9个: hero-simple, hero-centered, features-grid, cta-banner, footer-columns, contact, testimonial, pricing, team)
+- [x] Style Variations (3套: midnight, ocean, warm)
+- [x] WooCommerce 兼容样式（轻电商原则：不重写模板）
 
 ## 进行中
 
@@ -37,8 +39,6 @@ _Last updated: 2026-03-21 14:10_
 
 - [ ] 首页区块开发（在 yougu-cclee 子主题中实现）
 - [ ] 产品页样式（在 yougu-cclee 子主题中实现）
-- [ ] WooCommerce 兼容样式（轻电商原则：不重写模板）
-- [ ] Style Variations（2-3套配色方案）
 - [ ] AI 编辑器辅助 (editor-ai.js, ai-content-block.php) - 阶段三
 
 ## 文件结构
@@ -74,8 +74,14 @@ cclee-theme/
 │   ├── pricing.php
 │   └── team.php
 │
+├── styles/                # Style Variations (3套)
+│   ├── midnight.json
+│   ├── ocean.json
+│   └── warm.json
+│
 ├── assets/
 │   ├── css/custom.css     # 补充样式
+│   ├── css/woocommerce.css
 │   ├── js/theme.js
 │   └── images/
 │
@@ -83,7 +89,8 @@ cclee-theme/
     ├── setup.php
     ├── block-styles.php
     ├── block-patterns.php
-    └── seo.php            # OG + Schema 输出
+    ├── seo.php            # OG + Schema 输出
+    └── woocommerce.php    # Woo 兼容
 ```
 
 ## 策略文档

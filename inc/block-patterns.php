@@ -5,7 +5,7 @@
  */
 
 add_action( 'init', function () {
-    register_block_pattern_category( 'cclee', [
-        'label' => __( 'Yougu Theme', 'cclee' ),
+    register_block_pattern_category( 'cclee-theme', [
+        'label' => __( 'CCLEE Theme', 'cclee-theme' ),
     ] );
 } );

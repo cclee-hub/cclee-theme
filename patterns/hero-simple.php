@@ -1,8 +1,8 @@
 <?php
 /**
  * Title: Hero Simple
- * Slug: cclee/hero-simple
- * Categories: cclee, featured
+ * Slug: cclee-theme/hero-simple
+ * Categories: cclee-theme, featured
  * Description: 简单 Hero 区块占位，替换为实际内容
  */
 ?>

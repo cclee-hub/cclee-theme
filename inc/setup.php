@@ -4,7 +4,7 @@
  */
 
 add_action( 'after_setup_theme', function () {
-    load_theme_textdomain( 'cclee', get_template_directory() . '/languages' );
+    load_theme_textdomain( 'cclee-theme', get_template_directory() . '/languages' );
 
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'editor-styles' );
@@ -12,8 +12,8 @@ add_action( 'after_setup_theme', function () {
     add_theme_support( 'responsive-embeds' );
 
     register_nav_menus( [
-        'primary' => __( 'Primary Menu', 'cclee' ),
-        'footer'  => __( 'Footer Menu', 'cclee' ),
+        'primary' => __( 'Primary Menu', 'cclee-theme' ),
+        'footer'  => __( 'Footer Menu', 'cclee-theme' ),
     ] );
 } );
 

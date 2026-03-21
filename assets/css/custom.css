@@ -56,7 +56,7 @@ body:not(.woocommerce-active) .woo-cart-icon {
 /* Group: Card */
 .wp-block-group.is-style-card {
     background-color: var(--wp--preset--color--base);
-    border: 1px solid var(--wp--preset--color--neutral-border);
+    border: 1px solid var(--wp--preset--color--neutral-200);
     border-radius: 8px;
     padding: var(--wp--preset--spacing--40);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -79,7 +79,7 @@ body:not(.woocommerce-active) .woo-cart-icon {
 }
 .wp-block-quote.is-style-accent-border cite {
     font-style: normal;
-    color: var(--wp--preset--color--neutral-text);
+    color: var(--wp--preset--color--neutral-500);
 }
 
 /* Pricing Cards */

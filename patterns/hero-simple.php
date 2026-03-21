@@ -20,8 +20,8 @@
 		<h1 class="wp-block-heading has-primary-color has-text-color has-xx-large-font-size">Your Vision,<br>Our Theme.</h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"large","style":{"layout":{"selfStretch":"fixed","flexSize":"600px"}}} -->
-		<p class="has-neutral-500-color has-text-color has-large-font-size" style="max-width:600px">Build beautiful, responsive websites with ease. Our theme provides everything you need to create stunning online experiences.</p>
+		<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"large"} -->
+		<p class="has-neutral-500-color has-text-color has-large-font-size">Build beautiful, responsive websites with ease. Our theme provides everything you need to create stunning online experiences.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->

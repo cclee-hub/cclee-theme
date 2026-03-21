@@ -63,7 +63,7 @@
 		<div class="wp-block-column" style="flex-basis:50%">
 
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"neutral-200","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color" style="border-color:var(--wp--preset--color--neutral-border);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+			<div class="wp-block-group has-border-color has-neutral-200-border-color" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
 				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}},"textColor":"neutral-500"} -->
 				<p class="has-neutral-500-color has-text-color" style="font-style:italic"><!-- 建议配合 Contact Form 7 或 WPForms 使用 --></p>

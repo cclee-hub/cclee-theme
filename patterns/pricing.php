@@ -23,7 +23,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|40","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"neutral-200","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color" style="border-color:var(--wp--preset--color--neutral-border);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+			<div class="wp-block-group has-border-color has-neutral-200-border-color" style="border-radius:8px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 
 				<!-- wp:heading {"textAlign":"center","level":4} -->
 				<h4 class="wp-block-heading has-text-align-center">Starter</h4>
@@ -67,7 +67,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|40","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-base-color has-accent-background-color has-text-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 
-				<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.1em"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"base","textColor":"accent","style":{"spacing":{"margin":{"top":"calc(-1 * var(--wp--preset--spacing--50))","bottom":"var(--wp--preset--spacing--30)"}}}} -->
+				<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"calc(-1 * var(--wp--preset--spacing--50))","bottom":"var(--wp--preset--spacing--30)"}}},"backgroundColor":"base","textColor":"accent"} -->
 				<p class="has-text-align-center has-accent-color has-base-background-color has-text-color has-background has-small-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-top:calc(-1 * var(--wp--preset--spacing--50));margin-bottom:var(--wp--preset--spacing--30)">Most Popular</p>
 				<!-- /wp:paragraph -->
 
@@ -113,7 +113,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","right":"var:preset|spacing|40","bottom":"var:preset|spacing|50","left":"var:preset|spacing|40"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"neutral-200","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color" style="border-color:var(--wp--preset--color--neutral-border);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
+			<div class="wp-block-group has-border-color has-neutral-200-border-color" style="border-radius:8px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 
 				<!-- wp:heading {"textAlign":"center","level":4} -->
 				<h4 class="wp-block-heading has-text-align-center">Enterprise</h4>

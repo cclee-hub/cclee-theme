@@ -6,97 +6,109 @@
  * Description: 联系表单区块，包含表单和联系信息
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull">
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-    <!-- wp:heading {"textAlign":"center"} -->
-    <h2 class="wp-block-heading has-text-align-center">Get in Touch</h2>
-    <!-- /wp:heading -->
+	<!-- wp:columns -->
+	<div class="wp-block-columns">
 
-    <!-- wp:paragraph {"align":"center"} -->
-    <p class="has-text-align-center">We'd love to hear from you. Send us a message.</p>
-    <!-- /wp:paragraph -->
+		<!-- wp:column {"width":"50%"} -->
+		<div class="wp-block-column" style="flex-basis:50%">
 
-    <!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
-    <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--50)">
+			<!-- wp:heading {"textColor":"primary"} -->
+			<h2 class="wp-block-heading has-primary-color has-text-color">Get in Touch</h2>
+			<!-- /wp:heading -->
 
-        <!-- wp:column {"width":"60%"} -->
-        <div class="wp-block-column" style="flex-basis:60%">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"contrast"} -->
-            <div class="wp-block-group has-contrast-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+			<!-- wp:paragraph {"textColor":"neutral-500","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
+			<p class="has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--40)">Have a question or want to work together? We'd love to hear from you.</p>
+			<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph -->
-                <p><strong>Name</strong></p>
-                <!-- /wp:paragraph -->
+			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
+				<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|20"}}}} -->
+				<p style="margin-right:var(--wp--preset--spacing--20)">📧</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph -->
+				<p><strong>Email:</strong> hello@example.com</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
 
-                <!-- wp:separator {"backgroundColor":"secondary","className":"is-style-wide"} -->
-                <hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-wide"/>
-                <!-- /wp:separator -->
+			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
+				<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|20"}}}} -->
+				<p style="margin-right:var(--wp--preset--spacing--20)">📍</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph -->
+				<p><strong>Location:</strong> 123 Business Street, City</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
 
-                <!-- wp:paragraph -->
-                <p><strong>Email</strong></p>
-                <!-- /wp:paragraph -->
+			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group">
+				<!-- wp:paragraph {"style":{"spacing":{"margin":{"right":"var:preset|spacing|20"}}}} -->
+				<p style="margin-right:var(--wp--preset--spacing--20)">🕐</p>
+				<!-- /wp:paragraph -->
+				<!-- wp:paragraph -->
+				<p><strong>Hours:</strong> Mon-Fri 9AM-6PM</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
 
-                <!-- wp:separator {"backgroundColor":"secondary","className":"is-style-wide"} -->
-                <hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-wide"/>
-                <!-- /wp:separator -->
+		</div>
+		<!-- /wp:column -->
 
-                <!-- wp:paragraph -->
-                <p><strong>Message</strong></p>
-                <!-- /wp:paragraph -->
+		<!-- wp:column {"width":"50%"} -->
+		<div class="wp-block-column" style="flex-basis:50%">
 
-                <!-- wp:separator {"backgroundColor":"secondary","className":"is-style-wide"} -->
-                <hr class="wp-block-separator has-text-color has-secondary-color has-alpha-channel-opacity has-secondary-background-color has-background is-style-wide"/>
-                <!-- /wp:separator -->
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px","width":"1px"}},"borderColor":"neutral-200","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-border-color" style="border-color:var(--wp--preset--color--neutral-border);border-width:1px;border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-                <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
-                <div class="wp-block-buttons">
-                    <!-- wp:button -->
-                    <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">Send Message</a></div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
+				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}},"textColor":"neutral-500"} -->
+				<p class="has-neutral-500-color has-text-color" style="font-style:italic"><!-- 建议配合 Contact Form 7 或 WPForms 使用 --></p>
+				<!-- /wp:paragraph -->
 
-            </div>
-            <!-- /wp:group -->
-        </div>
-        <!-- /wp:column -->
+				<!-- wp:separator {"className":"is-style-wide"} -->
+				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<!-- /wp:separator -->
 
-        <!-- wp:column {"width":"40%"} -->
-        <div class="wp-block-column" style="flex-basis:40%">
+				<!-- wp:paragraph -->
+				<p><strong>Name</strong></p>
+				<!-- /wp:paragraph -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
-            <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:separator {"className":"is-style-wide"} -->
+				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<!-- /wp:separator -->
 
-                <!-- wp:paragraph {"fontSize":"large"} -->
-                <p class="has-large-font-size">📍 Address</p>
-                <!-- /wp:paragraph -->
-                <!-- wp:paragraph -->
-                <p>123 Business Street<br>City, Country 12345</p>
-                <!-- /wp:paragraph -->
+				<!-- wp:paragraph -->
+				<p><strong>Email</strong></p>
+				<!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"fontSize":"large"} -->
-                <p class="has-large-font-size">📧 Email</p>
-                <!-- /wp:paragraph -->
-                <!-- wp:paragraph -->
-                <p>hello@example.com</p>
-                <!-- /wp:paragraph -->
+				<!-- wp:separator {"className":"is-style-wide"} -->
+				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<!-- /wp:separator -->
 
-                <!-- wp:paragraph {"fontSize":"large"} -->
-                <p class="has-large-font-size">📞 Phone</p>
-                <!-- /wp:paragraph -->
-                <!-- wp:paragraph -->
-                <p>+1 (555) 123-4567</p>
-                <!-- /wp:paragraph -->
+				<!-- wp:paragraph -->
+				<p><strong>Message</strong></p>
+				<!-- /wp:paragraph -->
 
-            </div>
-            <!-- /wp:group -->
+				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}}} -->
+				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--30)">
+					<!-- wp:button {"backgroundColor":"accent","textColor":"base"} -->
+					<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button">Send Message</a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
 
-        </div>
-        <!-- /wp:column -->
+			</div>
+			<!-- /wp:group -->
 
-    </div>
-    <!-- /wp:columns -->
+		</div>
+		<!-- /wp:column -->
+
+	</div>
+	<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->

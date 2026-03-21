@@ -8,7 +8,7 @@
 			"palette": [
 				{ "slug": "primary", "color": "#3d2914", "name": "Primary" },
 				{ "slug": "secondary", "color": "#6b5344", "name": "Secondary" },
-				{ "slug": "accent", "color": "#d97706", "name": "Accent" },
+				{ "slug": "accent", "color": "#b45309", "name": "Accent" },
 				{ "slug": "base", "color": "#fef7ed", "name": "Base" },
 				{ "slug": "contrast", "color": "#fef3c7", "name": "Contrast" }
 			]

@@ -11,17 +11,118 @@
    Base Styles
    ======================================== */
 
-/* Site header */
-.site-header {
-    padding-block: var(--wp--preset--spacing--40);
-    border-bottom: 1px solid var(--wp--preset--color--contrast);
+/* Skip to content - accessibility */
+.skip-to-content-link {
+    position: absolute;
+    left: -9999px;
+}
+.skip-to-content-link:focus {
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--base);
 }
 
-/* Site footer */
-.site-footer {
-    padding-block: var(--wp--preset--spacing--50);
-    border-top: 1px solid var(--wp--preset--color--contrast);
-    color: var(--wp--preset--color--secondary);
+/* Site header - sticky */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--wp--preset--color--base);
+}
+
+/* Hide WooCommerce mini-cart if Woo not active */
+body:not(.woocommerce-active) .woo-cart-icon {
+    display: none;
+}
+
+/* ========================================
+   Block Styles
+   ======================================== */
+
+/* Button: Outline */
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+    border: 1px solid var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--accent);
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--base);
+}
+
+/* Group: Card */
+.wp-block-group.is-style-card {
+    background-color: var(--wp--preset--color--base);
+    border: 1px solid var(--wp--preset--color--neutral-border);
+    border-radius: 8px;
+    padding: var(--wp--preset--spacing--40);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Separator: Thick */
+.wp-block-separator.is-style-thick {
+    height: 3px;
+    background-color: var(--wp--preset--color--accent);
+    border: none;
+}
+
+/* Quote: Accent Border */
+.wp-block-quote.is-style-accent-border {
+    border-left: 4px solid var(--wp--preset--color--accent);
+    padding-left: var(--wp--preset--spacing--40);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+.wp-block-quote.is-style-accent-border cite {
+    font-style: normal;
+    color: var(--wp--preset--color--neutral-text);
+}
+
+/* Pricing Cards */
+.wp-block-columns .wp-block-column .wp-block-group.has-accent-background-color {
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+/* ========================================
+   Pattern-Specific Styles
+   ======================================== */
+
+/* Features Grid: Card style for columns */
+.is-pattern-pricing .wp-block-column > .wp-block-group,
+.wp-block-columns.is-style-cards .wp-block-column > .wp-block-group {
+    height: 100%;
+}
+
+/* Testimonial Cards: Quote decoration */
+.wp-block-columns .wp-block-column .wp-block-group.has-base-background-color .wp-block-quote {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.wp-block-columns .wp-block-column .wp-block-group.has-base-background-color .wp-block-quote::before {
+    content: '"';
+    position: absolute;
+    top: -0.3em;
+    left: -0.1em;
+    font-size: 4rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--wp--preset--color--accent);
+    opacity: 0.2;
+    line-height: 1;
+    pointer-events: none;
+}
+.wp-block-columns .wp-block-column .wp-block-group.has-base-background-color .wp-block-quote p {
+    font-style: italic;
+    position: relative;
+    z-index: 1;
 }
 
 /* ========================================
@@ -30,20 +131,93 @@
 
 /* Mobile: < 640px */
 @media screen and (max-width: 639px) {
-    /* Mobile styles - override in child theme */
+    /* Columns: stack on mobile */
+    .wp-block-columns {
+        flex-direction: column;
+        gap: var(--wp--preset--spacing--40);
+    }
+    .wp-block-column {
+        flex-basis: 100% !important;
+    }
+
+    /* Headings: scale down */
+    h1, .has-h-1-font-size {
+        font-size: var(--wp--preset--font-size--xx-large) !important;
+    }
+    h2, .has-h-2-font-size {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+    }
+
+    /* Hero: reduce padding */
+    [class*="hero"] .wp-block-group {
+        padding-top: var(--wp--preset--spacing--50) !important;
+        padding-bottom: var(--wp--preset--spacing--50) !important;
+    }
+
+    /* Buttons: full width on mobile */
+    .wp-block-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .wp-block-button {
+        width: 100%;
+    }
+    .wp-block-button .wp-block-button__link {
+        text-align: center;
+    }
 }
 
 /* Tablet: 640px - 1023px */
 @media screen and (min-width: 640px) and (max-width: 1023px) {
-    /* Tablet styles - override in child theme */
+    /* 4-column layouts (team): become 2x2 */
+    .wp-block-columns:not(.is-not-stacked-on-mobile) {
+        flex-wrap: wrap;
+    }
+    .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        flex-basis: calc(50% - var(--wp--preset--spacing--30)) !important;
+    }
+    .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column:nth-child(even) {
+        margin-left: var(--wp--preset--spacing--30);
+    }
+
+    /* 2-column layouts (contact): maintain side by side */
+    .wp-block-columns.has-2-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        flex-basis: calc(50% - var(--wp--preset--spacing--40)) !important;
+    }
 }
 
 /* Desktop: 1024px - 1279px */
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-    /* Desktop styles - override in child theme */
+    /* Standard desktop - no special overrides */
 }
 
 /* Wide: >= 1280px */
 @media screen and (min-width: 1280px) {
-    /* Wide styles - override in child theme */
+    /* Wide screens - full layout */
+}
+
+/* ========================================
+   Interactive States
+   ======================================== */
+
+/* Card hover effect */
+.wp-block-group.is-style-card,
+.wp-block-columns .wp-block-column > .wp-block-group {
+    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.wp-block-group.is-style-card:hover,
+.wp-block-columns .wp-block-column > .wp-block-group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Button transitions */
+.wp-block-button__link {
+    transition: all var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+/* Link transitions */
+a {
+    transition: color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
 }

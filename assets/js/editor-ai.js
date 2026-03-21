@@ -17,17 +17,15 @@
 
 	// ===== 配置区域 =====
 	const CONFIG = {
-		// API 端点（可替换为其他兼容 API）
-		apiEndpoint: 'https://api.openai.com/v1/chat/completions',
-		// 模型选择
-		model: 'gpt-3.5-turbo',
-		// 默认 prompt 模板
+		// 本地代理端点（通过后端调用 OpenAI，避免暴露 API Key）
+		apiEndpoint: '/wp-json/cclee/v1/ai/generate',
+		// Prompt 类型
 		prompts: {
-			paragraph: 'Write a clear, SEO-friendly paragraph about: ',
-			headline: 'Write an attention-grabbing headline for: ',
-			list: 'Create a list of key points about: ',
-			cta: 'Write a compelling call-to-action for: ',
-			faq: 'Generate 3 FAQ items with answers about: ',
+			paragraph: 'paragraph',
+			headline: 'headline',
+			list: 'list',
+			cta: 'cta',
+			faq: 'faq',
 		},
 	};
 
@@ -42,7 +40,7 @@
 		const [ error, setError ] = useState( '' );
 
 		/**
-		 * 调用 AI API
+		 * 调用 AI API（通过后端代理）
 		 */
 		async function generateContent() {
 			if ( ! prompt.trim() ) {
@@ -54,50 +52,31 @@
 			setError( '' );
 			setResult( '' );
 
-			const fullPrompt = CONFIG.prompts[ promptType ] + prompt;
-
 			try {
-				// 注意：实际使用时 API Key 应从安全配置中获取
-				// 这里仅作为示例，生产环境需要后端代理
-				const apiKey = window.ccleeAI?.apiKey || '';
+				// 使用本地代理端点，API Key 在后端安全存储
+				const apiRoot = window.wpApiSettings?.root || '/wp-json/';
+				const nonce = window.wpApiSettings?.nonce || '';
 
-				if ( ! apiKey ) {
-					throw new Error(
-						'API Key not configured. Please add your API key in theme settings.'
-					);
-				}
-
-				const response = await fetch( CONFIG.apiEndpoint, {
+				const response = await fetch( apiRoot + 'cclee/v1/ai/generate', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
-						Authorization: `Bearer ${ apiKey }`,
+						'X-WP-Nonce': nonce,
 					},
+					credentials: 'same-origin',
 					body: JSON.stringify( {
-						model: CONFIG.model,
-						messages: [
-							{
-								role: 'system',
-								content:
-									'You are a helpful content writing assistant. Write clear, engaging, and SEO-friendly content.',
-							},
-							{
-								role: 'user',
-								content: fullPrompt,
-							},
-						],
-						max_tokens: 500,
-						temperature: 0.7,
+						prompt: prompt,
+						type: promptType,
 					} ),
 				} );
 
 				if ( ! response.ok ) {
-					throw new Error( `API Error: ${ response.status }` );
+					const errorData = await response.json().catch( () => ( {} ) );
+					throw new Error( errorData.message || `API Error: ${ response.status }` );
 				}
 
 				const data = await response.json();
-				const generatedText =
-					data.choices?.[ 0 ]?.message?.content || 'No content generated.';
+				const generatedText = data.content || 'No content generated.';
 
 				setResult( generatedText );
 			} catch ( err ) {
@@ -246,7 +225,7 @@
 					createElement(
 						'p',
 						null,
-						'Add your API key via theme settings or modify window.ccleeAI.apiKey in your custom scripts.'
+						'API Key is securely stored on the server. Configure it via theme settings.'
 					)
 				)
 			)

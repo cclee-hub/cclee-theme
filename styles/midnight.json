@@ -10,7 +10,10 @@
 				{ "slug": "secondary", "color": "#a0a0a0", "name": "Secondary" },
 				{ "slug": "accent", "color": "#64b5f6", "name": "Accent" },
 				{ "slug": "base", "color": "#121212", "name": "Base" },
-				{ "slug": "contrast", "color": "#1e1e1e", "name": "Contrast" }
+				{ "slug": "contrast", "color": "#1e1e1e", "name": "Contrast" },
+				{ "slug": "neutral-bg", "color": "#1e1e1e", "name": "Neutral Background" },
+				{ "slug": "neutral-border", "color": "#333333", "name": "Neutral Border" },
+				{ "slug": "neutral-text", "color": "#a0a0a0", "name": "Neutral Text" }
 			]
 		}
 	},
@@ -28,6 +31,11 @@
 					"color": {
 						"text": "var(--wp--preset--color--primary)"
 					}
+				}
+			},
+			"button": {
+				"color": {
+					"text": "#121212"
 				}
 			}
 		}

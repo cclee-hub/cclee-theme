@@ -6,36 +6,33 @@
  * Description: 居中布局 Hero 区块，含背景封面
  */
 ?>
-<!-- wp:cover {"url":"","dimRatio":50,"overlayColor":"primary","minHeight":480,"align":"full"} -->
-<div class="wp-block-cover alignfull" style="min-height:480px">
-    <span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim"></span>
-    <div class="wp-block-cover__inner-container">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}},"color":{"background":"var(--wp--preset--color--accent)"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-background" style="background-color:var(--wp--preset--color--accent);padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
-        <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","flexWrap":"wrap"}} -->
-        <div class="wp-block-group">
+	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+	<div class="wp-block-group">
 
-            <!-- wp:heading {"textAlign":"center","level":1} -->
-            <h1 class="wp-block-heading has-text-align-center">Welcome to Our Site</h1>
-            <!-- /wp:heading -->
+		<!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"var(--wp--preset--font-size--xx-large)"}},"textColor":"base"} -->
+		<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color" style="font-size:var(--wp--preset--font-size--xx-large)">Build Something Beautiful</h1>
+		<!-- /wp:heading -->
 
-            <!-- wp:paragraph {"align":"center"} -->
-            <p class="has-text-align-center">A compelling subtitle that captures attention and invites visitors to explore more.</p>
-            <!-- /wp:paragraph -->
+		<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"var(--wp--preset--font-size--large)"}},"textColor":"base"} -->
+		<p class="has-text-align-center has-base-color has-text-color" style="font-size:var(--wp--preset--font-size--large);opacity:0.85">A modern WordPress theme built for speed and simplicity.</p>
+		<!-- /wp:paragraph -->
 
-            <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-            <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"accent","textColor":"base"} -->
-                <div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button">Get Started</a></div>
-                <!-- /wp:button -->
-                <!-- wp:button {"style":{"border":{"width":"1px"}},"className":"is-style-outline"} -->
-                <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" style="border-width:1px">Learn More</a></div>
-                <!-- /wp:button -->
-            </div>
-            <!-- /wp:buttons -->
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}}} -->
+		<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
+			<!-- wp:button {"backgroundColor":"base","textColor":"accent"} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button">Get Started</a></div>
+			<!-- /wp:button -->
+			<!-- wp:button {"textColor":"base","className":"is-style-outline"} -->
+			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color wp-element-button">Learn More</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
 
-        </div>
-        <!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
 
-    </div>
 </div>
-<!-- /wp:cover -->
+<!-- /wp:group -->

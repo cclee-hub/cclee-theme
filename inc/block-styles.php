@@ -5,9 +5,29 @@
  */
 
 add_action( 'init', function () {
-    // 示例：为按钮块注册"轮廓"样式变体
-    // register_block_style( 'core/button', [
-    //     'name'  => 'outline',
-    //     'label' => __( 'Outline', 'cclee-theme' ),
-    // ] );
+
+    // Button: Outline
+    register_block_style( 'core/button', [
+        'name'  => 'outline',
+        'label' => __( 'Outline', 'cclee-theme' ),
+    ] );
+
+    // Group: Card
+    register_block_style( 'core/group', [
+        'name'  => 'card',
+        'label' => __( 'Card', 'cclee-theme' ),
+    ] );
+
+    // Separator: Thick
+    register_block_style( 'core/separator', [
+        'name'  => 'thick',
+        'label' => __( 'Thick', 'cclee-theme' ),
+    ] );
+
+    // Quote: Accent Border
+    register_block_style( 'core/quote', [
+        'name'  => 'accent-border',
+        'label' => __( 'Accent Border', 'cclee-theme' ),
+    ] );
+
 } );

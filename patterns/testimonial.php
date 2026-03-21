@@ -6,88 +6,126 @@
  * Description: 客户评价区块，三列卡片布局
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}},"backgroundColor":"contrast"},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-contrast-background-color has-background">
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide has-neutral-100-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-    <!-- wp:heading {"textAlign":"center"} -->
-    <h2 class="wp-block-heading has-text-align-center">What Our Clients Say</h2>
-    <!-- /wp:heading -->
+	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
+	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">What Our Users Say</h2>
+	<!-- /wp:heading -->
 
-    <!-- wp:paragraph {"align":"center"} -->
-    <p class="has-text-align-center">Trusted by businesses worldwide</p>
-    <!-- /wp:paragraph -->
+	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
+	<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--50)">
 
-    <!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
-    <div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--50)">
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-        <!-- wp:column -->
-        <div class="wp-block-column">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"base"} -->
-            <div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:quote {"style":{"border":{"left":{"width":"4px","color":"var:preset|color|accent"}},"spacing":{"padding":{"left":"var:preset|spacing|30"}}}} -->
+				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
+					<!-- wp:paragraph -->
+					<p>"This theme transformed our website. The design quality and ease of customization are unmatched."</p>
+					<!-- /wp:paragraph -->
+				</blockquote>
+				<!-- /wp:quote -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}}} -->
-                <p style="font-style:italic">"Excellent service and outstanding quality. The team went above and beyond to meet our needs."</p>
-                <!-- /wp:paragraph -->
+				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
+				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
+					<!-- wp:paragraph {"fontSize":"large"} -->
+					<p class="has-large-font-size">👤</p>
+					<!-- /wp:paragraph -->
+					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+					<div class="wp-block-group">
+						<!-- wp:heading {"level":5} -->
+						<h5 class="wp-block-heading">Sarah Chen</h5>
+						<!-- /wp:heading -->
+						<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
+						<p class="has-neutral-500-color has-text-color has-small-font-size">Product Manager</p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
 
-                <!-- wp:separator {"opacity":"css","className":"is-style-wide"} -->
-                <hr class="wp-block-separator has-css-opacity is-style-wide"/>
-                <!-- /wp:separator -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
 
-                <!-- wp:paragraph {"fontSize":"small","textColor":"secondary"} -->
-                <p class="has-secondary-color has-text-color has-small-font-size">— John Smith, CEO</p>
-                <!-- /wp:paragraph -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-            </div>
-            <!-- /wp:group -->
-        </div>
-        <!-- /wp:column -->
+				<!-- wp:quote {"style":{"border":{"left":{"width":"4px","color":"var:preset|color|accent"}},"spacing":{"padding":{"left":"var:preset|spacing|30"}}}} -->
+				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
+					<!-- wp:paragraph -->
+					<p>"Professional, responsive, and delivered exactly what we needed. Highly recommended for any business!"</p>
+					<!-- /wp:paragraph -->
+				</blockquote>
+				<!-- /wp:quote -->
 
-        <!-- wp:column -->
-        <div class="wp-block-column">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"base"} -->
-            <div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
+				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
+					<!-- wp:paragraph {"fontSize":"large"} -->
+					<p class="has-large-font-size">👤</p>
+					<!-- /wp:paragraph -->
+					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+					<div class="wp-block-group">
+						<!-- wp:heading {"level":5} -->
+						<h5 class="wp-block-heading">Mike Johnson</h5>
+						<!-- /wp:heading -->
+						<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
+						<p class="has-neutral-500-color has-text-color has-small-font-size">Marketing Director</p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}}} -->
-                <p style="font-style:italic">"Professional, responsive, and delivered exactly what we needed. Highly recommended!"</p>
-                <!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
 
-                <!-- wp:separator {"opacity":"css","className":"is-style-wide"} -->
-                <hr class="wp-block-separator has-css-opacity is-style-wide"/>
-                <!-- /wp:separator -->
+		<!-- wp:column -->
+		<div class="wp-block-column">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-                <!-- wp:paragraph {"fontSize":"small","textColor":"secondary"} -->
-                <p class="has-secondary-color has-text-color has-small-font-size">— Sarah Johnson, Marketing Director</p>
-                <!-- /wp:paragraph -->
+				<!-- wp:quote {"style":{"border":{"left":{"width":"4px","color":"var:preset|color|accent"}},"spacing":{"padding":{"left":"var:preset|spacing|30"}}}} -->
+				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
+					<!-- wp:paragraph -->
+					<p>"The best investment we made for our online presence. Clean code and beautiful design out of the box."</p>
+					<!-- /wp:paragraph -->
+				</blockquote>
+				<!-- /wp:quote -->
 
-            </div>
-            <!-- /wp:group -->
-        </div>
-        <!-- /wp:column -->
+				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
+				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
+					<!-- wp:paragraph {"fontSize":"large"} -->
+					<p class="has-large-font-size">👤</p>
+					<!-- /wp:paragraph -->
+					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
+					<div class="wp-block-group">
+						<!-- wp:heading {"level":5} -->
+						<h5 class="wp-block-heading">Emily Davis</h5>
+						<!-- /wp:heading -->
+						<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
+						<p class="has-neutral-500-color has-text-color has-small-font-size">Startup Founder</p>
+						<!-- /wp:paragraph -->
+					</div>
+					<!-- /wp:group -->
+				</div>
+				<!-- /wp:group -->
 
-        <!-- wp:column -->
-        <div class="wp-block-column">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}},"border":{"radius":"8px"}},"backgroundColor":"base"} -->
-            <div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:column -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}}} -->
-                <p style="font-style:italic">"Great experience from start to finish. The results exceeded our expectations."</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:separator {"opacity":"css","className":"is-style-wide"} -->
-                <hr class="wp-block-separator has-css-opacity is-style-wide"/>
-                <!-- /wp:separator -->
-
-                <!-- wp:paragraph {"fontSize":"small","textColor":"secondary"} -->
-                <p class="has-secondary-color has-text-color has-small-font-size">— Michael Chen, Founder</p>
-                <!-- /wp:paragraph -->
-
-            </div>
-            <!-- /wp:group -->
-        </div>
-        <!-- /wp:column -->
-
-    </div>
-    <!-- /wp:columns -->
+	</div>
+	<!-- /wp:columns -->
 
 </div>
 <!-- /wp:group -->

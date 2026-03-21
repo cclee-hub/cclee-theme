@@ -4,17 +4,46 @@
  * 规范：
  * - 禁止重复定义 theme.json 已控制的属性
  * - 引用设计 token 必须使用 var(--wp--preset--*) 格式
+ * - 断点变量：--wp--custom--breakpoints--{mobile|tablet|desktop|wide}
  */
 
-/* 示例：site-header 补充样式 */
+/* ========================================
+   Base Styles
+   ======================================== */
+
+/* Site header */
 .site-header {
     padding-block: var(--wp--preset--spacing--40);
     border-bottom: 1px solid var(--wp--preset--color--contrast);
 }
 
-/* 示例：site-footer 补充样式 */
+/* Site footer */
 .site-footer {
     padding-block: var(--wp--preset--spacing--50);
     border-top: 1px solid var(--wp--preset--color--contrast);
     color: var(--wp--preset--color--secondary);
+}
+
+/* ========================================
+   Responsive Breakpoints
+   ======================================== */
+
+/* Mobile: < 640px */
+@media screen and (max-width: 639px) {
+    /* Mobile styles - override in child theme */
+}
+
+/* Tablet: 640px - 1023px */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    /* Tablet styles - override in child theme */
+}
+
+/* Desktop: 1024px - 1279px */
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    /* Desktop styles - override in child theme */
+}
+
+/* Wide: >= 1280px */
+@media screen and (min-width: 1280px) {
+    /* Wide styles - override in child theme */
 }

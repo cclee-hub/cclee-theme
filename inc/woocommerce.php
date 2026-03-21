@@ -66,3 +66,35 @@ add_action( 'woocommerce_before_main_content', function () {
 add_action( 'woocommerce_after_main_content', function () {
 	echo '</main>';
 }, 10 );
+
+/**
+ * B2B 文字替换：Shop → Products
+ * 适用于企业级站点，更专业的命名
+ */
+add_filter( 'gettext', function ( $translated, $text, $domain ) {
+	// 仅处理 WooCommerce 文字
+	if ( 'woocommerce' !== $domain ) {
+		return $translated;
+	}
+
+	// 替换映射表
+	$replacements = [
+		'Shop'          => 'Products',
+		'shop'          => 'products',
+		'SHOP'          => 'PRODUCTS',
+		'Return to shop' => 'Return to products',
+		'Back to shop'  => 'Back to products',
+	];
+
+	return $replacements[ $text ] ?? $translated;
+}, 10, 3 );
+
+/**
+ * 修改产品归档页标题
+ */
+add_filter( 'woocommerce_page_title', function ( $page_title ) {
+	if ( 'Shop' === $page_title ) {
+		return 'Products';
+	}
+	return $page_title;
+} );

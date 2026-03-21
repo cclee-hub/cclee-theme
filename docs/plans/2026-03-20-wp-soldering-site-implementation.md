@@ -344,7 +344,7 @@ function astra_child_inquiry_popup() {
                 <span class="inquiry-close">&times;</span>
                 <h3>Request a Quote</h3>
                 <p id="inquiry-product-name"></p>
-                <?php echo do_shortcode('[contact-form-7 id="123" title="Inquiry Form"]'); ?>
+                <?php echo do_shortcode('[contact-form-7 id="94f46e9" title="Inquiry Form"]'); ?>
             </div>
         </div>
         <?php

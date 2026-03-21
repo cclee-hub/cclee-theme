@@ -34,11 +34,21 @@
 
 ## 本地环境 (WSL)
 
+### 工具状态
+
+| 项目 | 值 |
+|------|-----|
+| IDE | VSCode |
+| AI | Claude Code |
+| 运行层 | WSL |
+
+### 环境依赖
+
 | 工具 | 状态 |
 |------|------|
 | Node.js | v24.13.1 (nvm) |
 | npm | 11.8.0 |
-| Docker Desktop | 已安装 (WSL 集成未启用) |
+| Docker Desktop | 已安装 (WSL 集成已启用) |
 | PHP | 未安装 |
 | MySQL | 未安装 |
 
@@ -70,20 +80,28 @@
 
 ### 已安装插件
 
-| 插件 | 说明 |
-|------|------|
-| WooCommerce | 电商核心插件 |
-| PayPal Payments | PayPal 支付网关 |
-| Google for WooCommerce | Google Ads & Analytics 集成 |
-| Astra Starter Templates | 模板导入 |
-| Contact Form 7 | 询盘表单 |
+| 插件 | 版本 | 状态 |
+|------|------|------|
+| WooCommerce | 10.6.1 | ✅ 激活 |
+| WooCommerce PayPal Payments | 3.4.1 | ✅ 激活 |
+| Google for WooCommerce | 3.6.0 | ✅ 激活 |
+| Starter Templates (Astra) | 4.4.52 | ✅ 激活 |
+| Contact Form 7 | - | ✅ 激活 |
+| Akismet Anti-spam | 5.6 | ✅ 激活 |
+
+### WP-CLI 命令
+
+```bash
+docker exec wp_cli wp [命令] --allow-root
+```
+
+主题文件路径：`wp/wordpress/wp-content/themes/cclee-theme/`
 
 ### 主题
 
 | 主题 | 说明 |
 |------|------|
-| Astra | 父主题 |
-| Astra Child | 子主题，自定义样式和功能 |
+| CCLEE | FSE 自定义主题 (唯一激活主题) |
 
 ### 网站设计概要
 
@@ -98,6 +116,7 @@
 - Home：Banner → 分类 → 热销 → 简介 → 评价 → CTA
 - About Us：公司介绍 → 数字亮点 → 工厂图
 - Products：WooCommerce 商店页
+- Blog：最新文章列表
 - Contact：联系信息 + 询盘表单
 
 **核心功能：**

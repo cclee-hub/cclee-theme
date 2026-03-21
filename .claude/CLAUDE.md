@@ -12,26 +12,19 @@
 |------|------|--------|
 | cn-site | `~/workspace/yougu/cn-site/` | `/var/www/cn-site/` |
 | wp | `~/workspace/yougu/wp/` | `/var/www/wp/` |
+| yougu-cclee | `wp/wordpress/wp-content/themes/yougu-cclee/` | `/var/www/wp/wordpress/wp-content/themes/yougu-cclee/` |
 
-## 项目特性
+## 项目概览
 
-| 项目 | 数据库 | 本地可运行 |
+| 项目 | 技术栈 | 本地可运行 |
 |------|--------|-----------|
-| cn-site (PbootCMS) | SQLite | ❌ 无PHP环境 |
-| wp (WordPress + WooCommerce) | MySQL 8.0 (Docker) | ✅ localhost:8080 |
+| cn-site | PbootCMS + SQLite | ❌ |
+| wp | WordPress + WooCommerce + MySQL 8.0 | ✅ localhost:8080 |
+| wp-theme | cclee-theme（通用主题，独立仓库）+ yougu-cclee（Yougu 子主题） | ✅ localhost:8080 |
 
-## wp 数据库连接
+## 全局禁止
 
-| 参数 | 值 |
-|------|-----|
-| Host | db |
-| 数据库名 | wordpress |
-| 用户名 | wordpress |
-| 密码 | wordpress |
-| Root 密码 | rootpassword |
-
-## 禁止
-
-- 禁止臆测延伸
-- 禁止提前设计未确认功能
+- 禁止臆测延伸，禁止提前设计未确认功能
 - 操作服务器前必须确认路径
+- 禁止修改未明确提及的文件
+- 遇到错误先登记到记忆，再按 `.claude/rules/wp-theme-errors.md` 流程处理

@@ -1,0 +1,20 @@
+/*
+ * custom.css — theme.json 无法覆盖的补充样式
+ *
+ * 规范：
+ * - 禁止重复定义 theme.json 已控制的属性
+ * - 引用设计 token 必须使用 var(--wp--preset--*) 格式
+ */
+
+/* 示例：site-header 补充样式 */
+.site-header {
+    padding-block: var(--wp--preset--spacing--40);
+    border-bottom: 1px solid var(--wp--preset--color--contrast);
+}
+
+/* 示例：site-footer 补充样式 */
+.site-footer {
+    padding-block: var(--wp--preset--spacing--50);
+    border-top: 1px solid var(--wp--preset--color--contrast);
+    color: var(--wp--preset--color--secondary);
+}

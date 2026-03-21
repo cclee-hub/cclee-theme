@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Midnight",
+	"description": "深色主题，适合科技与专业站点",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary", "color": "#e0e0e0", "name": "Primary" },
+				{ "slug": "secondary", "color": "#a0a0a0", "name": "Secondary" },
+				{ "slug": "accent", "color": "#64b5f6", "name": "Accent" },
+				{ "slug": "base", "color": "#121212", "name": "Base" },
+				{ "slug": "contrast", "color": "#1e1e1e", "name": "Contrast" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--primary)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--accent)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--primary)"
+					}
+				}
+			}
+		}
+	}
+}

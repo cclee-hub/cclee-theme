@@ -10,6 +10,7 @@ add_action( 'after_setup_theme', function () {
     add_theme_support( 'editor-styles' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'title-tag' );
 
     register_nav_menus( [
         'primary' => __( 'Primary Menu', 'cclee-theme' ),

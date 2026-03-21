@@ -8,6 +8,6 @@ add_action( 'init', function () {
     // 示例：为按钮块注册"轮廓"样式变体
     // register_block_style( 'core/button', [
     //     'name'  => 'outline',
-    //     'label' => __( 'Outline', 'cclee' ),
+    //     'label' => __( 'Outline', 'cclee-theme' ),
     // ] );
 } );

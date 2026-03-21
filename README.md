@@ -22,7 +22,7 @@ A lightweight Full Site Editing (FSE) theme for WordPress developers. Clean arch
 wp theme install /path/to/cclee-theme --activate
 
 # Or if hosted (replace with actual URL)
-wp theme install https://github.com/cclee-hub/cclee-theme/releases/download/v1.0.0/cclee-theme.zip --activate
+wp theme install https://github.com/cclee-hub/cclee-theme/releases/download/v1.1.0/cclee-theme.zip --activate
 ```
 
 ## Features

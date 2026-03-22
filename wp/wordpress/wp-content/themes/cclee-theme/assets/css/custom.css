@@ -110,14 +110,34 @@ body:not(.woocommerce-active) .woo-cart-icon {
    ======================================== */
 
 /* Timeline: Fixed circle dot */
-.cclee-timeline-dot {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+.wp-block-group.cclee-timeline-dot {
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    flex-shrink: 0 !important;
+    aspect-ratio: unset !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+.wp-block-group.cclee-timeline-dot p {
+    margin: 0 !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+    overflow: visible !important;
+}
+
+.wp-block-columns .wp-block-column:has(.cclee-timeline-dot) {
+    flex-shrink: 0 !important;
+    flex-basis: 100px !important;
+    width: 100px !important;
 }
 
 /* Features Grid: Card style for columns */
@@ -228,12 +248,12 @@ body:not(.woocommerce-active) .woo-cart-icon {
 
 /* Card hover effect */
 .wp-block-group.is-style-card,
-.wp-block-columns .wp-block-column > .wp-block-group {
+.wp-block-columns .wp-block-column > .wp-block-group:not(.cclee-timeline-dot) {
     transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
                 box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
 }
 .wp-block-group.is-style-card:hover,
-.wp-block-columns .wp-block-column > .wp-block-group:hover {
+.wp-block-columns .wp-block-column > .wp-block-group:not(.cclee-timeline-dot):hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -272,4 +292,287 @@ body:not(.woocommerce-active) .woo-cart-icon {
 /* Link transitions */
 a {
     transition: color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+/* ========================================
+   Avatar & Icon Components
+   ======================================== */
+
+/* Avatar with initials - replaces emoji placeholders */
+.cclee-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--wp--preset--color--neutral-200) 0%, var(--wp--preset--color--neutral-300) 100%);
+    color: var(--wp--preset--color--primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cclee-avatar--lg {
+    width: 80px;
+    height: 80px;
+    font-size: 1.75rem;
+}
+
+.cclee-avatar--md {
+    width: 48px;
+    height: 48px;
+    font-size: 1rem;
+}
+
+.cclee-avatar--sm {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+}
+
+.cclee-avatar--accent {
+    background: linear-gradient(135deg, var(--wp--preset--color--accent) 0%, #ea580c 100%);
+    color: var(--wp--preset--color--base);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.cclee-avatar--ring {
+    box-shadow: 0 0 0 3px var(--wp--preset--color--base), 0 0 0 5px var(--wp--preset--color--accent);
+}
+
+/* Icon container with background */
+.cclee-icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--wp--custom--border--radius--lg);
+    background: linear-gradient(135deg, var(--wp--preset--color--neutral-100) 0%, var(--wp--preset--color--neutral-200) 100%);
+    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+
+.cclee-icon-box--accent {
+    background: linear-gradient(135deg, var(--wp--preset--color--accent) 0%, #ea580c 100%);
+    box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
+}
+
+.cclee-icon-box--accent svg {
+    color: var(--wp--preset--color--base);
+}
+
+.cclee-icon-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Contact icon wrapper */
+.cclee-contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--wp--custom--border--radius--md);
+    background: var(--wp--preset--color--neutral-100);
+    flex-shrink: 0;
+}
+
+.cclee-contact-icon svg {
+    width: 20px;
+    height: 20px;
+    color: var(--wp--preset--color--accent);
+}
+
+/* ========================================
+   Decorative Elements
+   ======================================== */
+
+/* Hero background decoration */
+.cclee-hero-deco {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
+.cclee-hero-deco--1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+    background: var(--wp--preset--color--base);
+}
+
+.cclee-hero-deco--2 {
+    width: 200px;
+    height: 200px;
+    bottom: -50px;
+    left: 10%;
+    background: var(--wp--preset--color--base);
+}
+
+/* Dot pattern overlay */
+.cclee-dots-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* Grid pattern overlay */
+.cclee-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(to right, currentColor 1px, transparent 1px),
+        linear-gradient(to bottom, currentColor 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+/* ========================================
+   Glassmorphism
+   ======================================== */
+
+.cclee-glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.cclee-glass--dark {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   Timeline Enhancement
+   ======================================== */
+
+/* Timeline connector line */
+.cclee-timeline-item {
+    position: relative;
+}
+
+.cclee-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    bottom: -40px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--wp--preset--color--neutral-200) 0%, transparent 100%);
+}
+
+.cclee-timeline-item:last-child::before {
+    display: none;
+}
+
+/* ========================================
+   Stats Enhancement
+   ======================================== */
+
+.cclee-stat-number {
+    background: linear-gradient(135deg, currentColor 0%, var(--wp--preset--color--neutral-200) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   Entrance Animations
+   ======================================== */
+
+@keyframes cclee-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cclee-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes cclee-scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.cclee-animate-fade-in-up {
+    animation: cclee-fadeInUp 0.6s var(--wp--custom--easing--default) forwards;
+}
+
+.cclee-animate-fade-in {
+    animation: cclee-fadeIn 0.5s var(--wp--custom--easing--default) forwards;
+}
+
+.cclee-animate-scale-in {
+    animation: cclee-scaleIn 0.4s var(--wp--custom--easing--default) forwards;
+}
+
+/* Staggered animation delays */
+.cclee-animate-delay-1 { animation-delay: 0.1s; }
+.cclee-animate-delay-2 { animation-delay: 0.2s; }
+.cclee-animate-delay-3 { animation-delay: 0.3s; }
+.cclee-animate-delay-4 { animation-delay: 0.4s; }
+
+/* ========================================
+   Price Gradient Text
+   ======================================== */
+
+.cclee-price-gradient {
+    background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   Logo Cloud Enhancement
+   ======================================== */
+
+.cclee-logo-item {
+    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+                opacity var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+    opacity: 0.6;
+}
+
+.cclee-logo-item:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* ========================================
+   Portfolio Card
+   ======================================== */
+
+/* Portfolio Card Hover Effect */
+.cclee-portfolio-card {
+    transition: box-shadow var(--wp--custom--transition--normal);
+}
+.cclee-portfolio-card:hover {
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+.cclee-portfolio-card img {
+    transition: transform var(--wp--custom--transition--normal);
+}
+.cclee-portfolio-card:hover img {
+    transform: scale(1.02);
 }

@@ -341,6 +341,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | `home.html` | 博客列表首页 | ✅ | ✅ | 3列网格 | hero-simple + post-grid + cta-banner + 分页 + 空状态 |
 | `index.html` | 通用回退 | ✅ | ✅ | 3列网格 | post-grid + 分页 + 空状态 |
 | `archive.html` | 归档页（分类/标签/日期） | ✅ | ✅ | 3列网格 | 标题 + post-grid + 分页 + 空状态 |
+| `author.html` | 作者归档 | ✅ | ✅ | 单栏 | **作者头像/简介** + post-grid + 分页 + 空状态 |
 | `search.html` | 搜索结果 | ✅ | ✅ | 3列网格 | 搜索标题 + post-grid + **空状态含二次搜索** |
 | `single.html` | 单篇文章 | ✅ | ✅ | 70/30 两栏 | 标题 + 日期/分类 + 特色图 + 内容 + **上下篇导航** + **评论** + sidebar |
 | `page.html` | 通用页面 | ✅ | ✅ | 单栏 | 标题 + 特色图 + 内容 |
@@ -385,6 +386,8 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | WooCommerce Trust Badges | `cclee-theme/woo-trust-badges` | woocommerce | 信任徽章（安全支付/退换货/快速配送） |
 | Case Study Metrics | `cclee-theme/case-study-metrics` | featured | 成果数据展示（4列指标） |
 | Case Study Testimonial | `cclee-theme/case-study-testimonial` | featured | 客户评价卡片 |
+| Post List Layout | `cclee-theme/post-list` | cclee-theme | 列表式文章归档（左图右文） |
+| Post Magazine Layout | `cclee-theme/post-magazine` | cclee-theme | 杂志式文章归档（特色文章+网格） |
 
 ### Parts 清单
 
@@ -414,8 +417,8 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | ~~Landing Page 模板~~ | ~~投放页/活动页无法实现~~ | ✅ **已完成** | `page-landing.html` + 4 个 Landing Patterns |
 | ~~Case Study 详情模板~~ | ~~B 端客户案例转化页缺失~~ | ✅ **已完成** | `single-case-study.html` + CPT + 2 个 Patterns |
 | ~~WooCommerce Cart/Checkout~~ | ~~购物车/结算页未定制~~ | ✅ **已完成** | `cart.html` / `checkout.html` + 2 个 Woo Patterns |
-| Author/Date 归档 | 无专属模板，回退到 archive.html | P2 | 可选，archive.html 已足够 |
-| 归档布局变体 | 仅 3 列网格，无列表/杂志布局 | P2 | 新建 pattern 变体 |
+| ~~Author 归档~~ | ~~无专属模板，回退到 archive.html~~ | ✅ **已完成** | `author.html` 含作者头像/简介 |
+| ~~归档布局变体~~ | ~~仅 3 列网格，无列表/杂志布局~~ | ✅ **已完成** | `post-list.php` + `post-magazine.php` |
 
 ---
 

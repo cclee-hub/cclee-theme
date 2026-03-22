@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: cclee-hub/cclee-toolkit
-          token: ${{ secrets.CCLEE_TOOLKIT_PAT }}
+          token: ${{ secrets.CCLEE_THEME_PAT }}
           path: cclee-toolkit-repo
 
       - name: Sync plugin files

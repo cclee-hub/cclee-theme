@@ -91,8 +91,18 @@ functions.php
 
 | Token | Slugs |
 |-------|-------|
-| Colors | `primary`, `secondary`, `accent`, `base`, `contrast` |
+| Colors | `primary`, `secondary`, `accent`, `base`, `contrast`, `surface` |
 | Neutral | `neutral-50` ~ `neutral-900`（10 级）|
+
+**颜色语义：**
+| Token | 用途 |
+|-------|------|
+| `primary` | 品牌主色（Logo、主按钮、强调文字） |
+| `secondary` | 次要元素 |
+| `accent` | 行动召唤（CTA 按钮、链接） |
+| `base` | 页面主背景 |
+| `contrast` | 与 base 形成对比的区块背景（浅色场景） |
+| `surface` | 深色区块背景（Footer、暗色 CTA、暗色 Hero） |
 | Font Families | `system`, `mono` |
 | Font Sizes | `small`, `medium`, `large`, `x-large`, `xx-large`, `h1`~`h6` |
 | Spacing | `10`(0.25rem) ~ `100`(8rem) |

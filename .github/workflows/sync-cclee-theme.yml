@@ -1,0 +1,42 @@
+name: Sync cclee-theme to open source repo
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'wp/wordpress/wp-content/themes/cclee-theme/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout yougu repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout cclee-theme repo
+        uses: actions/checkout@v4
+        with:
+          repository: cclee-hub/cclee-theme
+          token: ${{ secrets.CCLEE_THEME_PAT }}
+          path: cclee-theme-repo
+
+      - name: Sync theme files
+        run: |
+          cd cclee-theme-repo
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -r "$GITHUB_WORKSPACE/wp/wordpress/wp-content/themes/cclee-theme/"* .
+          cp -r "$GITHUB_WORKSPACE/wp/wordpress/wp-content/themes/cclee-theme/".* . 2>/dev/null || true
+
+      - name: Commit and push changes
+        run: |
+          cd cclee-theme-repo
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || {
+            git commit -m "sync: from yougu repo"
+            git push origin main
+          }

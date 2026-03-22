@@ -1,5 +1,13 @@
-# WordPress core files
-wp/wordpress/
+# WordPress core files (keep themes for version control)
+wp/wordpress/wp-admin/
+wp/wordpress/wp-includes/
+wp/wordpress/wp-*.php
+wp/wordpress/xmlrpc.php
+wp/wordpress/index.php
+wp/wordpress/wp-content/plugins/
+wp/wordpress/wp-content/uploads/
+wp/wordpress/wp-content/upgrade/
+wp/wordpress/wp-content/backup/
 
 # PbootCMS runtime (auto-generated)
 cn-site/runtime/

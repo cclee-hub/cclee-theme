@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Professional",
+	"description": "金融/法律风格，传递权威与高端感",
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "primary", "color": "#1e3a8a", "name": "Primary" },
+				{ "slug": "secondary", "color": "#1e40af", "name": "Secondary" },
+				{ "slug": "accent", "color": "#d97706", "name": "Accent" },
+				{ "slug": "base", "color": "#ffffff", "name": "Base" },
+				{ "slug": "contrast", "color": "#eff6ff", "name": "Contrast" },
+				{ "slug": "surface", "color": "#1e3a8a", "name": "Surface" },
+				{ "slug": "neutral-50", "color": "#fafafa", "name": "Neutral 50" },
+				{ "slug": "neutral-100", "color": "#f5f5f5", "name": "Neutral 100" },
+				{ "slug": "neutral-200", "color": "#e5e5e5", "name": "Neutral 200" },
+				{ "slug": "neutral-300", "color": "#d4d4d4", "name": "Neutral 300" },
+				{ "slug": "neutral-400", "color": "#a3a3a3", "name": "Neutral 400" },
+				{ "slug": "neutral-500", "color": "#737373", "name": "Neutral 500" },
+				{ "slug": "neutral-600", "color": "#525252", "name": "Neutral 600" },
+				{ "slug": "neutral-700", "color": "#404040", "name": "Neutral 700" },
+				{ "slug": "neutral-800", "color": "#262626", "name": "Neutral 800" },
+				{ "slug": "neutral-900", "color": "#171717", "name": "Neutral 900" }
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--primary)"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--accent)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--primary)"
+					}
+				}
+			}
+		}
+	}
+}

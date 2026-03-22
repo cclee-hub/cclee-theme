@@ -1,0 +1,228 @@
+/*
+ * WooCommerce 兼容样式 — 轻电商原则
+ *
+ * 仅覆盖核心元素样式，不重写模板
+ * 引用 theme.json 设计 token
+ */
+
+/* ===== 按钮统一 ===== */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce .button {
+	background-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--base);
+	padding: 0.625rem 1.25rem;
+	border-radius: 0.25rem;
+	border: none;
+	font-size: var(--wp--preset--font-size--medium);
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color 0.2s ease;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce .button:hover {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+}
+
+.woocommerce .button.alt,
+.woocommerce .button.checkout {
+	background-color: var(--wp--preset--color--accent);
+}
+
+/* ===== 产品网格 ===== */
+.woocommerce ul.products {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: var(--wp--preset--spacing--50);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.woocommerce ul.products li.product {
+	margin: 0;
+	padding: var(--wp--preset--spacing--40);
+	background: var(--wp--preset--color--base);
+	border: 1px solid var(--wp--preset--color--contrast);
+	border-radius: 8px;
+	text-align: center;
+}
+
+.woocommerce ul.products li.product a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.woocommerce ul.products li.product h2,
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	font-size: var(--wp--preset--font-size--large);
+	color: var(--wp--preset--color--primary);
+	margin: var(--wp--preset--spacing--30) 0 var(--wp--preset--spacing--20);
+}
+
+.woocommerce ul.products li.product .price {
+	font-size: var(--wp--preset--font-size--medium);
+	color: var(--wp--preset--color--accent);
+	font-weight: 600;
+}
+
+/* ===== 单品页 ===== */
+.woocommerce div.product .product_title {
+	font-size: var(--wp--preset--font-size--xx-large);
+	color: var(--wp--preset--color--primary);
+}
+
+.woocommerce div.product .price {
+	font-size: var(--wp--preset--font-size--x-large);
+	color: var(--wp--preset--color--accent);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	padding: 0;
+	margin: var(--wp--preset--spacing--50) 0;
+	list-style: none;
+	border-bottom: 1px solid var(--wp--preset--color--contrast);
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	margin: 0;
+	padding: 0.5rem 1rem;
+	border: none;
+	background: transparent;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	border-bottom: 2px solid var(--wp--preset--color--accent);
+}
+
+/* ===== 购物车 ===== */
+.woocommerce table.shop_table {
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 0;
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table td {
+	padding: var(--wp--preset--spacing--30);
+	border: 1px solid var(--wp--preset--color--contrast);
+}
+
+.woocommerce table.shop_table th {
+	background: var(--wp->preset--color--contrast);
+}
+
+.woocommerce-cart .cart_totals {
+	background: var(--wp--preset--color--contrast);
+	padding: var(--wp--preset--spacing--40);
+	border-radius: 8px;
+}
+
+/* ===== 结账 ===== */
+.woocommerce-checkout .woocommerce-billing-fields h3,
+.woocommerce-checkout .woocommerce-shipping-fields h3,
+.woocommerce-checkout #order_review_heading {
+	font-size: var(--wp--preset--font-size--x-large);
+	color: var(--wp--preset--color--primary);
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+	border: 1px solid var(--wp--preset--color--contrast);
+	border-radius: 4px;
+	padding: 0.75rem;
+	width: 100%;
+}
+
+.woocommerce form .form-row label {
+	color: var(--wp--preset--color--secondary);
+}
+
+/* ===== 消息提示 ===== */
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error {
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+	margin-bottom: var(--wp--preset--spacing--40);
+	border-radius: 4px;
+}
+
+.woocommerce-message {
+	background: var(--wp--preset--color--contrast);
+	color: var(--wp--preset--color--primary);
+	border-left: 4px solid var(--wp--preset--color--accent);
+}
+
+.woocommerce-error {
+	background: #fff0f0;
+	color: #c00;
+	border-left: 4px solid #c00;
+}
+
+/* ===== 分页 ===== */
+.woocommerce nav.woocommerce-pagination {
+	margin: var(--wp--preset--spacing--60) 0;
+}
+
+.woocommerce nav.woocommerce-pagination ul {
+	display: flex;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+	border: none;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--wp--preset--color--contrast);
+	border-radius: 4px;
+	color: var(--wp--preset--color--primary);
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+	background: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--base);
+	border-color: var(--wp--preset--color--accent);
+}
+
+/* ===== 星级评分 ===== */
+.woocommerce .star-rating {
+	color: #f0ad4e;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+	.woocommerce ul.products {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--wp--preset--spacing--30);
+	}
+
+	.woocommerce table.shop_table thead {
+		display: none;
+	}
+
+	.woocommerce table.shop_table td {
+		display: block;
+		text-align: right;
+	}
+
+	.woocommerce table.shop_table td::before {
+		content: attr(data-title) ": ";
+		float: left;
+		font-weight: 600;
+	}
+}

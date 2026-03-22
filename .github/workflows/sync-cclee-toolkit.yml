@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'wp/wordpress/wp-content/plugins/cclee-toolkit/**'
+  workflow_dispatch:
 
 jobs:
   sync:

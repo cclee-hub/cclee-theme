@@ -4,7 +4,8 @@ wp/wordpress/wp-includes/
 wp/wordpress/wp-*.php
 wp/wordpress/xmlrpc.php
 wp/wordpress/index.php
-wp/wordpress/wp-content/plugins/
+wp/wordpress/wp-content/plugins/*
+!wp/wordpress/wp-content/plugins/cclee-toolkit/
 wp/wordpress/wp-content/uploads/
 wp/wordpress/wp-content/upgrade/
 wp/wordpress/wp-content/backup/
@@ -38,4 +39,3 @@ wp/wordpress/readme.html
 wp/wordpress/wp-content/languages/
 wp/wordpress/wp-content/index.php
 wp/wordpress/wp-content/*/index.php
-cclee-toolkit/

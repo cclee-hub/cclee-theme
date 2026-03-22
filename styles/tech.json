@@ -11,6 +11,7 @@
 				{ "slug": "accent", "color": "#8b5cf6", "name": "Accent" },
 				{ "slug": "base", "color": "#0f0f1a", "name": "Base" },
 				{ "slug": "contrast", "color": "#1e1e2e", "name": "Contrast" },
+				{ "slug": "surface", "color": "#1e1e2e", "name": "Surface" },
 				{ "slug": "neutral-50", "color": "#fafafa", "name": "Neutral 50" },
 				{ "slug": "neutral-100", "color": "#f5f5f5", "name": "Neutral 100" },
 				{ "slug": "neutral-200", "color": "#e5e5e5", "name": "Neutral 200" },

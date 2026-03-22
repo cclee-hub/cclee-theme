@@ -66,6 +66,11 @@
           "name": "Contrast"
         },
         {
+          "slug": "surface",
+          "color": "#0f172a",
+          "name": "Surface"
+        },
+        {
           "slug": "neutral-50",
           "color": "#fafafa",
           "name": "Neutral 50"

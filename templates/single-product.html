@@ -1,0 +1,30 @@
+<!-- wp:template -->
+<!-- wp:template-part {"slug":"header"} /-->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
+	<!-- wp:woocommerce/legacy-template {"template":"single-product"} /-->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|x-large"} -->
+	<div style="height:var(--wp--preset--spacing--x-large)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:heading {"textAlign":"center","level":2} -->
+	<h2 class="wp-block-heading has-text-align-center">Related Products</h2>
+	<!-- /wp:heading -->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|medium"} -->
+	<div style="height:var(--wp--preset--spacing--medium)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:woocommerce/related-products {"columns":4} /-->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|x-large"} -->
+	<div style="height:var(--wp--preset--spacing--x-large)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+</div>
+<!-- /wp:group -->
+
+<!-- wp:pattern {"slug":"cclee-theme/cta-banner"} /-->
+<!-- wp:template-part {"slug":"footer"} /-->
+<!-- /wp:template -->

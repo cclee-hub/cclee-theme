@@ -702,6 +702,20 @@
       ]
     },
     {
+      "name": "archive-product",
+      "title": "Product Archive",
+      "postTypes": [
+        "product"
+      ]
+    },
+    {
+      "name": "single-product",
+      "title": "Single Product",
+      "postTypes": [
+        "product"
+      ]
+    },
+    {
       "name": "404",
       "title": "404 Not Found"
     }

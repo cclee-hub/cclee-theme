@@ -352,6 +352,8 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | `404.html` | 404 页面 | ✅ | ✅ | 单栏 | 标题 + 描述 + **搜索框** |
 | `archive-product.html` | WooCommerce 产品归档 | ✅ | ✅ | 70/30 两栏 | hero-simple + **3列产品网格** + sidebar（分类/价格过滤）+ cta-banner |
 | `single-product.html` | WooCommerce 单品页 | ✅ | ✅ | 单栏 | legacy-template + **相关产品** + cta-banner |
+| `cart.html` | WooCommerce 购物车 | ✅ | ✅ | 65/35 两栏 | progress-steps + cart + order-summary + trust-badges |
+| `checkout.html` | WooCommerce 结算 | ✅ | ✅ | 60/40 两栏 | progress-steps + checkout + order-summary + trust-badges |
 
 ### Patterns 清单
 
@@ -377,6 +379,8 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | Landing Video Hero | `cclee-theme/landing-video-hero` | featured | 全屏视频背景 Hero |
 | Landing Trust Bar | `cclee-theme/landing-trust-bar` | featured | 信任徽章横条 |
 | Landing Countdown | `cclee-theme/landing-countdown` | featured | 限时优惠倒计时 |
+| WooCommerce Progress Steps | `cclee-theme/woo-progress-steps` | woocommerce | 结算进度条（购物车 → 结算 → 完成） |
+| WooCommerce Trust Badges | `cclee-theme/woo-trust-badges` | woocommerce | 信任徽章（安全支付/退换货/快速配送） |
 
 ### Parts 清单
 
@@ -405,7 +409,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 |------|------|--------|------|
 | ~~Landing Page 模板~~ | ~~投放页/活动页无法实现~~ | ✅ **已完成** | `page-landing.html` + 4 个 Landing Patterns |
 | Case Study 详情模板 | B 端客户案例转化页缺失 | **P1** | 新建 `single-case-study.html` + CPT + ACF 字段 |
-| WooCommerce Cart/Checkout | 购物车/结算页未定制 | P1 | 新建 `cart.html` / `checkout.html` |
+| ~~WooCommerce Cart/Checkout~~ | ~~购物车/结算页未定制~~ | ✅ **已完成** | `cart.html` / `checkout.html` + 2 个 Woo Patterns |
 | Author/Date 归档 | 无专属模板，回退到 archive.html | P2 | 可选，archive.html 已足够 |
 | 归档布局变体 | 仅 3 列网格，无列表/杂志布局 | P2 | 新建 pattern 变体 |
 

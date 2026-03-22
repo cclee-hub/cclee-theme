@@ -226,3 +226,138 @@
 		font-weight: 600;
 	}
 }
+
+/* ========================================
+   Cart & Checkout Page Styles
+   ======================================== */
+
+/* Progress Steps */
+.woo-progress-steps {
+	flex-wrap: wrap;
+}
+
+.woo-progress-step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.woo-progress-step--active .wp-block-group {
+	background: var(--wp--preset--color--accent);
+	border-color: var(--wp--preset--color--accent);
+}
+
+/* Trust Badges */
+.woo-trust-badges {
+	padding: var(--wp--preset--spacing--20) 0;
+	border-top: 1px solid var(--wp--preset--color--neutral-200);
+}
+
+.woo-trust-badge {
+	transition: opacity var(--wp--custom--transition--fast);
+}
+
+.woo-trust-badge:hover {
+	opacity: 0.8;
+}
+
+/* Cart Page */
+.cclee-cart .woocommerce-cart-form {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.cclee-cart table.shop_table {
+	border-radius: var(--wp--custom--border--radius--lg);
+	overflow: hidden;
+}
+
+.cclee-cart .coupon {
+	display: flex;
+	gap: var(--wp--preset--spacing--20);
+	align-items: center;
+}
+
+.cclee-cart .coupon input.input-text {
+	flex: 1;
+	max-width: 200px;
+}
+
+/* Checkout Page */
+.cclee-checkout .woocommerce-billing-fields,
+.cclee-checkout .woocommerce-shipping-fields,
+.cclee-checkout .woocommerce-additional-fields {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.cclee-checkout h3 {
+	font-size: var(--wp--preset--font-size--large);
+	color: var(--wp--preset--color--primary);
+	margin-bottom: var(--wp--preset--spacing--30);
+	padding-bottom: var(--wp--preset--spacing--20);
+	border-bottom: 1px solid var(--wp--preset--color--neutral-200);
+}
+
+/* Order Summary Sidebar */
+.cclee-checkout + .wp-block-column .wp-block-group {
+	position: sticky;
+	top: 100px;
+}
+
+/* Payment Methods */
+.cclee-checkout .woocommerce-checkout-payment {
+	background: var(--wp--preset--color--contrast);
+	padding: var(--wp--preset--spacing--40);
+	border-radius: var(--wp--custom--border--radius--lg);
+	margin-top: var(--wp--preset--spacing--30);
+}
+
+.cclee-checkout .woocommerce-checkout-payment ul.payment_methods {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 var(--wp--preset--spacing--30) 0;
+}
+
+.cclee-checkout .woocommerce-checkout-payment ul.payment_methods li {
+	margin-bottom: var(--wp--preset--spacing--20);
+}
+
+.cclee-checkout .woocommerce-checkout-payment label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--15);
+}
+
+/* Place Order Button */
+.cclee-checkout .woocommerce-checkout-payment .place-order {
+	margin-top: var(--wp--preset--spacing--30);
+}
+
+.cclee-checkout .woocommerce-checkout-payment .button {
+	width: 100%;
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--medium);
+	font-weight: 600;
+}
+
+/* Mobile Cart/Checkout */
+@media (max-width: 768px) {
+	.woo-progress-steps {
+		gap: var(--wp--preset--spacing--15);
+	}
+
+	.woo-progress-steps .wp-block-separator {
+		width: 30px !important;
+	}
+
+	.cclee-cart,
+	.cclee-checkout {
+		margin-bottom: var(--wp--preset--spacing--40);
+	}
+
+	.woo-trust-badges {
+		flex-direction: column;
+		gap: var(--wp--preset--spacing--20);
+	}
+}

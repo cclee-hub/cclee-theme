@@ -718,6 +718,13 @@
     {
       "name": "404",
       "title": "404 Not Found"
+    },
+    {
+      "name": "author",
+      "title": "Author Archive",
+      "postTypes": [
+        "post"
+      ]
     }
   ]
 }

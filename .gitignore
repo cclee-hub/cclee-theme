@@ -30,3 +30,11 @@ cn-site/static/backup/sql/
 # OS
 .DS_Store
 Thumbs.db
+
+# Additional WordPress files
+wp/wordpress/.htaccess
+wp/wordpress/license.txt
+wp/wordpress/readme.html
+wp/wordpress/wp-content/languages/
+wp/wordpress/wp-content/index.php
+wp/wordpress/wp-content/*/index.php

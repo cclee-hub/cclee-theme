@@ -45,9 +45,16 @@ add_action( 'wp_head', function () {
 	if ( is_archive() ) {
 		$title = get_the_archive_title();
 		$desc  = get_the_archive_description();
-		$url   = is_post_type_archive()
-			? get_post_type_archive_link( get_post_type() )
-			: get_term_link( get_queried_object() );
+
+		// 获取归档链接
+		$queried = get_queried_object();
+		if ( is_post_type_archive() ) {
+			$url = get_post_type_archive_link( get_post_type() );
+		} elseif ( $queried && ! is_wp_error( $queried ) ) {
+			$url = get_term_link( $queried );
+		} else {
+			$url = home_url( '/' );
+		}
 	}
 
 	// 首页

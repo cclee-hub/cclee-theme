@@ -109,6 +109,17 @@ body:not(.woocommerce-active) .woo-cart-icon {
    Pattern-Specific Styles
    ======================================== */
 
+/* Timeline: Fixed circle dot */
+.cclee-timeline-dot {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 /* Features Grid: Card style for columns */
 .is-pattern-pricing .wp-block-column > .wp-block-group,
 .wp-block-columns.is-style-cards .wp-block-column > .wp-block-group {

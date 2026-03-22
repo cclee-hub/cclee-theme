@@ -23,6 +23,7 @@ functions.php
     ├─→ inc/block-patterns.php  # Pattern 分类注册
     ├─→ inc/seo.php             # SEO 输出
     ├─→ inc/woocommerce.php     # WooCommerce 兼容
+    ├─→ inc/case-study.php      # Case Study CPT + Meta 字段
     └─→ inc/editor-ai.php       # AI 编辑器辅助
 ```
 
@@ -354,6 +355,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | `single-product.html` | WooCommerce 单品页 | ✅ | ✅ | 单栏 | legacy-template + **相关产品** + cta-banner |
 | `cart.html` | WooCommerce 购物车 | ✅ | ✅ | 65/35 两栏 | progress-steps + cart + order-summary + trust-badges |
 | `checkout.html` | WooCommerce 结算 | ✅ | ✅ | 60/40 两栏 | progress-steps + checkout + order-summary + trust-badges |
+| `single-case-study.html` | Case Study 详情 | ✅ | ✅ | Pattern 组装 | hero + challenge + solution + metrics + testimonial + gallery + related |
 
 ### Patterns 清单
 
@@ -381,6 +383,8 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | Landing Countdown | `cclee-theme/landing-countdown` | featured | 限时优惠倒计时 |
 | WooCommerce Progress Steps | `cclee-theme/woo-progress-steps` | woocommerce | 结算进度条（购物车 → 结算 → 完成） |
 | WooCommerce Trust Badges | `cclee-theme/woo-trust-badges` | woocommerce | 信任徽章（安全支付/退换货/快速配送） |
+| Case Study Metrics | `cclee-theme/case-study-metrics` | featured | 成果数据展示（4列指标） |
+| Case Study Testimonial | `cclee-theme/case-study-testimonial` | featured | 客户评价卡片 |
 
 ### Parts 清单
 
@@ -408,7 +412,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | 缺失 | 影响 | 优先级 | 建议 |
 |------|------|--------|------|
 | ~~Landing Page 模板~~ | ~~投放页/活动页无法实现~~ | ✅ **已完成** | `page-landing.html` + 4 个 Landing Patterns |
-| Case Study 详情模板 | B 端客户案例转化页缺失 | **P1** | 新建 `single-case-study.html` + CPT + ACF 字段 |
+| ~~Case Study 详情模板~~ | ~~B 端客户案例转化页缺失~~ | ✅ **已完成** | `single-case-study.html` + CPT + 2 个 Patterns |
 | ~~WooCommerce Cart/Checkout~~ | ~~购物车/结算页未定制~~ | ✅ **已完成** | `cart.html` / `checkout.html` + 2 个 Woo Patterns |
 | Author/Date 归档 | 无专属模板，回退到 archive.html | P2 | 可选，archive.html 已足够 |
 | 归档布局变体 | 仅 3 列网格，无列表/杂志布局 | P2 | 新建 pattern 变体 |

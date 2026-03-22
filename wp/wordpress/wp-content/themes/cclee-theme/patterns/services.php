@@ -9,6 +9,22 @@
 <!-- wp:group {"align":"full","backgroundColor":"contrast","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
+	<!-- wp:spacer {"height":"var:preset|spacing|80"} -->
+	<div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
+	<!-- wp:heading {"textAlign":"center","fontSize":"h2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-h-2-font-size">Our Services</h2>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->
+	<p class="has-text-align-center has-neutral-500-color has-text-color">Professional solutions tailored to your business needs</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:spacer {"height":"var:preset|spacing|60"} -->
+	<div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
+	<!-- /wp:spacer -->
+
 	<!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
 	<div class="wp-block-group">
 

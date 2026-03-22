@@ -221,4 +221,5 @@ GNU General Public License v2 or later
 ## Links
 
 - [GitHub Repository](https://github.com/cclee-hub/cclee-theme)
-- [Author](https://github.com/cclee-hub)
+- [About Aigent](https://www.aigent.ren/about)
+- [About AI DevHub](https://aidevhub.ai/about)

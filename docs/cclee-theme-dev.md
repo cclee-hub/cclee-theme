@@ -37,10 +37,13 @@ functions.php
 | `after_setup_theme` | 注册 theme support、导航菜单 |
 | `wp_enqueue_scripts` | 加载 `assets/css/custom.css` |
 | `wp_footer:99` | 触发 `cclee_float_widget` hook |
+| `after_switch_theme` | 主题激活时创建默认导航菜单（Primary/Footer） |
 
 **Theme Support：** `wp-block-styles`, `editor-styles`, `post-thumbnails`, `responsive-embeds`, `title-tag`, `custom-logo`
 
 **菜单位置：** `primary`, `footer`
+
+**自动创建导航：** 激活主题时检测是否存在 `wp_navigation` 帖子，不存在则自动创建 Primary Menu（Home/About/Products/Blog/Contact）和 Footer Menu（About/Contact/Blog）
 
 ---
 
@@ -69,7 +72,17 @@ functions.php
 
 ### woocommerce.php
 
-声明 Woo 支持（zoom/lightbox/slider），条件加载 `assets/css/woocommerce.css`
+| 钩子/过滤器 | 作用 |
+|-------------|------|
+| `after_setup_theme` | 声明 Woo 支持（zoom/lightbox/slider）|
+| `wp_enqueue_scripts` | 条件加载 `assets/css/woocommerce.css` |
+| `woocommerce_enqueue_styles` | 移除 Woo 默认样式（保留 general）|
+| `woocommerce_before_main_content` | 替换包装器为主题布局 |
+| `gettext` | B2B 文字替换（Shop → Products）|
+| `woocommerce_page_title` | 修改归档页标题 |
+| `woocommerce_helper_suppress_admin_notice` | 隐藏 WooCommerce.com 登录提示 |
+
+**设计原则：** 主题管样式，Woo 管功能；不重写 Woo 模板文件，仅通过 CSS 覆盖
 
 ---
 
@@ -93,6 +106,23 @@ functions.php
 |-------|-------|
 | Colors | `primary`, `secondary`, `accent`, `base`, `contrast`, `surface` |
 | Neutral | `neutral-50` ~ `neutral-900`（10 级）|
+| Gradients | `primary-gradient`, `accent-gradient`, `hero-gradient`, `subtle-gradient`, `glass-gradient`, `warm-gradient`, `cool-gradient` |
+| Shadows | `sm`, `md`, `lg`, `soft`, `elevated`, `card`, `glow`, `inner-glow` |
+| Font Families | `heading`(DM Serif Display), `body`(Inter), `system`, `mono` |
+| Font Sizes | `small`, `medium`, `large`, `x-large`, `xx-large`, `h1`~`h6` |
+| Spacing | `10`(0.25rem) ~ `100`(8rem) |
+| Layout | `contentSize: 800px`, `wideSize: 1200px` |
+
+**Custom Tokens（CSS 变量）：**
+| Token | 值 |
+|-------|-----|
+| `--wp--custom--breakpoints--mobile` | 640px |
+| `--wp--custom--breakpoints--tablet` | 768px |
+| `--wp--custom--breakpoints--desktop` | 1024px |
+| `--wp--custom--breakpoints--wide` | 1280px |
+| `--wp--custom--border--radius--sm/md/lg/full` | 4px/8px/12px/9999px |
+| `--wp--custom--transition--fast/normal/slow` | 150ms/250ms/400ms |
+| `--wp--custom--easing--default/bounce` | cubic-bezier 曲线 |
 
 **颜色语义：**
 | Token | 用途 |
@@ -103,11 +133,6 @@ functions.php
 | `base` | 页面主背景 |
 | `contrast` | 与 base 形成对比的区块背景（浅色场景） |
 | `surface` | 深色区块背景（Footer、暗色 CTA、暗色 Hero） |
-| Font Families | `system`, `mono` |
-| Font Sizes | `small`, `medium`, `large`, `x-large`, `xx-large`, `h1`~`h6` |
-| Spacing | `10`(0.25rem) ~ `100`(8rem) |
-| Layout | `contentSize: 800px`, `wideSize: 1200px` |
-| Transitions | `fast`(150ms), `normal`(250ms), `slow`(400ms) |
 
 **CSS 变量引用：**
 ```css
@@ -130,6 +155,7 @@ cclee-theme/
 ├── templates/
 │   ├── 404.html
 │   ├── archive.html
+│   ├── archive-product.html       # WooCommerce 产品归档
 │   ├── front-page.html
 │   ├── home.html
 │   ├── index.html
@@ -140,14 +166,15 @@ cclee-theme/
 │   ├── page-no-sidebar.html
 │   ├── page-pattern-preview.html  # Patterns 集中展示
 │   ├── search.html
-│   └── single.html
+│   ├── single.html
+│   └── single-product.html        # WooCommerce 单品页
 │
 ├── parts/
 │   ├── header.html        # 含 skip-to-content 无障碍链接
 │   ├── footer.html
 │   └── sidebar.html
 │
-├── patterns/              # 14 个预制区块
+├── patterns/              # 16 个预制区块
 │   ├── ai-content-block.php
 │   ├── contact.php
 │   ├── cta-banner.php
@@ -157,7 +184,9 @@ cclee-theme/
 │   ├── hero-centered.php
 │   ├── hero-simple.php
 │   ├── logo-cloud.php
+│   ├── portfolio.php
 │   ├── pricing.php
+│   ├── services.php
 │   ├── stats.php
 │   ├── team.php
 │   ├── testimonial.php
@@ -218,9 +247,8 @@ cclee-theme/
 
 ## 无障碍
 
-**Skip to Content：** `parts/header.html` 包含跳转链接，`custom.css` 隐藏（focus 时显示）
-
-**模板锚点：** 所有模板主内容区 `anchor:"main"`
+- `parts/header.html` 包含 Skip to Content 链接
+- 所有模板主内容区 `anchor:"main"`
 
 ---
 
@@ -256,19 +284,6 @@ add_action('wp_enqueue_scripts', function() {
     wp_enqueue_style('child-style', get_stylesheet_uri(), ['cclee-custom']);
 });
 ```
-
----
-
-## 常见问题
-
-> 详细排查流程见 `.claude/rules/wp-theme-errors.md` 和 `.claude/rules/gotchas.md`
-
-| 问题 | 原因 | 解决 |
-|------|------|------|
-| Pattern 验证失败 | 颜色 slug 不存在 | 使用 `neutral-100/200/500` |
-| 导航显示所有页面 | `wp_navigation` 帖子干扰 | 删除帖子，清除缓存 |
-| 块属性 JSON 错误 | 重复 key 或格式错误 | 合并属性，验证 JSON |
-| 店铺显示 Coming Soon | `woocommerce_coming_soon=yes` | `wp option update woocommerce_coming_soon no` |
 
 ---
 
@@ -310,6 +325,89 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 # 导入到媒体库（需要 PHP 脚本）
 # 详见项目记录
 ```
+
+---
+
+## 功能清单
+
+> 由 `/sync-theme-doc` 技能自动生成，反映代码实际状态
+
+### 模板能力矩阵
+
+| 模板 | 用途 | Header | Footer | 布局 | 特性 |
+|------|------|--------|--------|------|------|
+| `front-page.html` | 静态首页 | ✅ | ✅ | Pattern 组装 | hero-centered + features-grid + cta-banner |
+| `home.html` | 博客列表首页 | ✅ | ✅ | 3列网格 | hero-simple + post-grid + cta-banner + 分页 + 空状态 |
+| `index.html` | 通用回退 | ✅ | ✅ | 3列网格 | post-grid + 分页 + 空状态 |
+| `archive.html` | 归档页（分类/标签/日期） | ✅ | ✅ | 3列网格 | 标题 + post-grid + 分页 + 空状态 |
+| `search.html` | 搜索结果 | ✅ | ✅ | 3列网格 | 搜索标题 + post-grid + **空状态含二次搜索** |
+| `single.html` | 单篇文章 | ✅ | ✅ | 70/30 两栏 | 标题 + 日期/分类 + 特色图 + 内容 + **上下篇导航** + **评论** + sidebar |
+| `page.html` | 通用页面 | ✅ | ✅ | 单栏 | 标题 + 特色图 + 内容 |
+| `page-no-sidebar.html` | 无侧边栏页面 | ✅ | ✅ | 单栏 | 标题 + 特色图 + 内容（全宽） |
+| `page-about-us.html` | 关于我们 | ✅ | ✅ | Pattern 组装 | hero-simple + content + features-grid + cta-banner |
+| `page-contact.html` | 联系我们 | ✅ | ✅ | Pattern 组装 | hero-simple + contact form + cta-banner |
+| `page-landing.html` | Landing Page | ❌ | ❌ | Pattern 组装 | 无 header/footer，最小导航 + 微型页脚 |
+| `page-design-preview.html` | 设计预览入口 | ✅ | ✅ | 单栏 | 模板/Pattern 导航索引 |
+| `page-pattern-preview.html` | Pattern 集中展示 | ✅ | ✅ | Pattern 组装 | 展示全部 16 个 Patterns |
+| `404.html` | 404 页面 | ✅ | ✅ | 单栏 | 标题 + 描述 + **搜索框** |
+| `archive-product.html` | WooCommerce 产品归档 | ✅ | ✅ | 70/30 两栏 | hero-simple + **3列产品网格** + sidebar（分类/价格过滤）+ cta-banner |
+| `single-product.html` | WooCommerce 单品页 | ✅ | ✅ | 单栏 | legacy-template + **相关产品** + cta-banner |
+
+### Patterns 清单
+
+| Pattern | Slug | 分类 | 用途 |
+|---------|------|------|------|
+| Hero Centered | `cclee-theme/hero-centered` | featured | 居中大标题，渐变背景，装饰元素 |
+| Hero Simple | `cclee-theme/hero-simple` | featured | 左对齐简单 Hero，浅色背景 |
+| Features Grid | `cclee-theme/features-grid` | featured | 三列特性卡片网格 |
+| Services | `cclee-theme/services` | - | 垂直服务列表，图标+描述 |
+| Stats Section | `cclee-theme/stats` | featured | 关键数据展示，渐变背景 |
+| Portfolio | `cclee-theme/portfolio` | - | 项目展示网格，卡片+标签 |
+| Logo Cloud | `cclee-theme/logo-cloud` | featured | 合作伙伴 Logo 静态展示，hover 缩放效果 |
+| Team Members | `cclee-theme/team` | featured | 四列团队成员卡片 |
+| Testimonials | `cclee-theme/testimonial` | featured | 三列客户评价卡片 |
+| Pricing Table | `cclee-theme/pricing` | featured | 三列价格表 |
+| Timeline Section | `cclee-theme/timeline` | featured | 公司历程/里程碑时间线 |
+| FAQ Section | `cclee-theme/faq` | featured | 手风琴式常见问题，原生 details 元素 |
+| Contact Section | `cclee-theme/contact` | featured | 联系表单 + 信息区块 |
+| CTA Banner | `cclee-theme/cta-banner` | featured | 全宽行动召唤横幅 |
+| Footer Columns | `cclee-theme/footer-columns` | footer | 四列页脚区块（可独立使用） |
+| AI Content Block | `cclee-theme/ai-content-block` | featured | AI 辅助内容区块示例 |
+| Landing Hero with Form | `cclee-theme/landing-hero-form` | featured | Hero + 侧边线索收集表单 |
+| Landing Video Hero | `cclee-theme/landing-video-hero` | featured | 全屏视频背景 Hero |
+| Landing Trust Bar | `cclee-theme/landing-trust-bar` | featured | 信任徽章横条 |
+| Landing Countdown | `cclee-theme/landing-countdown` | featured | 限时优惠倒计时 |
+
+### Parts 清单
+
+| Part | 用途 | 特性 |
+|------|------|------|
+| `header.html` | 站点头部 | skip-link + sticky + site-title + navigation + loginout + mini-cart |
+| `footer.html` | 站点底部 | site-title + tagline + navigation + 版权 |
+| `sidebar.html` | 侧边栏 | 搜索框 + 分类列表 + 最新文章 + 归档 |
+
+### 已实现功能特性
+
+| 特性 | 状态 | 说明 |
+|------|------|------|
+| 空状态设计 | ✅ | search.html 含二次搜索框，其他模板含提示文字 |
+| 分页 | ✅ | query-pagination 块 |
+| 文章导航 | ✅ | single.html 上下篇导航 |
+| 评论区 | ✅ | single.html comments 块 |
+| WooCommerce 兼容 | ✅ | 产品归档/单品页 + mini-cart |
+| 无障碍 | ✅ | skip-link + anchor:main |
+| SEO | ✅ | OG/Twitter Card + JSON-LD |
+| AI 编辑器辅助 | ✅ | 侧边栏 + REST API 代理 |
+
+### 缺口清单
+
+| 缺失 | 影响 | 优先级 | 建议 |
+|------|------|--------|------|
+| ~~Landing Page 模板~~ | ~~投放页/活动页无法实现~~ | ✅ **已完成** | `page-landing.html` + 4 个 Landing Patterns |
+| Case Study 详情模板 | B 端客户案例转化页缺失 | **P1** | 新建 `single-case-study.html` + CPT + ACF 字段 |
+| WooCommerce Cart/Checkout | 购物车/结算页未定制 | P1 | 新建 `cart.html` / `checkout.html` |
+| Author/Date 归档 | 无专属模板，回退到 archive.html | P2 | 可选，archive.html 已足够 |
+| 归档布局变体 | 仅 3 列网格，无列表/杂志布局 | P2 | 新建 pattern 变体 |
 
 ---
 

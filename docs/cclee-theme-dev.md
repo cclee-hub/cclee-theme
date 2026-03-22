@@ -410,16 +410,6 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | SEO | ✅ | OG/Twitter Card + JSON-LD |
 | AI 编辑器辅助 | ✅ | 侧边栏 + REST API 代理 |
 
-### 缺口清单
-
-| 缺失 | 影响 | 优先级 | 建议 |
-|------|------|--------|------|
-| ~~Landing Page 模板~~ | ~~投放页/活动页无法实现~~ | ✅ **已完成** | `page-landing.html` + 4 个 Landing Patterns |
-| ~~Case Study 详情模板~~ | ~~B 端客户案例转化页缺失~~ | ✅ **已完成** | `single-case-study.html` + CPT + 2 个 Patterns |
-| ~~WooCommerce Cart/Checkout~~ | ~~购物车/结算页未定制~~ | ✅ **已完成** | `cart.html` / `checkout.html` + 2 个 Woo Patterns |
-| ~~Author 归档~~ | ~~无专属模板，回退到 archive.html~~ | ✅ **已完成** | `author.html` 含作者头像/简介 |
-| ~~归档布局变体~~ | ~~仅 3 列网格，无列表/杂志布局~~ | ✅ **已完成** | `post-list.php` + `post-magazine.php` |
-
 ---
 
 ## Links

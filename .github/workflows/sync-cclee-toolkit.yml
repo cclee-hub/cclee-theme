@@ -39,5 +39,6 @@ jobs:
           git add -A
           git diff --quiet && git diff --staged --quiet || {
             git commit -m "sync: from yougu repo"
-            git push origin main
+            # Push to whatever branch we checked out (main for cclee-toolkit)
+            git push origin HEAD:main
           }

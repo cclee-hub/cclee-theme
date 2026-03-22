@@ -93,7 +93,20 @@
       "Bash(sudo unzip:*)",
       "Bash(cp -r wordpress-importer ~/workspace/yougu/wp/wordpress/wp-content/plugins/)",
       "Bash(rm -rf wordpress-importer wordpress-importer.0.9.5.zip)",
-      "Bash(python3 -c \"import zipfile; zipfile.ZipFile\\(''wordpress-importer.0.9.5.zip''\\).extractall\\(''.''\\)\")"
+      "Bash(python3 -c \"import zipfile; zipfile.ZipFile\\(''wordpress-importer.0.9.5.zip''\\).extractall\\(''.''\\)\")",
+      "Read(//home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/cclee-theme/templates/**)",
+      "Bash(__NEW_LINE_befcb2cbf118154c__ docker exec wp_cli wp post update 104 --post_content=\"Have questions about our products or services? We''d love to hear from you. Our team is ready to help you find the perfect soldering solution for your needs.:*)",
+      "Bash(do)",
+      "Bash(sed -i 's/\"\"theme\"\":\"\"cclee-theme\"\",//g' \"$f\")",
+      "Bash(sed -i 's/,\"\"theme\"\":\"\"cclee-theme\"\"//g' \"$f\")",
+      "Read(//home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/cclee-theme/templates/wp/wordpress/wp-content/themes/cclee-theme/parts for f in *.html do sed -i s/\"theme\":\"cclee-theme\",/g $f sed -i s/,\"theme\":\"cclee-theme\"/**)",
+      "Bash(head -1 __NEW_LINE_ed874c69e404c536__ echo \"\" echo \"4. 联系我们 \\(page_id=104\\) - 应使用 page-contact.html:\" curl -s \"http://localhost:8080/?page_id=104\")",
+      "Bash(head -1 __NEW_LINE_ed874c69e404c536__ echo \"\" echo \"5. 通用页面 \\(page_id=105\\) - 应使用 page.html \\(带侧边栏\\):\" curl -s \"http://localhost:8080/?page_id=105\")",
+      "Bash(head -1 __NEW_LINE_ed874c69e404c536__ echo \"\" echo \"8. 搜索结果 \\(s=soldering\\) - 应使用 search.html:\" curl -s \"http://localhost:8080/?s=soldering\")",
+      "Bash(head -1 __NEW_LINE_ed874c69e404c536__ echo \"\" echo \"9. 归档 \\(m=202603\\) - 应使用 archive.html:\" curl -s \"http://localhost:8080/?m=202603\")",
+      "Bash(head -1 __NEW_LINE_ed874c69e404c536__ echo \"\" echo \"10. 404 \\(page_id=999999\\) - 应使用 404.html:\" curl -s \"http://localhost:8080/?page_id=999999\")",
+      "Bash(grep -A 'href.*')",
+      "Bash(wc -l templates/*.html patterns/*.php)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/yougu",
@@ -108,7 +121,8 @@
       "/home/aptop/workspace/yougu/.claude",
       "/home/aptop/.claude/skills",
       "/home/aptop/.claude/skills/note-convention",
-      "/tmp"
+      "/tmp",
+      "/home/aptop/workspace/yougu/wp/wordpress/wp-content/themes"
     ]
   },
   "hooks": {

@@ -274,6 +274,9 @@ docker exec wp_cli wp theme activate twentytwentyfour --allow-root
 **排查顺序：**
 
 ```bash
+# 0. 先查 debug.log 排除 PHP 错误
+docker exec wp_wordpress cat /var/www/html/wp-content/debug.log 2>/dev/null || echo "无错误日志"
+
 # 1. 验证 theme.json 格式合法性
 docker exec wp_cli wp eval 'echo json_encode(json_decode(file_get_contents(get_template_directory() . "/theme.json")));' --allow-root
 
@@ -294,6 +297,12 @@ docker exec wp_cli wp cron event run --due-now --allow-root
 ## 场景三：块模板渲染异常
 
 **触发条件：** 编辑器或前端块显示异常、块验证失败提示
+
+**前置检查：**
+```bash
+# 先查 debug.log 排除 PHP 错误
+docker exec wp_wordpress cat /var/www/html/wp-content/debug.log 2>/dev/null || echo "无错误日志"
+```
 
 **检查清单：**
 - [ ] 块开闭注释是否成对：`<!-- wp:xxx -->` / `<!-- /wp:xxx -->`
@@ -323,6 +332,12 @@ docker exec wp_cli wp cron event run --due-now --allow-root
 
 **触发条件：** 编辑器中找不到自定义 pattern
 
+**前置检查：**
+```bash
+# 先查 debug.log 排除 PHP 错误（如 pattern 文件语法错误）
+docker exec wp_wordpress cat /var/www/html/wp-content/debug.log 2>/dev/null || echo "无错误日志"
+```
+
 **检查清单：**
 - [ ] 文件在 `patterns/` 目录下
 - [ ] 文件扩展名为 `.php`
@@ -346,6 +361,9 @@ docker exec wp_cli wp cron event run --due-now --allow-root
 ## 场景六：Git 部署后服务器不生效
 
 ```bash
+# 0. 先查服务器 debug.log 排除 PHP 错误
+ssh root@47.84.87.131 "cd /var/www/wp && docker exec wp_wordpress cat /var/www/html/wp-content/debug.log 2>/dev/null || echo '无错误日志'"
+
 # 1. 确认服务器已拉取
 ssh root@47.84.87.131 "cd /var/www/wp && git log --oneline -3"
 

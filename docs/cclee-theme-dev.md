@@ -131,8 +131,14 @@ cclee-theme/
 │   ├── 404.html
 │   ├── archive.html
 │   ├── front-page.html
+│   ├── home.html
 │   ├── index.html
 │   ├── page.html
+│   ├── page-about-us.html
+│   ├── page-contact.html
+│   ├── page-design-preview.html   # 设计预览入口
+│   ├── page-no-sidebar.html
+│   ├── page-pattern-preview.html  # Patterns 集中展示
 │   ├── search.html
 │   └── single.html
 │
@@ -141,17 +147,21 @@ cclee-theme/
 │   ├── footer.html
 │   └── sidebar.html
 │
-├── patterns/              # 10 个预制区块
-│   ├── hero-simple.php
-│   ├── hero-centered.php
-│   ├── features-grid.php
-│   ├── cta-banner.php
-│   ├── footer-columns.php
+├── patterns/              # 14 个预制区块
+│   ├── ai-content-block.php
 │   ├── contact.php
-│   ├── testimonial.php
+│   ├── cta-banner.php
+│   ├── faq.php
+│   ├── features-grid.php
+│   ├── footer-columns.php
+│   ├── hero-centered.php
+│   ├── hero-simple.php
+│   ├── logo-cloud.php
 │   ├── pricing.php
+│   ├── stats.php
 │   ├── team.php
-│   └── ai-content-block.php
+│   ├── testimonial.php
+│   └── timeline.php
 │
 ├── styles/                # Style Variations
 │   ├── commerce.json      # 商务蓝

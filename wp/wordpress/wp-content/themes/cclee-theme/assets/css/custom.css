@@ -576,3 +576,116 @@ a {
 .cclee-portfolio-card:hover img {
     transform: scale(1.02);
 }
+
+/* ========================================
+   Landing Page Styles
+   ======================================== */
+
+/* Landing Nav */
+.landing-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--wp--preset--color--neutral-100);
+}
+
+.landing-exit-link a {
+    color: var(--wp--preset--color--neutral-500);
+    text-decoration: none;
+    transition: color var(--wp--custom--transition--fast);
+}
+
+.landing-exit-link a:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+/* Landing Footer */
+.landing-footer a {
+    color: var(--wp--preset--color--neutral-500);
+    text-decoration: none;
+    transition: color var(--wp--custom--transition--fast);
+}
+
+.landing-footer a:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+/* Landing Video Container */
+.landing-video-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.landing-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Landing Countdown */
+.landing-countdown-item {
+    text-align: center;
+}
+
+.landing-countdown-number {
+    font-family: var(--wp--preset--font-family--heading);
+}
+
+/* Landing Trust Logo */
+.landing-trust-logo img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all var(--wp--custom--transition--normal);
+}
+
+.landing-trust-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Landing Form */
+.cclee-landing-form input:focus,
+.cclee-landing-form textarea:focus {
+    outline: none;
+    border-color: var(--wp--preset--color--accent);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+.cclee-landing-form button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.cclee-landing-form button:active {
+    transform: translateY(0);
+}
+
+/* Landing Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .landing-countdown-item {
+        padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30) !important;
+    }
+
+    .landing-countdown-number {
+        font-size: 2rem !important;
+    }
+
+    .landing-nav {
+        padding-left: var(--wp--preset--spacing--30) !important;
+        padding-right: var(--wp--preset--spacing--30) !important;
+    }
+}

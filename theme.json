@@ -42,17 +42,17 @@
       "palette": [
         {
           "slug": "primary",
-          "color": "#1a1a1a",
+          "color": "#0f172a",
           "name": "Primary"
         },
         {
           "slug": "secondary",
-          "color": "#4a4a4a",
+          "color": "#334155",
           "name": "Secondary"
         },
         {
           "slug": "accent",
-          "color": "#0073aa",
+          "color": "#f59e0b",
           "name": "Accent"
         },
         {
@@ -62,7 +62,7 @@
         },
         {
           "slug": "contrast",
-          "color": "#f5f5f5",
+          "color": "#f8fafc",
           "name": "Contrast"
         },
         {
@@ -115,10 +115,92 @@
           "color": "#171717",
           "name": "Neutral 900"
         }
-      ]
+      ],
+      "gradients": [
+        {
+          "slug": "primary-gradient",
+          "gradient": "linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%)",
+          "name": "Primary Gradient"
+        },
+        {
+          "slug": "accent-gradient",
+          "gradient": "linear-gradient(135deg, var(--wp--preset--color--accent) 0%, #ea580c 100%)",
+          "name": "Accent Gradient"
+        },
+        {
+          "slug": "hero-gradient",
+          "gradient": "linear-gradient(180deg, var(--wp--preset--color--primary) 0%, #1e293b 100%)",
+          "name": "Hero Gradient"
+        },
+        {
+          "slug": "subtle-gradient",
+          "gradient": "linear-gradient(180deg, var(--wp--preset--color--contrast) 0%, var(--wp--preset--color--base) 100%)",
+          "name": "Subtle Gradient"
+        },
+        {
+          "slug": "glass-gradient",
+          "gradient": "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
+          "name": "Glass Gradient"
+        },
+        {
+          "slug": "warm-gradient",
+          "gradient": "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)",
+          "name": "Warm Gradient"
+        },
+        {
+          "slug": "cool-gradient",
+          "gradient": "linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)",
+          "name": "Cool Gradient"
+        }
+      ],
+      "customGradient": true
     },
     "typography": {
       "fontFamilies": [
+        {
+          "slug": "heading",
+          "name": "Heading (DM Serif Display)",
+          "fontFamily": "'DM Serif Display', Georgia, serif",
+          "fontFace": [
+            {
+              "fontFamily": "DM Serif Display",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["https://fonts.gstatic.com/s/dmserifdisplay/v17/-nFnOHM81r4j6k0gjAW3mujVU2B2K_c.ttf"]
+            }
+          ]
+        },
+        {
+          "slug": "body",
+          "name": "Body (Inter)",
+          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf"]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf"]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "600",
+              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf"]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf"]
+            }
+          ]
+        },
         {
           "slug": "system",
           "name": "System Font",
@@ -127,7 +209,7 @@
         {
           "slug": "mono",
           "name": "Monospace",
-          "fontFamily": "Menlo, Monaco, Consolas, 'Courier New', monospace"
+          "fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace"
         }
       ],
       "fontSizes": [
@@ -143,37 +225,37 @@
         },
         {
           "slug": "large",
-          "size": "1.25rem",
+          "size": "1.125rem",
           "name": "Large"
         },
         {
           "slug": "x-large",
-          "size": "1.5rem",
+          "size": "1.25rem",
           "name": "X Large"
         },
         {
           "slug": "xx-large",
-          "size": "2rem",
+          "size": "1.5rem",
           "name": "XX Large"
         },
         {
           "slug": "h1",
-          "size": "2.5rem",
+          "size": "3rem",
           "name": "H1"
         },
         {
           "slug": "h2",
-          "size": "2rem",
+          "size": "2.25rem",
           "name": "H2"
         },
         {
           "slug": "h3",
-          "size": "1.5rem",
+          "size": "1.75rem",
           "name": "H3"
         },
         {
           "slug": "h4",
-          "size": "1.25rem",
+          "size": "1.375rem",
           "name": "H4"
         },
         {
@@ -187,7 +269,8 @@
           "name": "H6"
         }
       ],
-      "lineHeight": true
+      "lineHeight": true,
+      "letterSpacing": true
     },
     "spacing": {
       "spacingScale": {
@@ -279,6 +362,26 @@
         {
           "slug": "lg",
           "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+        },
+        {
+          "slug": "soft",
+          "shadow": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)"
+        },
+        {
+          "slug": "elevated",
+          "shadow": "0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 4px 6px -4px rgba(0, 0, 0, 0.05)"
+        },
+        {
+          "slug": "card",
+          "shadow": "0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.06)"
+        },
+        {
+          "slug": "glow",
+          "shadow": "0 0 20px rgba(245, 158, 11, 0.3)"
+        },
+        {
+          "slug": "inner-glow",
+          "shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.1)"
         }
       ]
     },
@@ -313,9 +416,10 @@
       "text": "var(--wp--preset--color--primary)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--system)",
+      "fontFamily": "var(--wp--preset--font-family--body)",
       "fontSize": "var(--wp--preset--font-size--medium)",
-      "lineHeight": "1.6"
+      "lineHeight": "1.6",
+      "letterSpacing": "0"
     },
     "spacing": {
       "blockGap": "var(--wp--preset--spacing--50)"
@@ -344,9 +448,11 @@
       },
       "h1": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
           "fontSize": "var(--wp--preset--font-size--h1)",
-          "fontWeight": "700",
-          "lineHeight": "1.2"
+          "fontWeight": "400",
+          "lineHeight": "1.1",
+          "letterSpacing": "-0.02em"
         },
         "spacing": {
           "margin": {
@@ -357,9 +463,11 @@
       },
       "h2": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
           "fontSize": "var(--wp--preset--font-size--h2)",
-          "fontWeight": "700",
-          "lineHeight": "1.3"
+          "fontWeight": "400",
+          "lineHeight": "1.2",
+          "letterSpacing": "-0.02em"
         },
         "spacing": {
           "margin": {
@@ -370,9 +478,11 @@
       },
       "h3": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--heading)",
           "fontSize": "var(--wp--preset--font-size--h3)",
-          "fontWeight": "600",
-          "lineHeight": "1.3"
+          "fontWeight": "400",
+          "lineHeight": "1.3",
+          "letterSpacing": "-0.01em"
         },
         "spacing": {
           "margin": {
@@ -383,9 +493,11 @@
       },
       "h4": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--body)",
           "fontSize": "var(--wp--preset--font-size--h4)",
           "fontWeight": "600",
-          "lineHeight": "1.4"
+          "lineHeight": "1.4",
+          "letterSpacing": "-0.01em"
         },
         "spacing": {
           "margin": {
@@ -396,6 +508,7 @@
       },
       "h5": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--body)",
           "fontSize": "var(--wp--preset--font-size--h5)",
           "fontWeight": "600",
           "lineHeight": "1.4"
@@ -409,6 +522,7 @@
       },
       "h6": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--body)",
           "fontSize": "var(--wp--preset--font-size--h6)",
           "fontWeight": "600",
           "lineHeight": "1.5"
@@ -426,11 +540,14 @@
           "text": "var(--wp--preset--color--base)"
         },
         "typography": {
-          "fontWeight": "600"
+          "fontFamily": "var(--wp--preset--font-family--body)",
+          "fontWeight": "600",
+          "letterSpacing": "0.02em"
         },
         "border": {
           "radius": "var(--wp--custom--border--radius--md)"
         },
+        "shadow": "var(--wp--preset--shadow--sm)",
         "spacing": {
           "padding": {
             "top": "var(--wp--preset--spacing--30)",
@@ -442,7 +559,14 @@
         ":hover": {
           "color": {
             "background": "var(--wp--preset--color--secondary)"
-          }
+          },
+          "shadow": "var(--wp--preset--shadow--md)"
+        },
+        ":focus": {
+          "shadow": "0 0 0 3px rgba(245, 158, 11, 0.3)"
+        },
+        ":active": {
+          "shadow": "var(--wp--preset--shadow--sm)"
         }
       },
       "caption": {
@@ -547,6 +671,13 @@
     {
       "name": "page",
       "title": "Page",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-no-sidebar",
+      "title": "Page (No Sidebar)",
       "postTypes": [
         "page"
       ]

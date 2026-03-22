@@ -14,6 +14,7 @@ WP 焊接工具网站实施中
 ## 关键文档
 - 设计：`docs/plans/2026-03-20-wp-soldering-site-design.md`
 - 实施：`docs/plans/2026-03-20-wp-soldering-site-implementation.md`
+- 主题开发：`docs/cclee-theme-dev.md`，错误处理：`gotchas.md`
 
 ## 环境状态
 - WP 本地：`cd wp && docker-compose up -d` → http://localhost:8080

@@ -10,7 +10,7 @@ paths:
 
 FSE 主题，WordPress 6.4+ / PHP 8.0+
 
-**版本：** 1.1.1 | **Tested up to:** 6.7
+**版本：** 1.1.1
 
 ---
 
@@ -144,9 +144,11 @@ cclee-theme/
 │   └── ai-content-block.php
 │
 ├── styles/                # Style Variations
-│   ├── midnight.json      # 深色
-│   ├── ocean.json         # 蓝绿
-│   └── warm.json          # 暖色
+│   ├── commerce.json      # 商务蓝
+│   ├── industrial.json    # 工业灰
+│   ├── nature.json        # 自然绿
+│   ├── professional.json  # 专业黑
+│   └── tech.json          # 科技紫
 │
 ├── assets/
 │   ├── css/
@@ -246,6 +248,48 @@ add_action('wp_enqueue_scripts', function() {
 | Pattern 验证失败 | 颜色 slug 不存在 | 使用 `neutral-100/200/500` |
 | 导航显示所有页面 | `wp_navigation` 帖子干扰 | 删除帖子，清除缓存 |
 | 块属性 JSON 错误 | 重复 key 或格式错误 | 合并属性，验证 JSON |
+| 店铺显示 Coming Soon | `woocommerce_coming_soon=yes` | `wp option update woocommerce_coming_soon no` |
+
+---
+
+## WooCommerce 测试数据
+
+### 导入官方样本数据
+
+```bash
+# 安装导入器插件
+docker exec wp_wordpress mkdir -p /var/www/html/wp-content/upgrade
+docker exec -u root wp_wordpress chown -R www-data:www-data /var/www/html/wp-content/upgrade
+docker exec wp_cli wp plugin install wordpress-importer --activate --allow-root
+
+# 导入 WooCommerce 样本产品（约 18 个产品）
+docker exec wp_cli wp import /var/www/html/wp-content/plugins/woocommerce/sample-data/sample_products.xml --authors=create --allow-root
+```
+
+### 样本数据包含
+
+| 类型 | 数量 |
+|------|------|
+| 产品 | 18 个 |
+| 分类 | 7 个（Clothing, Accessories, Decor, Music 等）|
+| 属性 | 颜色、尺寸 |
+
+**注意：** 样本数据不包含实际图片，需手动补充或使用占位图。
+
+### 产品图片导入
+
+从免费图库下载并导入：
+
+```bash
+# 创建临时目录
+docker exec wp_wordpress mkdir -p /var/www/html/wp-content/uploads/2026/03/products
+
+# 下载图片（Pexels 免费图片）
+docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-photo-XXX.jpeg?w=800" -o /var/www/html/wp-content/uploads/2026/03/products/product-name.jpg
+
+# 导入到媒体库（需要 PHP 脚本）
+# 详见项目记录
+```
 
 ---
 

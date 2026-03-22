@@ -44,6 +44,13 @@
 - 仓库：https://github.com/cclee-hub/yougu
 - 包含：yougu-cclee 子主题、wp 环境配置、docs
 
+## FSE 架构决策
+
+### 首页模式
+- `show_on_front = 'posts'`
+- 首页内容由 `front-page.html` 模板 + Patterns 托管，不依赖页面内容
+- 原因：FSE 设计哲学（内容与模板分离）、Site Editor 预览兼容、版本可控
+
 ## 操作约定
 - 修改通用主题 → 进入 cclee-theme 目录，`git commit && git push`
 - 修改站点定制 → 在 yougu-cclee 子主题目录操作，提交至 yougu 主仓库

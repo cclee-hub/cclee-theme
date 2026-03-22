@@ -73,7 +73,27 @@
       "Bash(grep -oh 'borderColor\"\"\"\":\"\"\"\"[^\"\"\"\"]*\"\"\"\"' *.php)",
       "Read(//home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/cclee-theme/**)",
       "Bash(find /home/aptop/workspace/yougu/.claude -type f \\\\\\(-name *.md -o -name *.json \\\\\\))",
-      "Bash(find /home/aptop/.claude -type f -name *.md)"
+      "Bash(find /home/aptop/.claude -type f -name *.md)",
+      "Bash(mv ocean.json industrial.json)",
+      "Bash(mv warm.json commerce.json)",
+      "Bash(mv midnight.json tech.json)",
+      "Bash(docker exec wp_cli wp eval ':*)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); v=d.get\\(''''styles'''',{}\\).get\\(''''variations'''',{}\\); print\\(list\\(v.keys\\(\\)\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(''''customTemplates:'''', d.get\\(''''customTemplates'''',[]\\)\\); print\\(''''templateParts:'''', d.get\\(''''templateParts'''',[]\\)\\)\")",
+      "Bash(python3 -c \"import json; f=open\\(''wp/wordpress/wp-content/themes/cclee-theme/theme.json''\\); d=json.load\\(f\\); print\\(''version:'', d.get\\(''version''\\)\\); print\\(''schema:'', d.get\\(''$schema''\\)\\); print\\(''settings keys:'', list\\(d.get\\(''settings'',{}\\).keys\\(\\)\\)[:10]\\); print\\(''styles keys:'', list\\(d.get\\(''styles'',{}\\).keys\\(\\)\\)[:10]\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)[:500]\\)\")",
+      "Bash(bash /home/aptop/workspace/yougu/.claude/hooks/inject-context.sh)",
+      "Bash(bash /home/aptop/workspace/yougu/.claude/hooks/auto-cache-flush.sh \"wp/wordpress/wp-content/themes/cclee-theme/theme.json\")",
+      "Bash(bash /home/aptop/workspace/yougu/.claude/hooks/validate-pattern-slug.sh \"wp/wordpress/wp-content/themes/cclee-theme/patterns/test.php\" '{\"\"backgroundColor\"\":\"\"invalid-color\"\"}')",
+      "Bash(bash /home/aptop/workspace/yougu/.claude/hooks/validate-pattern-slug.sh \"wp/wordpress/wp-content/themes/cclee-theme/patterns/test.php\" '{\"\"backgroundColor\"\":\"\"primary\"\",\"\"textColor\"\":\"\"neutral-500\"\"}')",
+      "Bash(bash /home/aptop/workspace/yougu/.claude/hooks/auto-cache-flush.sh \"wp/wordpress/wp-content/themes/cclee-theme/style.css\")",
+      "Bash(unzip -o wordpress-importer.0.9.5.zip)",
+      "Bash(rm wordpress-importer.0.9.5.zip)",
+      "Bash(sudo curl:*)",
+      "Bash(sudo unzip:*)",
+      "Bash(cp -r wordpress-importer ~/workspace/yougu/wp/wordpress/wp-content/plugins/)",
+      "Bash(rm -rf wordpress-importer wordpress-importer.0.9.5.zip)",
+      "Bash(python3 -c \"import zipfile; zipfile.ZipFile\\(''wordpress-importer.0.9.5.zip''\\).extractall\\(''.''\\)\")"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/yougu",
@@ -82,7 +102,50 @@
       "/home/aptop/workspace/yougu/docs",
       "/home/aptop/.claude/projects/-home-aptop-workspace-yougu",
       "/home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/cclee-theme",
-      "/home/aptop/.config/Code/User"
+      "/home/aptop/.config/Code/User",
+      "/home/aptop/workspace/yougu/.claude/rules",
+      "/home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/cclee-theme/inc",
+      "/home/aptop/workspace/yougu/.claude",
+      "/home/aptop/.claude/skills",
+      "/home/aptop/.claude/skills/note-convention",
+      "/tmp"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/inject-context.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/auto-cache-flush.sh \"$CLAUDE_TOOL_INPUT_PATH\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash .claude/hooks/validate-pattern-slug.sh \"$CLAUDE_TOOL_INPUT_PATH\" \"$CLAUDE_TOOL_INPUT_CONTENT\"",
+            "timeout": 15
+          }
+        ]
+      }
     ]
   }
 }

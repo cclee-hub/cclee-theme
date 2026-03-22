@@ -126,7 +126,7 @@ docker exec wp_cli wp post update <ID> --post_content="$(cat /tmp/content.html)"
 
 **排查：** 对照 `theme.json` 的 `settings.color.palette`，检查 pattern 中所有颜色引用。
 
-**有效颜色 slug：** `primary` `secondary` `accent` `base` `contrast` `neutral-50` ~ `neutral-900`
+**有效颜色 slug：** `primary` `secondary` `accent` `base` `contrast` `surface` `neutral-50` ~ `neutral-900`
 
 **预防：** 新增 Pattern 前确认 slug 已在 theme.json 定义。
 
@@ -355,3 +355,31 @@ ssh root@47.84.87.131 "ls -la /var/www/wp/wordpress/wp-content/themes/cclee-them
 # 3. 清除服务器缓存
 ssh root@47.84.87.131 "cd /var/www/wp && docker exec wp_cli wp cache flush --allow-root"
 ```
+
+---
+
+## [2026-03-22] 新增颜色 Token 后全局样式缺少定义
+
+**现象：** 在 `theme.json` 中新增颜色（如 `surface`），但前端不生效，块显示验证失败或颜色不显示。
+
+**原因：** `wp_global_styles` 中的 `color.palette` 会**完全覆盖** theme.json 的调色板。新增的颜色不在全局样式中，导致颜色 token 不存在。
+
+**排查：**
+```bash
+# 检查全局样式中的颜色定义
+docker exec wp_cli wp post get <ID> --fields=post_content --allow-root | grep -o '"slug":"[^"]*"'
+```
+
+**解决：**
+```bash
+# 方案一：删除全局样式（推荐开发阶段）
+docker exec wp_cli wp post delete <ID> --force --allow-root
+docker exec wp_cli wp cache flush --allow-root
+
+# 方案二：更新全局样式，添加新颜色（需要保留自定义时）
+# 通过 Site Editor 重新保存，或直接修改 post_content
+```
+
+**预防：**
+- 新增 theme.json 颜色后，检查并删除全局样式
+- 或在 Site Editor 中重新保存以同步新颜色

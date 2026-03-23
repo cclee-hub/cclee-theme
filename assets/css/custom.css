@@ -40,8 +40,9 @@
     color: var(--wp--preset--color--base);
 }
 
-/* Admin bar height variable */
+/* Header height variable (dynamic via JS, fallback for SSR) */
 :root {
+    --header-height: 72px;
     --admin-bar-height: 0px;
 }
 .admin-bar {
@@ -67,10 +68,11 @@
 
 /* Header: Scrolled state (solid glass effect) */
 .site-header.is-scrolled {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 /* Header: Transparent variant (default for hero pages) */
@@ -95,7 +97,7 @@
     }
 }
 
-/* Header text color for transparent mode */
+/* Header text color for transparent mode - white with shadow for any background */
 .site-header--transparent .wp-block-site-title a,
 .site-header--transparent .wp-block-site-title,
 .site-header--transparent .wp-block-navigation__container a,
@@ -103,6 +105,7 @@
 .site-header--transparent .wp-block-loginout a {
     color: #ffffff !important;
     text-decoration: none;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .site-header--transparent .wp-block-site-title a:hover,
@@ -113,10 +116,11 @@
 
 /* Header: Solid state (after scroll) */
 .site-header--transparent.is-scrolled {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.78) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .site-header--transparent.is-scrolled .wp-block-site-title a,
@@ -125,6 +129,7 @@
 .site-header--transparent.is-scrolled .wp-block-navigation a,
 .site-header--transparent.is-scrolled .wp-block-loginout a {
     color: var(--wp--preset--color--primary) !important;
+    text-shadow: none;
 }
 
 .site-header--transparent.is-scrolled .wp-block-site-title a:hover,
@@ -153,9 +158,9 @@ body:has(.site-header) main {
 }
 
 /* Hero section: negative margin pulls up, padding keeps content visible */
-main > .wp-block-group.alignfull:first-child {
-    margin-top: calc(-80px - var(--admin-bar-height)) !important;
-    padding-top: calc(var(--wp--preset--spacing--80) + 80px + var(--admin-bar-height)) !important;
+.wp-site-blocks > .wp-block-group.alignfull:first-of-type {
+    margin-top: calc(-1 * var(--header-height) - var(--admin-bar-height)) !important;
+    padding-top: calc(var(--wp--preset--spacing--80) + var(--header-height) + var(--admin-bar-height)) !important;
 }
 
 /* Hide WooCommerce mini-cart if Woo not active */

@@ -12,7 +12,9 @@
 |------|------|--------|
 | cn-site | `~/workspace/yougu/cn-site/` | `/var/www/cn-site/` |
 | wp | `~/workspace/yougu/wp/` | `/var/www/wp/` |
+| wp-demo | - | `/var/www/wp-demo/` |
 | yougu-cclee | `wp/wordpress/wp-content/themes/yougu-cclee/` | `/var/www/wp/wordpress/wp-content/themes/yougu-cclee/` |
+| cclee-theme | `wp/wordpress/wp-content/themes/cclee-theme/` | `/var/www/wp-demo/wordpress/wp-content/themes/cclee-theme/` |
 
 ## 项目概览
 
@@ -28,8 +30,7 @@
 1. 先查日志：`docker exec wp_wordpress cat /var/www/html/wp-content/debug.log | tail -50`
 2. 按 `.claude/rules/gotchas.md` 流程处理
 3. 修复后执行 `/note gotcha <内容>` 记录
-4.WSL 环境下主题文件属于 www-data 用户，编辑前若遇到权限错误，
-必须先执行 sudo chown -R $USER:$USER <文件路径>，不得跳过或提示手动操作。
+4. WSL 权限：主题文件属 www-data，编辑前执行 `sudo chown -R $USER:$USER <路径>`
 
 ## 全局禁止
 

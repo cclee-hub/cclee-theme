@@ -58,11 +58,6 @@
 - **单站点定制**：可使用 `ref` 绑定特定导航 ID（但 ID 因站点而异）
 - **注意**：`location` 是传统菜单属性，不是 FSE `wp:navigation` 块的有效属性
 
-## 操作约定
-- 修改通用主题 → 进入 cclee-theme 目录，`git commit && git push`
-- 修改站点定制 → 在 yougu-cclee 子主题目录操作，提交至 yougu 主仓库
-- 主题更新后，服务器执行 `git pull` 同步
-
 ## 开发阶段强制规范
 
 ### 文件要求

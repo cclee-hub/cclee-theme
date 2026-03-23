@@ -22,6 +22,9 @@ cn-site/static/backup/sql/
 # Windows Zone files
 *:Zone.Identifier
 
+# Credentials (NEVER commit)
+.claude/credentials.md
+
 # IDE
 .idea/
 .vscode/

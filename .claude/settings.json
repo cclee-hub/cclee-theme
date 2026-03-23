@@ -143,7 +143,19 @@
       "Bash(grep -r Preview /home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/ --include=*.html --include=*.php)",
       "Bash(grep -rn \"🎨\\\\|Preview Patterns\\\\|preview\" /home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/ --include=*.html --include=*.php)",
       "Bash(grep -rn \"page_id=108\\\\|page_id=102\" /home/aptop/workspace/yougu/wp/wordpress/ --include=*.html --include=*.php)",
-      "Bash(grep -E \"^page$|^page-blog$\")"
+      "Bash(grep -E \"^page$|^page-blog$\")",
+      "Bash(find wp/wordpress/wp-content/themes/cclee-theme -type f \\\\\\(-name *.min.js -o -name *.min.css \\\\\\))",
+      "Bash(find wp/wordpress/wp-content/themes/cclee-theme -name .* -type f)",
+      "Bash(grep -r \"gradient\\\\|background\" /home/aptop/workspace/yougu/wp/wordpress/wp-content/themes/cclee-theme/patterns/hero*.php)",
+      "Bash(chromium-browser --headless --disable-gpu --screenshot=/tmp/cclee-screenshot.png --window-size=1200,900 http://localhost:8080/)",
+      "Bash(chromium-browser --headless --disable-gpu --no-sandbox --disable-dev-shm-usage --screenshot=$HOME/cclee-screenshot.png --window-size=1200,900 http://localhost:8080/)",
+      "Bash(/tmp/wp-demo-docker-compose.yml:*)",
+      "Bash(/tmp/wp-demo.env:*)",
+      "Bash(scp /tmp/wp-demo-docker-compose.yml root@47.84.87.131:/var/www/wp-demo/docker-compose.yml)",
+      "Bash(scp /tmp/wp-demo.env root@47.84.87.131:/var/www/wp-demo/.env)",
+      "Bash(/tmp/wp-demo-docker-compose-v2.yml:*)",
+      "Bash(scp /tmp/wp-demo-docker-compose-v2.yml root@47.84.87.131:/var/www/wp-demo/docker-compose.yml)",
+      "Bash(scp /tmp/demo.aigent.ren.conf root@47.84.87.131:/etc/nginx/conf.d/demo.aigent.ren.conf)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/yougu",

@@ -164,7 +164,9 @@
       "Bash(grep -r 47.84.87.131 /home/aptop/workspace/wordpress --include=*.md --include=*.json --include=*.yml --include=*.yaml)",
       "Bash(timeout 10 openssl s_client -connect demo.aigent.ren:443)",
       "Bash(openssl s_client -connect demo.aigent.ren:443)",
-      "Read(//dev/**)"
+      "Read(//dev/**)",
+      "Bash(scp /home/aptop/workspace/wordpress/wp-export.xml root@47.84.87.131:/tmp/)",
+      "Bash(scp /tmp/wp-uploads.tar.gz root@47.84.87.131:/tmp/)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/wordpress",

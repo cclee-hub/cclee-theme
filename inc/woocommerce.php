@@ -60,16 +60,23 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
 add_action( 'woocommerce_before_main_content', function () {
-	echo '<main class="wp-block-group" style="max-width:var(--wp--style--global--wide-size);margin-left:auto;margin-right:auto;padding:var(--wp--preset--spacing--50) var(--wp--preset--spacing--40);">';
+	$wrapper_start = <<<HTML
+		<main class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);">
+		HTML;
+	echo wp_kses_post( $wrapper_start );
 }, 10 );
 
 add_action( 'woocommerce_after_main_content', function () {
-	echo '</main>';
+	echo wp_kses_post( '</main>' );
 }, 10 );
 
 /**
  * B2B 文字替换：Shop → Products
- * 适用于企业级站点，更专业的命名
+ *
+ * 这只是 UX 文字优化，让企业站点更专业。
+ * 不修改 WooCommerce 功能，用户可通过子主题移除此 filter：
+ *   remove_filter( 'gettext', [已注册的回调], 10 );
+ *   remove_filter( 'woocommerce_page_title', [已注册的回调], 10 );
  */
 add_filter( 'gettext', function ( $translated, $text, $domain ) {
 	// 仅处理 WooCommerce 文字
@@ -98,3 +105,19 @@ add_filter( 'woocommerce_page_title', function ( $page_title ) {
 	}
 	return $page_title;
 } );
+
+/**
+ * 隐藏 WooCommerce.com 登录提示
+ * 本地开发不需要连接 WooCommerce 账号
+ */
+add_filter( 'woocommerce_helper_suppress_admin_notice', '__return_true' );
+
+/**
+ * 强制 Shop 页面 URL 使用 /products/
+ */
+add_filter( 'woocommerce_get_page_permalink', function ( $permalink, $page ) {
+	if ( $page === 'shop' ) {
+		return home_url( '/products/' );
+	}
+	return $permalink;
+}, 10, 2 );

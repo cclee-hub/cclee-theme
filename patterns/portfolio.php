@@ -23,11 +23,9 @@
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:8px;border-style:solid;border-width:1px;padding:0">
-				<!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
-				<figure class="wp-block-image size-large" style="border-radius:8px 8px 0 0">
-					<img src="https://placehold.co/600x340/e5e5e5/737373?text=Project+1" alt="Project 1" style="object-fit:cover;aspect-ratio:16/9"/>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:cover {"url":"","dimRatio":50,"overlayColor":"neutral-200","minHeight":200,"style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
+				<div class="wp-block-cover" style="border-radius:8px 8px 0 0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-neutral-200-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} --><p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Replace with project image</p><!-- /wp:paragraph --></div></div>
+				<!-- /wp:cover -->
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
@@ -57,11 +55,9 @@
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:8px;border-style:solid;border-width:1px;padding:0">
-				<!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
-				<figure class="wp-block-image size-large" style="border-radius:8px 8px 0 0">
-					<img src="https://placehold.co/600x340/e5e5e5/737373?text=Project+2" alt="Project 2" style="object-fit:cover;aspect-ratio:16/9"/>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:cover {"url":"","dimRatio":50,"overlayColor":"neutral-200","minHeight":200,"style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
+				<div class="wp-block-cover" style="border-radius:8px 8px 0 0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-neutral-200-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} --><p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Replace with project image</p><!-- /wp:paragraph --></div></div>
+				<!-- /wp:cover -->
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
@@ -95,11 +91,9 @@
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:8px;border-style:solid;border-width:1px;padding:0">
-				<!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
-				<figure class="wp-block-image size-large" style="border-radius:8px 8px 0 0">
-					<img src="https://placehold.co/600x340/e5e5e5/737373?text=Project+3" alt="Project 3" style="object-fit:cover;aspect-ratio:16/9"/>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:cover {"url":"","dimRatio":50,"overlayColor":"neutral-200","minHeight":200,"style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
+				<div class="wp-block-cover" style="border-radius:8px 8px 0 0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-neutral-200-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} --><p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Replace with project image</p><!-- /wp:paragraph --></div></div>
+				<!-- /wp:cover -->
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
@@ -129,11 +123,9 @@
 		<div class="wp-block-column">
 			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:8px;border-style:solid;border-width:1px;padding:0">
-				<!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
-				<figure class="wp-block-image size-large" style="border-radius:8px 8px 0 0">
-					<img src="https://placehold.co/600x340/e5e5e5/737373?text=Project+4" alt="Project 4" style="object-fit:cover;aspect-ratio:16/9"/>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:cover {"url":"","dimRatio":50,"overlayColor":"neutral-200","minHeight":200,"style":{"border":{"radius":{"top":"8px","bottom":"0"}}}} -->
+				<div class="wp-block-cover" style="border-radius:8px 8px 0 0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-neutral-200-background-color has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} --><p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Replace with project image</p><!-- /wp:paragraph --></div></div>
+				<!-- /wp:cover -->
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->

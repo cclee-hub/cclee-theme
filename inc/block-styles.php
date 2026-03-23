@@ -30,4 +30,22 @@ add_action( 'init', function () {
         'label' => __( 'Accent Border', 'cclee-theme' ),
     ] );
 
+    // Image: Rounded
+    register_block_style( 'core/image', [
+        'name'  => 'rounded',
+        'label' => __( 'Rounded', 'cclee-theme' ),
+    ] );
+
+    // Image: Shadow
+    register_block_style( 'core/image', [
+        'name'  => 'shadow',
+        'label' => __( 'Shadow', 'cclee-theme' ),
+    ] );
+
+    // List: Checkmark
+    register_block_style( 'core/list', [
+        'name'  => 'checkmark',
+        'label' => __( 'Checkmark', 'cclee-theme' ),
+    ] );
+
 } );

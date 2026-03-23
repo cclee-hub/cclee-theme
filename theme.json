@@ -213,8 +213,16 @@
         },
         {
           "slug": "mono",
-          "name": "Monospace",
-          "fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace"
+          "name": "Monospace (JetBrains Mono)",
+          "fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
+          "fontFace": [
+            {
+              "fontFamily": "JetBrains Mono",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjOVGa.ttf"]
+            }
+          ]
         }
       ],
       "fontSizes": [
@@ -432,14 +440,14 @@
     "elements": {
       "link": {
         "color": {
-          "text": "var(--wp--preset--color--accent)"
+          "text": "var(--wp--preset--color--primary)"
         },
         "typography": {
-          "textDecoration": "none"
+          "textDecoration": "underline"
         },
         ":hover": {
           "color": {
-            "text": "var(--wp--preset--color--primary)"
+            "text": "var(--wp--preset--color--accent)"
           },
           "typography": {
             "textDecoration": "underline"

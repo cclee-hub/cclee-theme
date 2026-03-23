@@ -21,22 +21,16 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"width":"80px","height":"80px","style":{"border":{"radius":"50px"}},"backgroundColor":"neutral-100"} -->
-				<figure class="wp-block-image is-resized has-custom-dimensions">
-					<div class="wp-block-image has-neutral-100-background-color has-background" style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center">
-						<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-						<p class="has-text-align-center has-large-font-size">👤</p>
-						<!-- /wp:paragraph -->
-					</div>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">AM</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Alex Morgan</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","textColor":"accent","fontSize":"small"} -->
-				<p class="has-text-align-center has-accent-color has-text-color has-small-font-size">CEO &amp; Founder</p>
+				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
+				<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size">CEO &amp; Founder</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
@@ -53,22 +47,16 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"width":"80px","height":"80px","style":{"border":{"radius":"50px"}},"backgroundColor":"neutral-100"} -->
-				<figure class="wp-block-image is-resized has-custom-dimensions">
-					<div class="wp-block-image has-neutral-100-background-color has-background" style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center">
-						<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-						<p class="has-text-align-center has-large-font-size">👤</p>
-						<!-- /wp:paragraph -->
-					</div>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">JL</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Jordan Lee</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","textColor":"accent","fontSize":"small"} -->
-				<p class="has-text-align-center has-accent-color has-text-color has-small-font-size">CTO</p>
+				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
+				<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size">CTO</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
@@ -85,22 +73,16 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"width":"80px","height":"80px","style":{"border":{"radius":"50px"}},"backgroundColor":"neutral-100"} -->
-				<figure class="wp-block-image is-resized has-custom-dimensions">
-					<div class="wp-block-image has-neutral-100-background-color has-background" style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center">
-						<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-						<p class="has-text-align-center has-large-font-size">👤</p>
-						<!-- /wp:paragraph -->
-					</div>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">ST</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Sam Taylor</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","textColor":"accent","fontSize":"small"} -->
-				<p class="has-text-align-center has-accent-color has-text-color has-small-font-size">Design Lead</p>
+				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
+				<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size">Design Lead</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
@@ -117,22 +99,16 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"width":"80px","height":"80px","style":{"border":{"radius":"50px"}},"backgroundColor":"neutral-100"} -->
-				<figure class="wp-block-image is-resized has-custom-dimensions">
-					<div class="wp-block-image has-neutral-100-background-color has-background" style="width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center">
-						<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-						<p class="has-text-align-center has-large-font-size">👤</p>
-						<!-- /wp:paragraph -->
-					</div>
-				</figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">CK</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Casey Kim</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","textColor":"accent","fontSize":"small"} -->
-				<p class="has-text-align-center has-accent-color has-text-color has-small-font-size">Marketing Director</p>
+				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
+				<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size">Marketing Director</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->

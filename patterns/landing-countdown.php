@@ -74,43 +74,43 @@
 		</div>
 		<!-- /wp:buttons -->
 
+		<!-- wp:html -->
+		<script>
+		(function() {
+			var targetDate = new Date();
+			targetDate.setDate(targetDate.getDate() + 7);
+
+			function updateCountdown() {
+				var now = new Date();
+				var diff = targetDate - now;
+
+				if (diff <= 0) {
+					document.getElementById('countdown-days').textContent = '00';
+					document.getElementById('countdown-hours').textContent = '00';
+					document.getElementById('countdown-minutes').textContent = '00';
+					document.getElementById('countdown-seconds').textContent = '00';
+					return;
+				}
+
+				var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+				document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
+				document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+				document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+				document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+			}
+
+			updateCountdown();
+			setInterval(updateCountdown, 1000);
+		})();
+		</script>
+		<!-- /wp:html -->
+
 	</div>
 	<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->
-
-<!-- wp:html -->
-<script>
-(function() {
-	var targetDate = new Date();
-	targetDate.setDate(targetDate.getDate() + 7);
-
-	function updateCountdown() {
-		var now = new Date();
-		var diff = targetDate - now;
-
-		if (diff <= 0) {
-			document.getElementById('countdown-days').textContent = '00';
-			document.getElementById('countdown-hours').textContent = '00';
-			document.getElementById('countdown-minutes').textContent = '00';
-			document.getElementById('countdown-seconds').textContent = '00';
-			return;
-		}
-
-		var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-		var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-		var seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-		document.getElementById('countdown-days').textContent = String(days).padStart(2, '0');
-		document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
-		document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
-		document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
-	}
-
-	updateCountdown();
-	setInterval(updateCountdown, 1000);
-})();
-</script>
-<!-- /wp:html -->

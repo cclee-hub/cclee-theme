@@ -12,7 +12,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout yougu repo
+      - name: Checkout wordpress repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -38,7 +38,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --quiet && git diff --staged --quiet || {
-            git commit -m "sync: from yougu repo"
+            git commit -m "sync: from wordpress repo"
             # Push to whatever branch we checked out (main for cclee-toolkit)
             git push origin HEAD:main
           }

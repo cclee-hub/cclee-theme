@@ -30,7 +30,7 @@
 ### CCLEE 主题（独立仓库）
 - 仓库：https://github.com/cclee-hub/cclee-theme
 - 本地路径：`wp/wordpress/wp-content/themes/cclee-theme/`
-- 以独立 git repo 存在，非 submodule；yougu 仓库 .gitignore 排除该路径
+- 以独立 git repo 存在，非 submodule；wordpress 仓库 .gitignore 排除该路径
 - 内容：通用设计系统、可复用 patterns、基础模板结构
 - 判断标准：**能否被其他项目复用？能 → 放主题**
 
@@ -42,7 +42,7 @@
 - 判断标准：**只适用于焊接工具站？是 → 放子主题**
 
 ### Yougu 主仓库
-- 仓库：https://github.com/cclee-hub/yougu
+- 仓库：https://github.com/cclee-hub/wordpress
 - 包含：yougu-cclee 子主题、wp 环境配置、docs
 
 ## FSE 架构决策

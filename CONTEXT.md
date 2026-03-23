@@ -13,8 +13,8 @@
 
 | 本地 (WSL) | 服务器 |
 |------------|--------|
-| `~/workspace/yougu/cn-site/` | `/var/www/cn-site/` |
-| `~/workspace/yougu/wp/` | `/var/www/wp/` |
+| `~/workspace/wordpress/cn-site/` | `/var/www/cn-site/` |
+| `~/workspace/wordpress/wp/` | `/var/www/wp/` |
 
 ## 子项目
 
@@ -61,9 +61,9 @@
 
 ## GitHub 仓库
 
-- 仓库: https://github.com/cclee-hub/yougu
+- 仓库: https://github.com/cclee-hub/wordpress
 - 可见性: 私有
-- SSH: `git@github.com:cclee-hub/yougu.git`
+- SSH: `git@github.com:cclee-hub/wordpress.git`
 
 ## WordPress 本地开发环境
 

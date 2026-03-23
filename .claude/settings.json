@@ -163,14 +163,15 @@
       "Bash(openssl s_client -connect yougu.cc:443)",
       "Bash(grep -r 47.84.87.131 /home/aptop/workspace/wordpress --include=*.md --include=*.json --include=*.yml --include=*.yaml)",
       "Bash(timeout 10 openssl s_client -connect demo.aigent.ren:443)",
-      "Bash(openssl s_client -connect demo.aigent.ren:443)"
+      "Bash(openssl s_client -connect demo.aigent.ren:443)",
+      "Read(//dev/**)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/wordpress",
       "/home/aptop/workspace/wordpress/cn-site/pbootcms_N28t6",
       "/home/aptop/workspace/wordpress/.claude/skills",
       "/home/aptop/workspace/wordpress/docs",
-      "/home/aptop/.claude/projects/-home-aptop-workspace-yougu",
+      "/home/aptop/.claude/projects/-home-aptop-workspace-wordpress",
       "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme",
       "/home/aptop/.config/Code/User",
       "/home/aptop/workspace/wordpress/.claude/rules",
@@ -181,7 +182,9 @@
       "/tmp",
       "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes",
       "/home/aptop/workspace/wordpress/.claude/skills/wp-org-submission",
-      "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/templates"
+      "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/templates",
+      "/home/aptop/.claude/projects/-home-aptop-workspace-yougu",
+      "/home/aptop/.claude"
     ]
   },
   "hooks": {

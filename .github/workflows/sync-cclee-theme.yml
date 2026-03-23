@@ -58,6 +58,12 @@ jobs:
             git fetch origin
             git reset --hard origin/main
 
+            # Reset FSE templates to use theme files (remove database overrides)
+            TEMPLATE_PARTS=$(docker exec demo_cli wp post list --post_type=wp_template_part --field=ID --allow-root)
+            [ -n "$TEMPLATE_PARTS" ] && docker exec demo_cli wp post delete $TEMPLATE_PARTS --force --allow-root || true
+            TEMPLATES=$(docker exec demo_cli wp post list --post_type=wp_template --field=ID --allow-root)
+            [ -n "$TEMPLATES" ] && docker exec demo_cli wp post delete $TEMPLATES --force --allow-root || true
+
             # Bind navigation menu to header
             NAV_ID=$(docker exec demo_cli wp post list --post_type=wp_navigation --name=main-menu --field=ID --allow-root)
             if [ -n "$NAV_ID" ]; then

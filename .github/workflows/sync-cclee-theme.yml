@@ -57,3 +57,10 @@ jobs:
             cd /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme
             git fetch origin
             git reset --hard origin/main
+
+            # Bind navigation menu to header
+            NAV_ID=$(docker exec demo_cli wp post list --post_type=wp_navigation --name=main-menu --field=ID --allow-root)
+            if [ -n "$NAV_ID" ]; then
+              sed -i "s/{\"overlayMenu\":\"never\"/{\"ref\":$NAV_ID,\"overlayMenu\":\"never\"/" parts/header.html
+              docker exec demo_cli wp cache flush --allow-root
+            fi

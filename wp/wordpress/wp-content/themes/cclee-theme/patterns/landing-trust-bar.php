@@ -16,25 +16,45 @@
 	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide" style="display:flex;flex-wrap:wrap;justify-content:center;gap:var(--wp--preset--spacing--50)">
 
-		<!-- wp:image {"width":120,"sizeSlug":"full","className":"landing-trust-logo"} -->
-		<figure class="wp-block-image landing-trust-logo"><img src="https://via.placeholder.com/120x40?text=Logo+1" alt="Partner 1" width="120"/></figure>
-		<!-- /wp:image -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-400","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
+			<p class="has-text-align-center has-neutral-400-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">ACME</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
 
-		<!-- wp:image {"width":120,"sizeSlug":"full","className":"landing-trust-logo"} -->
-		<figure class="wp-block-image landing-trust-logo"><img src="https://via.placeholder.com/120x40?text=Logo+2" alt="Partner 2" width="120"/></figure>
-		<!-- /wp:image -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-400","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
+			<p class="has-text-align-center has-neutral-400-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">GLOBEX</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
 
-		<!-- wp:image {"width":120,"sizeSlug":"full","className":"landing-trust-logo"} -->
-		<figure class="wp-block-image landing-trust-logo"><img src="https://via.placeholder.com/120x40?text=Logo+3" alt="Partner 3" width="120"/></figure>
-		<!-- /wp:image -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-400","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
+			<p class="has-text-align-center has-neutral-400-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">INITECH</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
 
-		<!-- wp:image {"width":120,"sizeSlug":"full","className":"landing-trust-logo"} -->
-		<figure class="wp-block-image landing-trust-logo"><img src="https://via.placeholder.com/120x40?text=Logo+4" alt="Partner 4" width="120"/></figure>
-		<!-- /wp:image -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-400","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
+			<p class="has-text-align-center has-neutral-400-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">UMBRELLA</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
 
-		<!-- wp:image {"width":120,"sizeSlug":"full","className":"landing-trust-logo"} -->
-		<figure class="wp-block-image landing-trust-logo"><img src="https://via.placeholder.com/120x40?text=Logo+5" alt="Partner 5" width="120"/></figure>
-		<!-- /wp:image -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-400","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
+			<p class="has-text-align-center has-neutral-400-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">STARK</p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
 
 	</div>
 	<!-- /wp:group -->

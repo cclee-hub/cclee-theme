@@ -13,6 +13,9 @@ add_action( 'after_setup_theme', function () {
     add_theme_support( 'title-tag' );
     add_theme_support( 'custom-logo' );
 
+    // 加载编辑器样式，确保后台与前台一致
+    add_editor_style( 'assets/css/custom.css' );
+
     register_nav_menus( [
         'primary' => __( 'Primary Menu', 'cclee-theme' ),
         'footer'  => __( 'Footer Menu', 'cclee-theme' ),
@@ -26,6 +29,13 @@ add_action( 'wp_enqueue_scripts', function () {
         get_template_directory_uri() . '/assets/css/custom.css',
         [],
         $ver
+    );
+    wp_enqueue_script(
+        'cclee-theme',
+        get_template_directory_uri() . '/assets/js/theme.js',
+        [],
+        $ver,
+        true
     );
 } );
 
@@ -76,9 +86,9 @@ add_action( 'after_switch_theme', function () {
     }
 
     // 创建 Primary 导航
-    wp_insert_post( [
-        'post_title'   => 'Primary Menu',
-        'post_name'    => 'primary-menu',
+    $primary_id = wp_insert_post( [
+        'post_title'   => 'Main Menu',
+        'post_name'    => 'main-menu',
         'post_type'    => 'wp_navigation',
         'post_status'  => 'publish',
         'post_content' => implode( '', $primary_links ),
@@ -99,11 +109,19 @@ add_action( 'after_switch_theme', function () {
     }
 
     // 创建 Footer 导航
-    wp_insert_post( [
+    $footer_id = wp_insert_post( [
         'post_title'   => 'Footer Menu',
         'post_name'    => 'footer-menu',
         'post_type'    => 'wp_navigation',
         'post_status'  => 'publish',
         'post_content' => implode( '', $footer_links ),
     ] );
+
+    // 将导航分配到菜单位置（关键！）
+    if ( $primary_id && $footer_id ) {
+        set_theme_mod( 'nav_menu_locations', [
+            'primary' => $primary_id,
+            'footer'  => $footer_id,
+        ] );
+    }
 } );

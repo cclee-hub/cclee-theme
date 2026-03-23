@@ -21,10 +21,7 @@ functions.php
     ├─→ inc/setup.php           # 主题基础设置（最先）
     ├─→ inc/block-styles.php    # 块样式变体
     ├─→ inc/block-patterns.php  # Pattern 分类注册
-    ├─→ inc/seo.php             # SEO 输出
-    ├─→ inc/woocommerce.php     # WooCommerce 兼容
-    ├─→ inc/case-study.php      # Case Study CPT + Meta 字段
-    └─→ inc/editor-ai.php       # AI 编辑器辅助
+    └─→ inc/woocommerce.php     # WooCommerce 兼容
 ```
 
 ---
@@ -50,24 +47,21 @@ functions.php
 
 ### block-styles.php
 
-| 块 | 样式名 |
-|----|--------|
-| `core/button` | `outline` |
-| `core/group` | `card` |
-| `core/separator` | `thick` |
-| `core/quote` | `accent-border` |
+| 块 | 样式名 | 用途 |
+|----|--------|------|
+| `core/button` | `outline` | 透明背景+边框按钮 |
+| `core/group` | `card` | 卡片容器（边框+阴影） |
+| `core/separator` | `thick` | 粗分隔线 |
+| `core/quote` | `accent-border` | 左侧强调色边框引用 |
+| `core/image` | `rounded` | 圆角图片 |
+| `core/image` | `shadow` | 阴影图片 |
+| `core/list` | `checkmark` | 勾选列表（功能特性） |
 
 ---
 
 ### block-patterns.php
 
 注册 `cclee-theme` pattern 分类
-
----
-
-### seo.php
-
-`wp_head:1` 输出 OG + Twitter Card，`wp_head:2` 输出 JSON-LD Schema
 
 ---
 
@@ -84,20 +78,6 @@ functions.php
 | `woocommerce_helper_suppress_admin_notice` | 隐藏 WooCommerce.com 登录提示 |
 
 **设计原则：** 主题管样式，Woo 管功能；不重写 Woo 模板文件，仅通过 CSS 覆盖
-
----
-
-### editor-ai.php
-
-| 钩子 | 作用 |
-|------|------|
-| `enqueue_block_editor_assets` | 加载 `assets/js/editor-ai.js` |
-| `admin_menu` | 设置页面：设置 → CCLEE AI |
-| `rest_api_init` | 代理路由 `POST /wp-json/cclee/v1/ai/generate` |
-
-**设置选项：** `cclee_ai_api_key`, `cclee_ai_enabled`
-
-**安全：** API Key 存服务端，前端通过 nonce + REST API 代理调用
 
 ---
 
@@ -153,10 +133,13 @@ cclee-theme/
 ├── functions.php          # 入口（仅 require）
 ├── index.php              # 兼容占位
 │
-├── templates/
+├── templates/             # 20 个模板
 │   ├── 404.html
 │   ├── archive.html
 │   ├── archive-product.html       # WooCommerce 产品归档
+│   ├── author.html                # 作者归档
+│   ├── cart.html                  # WooCommerce 购物车
+│   ├── checkout.html              # WooCommerce 结算
 │   ├── front-page.html
 │   ├── home.html
 │   ├── index.html
@@ -164,10 +147,12 @@ cclee-theme/
 │   ├── page-about-us.html
 │   ├── page-contact.html
 │   ├── page-design-preview.html   # 设计预览入口
+│   ├── page-landing.html          # Landing Page（无 header/footer）
 │   ├── page-no-sidebar.html
 │   ├── page-pattern-preview.html  # Patterns 集中展示
 │   ├── search.html
 │   ├── single.html
+│   ├── single-case-study.html     # Case Study 详情
 │   └── single-product.html        # WooCommerce 单品页
 │
 ├── parts/
@@ -175,7 +160,7 @@ cclee-theme/
 │   ├── footer.html
 │   └── sidebar.html
 │
-├── patterns/              # 16 个预制区块
+├── patterns/              # 24 个预制区块
 │   ├── ai-content-block.php
 │   ├── contact.php
 │   ├── cta-banner.php
@@ -184,14 +169,22 @@ cclee-theme/
 │   ├── footer-columns.php
 │   ├── hero-centered.php
 │   ├── hero-simple.php
+│   ├── landing-countdown.php
+│   ├── landing-hero-form.php
+│   ├── landing-trust-bar.php
+│   ├── landing-video-hero.php
 │   ├── logo-cloud.php
 │   ├── portfolio.php
+│   ├── post-list.php
+│   ├── post-magazine.php
 │   ├── pricing.php
 │   ├── services.php
 │   ├── stats.php
 │   ├── team.php
 │   ├── testimonial.php
-│   └── timeline.php
+│   ├── timeline.php
+│   ├── woo-progress-steps.php
+│   └── woo-trust-badges.php
 │
 ├── styles/                # Style Variations
 │   ├── commerce.json      # 商务蓝
@@ -212,9 +205,7 @@ cclee-theme/
     ├── setup.php
     ├── block-styles.php
     ├── block-patterns.php
-    ├── seo.php
-    ├── woocommerce.php
-    └── editor-ai.php
+    └── woocommerce.php
 ```
 
 ---
@@ -350,7 +341,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | `page-contact.html` | 联系我们 | ✅ | ✅ | Pattern 组装 | hero-simple + contact form + cta-banner |
 | `page-landing.html` | Landing Page | ❌ | ❌ | Pattern 组装 | 无 header/footer，最小导航 + 微型页脚 |
 | `page-design-preview.html` | 设计预览入口 | ✅ | ✅ | 单栏 | 模板/Pattern 导航索引 |
-| `page-pattern-preview.html` | Pattern 集中展示 | ✅ | ✅ | Pattern 组装 | 展示全部 16 个 Patterns |
+| `page-pattern-preview.html` | Pattern 集中展示 | ✅ | ✅ | Pattern 组装 | 展示全部 Patterns |
 | `404.html` | 404 页面 | ✅ | ✅ | 单栏 | 标题 + 描述 + **搜索框** |
 | `archive-product.html` | WooCommerce 产品归档 | ✅ | ✅ | 70/30 两栏 | hero-simple + **3列产品网格** + sidebar（分类/价格过滤）+ cta-banner |
 | `single-product.html` | WooCommerce 单品页 | ✅ | ✅ | 单栏 | legacy-template + **相关产品** + cta-banner |
@@ -362,30 +353,28 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 
 | Pattern | Slug | 分类 | 用途 |
 |---------|------|------|------|
-| Hero Centered | `cclee-theme/hero-centered` | featured | 居中大标题，渐变背景，装饰元素 |
-| Hero Simple | `cclee-theme/hero-simple` | featured | 左对齐简单 Hero，浅色背景 |
-| Features Grid | `cclee-theme/features-grid` | featured | 三列特性卡片网格 |
-| Services | `cclee-theme/services` | - | 垂直服务列表，图标+描述 |
-| Stats Section | `cclee-theme/stats` | featured | 关键数据展示，渐变背景 |
-| Portfolio | `cclee-theme/portfolio` | - | 项目展示网格，卡片+标签 |
-| Logo Cloud | `cclee-theme/logo-cloud` | featured | 合作伙伴 Logo 静态展示，hover 缩放效果 |
-| Team Members | `cclee-theme/team` | featured | 四列团队成员卡片 |
-| Testimonials | `cclee-theme/testimonial` | featured | 三列客户评价卡片 |
-| Pricing Table | `cclee-theme/pricing` | featured | 三列价格表 |
-| Timeline Section | `cclee-theme/timeline` | featured | 公司历程/里程碑时间线 |
-| FAQ Section | `cclee-theme/faq` | featured | 手风琴式常见问题，原生 details 元素 |
-| Contact Section | `cclee-theme/contact` | featured | 联系表单 + 信息区块 |
-| CTA Banner | `cclee-theme/cta-banner` | featured | 全宽行动召唤横幅 |
-| Footer Columns | `cclee-theme/footer-columns` | footer | 四列页脚区块（可独立使用） |
-| AI Content Block | `cclee-theme/ai-content-block` | featured | AI 辅助内容区块示例 |
-| Landing Hero with Form | `cclee-theme/landing-hero-form` | featured | Hero + 侧边线索收集表单 |
-| Landing Video Hero | `cclee-theme/landing-video-hero` | featured | 全屏视频背景 Hero |
-| Landing Trust Bar | `cclee-theme/landing-trust-bar` | featured | 信任徽章横条 |
-| Landing Countdown | `cclee-theme/landing-countdown` | featured | 限时优惠倒计时 |
-| WooCommerce Progress Steps | `cclee-theme/woo-progress-steps` | woocommerce | 结算进度条（购物车 → 结算 → 完成） |
-| WooCommerce Trust Badges | `cclee-theme/woo-trust-badges` | woocommerce | 信任徽章（安全支付/退换货/快速配送） |
-| Case Study Metrics | `cclee-theme/case-study-metrics` | featured | 成果数据展示（4列指标） |
-| Case Study Testimonial | `cclee-theme/case-study-testimonial` | featured | 客户评价卡片 |
+| Hero Centered | `cclee-theme/hero-centered` | cclee-theme, featured | 居中大标题，渐变背景，装饰元素 |
+| Hero Simple | `cclee-theme/hero-simple` | cclee-theme, featured | 左对齐简单 Hero，浅色背景 |
+| Features Grid | `cclee-theme/features-grid` | cclee-theme, featured | 三列特性卡片网格 |
+| Services | `cclee-theme/services` | cclee-theme | 垂直服务列表，图标+描述 |
+| Stats Section | `cclee-theme/stats` | cclee-theme, featured | 关键数据展示，渐变背景 |
+| Portfolio | `cclee-theme/portfolio` | cclee-theme | 项目展示网格，卡片+标签 |
+| Logo Cloud | `cclee-theme/logo-cloud` | cclee-theme, featured | 合作伙伴 Logo 静态展示，hover 缩放效果 |
+| Team Members | `cclee-theme/team` | cclee-theme, featured | 四列团队成员卡片 |
+| Testimonials | `cclee-theme/testimonial` | cclee-theme, featured | 三列客户评价卡片 |
+| Pricing Table | `cclee-theme/pricing` | cclee-theme, featured | 三列价格表 |
+| Timeline Section | `cclee-theme/timeline` | cclee-theme, featured | 公司历程/里程碑时间线 |
+| FAQ Section | `cclee-theme/faq` | cclee-theme, featured | 手风琴式常见问题，原生 details 元素 |
+| Contact Section | `cclee-theme/contact` | cclee-theme, featured | 联系表单 + 信息区块 |
+| CTA Banner | `cclee-theme/cta-banner` | cclee-theme, featured | 全宽行动召唤横幅 |
+| Footer Columns | `cclee-theme/footer-columns` | cclee-theme, footer | 四列页脚区块（可独立使用） |
+| AI Content Block | `cclee-theme/ai-content-block` | cclee-theme, featured | AI 辅助内容区块示例 |
+| Landing Hero with Form | `cclee-theme/landing-hero-form` | cclee-theme, featured | Hero + 侧边线索收集表单 |
+| Landing Video Hero | `cclee-theme/landing-video-hero` | cclee-theme, featured | 全屏视频背景 Hero |
+| Landing Trust Bar | `cclee-theme/landing-trust-bar` | cclee-theme, featured | 信任徽章横条 |
+| Landing Countdown | `cclee-theme/landing-countdown` | cclee-theme, featured | 限时优惠倒计时 |
+| WooCommerce Progress Steps | `cclee-theme/woo-progress-steps` | cclee-theme, woocommerce | 结算进度条（购物车 → 结算 → 完成） |
+| WooCommerce Trust Badges | `cclee-theme/woo-trust-badges` | cclee-theme, woocommerce | 信任徽章（安全支付/退换货/快速配送） |
 | Post List Layout | `cclee-theme/post-list` | cclee-theme | 列表式文章归档（左图右文） |
 | Post Magazine Layout | `cclee-theme/post-magazine` | cclee-theme | 杂志式文章归档（特色文章+网格） |
 
@@ -407,8 +396,6 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | 评论区 | ✅ | single.html comments 块 |
 | WooCommerce 兼容 | ✅ | 产品归档/单品页 + mini-cart |
 | 无障碍 | ✅ | skip-link + anchor:main |
-| SEO | ✅ | OG/Twitter Card + JSON-LD |
-| AI 编辑器辅助 | ✅ | 侧边栏 + REST API 代理 |
 
 ---
 

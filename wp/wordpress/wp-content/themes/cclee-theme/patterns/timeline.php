@@ -6,8 +6,8 @@
  * Description: 公司历程/里程碑时间线区块
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
 	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
 	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Our Journey</h2>
@@ -20,12 +20,12 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"right":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained","wideSize":"800px"}} -->
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->
-		<div class="wp-block-columns" style="margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"dimensions":{"width":"80px","height":"80px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","alignItems":"center","orientation":"horizontal"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;width:80px;height:80px">
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;box-shadow:0 4px 16px rgba(245,158,11,0.3)">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2010</p>
 					<!-- /wp:paragraph -->
@@ -36,8 +36,8 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}},"border":{"radius":"var(--wp--custom--border--radius--md)","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:var(--wp--custom--border--radius--md);border-width:1px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:12px;border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">Company Founded</h4>
 					<!-- /wp:heading -->
@@ -51,12 +51,12 @@
 		</div>
 		<!-- /wp:columns -->
 
-		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->
-		<div class="wp-block-columns" style="margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"dimensions":{"width":"80px","height":"80px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","alignItems":"center","orientation":"horizontal"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;width:80px;height:80px">
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;box-shadow:0 4px 16px rgba(245,158,11,0.3)">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2015</p>
 					<!-- /wp:paragraph -->
@@ -67,8 +67,8 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}},"border":{"radius":"var(--wp--custom--border--radius--md)","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:var(--wp--custom--border--radius--md);border-width:1px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:12px;border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">Global Expansion</h4>
 					<!-- /wp:heading -->
@@ -82,12 +82,12 @@
 		</div>
 		<!-- /wp:columns -->
 
-		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->
-		<div class="wp-block-columns" style="margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"dimensions":{"width":"80px","height":"80px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","alignItems":"center","orientation":"horizontal"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;width:80px;height:80px">
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;box-shadow:0 4px 16px rgba(245,158,11,0.3)">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2020</p>
 					<!-- /wp:paragraph -->
@@ -98,8 +98,8 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}},"border":{"radius":"var(--wp--custom--border--radius--md)","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:var(--wp--custom--border--radius--md);border-width:1px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:12px;border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">Industry Award Winner</h4>
 					<!-- /wp:heading -->
@@ -113,12 +113,12 @@
 		</div>
 		<!-- /wp:columns -->
 
-		<!-- wp:columns -->
-		<div class="wp-block-columns">
+		<!-- wp:columns {"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"dimensions":{"width":"80px","height":"80px"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center","alignItems":"center","orientation":"horizontal"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;width:80px;height:80px">
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-base-color has-accent-background-color has-text-color has-background" style="border-radius:50%;box-shadow:0 4px 16px rgba(245,158,11,0.3)">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2024</p>
 					<!-- /wp:paragraph -->
@@ -129,8 +129,8 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}},"border":{"radius":"var(--wp--custom--border--radius--md)","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:var(--wp--custom--border--radius--md);border-width:1px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-radius:12px;border-width:1px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">500+ Projects Milestone</h4>
 					<!-- /wp:heading -->

@@ -82,7 +82,7 @@
 						<label for="landing-message" style="display:block;margin-bottom:var(--wp--preset--spacing--10);color:var(--wp--preset--color--neutral-700);font-size:var(--wp--preset--font-size--small)">Message</label>
 						<textarea id="landing-message" name="message" rows="3" style="width:100%;padding:var(--wp--preset--spacing--20);border:1px solid var(--wp--preset--color--neutral-200);border-radius:6px;font-size:var(--wp--preset--font-size--medium);resize:vertical"></textarea>
 					</div>
-					<button type="submit" style="width:100%;padding:var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);background:var(--wp--preset--color--accent);color:var(--wp--preset--color--base);border:none;border-radius:8px;font-size:var(--wp--preset--font-size--medium);font-weight:600;cursor:pointer">Submit Request</button>
+					<button type="submit" style="width:100%;padding:var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);background:var(--wp--preset--color--primary);color:var(--wp--preset--color--base);border:none;border-radius:8px;font-size:var(--wp--preset--font-size--medium);font-weight:600;cursor:pointer">Submit Request</button>
 				</form>
 				<!-- /wp:html -->
 

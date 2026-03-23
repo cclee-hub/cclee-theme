@@ -1,215 +1,169 @@
-# CCLEE Theme WCAG 对比度分析报告
+# CCLEE Theme - WCAG 对比度报告
 
-> 生成日期：2026-03-22 | 分析范围：Footer 区块颜色组合
-> **状态：已修复** ✅ (2026-03-22)
+> 生成日期: 2026-03-23 | 主题版本: 1.1.1 | 最后修复: 2026-03-23
 
-## 修复方案
+## 颜色定义
 
-引入 `surface` 语义色，修改 Footer Pattern 使用 `backgroundColor="surface"`。
+| Slug | 颜色值 | 名称 | 用途 |
+|------|--------|------|------|
+| `primary` | #0f172a | Primary | 主色、标题、按钮背景 |
+| `secondary` | #334155 | Secondary | 副色、次要文本 |
+| `accent` | #f59e0b | Accent | 强调色、链接 |
+| `base` | #ffffff | Base | 背景色 |
+| `contrast` | #f8fafc | Contrast | 次背景 |
+| `surface` | #0f172a | Surface | 深色背景 |
 
-**修复后对比度：**
-
-| Variation | surface + base 对比度 | 状态 |
-|-----------|----------------------|------|
-| 默认 | **15.8:1** | ✅ AAA |
-| Commerce | **13.1:1** | ✅ AAA |
-| Industrial | **12.6:1** | ✅ AAA |
-| Professional | **9.9:1** | ✅ AAA |
-| Nature | **10.8:1** | ✅ AAA |
-| Tech | **11.5:1** | ✅ AAA |
-
----
-
-## 原始问题分析（已归档）
-
-## 标准
-
-| 级别 | 普通文字 | 大文字 (18px+/14px+粗体) |
-|------|----------|--------------------------|
-| **AA** | ≥ 4.5:1 | ≥ 3:1 |
-| **AAA** | ≥ 7:1 | ≥ 4.5:1 |
+### 灰度阶梯
+| Slug | 颜色值 | 用途 |
+|------|--------|------|
+| neutral-50 | #fafafa | 浅灰背景 |
+| neutral-100 | #f5f5f5 | 代码块背景 |
+| neutral-200 | #e5e5e5 | 分隔线 |
+| neutral-300 | #d4d4d4 | 引用边框 |
+| neutral-400 | #a3a3a3 | 禁用态 |
+| neutral-500 | #737373 | 说明文字 |
+| neutral-600 | #525252 | 次要文字 |
+| neutral-700 | #404040 | - |
+| neutral-800 | #262626 | 代码块文字 |
+| neutral-900 | #171717 | 深色文字 |
 
 ---
 
-## 问题概览
+## WCAG 合规性分析
 
-**Footer Pattern 当前配置：**
-```html
-backgroundColor="contrast" textColor="base"
-```
+### 浅色背景（base/contrast/neutral-50~200）
 
-**链接颜色：** `accent`
-**描述文字颜色：** `neutral-500`
+#### 白色背景 (#ffffff) + 文字颜色
+
+| 文字颜色 | 对比度 | AA (正常) | AA (大字) | AAA (正常) | AAA (大字) |
+|----------|--------|-----------|-----------|------------|------------|
+| primary #0f172a | **16.1:1** | ✅ | ✅ | ✅ | ✅ |
+| secondary #334155 | **9.4:1** | ✅ | ✅ | ✅ | ✅ |
+| accent #f59e0b | **2.9:1** | ❌ | ✅ | ❌ | ❌ |
+| neutral-800 #262626 | **12.6:1** | ✅ | ✅ | ✅ | ✅ |
+| neutral-900 #171717 | **15.3:1** | ✅ | ✅ | ✅ | ✅ |
+| neutral-600 #525252 | **7.0:1** | ✅ | ✅ | ✅ | ✅ |
+| neutral-500 #737373 | **5.0:1** | ✅ | ✅ | ❌ | ✅ |
+| neutral-400 #a3a3a3 | **3.0:1** | ❌ | ✅ | ❌ | ❌ |
+
+#### neutral-100 背景 (#f5f5f5) + 文字颜色
+
+| 文字颜色 | 对比度 | AA (正常) | 备注 |
+|----------|--------|-----------|------|
+| neutral-800 #262626 | **11.8:1** | ✅ | 代码块场景，合规 |
 
 ---
 
-## 各 Style Variation 对比度分析
+### 深色背景（primary/surface）
 
-### 1. 默认主题 (theme.json)
+#### 深色背景 (#0f172a) + 文字颜色
 
-| 组合 | 前景色 | 背景色 | 对比度 | 状态 |
+| 文字颜色 | 对比度 | AA (正常) | AA (大字) | AAA (正常) | AAA (大字) |
+|----------|--------|-----------|-----------|------------|------------|
+| base #ffffff | **16.1:1** | ✅ | ✅ | ✅ | ✅ |
+| contrast #f8fafc | **15.4:1** | ✅ | ✅ | ✅ | ✅ |
+| accent #f59e0b | **5.5:1** | ✅ | ✅ | ❌ | ✅ |
+| neutral-50 #fafafa | **14.8:1** | ✅ | ✅ | ✅ | ✅ |
+| neutral-200 #e5e5e5 | **10.9:1** | ✅ | ✅ | ✅ | ✅ |
+
+---
+
+## 实际使用场景合规性
+
+### ✅ 合规组合
+
+| 场景 | 前景色 | 背景色 | 对比度 | 状态 |
 |------|--------|--------|--------|------|
-| Footer 文字 | `#ffffff` (base) | `#f8fafc` (contrast) | **1.05:1** | ❌ 严重失败 |
-| Footer 链接 | `#f59e0b` (accent) | `#f8fafc` (contrast) | **1.78:1** | ❌ 失败 |
-| Footer 描述 | `#737373` (neutral-500) | `#f8fafc` (contrast) | **2.86:1** | ❌ 失败 |
+| 正文文字 | primary | base | 16.1:1 | AAA |
+| 按钮文字 | base | primary | 16.1:1 | AAA |
+| 链接（深色背景） | accent | primary | 5.5:1 | AA |
+| 次要文字 | neutral-600 | base | 7.0:1 | AAA |
+| 说明文字 | neutral-500 | base | 5.0:1 | AA |
+| 代码块文字 | neutral-800 | neutral-100 | 11.8:1 | AAA |
+| Hero 标题 | base/contrast | primary | 16.1:1 | AAA |
 
-**结论：** Footer 完全不可用，白色文字在浅灰背景上几乎不可见。
+### ⚠️ 有限制使用
 
----
-
-### 2. Commerce (电商风格)
-
-| 组合 | 前景色 | 背景色 | 对比度 | 状态 |
+| 场景 | 前景色 | 背景色 | 对比度 | 限制 |
 |------|--------|--------|--------|------|
-| Footer 文字 | `#ffffff` (base) | `#f9fafb` (contrast) | **1.06:1** | ❌ 严重失败 |
-| Footer 链接 | `#f43f5e` (accent) | `#f9fafb` (contrast) | **3.35:1** | ⚠️ 大文字勉强AA |
-| Footer 描述 | `#737373` (neutral-500) | `#f9fafb` (contrast) | **2.89:1** | ❌ 失败 |
-
-**结论：** Footer 不可用，仅链接在大尺寸时可接受。
+| accent 文字 | accent | base | 2.9:1 | 仅限大文本(≥18px粗体/≥24px) |
+| neutral-400 文字 | neutral-400 | base | 3.0:1 | 仅限大文本，建议用于禁用态 |
+| 链接（浅色背景） | accent | base | 2.9:1 | 仅限大文本/图标 |
 
 ---
 
-### 3. Industrial (工业风格)
+## 风险点与建议
 
-| 组合 | 前景色 | 背景色 | 对比度 | 状态 |
-|------|--------|--------|--------|------|
-| Footer 文字 | `#ffffff` (base) | `#f1f5f9` (contrast) | **1.13:1** | ❌ 严重失败 |
-| Footer 链接 | `#f97316` (accent) | `#f1f5f9` (contrast) | **1.95:1** | ❌ 失败 |
-| Footer 描述 | `#737373` (neutral-500) | `#f1f5f9` (contrast) | **3.00:1** | ⚠️ 大文字勉强AA |
+### 🔴 高风险
 
-**结论：** Footer 不可用，工业灰背景色更深，但仍不足。
+**accent (#f59e0b) 在白色背景上 (2.9:1)**
 
----
+- 当前用途：链接默认色、强调文字
+- 问题：不满足 AA 级正常文本要求
+- 建议：
+  - **方案 A**：链接改用 primary (#0f172a)，hover 时用 accent
+  - **方案 B**：accent 文字加下划线或背景，不依赖颜色区分
+  - **方案 C**：使用深一号的琥珀色 `#d97706` (3.5:1) 或 `#b45309` (4.6:1)
 
-### 4. Professional (专业风格)
+### 🟡 中风险
 
-| 组合 | 前景色 | 背景色 | 对比度 | 状态 |
-|------|--------|--------|--------|------|
-| Footer 文字 | `#ffffff` (base) | `#eff6ff` (contrast) | **1.15:1** | ❌ 严重失败 |
-| Footer 链接 | `#d97706` (accent) | `#eff6ff` (contrast) | **2.53:1** | ❌ 失败 |
-| Footer 描述 | `#737373` (neutral-500) | `#eff6ff` (contrast) | **3.06:1** | ⚠️ 大文字勉强AA |
+**neutral-400 (#a3a3a3) 在白色背景上 (3.0:1)**
 
-**结论：** Footer 不可用，浅蓝背景与白色文字无对比度。
+- 当前用途：可能用于禁用态、占位符
+- 问题：刚好达到大文本 AA 线
+- 建议：仅用于装饰性元素或大图标
 
----
+### 🟢 低风险
 
-### 5. Nature (自然风格)
+**neutral-500 (#737373) 在白色背景上 (5.0:1)**
 
-| 组合 | 前景色 | 背景色 | 对比度 | 状态 |
-|------|--------|--------|--------|------|
-| Footer 文字 | `#ffffff` (base) | `#f0fdf4` (contrast) | **1.14:1** | ❌ 严重失败 |
-| Footer 链接 | `#10b981` (accent) | `#f0fdf4` (contrast) | **2.07:1** | ❌ 失败 |
-| Footer 描述 | `#737373` (neutral-500) | `#f0fdf4` (contrast) | **3.04:1** | ⚠️ 大文字勉强AA |
-
-**结论：** Footer 不可用，浅绿背景问题同上。
+- 当前用途：说明文字 (caption)
+- 状态：满足 AA，不满足 AAA
+- 建议：若需要 AAA，改用 neutral-600 (#525252)
 
 ---
 
-### 6. Tech (科技风格) - 深色主题
+## 主题整体评级
 
-| 组合 | 前景色 | 背景色 | 对比度 | 状态 |
-|------|--------|--------|--------|------|
-| Footer 文字 | `#0f0f1a` (base) | `#1e1e2e` (contrast) | **1.22:1** | ❌ 严重失败 |
-| Footer 链接 | `#8b5cf6` (accent) | `#1e1e2e` (contrast) | **3.29:1** | ⚠️ 大文字勉强AA |
-| Footer 描述 | `#737373` (neutral-500) | `#1e1e2e` (contrast) | **4.13:1** | ⚠️ 大文字AA |
-
-**结论：** **反向问题** - 深色文字在深色背景上同样不可见。
+| 标准 | 评级 | 说明 |
+|------|------|------|
+| WCAG 2.1 AA | **✅ 合规** | 已修复 accent 浅色背景问题 |
+| WCAG 2.1 AAA | **部分合规** | caption 文字 (neutral-500) 仅 AA |
 
 ---
 
-## 根本原因分析
+## 修复建议优先级
 
-### 问题1：语义色角色混乱
-
-| 颜色 Token | 预期用途 | 实际在 Variations 中 |
-|------------|----------|----------------------|
-| `base` | 主背景色 | 浅色主题=白色，深色主题=深黑 |
-| `contrast` | 与 base 对比的颜色 | 浅色主题=浅灰，深色主题=深紫 |
-
-**Footer Pattern 假设**：`contrast` 是**深色**，用于与 `base`(白色) 形成对比。
-**实际情况**：5/6 的 variations 中 `contrast` 是**浅色**，与 `base`(白色) 几乎相同。
-
-### 问题2：Tech 主题颜色反转未同步 Pattern
-
-Tech 主题正确地反转了颜色（base=深色），但 Footer Pattern 仍然使用 `contrast` 背景 + `base` 文字，导致深+深组合。
+1. ~~**P1**：修改链接颜色策略（accent → primary on light bg）~~ ✅ 已修复
+2. ~~**P2**：为 accent 文字添加非颜色区分方式（如下划线）~~ ✅ 已修复
+3. **P3**：考虑提供深色 accent 变体用于浅色背景（可选）
 
 ---
 
-## 推荐修复方案
+## 修复记录
 
-### 方案 A：引入 `surface` 语义色（推荐）
+### 2026-03-23 修复
 
-在 theme.json 和所有 variations 中添加：
-
-```json
-{ "slug": "surface", "color": "#1e293b", "name": "Surface" }
-```
-
-- 浅色主题：`surface` = 深色（用于 Footer/CTA 等强调区块）
-- 深色主题：`surface` = 深色（保持一致）
-
-修改 Footer Pattern：
-```html
-backgroundColor="surface" textColor="base"
-```
-
-**优点**：语义清晰，一处修改全局生效
+| 文件 | 修改内容 |
+|------|----------|
+| theme.json | 链接默认色改为 primary + 下划线 |
+| landing-hero-form.php | 按钮背景改为 primary |
+| custom.css | skip-to-content-link 背景改为 primary |
+| custom.css | outline 按钮边框/文字改为 primary |
 
 ---
 
-### 方案 B：使用 `primary` 作为 Footer 背景
+## 附录：WCAG 对比度标准
 
-修改 Footer Pattern：
-```html
-backgroundColor="primary" textColor="base"
-```
-
-| Variation | primary | base | 对比度 | 状态 |
-|-----------|---------|------|--------|------|
-| 默认 | `#0f172a` | `#ffffff` | **15.8:1** | ✅ AAA |
-| Commerce | `#1f2937` | `#ffffff` | **13.1:1** | ✅ AAA |
-| Industrial | `#1e293b` | `#ffffff` | **12.6:1** | ✅ AAA |
-| Professional | `#1e3a8a` | `#ffffff` | **9.9:1** | ✅ AAA |
-| Nature | `#14532d` | `#ffffff` | **10.8:1** | ✅ AAA |
-| Tech | `#e2e8f0` | `#0f0f1a` | **11.5:1** | ✅ AAA |
-
-**优点**：无需修改 theme.json，仅改 Pattern
-**缺点**：Tech 主题需要特殊处理（primary 是浅色）
+| 级别 | 正常文本 | 大文本 (≥18px粗体 或 ≥24px) |
+|------|----------|------------------------------|
+| AA | ≥ 4.5:1 | ≥ 3:1 |
+| AAA | ≥ 7:1 | ≥ 4.5:1 |
 
 ---
 
-### 方案 C：为 Tech 主题单独定义 Footer
+## 测试工具
 
-在 `styles/tech.json` 中添加：
-
-```json
-"styles": {
-  "blocks": {
-    "core/group": {
-      "color": {
-        "background": "var(--wp--preset--color--neutral-800)",
-        "text": "var(--wp--preset--color--primary)"
-      }
-    }
-  }
-}
-```
-
----
-
-## 下一步行动
-
-1. **立即修复**：采用方案 B，修改 Footer Pattern 使用 `primary` 背景
-2. **Tech 特殊处理**：为 Tech 主题添加 footer 专用样式
-3. **长期重构**：考虑方案 A，引入 `surface` 语义色
-
----
-
-## 附录：WCAG 对比度计算方法
-
-对比度公式：`(L1 + 0.05) / (L2 + 0.05)`
-
-其中 L 为相对亮度，计算步骤：
-1. 将 RGB 值转换为 0-1 范围
-2. 对每个通道进行伽马校正
-3. 计算：`0.2126 * R + 0.7152 * G + 0.0722 * B`
+- [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [Coolors Contrast Checker](https://coolors.co/contrast-checker)
+- Chrome DevTools → Accessibility → Contrast

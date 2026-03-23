@@ -18,11 +18,11 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 
-				<!-- wp:quote {"style":{"border":{"left":{"width":"4px","color":"var(--wp--preset--color--accent"}},"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}}}} -->
-				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
+				<!-- wp:quote {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}}}} -->
+				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-style:solid;border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:paragraph -->
 					<p>"This theme transformed our website. The design quality and ease of customization are unmatched."</p>
 					<!-- /wp:paragraph -->
@@ -31,9 +31,9 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:paragraph {"fontSize":"large"} -->
-					<p class="has-large-font-size">👤</p>
-					<!-- /wp:paragraph -->
+					<!-- wp:html -->
+					<div class="cclee-avatar cclee-avatar--md cclee-avatar--accent" style="margin-right:12px">SC</div>
+					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:heading {"level":5} -->
@@ -54,11 +54,11 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 
-				<!-- wp:quote {"style":{"border":{"left":{"width":"4px","color":"var(--wp--preset--color--accent"}},"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}}}} -->
-				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
+				<!-- wp:quote {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}}}} -->
+				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-style:solid;border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:paragraph -->
 					<p>"Professional, responsive, and delivered exactly what we needed. Highly recommended for any business!"</p>
 					<!-- /wp:paragraph -->
@@ -67,9 +67,9 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:paragraph {"fontSize":"large"} -->
-					<p class="has-large-font-size">👤</p>
-					<!-- /wp:paragraph -->
+					<!-- wp:html -->
+					<div class="cclee-avatar cclee-avatar--md cclee-avatar--accent" style="margin-right:12px">MJ</div>
+					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:heading {"level":5} -->
@@ -90,11 +90,11 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"8px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-base-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-base-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 
-				<!-- wp:quote {"style":{"border":{"left":{"width":"4px","color":"var(--wp--preset--color--accent"}},"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}}}} -->
-				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
+				<!-- wp:quote {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}}}} -->
+				<blockquote class="wp-block-quote" style="border-left-color:var(--wp--preset--color--accent);border-left-style:solid;border-left-width:4px;padding-left:var(--wp--preset--spacing--30)">
 					<!-- wp:paragraph -->
 					<p>"The best investment we made for our online presence. Clean code and beautiful design out of the box."</p>
 					<!-- /wp:paragraph -->
@@ -103,9 +103,9 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:paragraph {"fontSize":"large"} -->
-					<p class="has-large-font-size">👤</p>
-					<!-- /wp:paragraph -->
+					<!-- wp:html -->
+					<div class="cclee-avatar cclee-avatar--md cclee-avatar--accent" style="margin-right:12px">ED</div>
+					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:heading {"level":5} -->

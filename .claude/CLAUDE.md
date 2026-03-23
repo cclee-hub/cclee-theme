@@ -22,10 +22,18 @@
 | wp | WordPress + WooCommerce + MySQL 8.0 | ✅ localhost:8080 |
 | wp-theme | cclee-theme（通用主题，独立仓库）+ yougu-cclee（Yougu 子主题） | ✅ localhost:8080 |
 
+## 开发流程
+
+### 遇到错误时
+1. 先查日志：`docker exec wp_wordpress cat /var/www/html/wp-content/debug.log | tail -50`
+2. 按 `.claude/rules/gotchas.md` 流程处理
+3. 修复后执行 `/note gotcha <内容>` 记录
+4.WSL 环境下主题文件属于 www-data 用户，编辑前若遇到权限错误，
+必须先执行 sudo chown -R $USER:$USER <文件路径>，不得跳过或提示手动操作。
+
 ## 全局禁止
 
 - 禁止臆测延伸，禁止提前设计未确认功能
 - 操作服务器前必须确认路径
 - 禁止修改未明确提及的文件
-- 遇到错误先登记到记忆，再按 `.claude/rules/gotchas.md` 流程处理
 - 更新文档时：AI友好、无歧义、无噪音

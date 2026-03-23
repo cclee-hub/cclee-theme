@@ -6,8 +6,8 @@
  * Description: 合作伙伴/客户Logo展示区块
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
 	<!-- wp:paragraph {"align":"center","textColor":"neutral-400","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.15em","fontSize":"0.875rem"},"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--50)"}}}} -->
 	<p class="has-text-align-center has-neutral-400-color has-text-color" style="letter-spacing:0.15em;margin-bottom:var(--wp--preset--spacing--50)">Trusted by Industry Leaders</p>
@@ -16,40 +16,40 @@
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"}} -->
 	<div class="wp-block-group" style="gap:var(--wp--preset--spacing--60)">
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
 			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
 			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">TECHCORP</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
 			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
 			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">INNOVATE</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
 			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
 			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">NEXUS</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
 			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
 			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">VERTEX</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--40)}}},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)}}},"className":"cclee-logo-item","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
 			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
 			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">PULSE</p>
 			<!-- /wp:paragraph -->

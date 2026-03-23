@@ -28,14 +28,10 @@
         const header = document.querySelector('.site-header');
         if (!header) return;
 
-        // Detect if first full-width group has dark background
-        const hero = document.querySelector('.wp-site-blocks > .wp-block-group.alignfull:first-of-type');
-        const hasDarkHero = hero &&
-                            hero.classList.contains('has-background') &&
-                            !hero.classList.contains('has-base-background-color');
+        // Only add transparent class on front page
+        const isFrontPage = document.body.classList.contains('home');
 
-        // Only add transparent class on pages with dark hero
-        if (hasDarkHero) {
+        if (isFrontPage) {
             header.classList.add('site-header--transparent');
         }
 

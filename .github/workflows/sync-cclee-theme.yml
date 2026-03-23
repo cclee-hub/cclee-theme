@@ -40,3 +40,15 @@ jobs:
             git commit -m "sync: from yougu repo"
             git push origin main
           }
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to demo server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DEMO_HOST }}
+          username: ${{ secrets.DEMO_USER }}
+          key: ${{ secrets.DEMO_SSH_KEY }}
+          script: cd /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme && git pull

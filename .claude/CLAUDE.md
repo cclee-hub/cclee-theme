@@ -10,8 +10,8 @@
 
 | 项目 | 本地 | 服务器 |
 |------|------|--------|
-| cn-site | `~/workspace/yougu/cn-site/` | `/var/www/cn-site/` |
-| wp | `~/workspace/yougu/wp/` | `/var/www/wp/` |
+| cn-site | `~/workspace/wordpress/cn-site/` | `/var/www/cn-site/` |
+| wp | `~/workspace/wordpress/wp/` | `/var/www/wp/` |
 | wp-demo | - | `/var/www/wp-demo/` |
 | yougu-cclee | `wp/wordpress/wp-content/themes/yougu-cclee/` | `/var/www/wp/wordpress/wp-content/themes/yougu-cclee/` |
 | cclee-theme | `wp/wordpress/wp-content/themes/cclee-theme/` | `/var/www/wp-demo/wordpress/wp-content/themes/cclee-theme/` |

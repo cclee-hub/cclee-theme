@@ -42,7 +42,7 @@ docker exec wp_cli wp [命令] --allow-root
 
 ### 路径
 
-- 本地：`~/workspace/yougu/cn-site/`
+- 本地：`~/workspace/wordpress/cn-site/`
 - 服务器：`/var/www/cn-site/`
 
 ### 开发原则

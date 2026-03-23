@@ -22,8 +22,11 @@ cn-site/static/backup/sql/
 # Windows Zone files
 *:Zone.Identifier
 
-# Claude Code (NEVER commit)
-.claude/
+# Claude Code (keep rules, ignore sensitive)
+.claude/credentials.md
+.claude/*.log
+.claude/handover.md
+.claude/memory/
 
 # IDE
 .idea/

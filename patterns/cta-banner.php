@@ -27,7 +27,7 @@
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"backgroundColor":"base","textColor":"accent","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"var(--wp--preset--spacing--60)","right":"var(--wp--preset--spacing--60)"}}}} -->
-			<div class="wp-block-button"><a class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-left:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);box-shadow:0 4px 14px rgba(0,0,0,0.15)">Download Free</a></div>
+			<div class="wp-block-button"><a href="https://demo.aigent.ren/" class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-left:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);box-shadow:0 4px 14px rgba(0,0,0,0.15)">View Demo</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

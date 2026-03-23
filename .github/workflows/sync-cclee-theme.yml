@@ -51,4 +51,4 @@ jobs:
           host: ${{ secrets.DEMO_HOST }}
           username: ${{ secrets.DEMO_USER }}
           key: ${{ secrets.DEMO_SSH_KEY }}
-          script: cd /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme && git pull
+          script: git config --global --add safe.directory /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme && cd /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme && git pull

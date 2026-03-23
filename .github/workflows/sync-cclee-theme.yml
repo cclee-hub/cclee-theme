@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - 'wp/wordpress/wp-content/themes/cclee-theme/**'
+  workflow_dispatch:
 
 jobs:
   sync:

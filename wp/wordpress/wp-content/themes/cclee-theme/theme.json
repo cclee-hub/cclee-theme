@@ -733,6 +733,21 @@
       "postTypes": [
         "post"
       ]
+    },
+    {
+      "name": "my-account",
+      "title": "My Account",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "order-received",
+      "title": "Order Received"
+    },
+    {
+      "name": "product-search",
+      "title": "Product Search"
     }
   ]
 }

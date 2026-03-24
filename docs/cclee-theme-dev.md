@@ -32,8 +32,8 @@ functions.php
 
 | 钩子 | 作用 |
 |------|------|
-| `after_setup_theme` | 注册 theme support、导航菜单 |
-| `wp_enqueue_scripts` | 加载 `assets/css/custom.css` |
+| `after_setup_theme` | 注册 theme support、导航菜单、加载编辑器样式 |
+| `wp_enqueue_scripts` | 加载 `custom.css` + `theme.js` |
 | `wp_footer:99` | 触发 `cclee_float_widget` hook |
 | `after_switch_theme` | 主题激活时创建默认导航菜单（Primary/Footer） |
 
@@ -69,13 +69,14 @@ functions.php
 
 | 钩子/过滤器 | 作用 |
 |-------------|------|
-| `after_setup_theme` | 声明 Woo 支持（zoom/lightbox/slider）|
+| `after_setup_theme` | 声明 Woo 支持|
 | `wp_enqueue_scripts` | 条件加载 `assets/css/woocommerce.css` |
 | `woocommerce_enqueue_styles` | 移除 Woo 默认样式（保留 general）|
 | `woocommerce_before_main_content` | 替换包装器为主题布局 |
 | `gettext` | B2B 文字替换（Shop → Products）|
 | `woocommerce_page_title` | 修改归档页标题 |
 | `woocommerce_helper_suppress_admin_notice` | 隐藏 WooCommerce.com 登录提示 |
+| `woocommerce_get_page_permalink` | 强制 Shop 页面 URL 使用 `/products/` |
 
 **设计原则：** 主题管样式，Woo 管功能；不重写 Woo 模板文件，仅通过 CSS 覆盖
 
@@ -133,7 +134,7 @@ cclee-theme/
 ├── functions.php          # 入口（仅 require）
 ├── index.php              # 兼容占位
 │
-├── templates/             # 20 个模板
+├── templates/             # 24 个模板
 │   ├── 404.html
 │   ├── archive.html
 │   ├── archive-product.html       # WooCommerce 产品归档
@@ -143,13 +144,17 @@ cclee-theme/
 │   ├── front-page.html
 │   ├── home.html
 │   ├── index.html
+│   ├── my-account.html            # WooCommerce 账户中心
+│   ├── order-received.html        # WooCommerce 订单确认
 │   ├── page.html
 │   ├── page-about-us.html
+│   ├── page-blog.html             # 博客页面（通过 slug 匹配）
 │   ├── page-contact.html
 │   ├── page-design-preview.html   # 设计预览入口
 │   ├── page-landing.html          # Landing Page（无 header/footer）
 │   ├── page-no-sidebar.html
 │   ├── page-pattern-preview.html  # Patterns 集中展示
+│   ├── product-search.html        # WooCommerce 产品搜索
 │   ├── search.html
 │   ├── single.html
 │   ├── single-case-study.html     # Case Study 详情
@@ -160,7 +165,7 @@ cclee-theme/
 │   ├── footer.html
 │   └── sidebar.html
 │
-├── patterns/              # 24 个预制区块
+├── patterns/              # 25 个预制区块
 │   ├── ai-content-block.php
 │   ├── contact.php
 │   ├── cta-banner.php
@@ -183,6 +188,7 @@ cclee-theme/
 │   ├── team.php
 │   ├── testimonial.php
 │   ├── timeline.php
+│   ├── woo-account-nav.php
 │   ├── woo-progress-steps.php
 │   └── woo-trust-badges.php
 │
@@ -337,6 +343,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | `single.html` | 单篇文章 | ✅ | ✅ | 70/30 两栏 | 标题 + 日期/分类 + 特色图 + 内容 + **上下篇导航** + **评论** + sidebar |
 | `page.html` | 通用页面 | ✅ | ✅ | 单栏 | 标题 + 特色图 + 内容 |
 | `page-no-sidebar.html` | 无侧边栏页面 | ✅ | ✅ | 单栏 | 标题 + 特色图 + 内容（全宽） |
+| `page-blog.html` | 博客页面 | ✅ | ✅ | 3列网格 | hero-simple + post-grid + cta-banner + 分页 + 空状态 |
 | `page-about-us.html` | 关于我们 | ✅ | ✅ | Pattern 组装 | hero-simple + content + features-grid + cta-banner |
 | `page-contact.html` | 联系我们 | ✅ | ✅ | Pattern 组装 | hero-simple + contact form + cta-banner |
 | `page-landing.html` | Landing Page | ❌ | ❌ | Pattern 组装 | 无 header/footer，最小导航 + 微型页脚 |
@@ -347,6 +354,9 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | `single-product.html` | WooCommerce 单品页 | ✅ | ✅ | 单栏 | legacy-template + **相关产品** + cta-banner |
 | `cart.html` | WooCommerce 购物车 | ✅ | ✅ | 65/35 两栏 | progress-steps + cart + order-summary + trust-badges |
 | `checkout.html` | WooCommerce 结算 | ✅ | ✅ | 60/40 两栏 | progress-steps + checkout + order-summary + trust-badges |
+| `my-account.html` | WooCommerce 账户中心 | ✅ | ✅ | 25/75 两栏 | **woo-account-nav** + my-account block |
+| `order-received.html` | WooCommerce 订单确认 | ✅ | ✅ | 60/40 两栏 | progress-steps(第3步高亮) + thank-you + order-details + order-info + trust-badges |
+| `product-search.html` | WooCommerce 产品搜索 | ✅ | ✅ | 70/30 两栏 | search-results 标题 + 产品网格 + sidebar（分类/价格过滤）+ cta-banner |
 | `single-case-study.html` | Case Study 详情 | ✅ | ✅ | Pattern 组装 | hero + challenge + solution + metrics + testimonial + gallery + related |
 
 ### Patterns 清单
@@ -375,6 +385,7 @@ docker exec wp_wordpress curl -L "https://images.pexels.com/photos/XXX/pexels-ph
 | Landing Countdown | `cclee-theme/landing-countdown` | cclee-theme, featured | 限时优惠倒计时 |
 | WooCommerce Progress Steps | `cclee-theme/woo-progress-steps` | cclee-theme, woocommerce | 结算进度条（购物车 → 结算 → 完成） |
 | WooCommerce Trust Badges | `cclee-theme/woo-trust-badges` | cclee-theme, woocommerce | 信任徽章（安全支付/退换货/快速配送） |
+| WooCommerce Account Navigation | `cclee-theme/woo-account-nav` | cclee-theme, woocommerce | 账户中心侧边栏导航（Dashboard/Orders/Downloads/Addresses/Account/Logout） |
 | Post List Layout | `cclee-theme/post-list` | cclee-theme | 列表式文章归档（左图右文） |
 | Post Magazine Layout | `cclee-theme/post-magazine` | cclee-theme | 杂志式文章归档（特色文章+网格） |
 

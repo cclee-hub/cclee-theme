@@ -7,14 +7,14 @@
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"surface","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-base-color has-surface-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<div class="wp-block-group alignfull has-surface-background-color has-background has-base-color has-text-color" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
 	<!-- wp:columns -->
 	<div class="wp-block-columns">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:site-title {"level":0} /-->
+			<!-- wp:site-title {"level":0,"isLink":false} /-->
 			<!-- wp:paragraph {"textColor":"neutral-500"} -->
 			<p class="has-neutral-500-color has-text-color">Building beautiful websites with modern design principles and powerful features.</p>
 			<!-- /wp:paragraph -->
@@ -62,7 +62,7 @@
 			<p class="has-neutral-500-color has-text-color has-small-font-size">Stay updated with our latest news and updates.</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small","style":{"typography":{"fontStyle":"italic"}}} -->
-			<p class="has-neutral-500-color has-text-color has-small-font-size" style="font-style:italic"><!-- Newsletter input placeholder --></p>
+			<p class="has-neutral-500-color has-text-color has-small-font-size" style="font-style:italic">Newsletter input placeholder</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">

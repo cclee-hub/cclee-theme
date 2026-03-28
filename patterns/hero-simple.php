@@ -9,22 +9,18 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left"}} -->
-	<div class="wp-block-group alignwide" style="position:relative">
+	<!-- wp:group {"align":"wide","className":"has-grid-pattern","layout":{"type":"constrained","justifyContent":"left"}} -->
+	<div class="wp-block-group alignwide has-grid-pattern">
 
-		<!-- wp:html -->
-		<div class="cclee-grid-pattern" style="color:var(--wp--preset--color--neutral-300)"></div>
-		<!-- /wp:html -->
-
-		<!-- wp:group {"layout":{"type":"constrained"},"style":{"spacing":{"maxWidth":"640px"}}} -->
-		<div style="position:relative;z-index:1;max-width:640px">
+		<!-- wp:group {"className":"cclee-hero-content","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group cclee-hero-content">
 
 			<!-- wp:paragraph {"textColor":"accent","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em"}}} -->
 			<p class="has-accent-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.05em">WELCOME</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":1,"textColor":"primary","fontSize":"h1"} -->
-			<h1 class="wp-block-heading has-primary-color has-text-color" style="font-size:var(--wp--preset--font-size--h1)">Your Vision,<br>Our Theme.</h1>
+			<h1 class="wp-block-heading has-primary-color has-text-color has-h-1-font-size">Your Vision,<br>Our Theme.</h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"large","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
@@ -33,8 +29,8 @@
 
 			<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
 			<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50)">
-				<!-- wp:button {"backgroundColor":"accent","textColor":"base","style":{"border":{"radius":"8px"}}} -->
-				<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:8px">Start Building</a></div>
+				<!-- wp:button {"backgroundColor":"accent","textColor":"base"} -->
+				<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button">Start Building</a></div>
 				<!-- /wp:button -->
 				<!-- wp:paragraph {"style":{"spacing":{"margin":{"left":"var(--wp--preset--spacing--30)"}}}} -->
 				<p style="margin-left:var(--wp--preset--spacing--30)"><a href="#">View Demo</a></p>

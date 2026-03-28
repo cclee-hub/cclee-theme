@@ -123,37 +123,37 @@
       ],
       "gradients": [
         {
-          "slug": "primary-gradient",
+          "slug": "primary",
           "gradient": "linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--secondary) 100%)",
           "name": "Primary Gradient"
         },
         {
-          "slug": "accent-gradient",
+          "slug": "accent",
           "gradient": "linear-gradient(135deg, var(--wp--preset--color--accent) 0%, #ea580c 100%)",
           "name": "Accent Gradient"
         },
         {
-          "slug": "hero-gradient",
+          "slug": "hero",
           "gradient": "linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%)",
           "name": "Hero Gradient"
         },
         {
-          "slug": "subtle-gradient",
+          "slug": "subtle",
           "gradient": "linear-gradient(180deg, var(--wp--preset--color--contrast) 0%, var(--wp--preset--color--base) 100%)",
           "name": "Subtle Gradient"
         },
         {
-          "slug": "glass-gradient",
+          "slug": "glass",
           "gradient": "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)",
           "name": "Glass Gradient"
         },
         {
-          "slug": "warm-gradient",
+          "slug": "warm",
           "gradient": "linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)",
           "name": "Warm Gradient"
         },
         {
-          "slug": "cool-gradient",
+          "slug": "cool",
           "gradient": "linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%)",
           "name": "Cool Gradient"
         }
@@ -177,39 +177,39 @@
         },
         {
           "slug": "body",
-          "name": "Body (Inter)",
-          "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+          "name": "Body (Space Grotesk)",
+          "fontFamily": "'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
           "fontFace": [
             {
-              "fontFamily": "Inter",
+              "fontFamily": "Space Grotesk",
               "fontStyle": "normal",
               "fontWeight": "400",
-              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf"]
+              "src": ["https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUUsj.ttf"]
             },
             {
-              "fontFamily": "Inter",
+              "fontFamily": "Space Grotesk",
               "fontStyle": "normal",
               "fontWeight": "500",
-              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf"]
+              "src": ["https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUUsj.ttf"]
             },
             {
-              "fontFamily": "Inter",
+              "fontFamily": "Space Grotesk",
               "fontStyle": "normal",
               "fontWeight": "600",
-              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf"]
+              "src": ["https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj42Vksj.ttf"]
             },
             {
-              "fontFamily": "Inter",
+              "fontFamily": "Space Grotesk",
               "fontStyle": "normal",
               "fontWeight": "700",
-              "src": ["https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf"]
+              "src": ["https://fonts.gstatic.com/s/spacegrotesk/v22/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj4PVksj.ttf"]
             }
           ]
         },
         {
           "slug": "system",
           "name": "System Font",
-          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif"
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif"
         },
         {
           "slug": "mono",
@@ -230,6 +230,11 @@
           "slug": "small",
           "size": "0.875rem",
           "name": "Small"
+        },
+        {
+          "slug": "base",
+          "size": "16px",
+          "name": "Base"
         },
         {
           "slug": "medium",
@@ -675,8 +680,53 @@
       "area": "header"
     },
     {
+      "name": "header-transparent",
+      "title": "Header (Transparent)",
+      "area": "header"
+    },
+    {
+      "name": "header-light",
+      "title": "Header (Light)",
+      "area": "header"
+    },
+    {
+      "name": "header-centered",
+      "title": "Header (Centered Logo)",
+      "area": "header"
+    },
+    {
+      "name": "header-nav-center",
+      "title": "Header (Centered Nav)",
+      "area": "header"
+    },
+    {
+      "name": "header-search",
+      "title": "Header (With Search)",
+      "area": "header"
+    },
+    {
+      "name": "header-social",
+      "title": "Header (With Social)",
+      "area": "header"
+    },
+    {
       "name": "footer",
       "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "footer-simple",
+      "title": "Footer (Simple)",
+      "area": "footer"
+    },
+    {
+      "name": "footer-newsletter",
+      "title": "Footer (Newsletter)",
+      "area": "footer"
+    },
+    {
+      "name": "footer-columns",
+      "title": "Footer (Multi-Column)",
       "area": "footer"
     }
   ],
@@ -691,6 +741,13 @@
     {
       "name": "page-no-sidebar",
       "title": "Page (No Sidebar)",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-with-sidebar",
+      "title": "Page with Sidebar",
       "postTypes": [
         "page"
       ]
@@ -748,6 +805,43 @@
     {
       "name": "product-search",
       "title": "Product Search"
+    },
+    {
+      "name": "page-privacy",
+      "title": "Privacy Policy",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "page-terms",
+      "title": "Terms of Service",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "maintenance",
+      "title": "Maintenance Mode"
+    },
+    {
+      "name": "coming-soon",
+      "title": "Coming Soon"
+    },
+    {
+      "name": "wishlist",
+      "title": "Wishlist"
+    },
+    {
+      "name": "compare",
+      "title": "Compare Products"
+    },
+    {
+      "name": "single-product-wide",
+      "title": "Single Product (Wide)",
+      "postTypes": [
+        "product"
+      ]
     }
   ]
 }

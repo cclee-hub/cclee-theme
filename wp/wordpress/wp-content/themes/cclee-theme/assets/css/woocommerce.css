@@ -811,23 +811,55 @@
 	margin: 0;
 }
 
-.cclee-filter-panel .wc-block-product-categories-list {
+/* Category list as horizontal pill tags */
+.cclee-filter-panel .wp-block-woocommerce-product-categories {
 	margin: 0;
 }
 
-.cclee-filter-panel .wc-block-product-categories-list li {
-	margin-bottom: var(--wp--preset--spacing--10);
+.cclee-filter-panel .wc-block-product-categories-list--depth-0 {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--wp--preset--spacing--20);
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-.cclee-filter-panel .wc-block-product-categories-list a {
+.cclee-filter-panel .wc-block-product-categories-list--depth-0 > li {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--10);
+}
+
+.cclee-filter-panel .wc-block-product-categories-list-item > a {
+	display: inline-flex;
+	align-items: center;
 	font-size: var(--wp--preset--font-size--small);
 	color: var(--wp--preset--color--neutral-700);
 	text-decoration: none;
-	transition: color var(--wp--custom--transition--fast);
+	padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--30);
+	border: 1px solid var(--wp--preset--color--neutral-200);
+	border-radius: var(--wp--custom--border--radius--full);
+	transition: all var(--wp--custom--transition--fast);
+	line-height: 1.4;
 }
 
-.cclee-filter-panel .wc-block-product-categories-list a:hover {
+.cclee-filter-panel .wc-block-product-categories-list-item > a:hover {
 	color: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--primary);
+	background: rgba(15, 23, 42, 0.04);
+}
+
+/* Count badge next to tag */
+.cclee-filter-panel .wc-block-product-categories-list-item-count {
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--neutral-400);
+}
+
+/* Hide sub-categories to keep tags flat */
+.cclee-filter-panel .wc-block-product-categories-list--depth-1 {
+	display: none;
 }
 
 /* ========================================

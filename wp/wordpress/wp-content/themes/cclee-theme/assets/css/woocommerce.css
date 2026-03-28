@@ -805,12 +805,6 @@
 	margin-bottom: var(--wp--preset--spacing--20);
 }
 
-/* Override WooCommerce filter block styles inside panel */
-.cclee-filter-panel .wp-block-woocommerce-price-filter,
-.cclee-filter-panel .wp-block-woocommerce-stock-filter {
-	margin: 0;
-}
-
 /* Category list as horizontal pill tags */
 .cclee-filter-panel .wp-block-woocommerce-product-categories {
 	margin: 0;

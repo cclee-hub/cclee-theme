@@ -1,4 +1,4 @@
-# WordPress core files (keep themes for version control)
+# WordPress core files
 wp/wordpress/wp-admin/
 wp/wordpress/wp-includes/
 wp/wordpress/wp-*.php
@@ -6,6 +6,8 @@ wp/wordpress/xmlrpc.php
 wp/wordpress/index.php
 wp/wordpress/wp-content/plugins/*
 !wp/wordpress/wp-content/plugins/cclee-toolkit/
+wp/wordpress/wp-content/themes/*
+!wp/wordpress/wp-content/themes/cclee-theme/
 wp/wordpress/wp-content/uploads/
 wp/wordpress/wp-content/upgrade/
 wp/wordpress/wp-content/backup/
@@ -21,6 +23,25 @@ cn-site/static/backup/sql/
 
 # Windows Zone files
 *:Zone.Identifier
+
+# Browser automation
+.puppeteer/
+.playwright.config.json
+test-results/
+
+# MCP
+.mcp.json
+
+# Debug / temp data
+docs/console-records/
+docs/temp.md
+docs/screenshots/
+docs/styles/
+docs/plans/
+docs/woo/
+docs/*.md
+!docs/cclee-theme-dev.md
+!docs/troubleshooting.md
 
 # Claude Code (keep rules, ignore sensitive)
 .claude/credentials.md

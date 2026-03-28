@@ -7,7 +7,7 @@
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--30)"}},"border":{"radius":"var(--wp--custom--border--radius--lg)"}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-neutral-50-background-color has-background" style="border-radius:var(--wp--custom--border--radius--lg);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)">
+<div class="wp-block-group has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30);border-radius:var(--wp--custom--border--radius--lg)">
 
 	<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"medium","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--30)"}}}} -->
 	<h3 class="wp-block-heading has-primary-color has-text-color has-medium-font-size" style="margin-bottom:var(--wp--preset--spacing--30)">My Account</h3>

@@ -26,9 +26,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-				</div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'mail' ); ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Email:</strong> hello@example.com</p>
@@ -39,9 +37,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-				</div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'map-pin' ); ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Location:</strong> 123 Business Street, City</p>
@@ -49,15 +45,24 @@
 			</div>
 			<!-- /wp:group -->
 
-			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group">
+			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-				</div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'clock' ); ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Hours:</strong> Mon-Fri 9AM-6PM</p>
+				<!-- /wp:paragraph -->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+			<div class="wp-block-group">
+				<!-- wp:html -->
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'phone' ); ?></div>
+				<!-- /wp:html -->
+				<!-- wp:paragraph -->
+				<p><strong>Phone:</strong> +1 (555) 123-4567</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -68,15 +73,15 @@
 		<!-- wp:column {"width":"50%"} -->
 		<div class="wp-block-column" style="flex-basis:50%">
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px"}},"borderColor":"neutral-200","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group has-border-color has-neutral-200-border-color" style="border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.04)">
+			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
 				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}},"textColor":"neutral-500"} -->
-				<p class="has-neutral-500-color has-text-color" style="font-style:italic"><!-- 建议配合 Contact Form 7 或 WPForms 使用 --></p>
+				<p class="has-neutral-500-color has-text-color" style="font-style:italic">Tip: Use with Contact Form 7 or WPForms plugin.</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:separator {"className":"is-style-wide"} -->
-				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<hr class="wp-block-separator is-style-wide"/>
 				<!-- /wp:separator -->
 
 				<!-- wp:paragraph -->
@@ -84,7 +89,7 @@
 				<!-- /wp:paragraph -->
 
 				<!-- wp:separator {"className":"is-style-wide"} -->
-				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<hr class="wp-block-separator is-style-wide"/>
 				<!-- /wp:separator -->
 
 				<!-- wp:paragraph -->
@@ -92,7 +97,7 @@
 				<!-- /wp:paragraph -->
 
 				<!-- wp:separator {"className":"is-style-wide"} -->
-				<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+				<hr class="wp-block-separator is-style-wide"/>
 				<!-- /wp:separator -->
 
 				<!-- wp:paragraph -->

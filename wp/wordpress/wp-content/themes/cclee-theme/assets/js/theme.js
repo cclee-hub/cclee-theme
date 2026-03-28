@@ -21,19 +21,14 @@
 
     /**
      * Header scroll effect
-     * Toggle transparent/solid state on scroll
-     * Only applies transparent mode on pages with dark hero sections
+     * Only headers with site-header--transparent class get transparent → frosted glass effect
      */
     function initHeaderScroll() {
         const header = document.querySelector('.site-header');
         if (!header) return;
 
-        // Only add transparent class on front page
-        const isFrontPage = document.body.classList.contains('home');
-
-        if (isFrontPage) {
-            header.classList.add('site-header--transparent');
-        }
+        // Whitelist: only transparent headers get scroll effect
+        const hasScrollEffect = header.classList.contains('site-header--transparent');
 
         const scrollThreshold = 50;
 
@@ -62,11 +57,89 @@
     }
 
     /**
+     * Product Archive View Toggle
+     * Switch between grid and list view
+     */
+    function initViewToggle() {
+        const toggleContainer = document.querySelector('.cclee-view-toggle');
+        if (!toggleContainer) return;
+
+        const buttons = toggleContainer.querySelectorAll('.cclee-view-toggle__btn');
+        const productGrid = document.querySelector('.cclee-products-wrapper');
+        if (!productGrid) return;
+
+        // Load saved preference
+        const savedView = localStorage.getItem('cclee-product-view') || 'grid';
+        productGrid.classList.add('is-view-' + savedView);
+        toggleContainer.querySelector('[data-view="' + savedView + '"]').classList.add('is-active');
+
+        buttons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                const view = this.getAttribute('data-view');
+
+                // Update buttons
+                buttons.forEach(function(b) { b.classList.remove('is-active'); });
+                this.classList.add('is-active');
+
+                // Update grid
+                productGrid.classList.remove('is-view-grid', 'is-view-list');
+                productGrid.classList.add('is-view-' + view);
+
+                // Save preference
+                localStorage.setItem('cclee-product-view', view);
+            });
+        });
+    }
+
+    /**
+     * Mobile Bottom Navigation
+     * Update cart count dynamically
+     */
+    function initMobileBottomNav() {
+        const mobileNav = document.querySelector('.cclee-mobile-bottom-nav');
+        if (!mobileNav) return;
+
+        // Update cart count when WooCommerce cart updates
+        if (typeof jQuery !== 'undefined' && typeof wc_add_to_cart_params !== 'undefined') {
+            jQuery(document.body).on('added_to_cart updated_cart_totals', function() {
+                // Fetch updated cart count
+                fetch('/wp-json/wc/v3/cart/', {
+                    credentials: 'same-origin'
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const count = data.items_count || 0;
+                    const countEl = mobileNav.querySelector('.cclee-mobile-bottom-nav__cart-count');
+                    if (countEl) {
+                        countEl.textContent = count;
+                        countEl.style.display = count > 0 ? 'flex' : 'none';
+                    }
+                })
+                .catch(function() {
+                    // Silently fail if cart API not available
+                });
+            });
+        }
+
+        // Set active state based on current URL
+        const currentPath = window.location.pathname;
+        const navItems = mobileNav.querySelectorAll('.cclee-mobile-bottom-nav__item');
+        navItems.forEach(function(item) {
+            const href = item.getAttribute('href');
+            if (href && (currentPath === href || (href !== '/' && currentPath.startsWith(href)))) {
+                item.classList.add('cclee-mobile-bottom-nav__item--active');
+            }
+        });
+    }
+
+    /**
      * Initialize on DOM ready
      */
     document.addEventListener('DOMContentLoaded', function() {
         setCCLEEHeaderHeight();
         initHeaderScroll();
+        initViewToggle();
+        initMobileBottomNav();
     });
 
     // Update header height on resize

@@ -55,19 +55,17 @@ add_filter( 'woocommerce_enqueue_styles', function ( $styles ) {
 
 /**
  * 调整 WooCommerce 包装器，使其与主题布局一致
+ * 样式在 assets/css/woocommerce.css 中定义
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
 add_action( 'woocommerce_before_main_content', function () {
-	$wrapper_start = <<<HTML
-		<main class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);">
-		HTML;
-	echo wp_kses_post( $wrapper_start );
+	echo '<main class="woocommerce-wrapper wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">';
 }, 10 );
 
 add_action( 'woocommerce_after_main_content', function () {
-	echo wp_kses_post( '</main>' );
+	echo '</main>';
 }, 10 );
 
 /**

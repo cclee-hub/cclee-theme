@@ -29,8 +29,8 @@
 | 文件 | 说明 |
 |------|------|
 | `docs/vpn-hysteria2.md` | Hysteria2 VPN 服务配置说明 |
-| `docs/plans/2026-03-20-wp-soldering-site-design.md` | WP 焊接工具网站设计文档 |
-| `docs/plans/2026-03-20-wp-soldering-site-implementation.md` | WP 焊接工具网站实施计划 |
+| `docs/cclee-theme-dev.md` | 主题开发文档 |
+| `docs/plans/2026-03-24-woo-templates-design.md` | WooCommerce 模板设计 |
 
 ## 本地环境 (WSL)
 
@@ -108,7 +108,7 @@ docker exec wp_cli wp [命令] --allow-root
 | 项目 | 内容 |
 |------|------|
 | 类型 | 外贸企业官网 + WooCommerce 商城 |
-| 产品 | 焊接工具（电烙铁、焊台、烙铁嘴） |
+| 产品 | 待定（B2B/B2C 电商） |
 | 市场 | 全球，英文，USD |
 | 风格 | 简洁现代 + 工业感（深蓝 + 橙色） |
 

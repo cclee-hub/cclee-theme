@@ -3,10 +3,10 @@ Contributors: cclee-hub
 Requires at least: 6.4
 Tested up to: 6.7
 Requires PHP: 8.0
-License: GPLv2 or later
+License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A lightweight FSE theme for developers. Clean architecture, customizable design tokens, 20+ block patterns.
+A lightweight FSE theme for developers. Clean architecture, customizable design tokens, SEO-friendly.
 
 == Description ==
 
@@ -53,6 +53,9 @@ Use the Site Editor (Appearance > Editor) or create a child theme with custom th
 = Why does WooCommerce say "Products" instead of "Shop"? =
 CCLEE uses B2B-friendly terminology by default. The "Shop" label is replaced with "Products" to better serve business-focused websites. This is a text display preference only and does not modify WooCommerce functionality. You can override this by removing the filter in a child theme.
 
+== Tags ==
+full-site-editing, block-themes, custom-colors
+
 == Changelog ==
 
 = 1.1.1 =
@@ -72,3 +75,4 @@ CCLEE uses B2B-friendly terminology by default. The "Shop" label is replaced wit
 * DM Serif Display font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/DM+Serif+Display
 * Inter font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/Inter
 * JetBrains Mono font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/JetBrains+Mono
+* hero-business.jpg, Unsplash License, https://unsplash.com

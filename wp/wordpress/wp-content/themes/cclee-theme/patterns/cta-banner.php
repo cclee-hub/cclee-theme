@@ -6,18 +6,14 @@
  * Description: 全宽 CTA 横幅区块
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"accent-gradient","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-accent-gradient-gradient has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"accent","className":"has-dots-pattern","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-dots-pattern has-accent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
-	<!-- wp:html -->
-	<div class="cclee-dots-pattern" style="color:rgba(255,255,255,0.2)"></div>
-	<!-- /wp:html -->
-
-	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-	<div class="wp-block-group" style="position:relative;z-index:1">
+	<!-- wp:group {"className":"cta-inner-group","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+	<div class="wp-block-group cta-inner-group">
 
 		<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"h2"} -->
-		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color" style="font-size:var(--wp--preset--font-size--h2)">Ready to Get Started?</h2>
+		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-h-2-font-size">Ready to Get Started?</h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","textColor":"neutral-100","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
@@ -26,8 +22,8 @@
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"base","textColor":"accent","style":{"border":{"radius":"8px"},"spacing":{"padding":{"left":"var(--wp--preset--spacing--60)","right":"var(--wp--preset--spacing--60)"}}}} -->
-			<div class="wp-block-button"><a href="https://demo.aigent.ren/" class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button" style="border-radius:8px;padding-left:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);box-shadow:0 4px 14px rgba(0,0,0,0.15)">View Demo</a></div>
+			<!-- wp:button {"backgroundColor":"base","textColor":"accent","className":"cta-button","style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--60)","right":"var(--wp--preset--spacing--60)"}}}} -->
+			<div class="wp-block-button cta-button"><a href="#" class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">View Demo</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

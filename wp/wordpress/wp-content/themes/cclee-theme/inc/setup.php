@@ -44,6 +44,74 @@ add_action( 'wp_footer', function() {
 }, 99 );
 
 /**
+ * Mobile Bottom Navigation (仅前台显示，不在编辑器中)
+ * 样式在 assets/css/custom.css 中定义
+ */
+add_action( 'wp_footer', function() {
+    // 仅在 WooCommerce 激活时显示
+    if ( ! function_exists( 'WC' ) ) {
+        return;
+    }
+
+    // 获取购物车数量
+    $cart_count = WC()->cart ? WC()->cart->get_cart_contents_count() : 0;
+    ?>
+    <nav class="cclee-mobile-bottom-nav" aria-label="<?php esc_attr_e( 'Mobile Navigation', 'cclee-theme' ); ?>">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="cclee-mobile-bottom-nav__item" aria-label="<?php esc_attr_e( 'Home', 'cclee-theme' ); ?>">
+            <?php echo cclee_svg( 'home' ); ?>
+            <span><?php esc_html_e( 'Home', 'cclee-theme' ); ?></span>
+        </a>
+        <a href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>" class="cclee-mobile-bottom-nav__item" aria-label="<?php esc_attr_e( 'Shop', 'cclee-theme' ); ?>">
+            <?php echo cclee_svg( 'shopping-cart' ); ?>
+            <span><?php esc_html_e( 'Shop', 'cclee-theme' ); ?></span>
+        </a>
+        <a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="cclee-mobile-bottom-nav__item cclee-mobile-bottom-nav__item--cart" aria-label="<?php esc_attr_e( 'Cart', 'cclee-theme' ); ?>">
+            <?php echo cclee_svg( 'shopping-cart' ); ?>
+            <span><?php esc_html_e( 'Cart', 'cclee-theme' ); ?></span>
+            <span class="cclee-mobile-bottom-nav__cart-count" aria-hidden="true"><?php echo absint( $cart_count ); ?></span>
+        </a>
+        <a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="cclee-mobile-bottom-nav__item" aria-label="<?php esc_attr_e( 'Account', 'cclee-theme' ); ?>">
+            <?php echo cclee_svg( 'user' ); ?>
+            <span><?php esc_html_e( 'Account', 'cclee-theme' ); ?></span>
+        </a>
+    </nav>
+    <?php
+}, 98 );
+
+/**
+ * 输出内联 SVG（主题自带静态资源，不需 wp_kses）
+ *
+ * @param string $name 图标文件名（不含 .svg 后缀），仅允许 a-z 0-9 - .
+ * @return string SVG markup 或空字符串
+ */
+function cclee_svg( $name ) {
+    $name = sanitize_key( $name );
+    if ( ! $name ) {
+        return '';
+    }
+
+    static $cache = [];
+    if ( isset( $cache[ $name ] ) ) {
+        return $cache[ $name ];
+    }
+
+    $path = get_theme_file_path( 'assets/icons/' . $name . '.svg' );
+    if ( ! file_exists( $path ) ) {
+        $cache[ $name ] = '';
+        return '';
+    }
+
+    $svg = file_get_contents( $path );
+    // 移除 XML 声明（如有）
+    $svg = preg_replace( '/<\?xml[^?]*\?>\s*/', '', $svg );
+    // 装饰性图标对屏幕阅读器隐藏
+    $svg = str_replace( '<svg ', '<svg aria-hidden="true" ', $svg );
+
+    $cache[ $name ] = $svg;
+    return $svg;
+}
+
+/**
  * 主题激活时创建默认导航菜单
  */
 add_action( 'after_switch_theme', function () {

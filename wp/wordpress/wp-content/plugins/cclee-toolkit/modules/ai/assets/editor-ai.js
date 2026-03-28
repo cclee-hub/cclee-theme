@@ -93,10 +93,11 @@
 
 				// Prompt 类型选择
 				createElement( 'div', { style: { marginBottom: '16px' } }, [
-					createElement( 'strong', null, 'Content Type' ),
+					createElement( 'strong', { key: 'label' }, 'Content Type' ),
 					createElement(
 						'select',
 						{
+							key: 'select',
 							value: promptType,
 							onChange: ( e ) => setPromptType( e.target.value ),
 							style: {
@@ -141,6 +142,7 @@
 					createElement(
 						Notice,
 						{
+							key: 'error-notice',
 							status: 'error',
 							isDismissible: true,
 							onRemove: () => setError( '' ),
@@ -154,6 +156,7 @@
 					createElement(
 						'div',
 						{
+							key: 'loading-spinner',
 							style: {
 								display: 'flex',
 								justifyContent: 'center',
@@ -167,7 +170,7 @@
 				result &&
 					createElement(
 						'div',
-						{ style: { marginTop: '16px' } },
+						{ key: 'result-container', style: { marginTop: '16px' } },
 						createElement( 'strong', null, 'Generated Content:' ),
 						createElement(
 							'div',
@@ -198,6 +201,7 @@
 				createElement(
 					'div',
 					{
+						key: 'usage-info',
 						style: {
 							marginTop: '24px',
 							paddingTop: '16px',

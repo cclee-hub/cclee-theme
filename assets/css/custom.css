@@ -1765,12 +1765,13 @@ a {
 	gap: var(--wp--preset--spacing--50);
 }
 
-/* Product image — force square crop regardless of source aspect ratio */
-.cclee-products-wrapper .wp-block-post-featured-image {
-	aspect-ratio: 1;
+/* Product image — fill card width */
+.cclee-products-wrapper .wp-block-post-template .wp-block-post-featured-image {
+	width: 100%;
+	aspect-ratio: 1/1;
 	overflow: hidden;
 }
-.cclee-products-wrapper .wp-block-post-featured-image img {
+.cclee-products-wrapper .wp-block-post-template .wp-block-post-featured-image img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;

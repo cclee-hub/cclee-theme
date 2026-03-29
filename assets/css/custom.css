@@ -40,7 +40,7 @@
 }
 /* Accent tint variant */
 .cclee-icon--accent {
-	background: rgba(245, 158, 11, 0.1);
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 10%, transparent);
 	color: var(--wp--preset--color--accent);
 }
 /* Dark background auto-adapt — only colors that are ALWAYS dark across all style variations */
@@ -53,7 +53,7 @@
 :is(.has-surface-background-color,
     .has-neutral-800-background-color,
     .has-neutral-900-background-color) > :is(.cclee-icon--accent, p .cclee-icon--accent) {
-	background: rgba(245, 158, 11, 0.15);
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 15%, transparent);
 	color: var(--wp--preset--color--accent);
 }
 
@@ -664,7 +664,7 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     box-shadow: var(--wp--preset--shadow--glow);
 }
 .cta-button .wp-block-button__link:hover {
-    box-shadow: 0 0 30px rgba(245, 158, 11, 0.4),
+    box-shadow: 0 0 30px color-mix(in srgb, var(--wp--preset--color--accent) 40%, transparent),
                 var(--wp--preset--shadow--md);
 }
 
@@ -970,9 +970,9 @@ a {
 }
 
 .cclee-avatar--accent {
-    background: linear-gradient(135deg, var(--wp--preset--color--accent) 0%, #ea580c 100%);
+    background: var(--wp--preset--gradient--accent);
     color: var(--wp--preset--color--base);
-    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--wp--preset--color--accent) 30%, transparent);
 }
 
 .cclee-avatar--ring {
@@ -1009,7 +1009,7 @@ a {
 }
 /* Accent tint variant for icon-box */
 .cclee-icon-box--accent {
-    background: rgba(245, 158, 11, 0.1);
+    background: color-mix(in srgb, var(--wp--preset--color--accent) 10%, transparent);
     color: var(--wp--preset--color--accent);
 }
 /* Dark background auto-adapt for icon-box — only always-dark colors */
@@ -1022,7 +1022,7 @@ a {
 :is(.has-surface-background-color,
     .has-neutral-800-background-color,
     .has-neutral-900-background-color) > :is(.cclee-icon-box--accent, p .cclee-icon-box--accent) {
-    background: rgba(245, 158, 11, 0.15);
+    background: color-mix(in srgb, var(--wp--preset--color--accent) 15%, transparent);
     color: var(--wp--preset--color--accent);
 }
 
@@ -1350,7 +1350,7 @@ a {
 .cclee-landing-form textarea:focus {
     outline: none;
     border-color: var(--wp--preset--color--accent);
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--wp--preset--color--accent) 10%, transparent);
 }
 
 .cclee-landing-form button:hover {

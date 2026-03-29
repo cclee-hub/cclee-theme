@@ -111,11 +111,29 @@ add_filter( 'woocommerce_page_title', function ( $page_title ) {
 add_filter( 'woocommerce_helper_suppress_admin_notice', '__return_true' );
 
 /**
- * 强制 Shop 页面 URL 使用 /products/
+ * 产品无特色图片时，输出 WooCommerce 占位图
+ *
+ * FSE 的 post-featured-image 块在无图时渲染为空，
+ * 导致卡片高度塌陷。此 filter 在 product 类型中补上占位图。
+ *
+ * @param string $html  The post thumbnail HTML.
+ * @param int    $post_id The post ID.
+ * @return string
  */
-add_filter( 'woocommerce_get_page_permalink', function ( $permalink, $page ) {
-	if ( $page === 'shop' ) {
-		return home_url( '/products/' );
+add_filter( 'post_thumbnail_html', function ( $html, $post_id ) {
+	if ( $html || get_post_type( $post_id ) !== 'product' ) {
+		return $html;
 	}
-	return $permalink;
+
+	// WooCommerce placeholder — 依赖 wc_placeholder_img_src
+	$src = function_exists( 'wc_placeholder_img_src' ) ? wc_placeholder_img_src() : '';
+	if ( ! $src ) {
+		return '';
+	}
+
+	return sprintf(
+		'<img src="%s" alt="%s" loading="lazy" decoding="async" style="width:100%%;height:100%%;object-fit:cover;">',
+		esc_url( $src ),
+		esc_attr( get_the_title( $post_id ) )
+	);
 }, 10, 2 );

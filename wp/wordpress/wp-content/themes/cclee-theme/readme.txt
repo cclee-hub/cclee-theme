@@ -53,6 +53,10 @@ Use the Site Editor (Appearance > Editor) or create a child theme with custom th
 = Why does WooCommerce say "Products" instead of "Shop"? =
 CCLEE uses B2B-friendly terminology by default. The "Shop" label is replaced with "Products" to better serve business-focused websites. This is a text display preference only and does not modify WooCommerce functionality. You can override this by removing the filter in a child theme.
 
+== Privacy ==
+
+CCLEE does not collect, store, or transmit any user data. No cookies are set by the theme. No tracking, analytics, or external API calls are made. The theme is fully GDPR-compliant out of the box.
+
 == Tags ==
 full-site-editing, block-themes, custom-colors
 
@@ -73,6 +77,16 @@ full-site-editing, block-themes, custom-colors
 == Resources ==
 
 * DM Serif Display font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/DM+Serif+Display
-* Inter font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/Inter
-* JetBrains Mono font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/JetBrains+Mono
-* hero-business.jpg, Unsplash License, https://unsplash.com
+* Space Grotesk font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/Space+Grotesk
+* hero-business.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* portfolio-analytics.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* portfolio-collab.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* portfolio-office.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* portfolio-tech.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-team-1.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-team-2.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-team-3.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-team-4.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-testimonial-1.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-testimonial-2.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
+* avatar-testimonial-3.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)

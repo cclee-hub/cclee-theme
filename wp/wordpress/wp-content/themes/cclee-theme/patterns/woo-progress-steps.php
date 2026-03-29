@@ -3,7 +3,7 @@
  * Title: WooCommerce Progress Steps
  * Slug: cclee-theme/woo-progress-steps
  * Categories: cclee-theme, woocommerce
- * Description: 结算进度条，显示购物车 → 结算 → 完成
+ * Description: Checkout progress bar showing Cart, Checkout, and Complete steps
  */
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"neutral-50","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained"}} -->
@@ -21,8 +21,8 @@
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
-			<!-- wp:paragraph {"textColor":"accent","fontSize":"small","style":{"typography":{"fontWeight":"600"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--10)"}}}} -->
-			<p class="has-accent-color has-text-color has-small-font-size" style="font-weight:600;margin-top:var(--wp--preset--spacing--10)">Cart</p>
+			<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"600"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--10)"}}}} -->
+			<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;margin-top:var(--wp--preset--spacing--10)">Cart</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

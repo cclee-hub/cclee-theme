@@ -36,7 +36,7 @@
     },
     "layout": {
       "contentSize": "800px",
-      "wideSize": "1200px"
+      "wideSize": "1320px"
     },
     "color": {
       "palette": [
@@ -213,16 +213,8 @@
         },
         {
           "slug": "mono",
-          "name": "Monospace (JetBrains Mono)",
-          "fontFamily": "'JetBrains Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
-          "fontFace": [
-            {
-              "fontFamily": "JetBrains Mono",
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "src": ["https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjOVGa.ttf"]
-            }
-          ]
+          "name": "Monospace",
+          "fontFamily": "Menlo, Monaco, Consolas, 'Courier New', monospace"
         }
       ],
       "fontSizes": [
@@ -440,6 +432,10 @@
       "letterSpacing": "0"
     },
     "spacing": {
+      "padding": {
+        "left": "var(--wp--preset--spacing--50)",
+        "right": "var(--wp--preset--spacing--50)"
+      },
       "blockGap": "var(--wp--preset--spacing--50)"
     },
     "elements": {
@@ -452,7 +448,7 @@
         },
         ":hover": {
           "color": {
-            "text": "var(--wp--preset--color--accent)"
+            "text": "var(--wp--preset--color--secondary)"
           },
           "typography": {
             "textDecoration": "underline"
@@ -685,28 +681,8 @@
       "area": "header"
     },
     {
-      "name": "header-light",
-      "title": "Header (Light)",
-      "area": "header"
-    },
-    {
       "name": "header-centered",
       "title": "Header (Centered Logo)",
-      "area": "header"
-    },
-    {
-      "name": "header-nav-center",
-      "title": "Header (Centered Nav)",
-      "area": "header"
-    },
-    {
-      "name": "header-search",
-      "title": "Header (With Search)",
-      "area": "header"
-    },
-    {
-      "name": "header-social",
-      "title": "Header (With Social)",
       "area": "header"
     },
     {
@@ -734,20 +710,6 @@
     {
       "name": "page",
       "title": "Page",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "page-no-sidebar",
-      "title": "Page (No Sidebar)",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "page-with-sidebar",
-      "title": "Page with Sidebar",
       "postTypes": [
         "page"
       ]
@@ -803,22 +765,8 @@
       "title": "Order Received"
     },
     {
-      "name": "product-search",
-      "title": "Product Search"
-    },
-    {
-      "name": "page-privacy",
-      "title": "Privacy Policy",
-      "postTypes": [
-        "page"
-      ]
-    },
-    {
-      "name": "page-terms",
-      "title": "Terms of Service",
-      "postTypes": [
-        "page"
-      ]
+      "name": "product-search-results",
+      "title": "Product Search Results"
     },
     {
       "name": "maintenance",
@@ -829,16 +777,8 @@
       "title": "Coming Soon"
     },
     {
-      "name": "wishlist",
-      "title": "Wishlist"
-    },
-    {
-      "name": "compare",
-      "title": "Compare Products"
-    },
-    {
       "name": "single-product-wide",
-      "title": "Single Product (Wide)",
+      "title": "Single Product Fullwidth",
       "postTypes": [
         "product"
       ]

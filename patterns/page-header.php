@@ -12,8 +12,8 @@
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"800px","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide">
 
-		<!-- wp:paragraph {"textColor":"accent","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
-		<p class="has-accent-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Legal</p>
+		<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
+		<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Legal</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":1,"textAlign":"center","textColor":"primary","fontSize":"h1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->

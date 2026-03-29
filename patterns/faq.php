@@ -3,7 +3,7 @@
  * Title: FAQ Section
  * Slug: cclee-theme/faq
  * Categories: cclee-theme, featured
- * Description: 手风琴式常见问题区块
+ * Description: Accordion-style frequently asked questions
  */
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->

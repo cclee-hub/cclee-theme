@@ -3,7 +3,7 @@
  * Title: Hero Simple
  * Slug: cclee-theme/hero-simple
  * Categories: cclee-theme, featured
- * Description: 简单 Hero 区块，左对齐布局
+ * Description: Simple hero section with left-aligned layout
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
@@ -15,8 +15,8 @@
 		<!-- wp:group {"className":"cclee-hero-content","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group cclee-hero-content">
 
-			<!-- wp:paragraph {"textColor":"accent","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em"}}} -->
-			<p class="has-accent-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.05em">WELCOME</p>
+			<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em"}}} -->
+			<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.05em">WELCOME</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":1,"textColor":"primary","fontSize":"h1"} -->

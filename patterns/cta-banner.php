@@ -3,7 +3,7 @@
  * Title: CTA Banner
  * Slug: cclee-theme/cta-banner
  * Categories: cclee-theme, featured
- * Description: 全宽 CTA 横幅区块
+ * Description: Full-width call-to-action banner
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"accent","className":"has-dots-pattern","layout":{"type":"constrained"}} -->
@@ -22,8 +22,8 @@
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
-			<!-- wp:button {"backgroundColor":"base","textColor":"accent","className":"cta-button","style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--60)","right":"var(--wp--preset--spacing--60)"}}}} -->
-			<div class="wp-block-button cta-button"><a href="#" class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">View Demo</a></div>
+			<!-- wp:button {"backgroundColor":"base","textColor":"primary","className":"cta-button","style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--60)","right":"var(--wp--preset--spacing--60)"}}}} -->
+			<div class="wp-block-button cta-button"><a href="#" class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background wp-element-button" style="padding-right:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">View Demo</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

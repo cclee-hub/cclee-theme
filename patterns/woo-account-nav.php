@@ -3,7 +3,7 @@
  * Title: WooCommerce Account Navigation
  * Slug: cclee-theme/woo-account-nav
  * Categories: cclee-theme, woocommerce
- * Description: 账户中心侧边栏导航，带图标菜单
+ * Description: Account sidebar navigation with icon menu
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--30)"}},"border":{"radius":"var(--wp--custom--border--radius--lg)"}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->

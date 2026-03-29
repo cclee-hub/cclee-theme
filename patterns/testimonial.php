@@ -3,7 +3,7 @@
  * Title: Testimonials
  * Slug: cclee-theme/testimonial
  * Categories: cclee-theme, featured
- * Description: 客户评价区块，三列卡片布局
+ * Description: Customer testimonials with three-column card layout
  */
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
@@ -35,8 +35,8 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Sarah Chen avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
-					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Sarah Chen avatar" style="border-radius:50px"/></figure>
+					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-1.jpg' ) ); ?>","alt":"Sarah Chen avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
+					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-1.jpg' ) ); ?>" alt="Sarah Chen avatar" style="border-radius:50px"/></figure>
 					<!-- /wp:image -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
@@ -75,8 +75,8 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Mike Johnson avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
-					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Mike Johnson avatar" style="border-radius:50px"/></figure>
+					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-2.jpg' ) ); ?>","alt":"Mike Johnson avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
+					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-2.jpg' ) ); ?>" alt="Mike Johnson avatar" style="border-radius:50px"/></figure>
 					<!-- /wp:image -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
@@ -115,8 +115,8 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Emily Davis avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
-					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Emily Davis avatar" style="border-radius:50px"/></figure>
+					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-3.jpg' ) ); ?>","alt":"Emily Davis avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
+					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-3.jpg' ) ); ?>" alt="Emily Davis avatar" style="border-radius:50px"/></figure>
 					<!-- /wp:image -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">

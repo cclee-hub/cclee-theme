@@ -3,7 +3,7 @@
  * Title: Pricing Table
  * Slug: cclee-theme/pricing
  * Categories: cclee-theme, featured
- * Description: 三列价格表区块
+ * Description: Three-column pricing table
  */
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
@@ -67,8 +67,8 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"gradient":"accent","textColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-base-color has-text-color has-accent-gradient-background has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 
-				<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"calc(-1 * var(--wp--preset--spacing--50))","bottom":"var(--wp--preset--spacing--30)"}}},"backgroundColor":"base","textColor":"accent"} -->
-				<p class="has-text-align-center has-accent-color has-text-color has-base-background-color has-background has-small-font-size" style="margin-top:calc(-1 * var(--wp--preset--spacing--50));margin-bottom:var(--wp--preset--spacing--30);font-weight:600;text-transform:uppercase;letter-spacing:0.1em">Most Popular</p>
+				<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"calc(-1 * var(--wp--preset--spacing--50))","bottom":"var(--wp--preset--spacing--30)"}}},"backgroundColor":"base","textColor":"primary"} -->
+				<p class="has-text-align-center has-primary-color has-text-color has-base-background-color has-background has-small-font-size" style="margin-top:calc(-1 * var(--wp--preset--spacing--50));margin-bottom:var(--wp--preset--spacing--30);font-weight:600;text-transform:uppercase;letter-spacing:0.1em">Most Popular</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:heading {"textAlign":"center","level":4} -->
@@ -99,8 +99,8 @@
 
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}}} -->
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
-					<!-- wp:button {"width":100,"backgroundColor":"base","textColor":"accent"} -->
-					<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-accent-color has-base-background-color has-text-color has-background wp-element-button">Start Free Trial</a></div>
+					<!-- wp:button {"width":100,"backgroundColor":"base","textColor":"primary"} -->
+					<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-primary-color has-base-background-color has-text-color has-background wp-element-button">Start Free Trial</a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->

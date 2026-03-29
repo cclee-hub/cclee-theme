@@ -9,7 +9,12 @@
 
 			<!-- wp:column {"width":"40%"} -->
 			<div class="wp-block-column" style="flex-basis:40%">
-				<!-- wp:site-title {"style":{"typography":{"fontWeight":"700"}},"showTagline":false,"isLink":false,"textColor":"base"} /-->
+				<!-- wp:group {"className":"site-branding","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+				<div class="wp-block-group site-branding">
+					<!-- wp:site-logo {"shouldSyncHash":true} /-->
+					<!-- wp:site-title {"style":{"typography":{"fontWeight":"700"}},"showTagline":false,"isLink":true,"textColor":"base"} /-->
+				</div>
+				<!-- /wp:group -->
 				<!-- wp:site-tagline {"fontSize":"small","textColor":"neutral-400"} /-->
 				<!-- wp:social-links {"iconColor":"neutral-400","className":"cclee-footer-social","style":{"spacing":{"blockGap":"var(--wp--preset--spacing--30)"}}} -->
 				<ul class="wp-block-social-links cclee-footer-social has-neutral-400-color has-icon-color">
@@ -24,33 +29,33 @@
 			<!-- wp:column {"width":"20%"} -->
 			<div class="wp-block-column" style="flex-basis:20%">
 				<!-- wp:heading {"level":4,"textColor":"base","fontSize":"small","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"}}} -->
-				<h4 class="wp-block-heading has-base-color has-text-color" style="font-size:var(--wp--preset--font-size--small);text-transform:uppercase;letter-spacing:0.1em">Shop</h4>
+				<h4 class="wp-block-heading has-base-color has-text-color has-small-font-size" style="text-transform:uppercase;letter-spacing:0.1em">Shop</h4>
 				<!-- /wp:heading -->
-				<!-- wp:paragraph {"textColor":"neutral-400","fontSize":"small"} -->
-				<p class="has-neutral-400-color has-text-color" style="font-size:var(--wp--preset--font-size--small)"><em>Add navigation links in Site Editor</em></p>
-				<!-- /wp:paragraph -->
+				<!-- wp:navigation {"overlayMenu":"never","fontSize":"small","textColor":"neutral-400","layout":{"type":"flex","orientation":"vertical"}} /-->
 			</div>
 			<!-- /wp:column -->
 
 			<!-- wp:column {"width":"20%"} -->
 			<div class="wp-block-column" style="flex-basis:20%">
 				<!-- wp:heading {"level":4,"textColor":"base","fontSize":"small","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"}}} -->
-				<h4 class="wp-block-heading has-base-color has-text-color" style="font-size:var(--wp--preset--font-size--small);text-transform:uppercase;letter-spacing:0.1em">Company</h4>
+				<h4 class="wp-block-heading has-base-color has-text-color has-small-font-size" style="text-transform:uppercase;letter-spacing:0.1em">Company</h4>
 				<!-- /wp:heading -->
-				<!-- wp:paragraph {"textColor":"neutral-400","fontSize":"small"} -->
-				<p class="has-neutral-400-color has-text-color" style="font-size:var(--wp--preset--font-size--small)"><em>Add navigation links in Site Editor</em></p>
-				<!-- /wp:paragraph -->
+				<!-- wp:navigation {"overlayMenu":"never","fontSize":"small","textColor":"neutral-400","layout":{"type":"flex","orientation":"vertical"}} /-->
 			</div>
 			<!-- /wp:column -->
 
 			<!-- wp:column {"width":"20%"} -->
 			<div class="wp-block-column" style="flex-basis:20%">
 				<!-- wp:heading {"level":4,"textColor":"base","fontSize":"small","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"}}} -->
-				<h4 class="wp-block-heading has-base-color has-text-color" style="font-size:var(--wp--preset--font-size--small);text-transform:uppercase;letter-spacing:0.1em">Support</h4>
+				<h4 class="wp-block-heading has-base-color has-text-color has-small-font-size" style="text-transform:uppercase;letter-spacing:0.1em">Support</h4>
 				<!-- /wp:heading -->
-				<!-- wp:paragraph {"textColor":"neutral-400","fontSize":"small"} -->
-				<p class="has-neutral-400-color has-text-color" style="font-size:var(--wp--preset--font-size--small)"><em>Add navigation links in Site Editor</em></p>
-				<!-- /wp:paragraph -->
+				<!-- wp:navigation {"overlayMenu":"never","fontSize":"small","textColor":"neutral-400","layout":{"type":"flex","orientation":"vertical"}} -->
+				<!-- wp:navigation-link {"label":"My Account","url":"#","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Order Tracking","url":"#","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Help Center","url":"#","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Contact Us","url":"#","kind":"custom"} /-->
+				<!-- wp:navigation-link {"label":"Shipping & Returns","url":"#","kind":"custom"} /-->
+			<!-- /wp:navigation -->
 			</div>
 			<!-- /wp:column -->
 
@@ -58,26 +63,17 @@
 		<!-- /wp:columns -->
 
 		<!-- wp:separator {"backgroundColor":"neutral-800","className":"is-style-wide"} -->
-		<hr class="wp-block-separator has-text-color has-neutral-800-color has-alpha-channel-opacity has-neutral-800-background-color is-style-wide"/>
+		<hr class="wp-block-separator has-css-opacity has-text-color has-neutral-800-color has-alpha-channel-opacity has-neutral-800-background-color is-style-wide"/>
 		<!-- /wp:separator -->
 
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--20)"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 		<div class="wp-block-group is-layout-flex is-flex-wrap is-content-justification-space-between items-center">
 
 			<!-- wp:paragraph {"fontSize":"small","textColor":"neutral-500"} -->
-			<p class="has-neutral-500-color has-text-color" style="font-size:var(--wp--preset--font-size--small)">© 2024 <a href="https://wordpress.org" rel="nofollow">WordPress</a></p>
+			<p class="has-neutral-500-color has-text-color has-small-font-size">© 2026 <a href="https://aidevhub.ai/cclee-theme">CCLEE Theme</a> — Free &amp; Open Source (GPL v2)</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--40)"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group is-layout-flex">
-				<!-- wp:paragraph {"fontSize":"small","textColor":"neutral-500"} -->
-				<p class="has-neutral-500-color has-text-color" style="font-size:var(--wp--preset--font-size--small)"><a href="/privacy-policy/">Privacy</a></p>
-				<!-- /wp:paragraph -->
-				<!-- wp:paragraph {"fontSize":"small","textColor":"neutral-500"} -->
-				<p class="has-neutral-500-color has-text-color" style="font-size:var(--wp--preset--font-size--small)"><a href="/terms/">Terms</a></p>
-				<!-- /wp:paragraph -->
-			</div>
-			<!-- /wp:group -->
+			<!-- wp:navigation {"overlayMenu":"never","fontSize":"small","textColor":"neutral-500","layout":{"type":"flex","justifyContent":"right"}} /-->
 
 		</div>
 		<!-- /wp:group -->

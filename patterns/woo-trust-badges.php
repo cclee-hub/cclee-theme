@@ -3,7 +3,7 @@
  * Title: WooCommerce Trust Badges
  * Slug: cclee-theme/woo-trust-badges
  * Categories: cclee-theme, woocommerce
- * Description: 信任徽章，显示安全支付和退换货保障
+ * Description: Trust badges showing secure payment and return guarantees
  */
 ?>
 <!-- wp:group {"className":"woo-trust-badges","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->

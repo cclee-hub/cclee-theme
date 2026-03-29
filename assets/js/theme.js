@@ -103,7 +103,7 @@
         if (typeof jQuery !== 'undefined' && typeof wc_add_to_cart_params !== 'undefined') {
             jQuery(document.body).on('added_to_cart updated_cart_totals', function() {
                 // Fetch updated cart count
-                fetch('/wp-json/wc/v3/cart/', {
+                fetch((window.ccleeTheme && window.ccleeTheme.restUrl ? window.ccleeTheme.restUrl : '/wp-json/') + 'wc/v3/cart/', {
                     credentials: 'same-origin'
                 })
                 .then(response => response.json())

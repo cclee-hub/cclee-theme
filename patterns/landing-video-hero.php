@@ -3,7 +3,7 @@
  * Title: Landing Video Hero
  * Slug: cclee-theme/landing-video-hero
  * Categories: cclee-theme, featured
- * Description: 全屏视频背景 Hero 区块，添加您的 MP4 视频文件
+ * Description: Full-screen video background hero, add your own MP4 video
  */
 ?>
 <!-- wp:group {"align":"full","className":"landing-video-container","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->

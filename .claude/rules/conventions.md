@@ -1,6 +1,6 @@
 # 约定记录
 
-> v1.3 · 2026-03-28
+> v1.4 · 2026-03-29
 
 ## 通用规范 [所有 WP 项目]
 
@@ -16,9 +16,14 @@
 
 ### 浏览器操作
 - 截图、控制台日志采集等浏览器操作统一使用 **Playwright**
-- 脚本路径：`~/scripts/playwright-tools/console-capture.js`
-- 配置：项目级 `.playwright.config.json`，全局 `~/.playwright.config.json`（不存在则以项目级为准）
-- Playwright 不支持自动登录 wp-admin，可复用 Puppeteer cookies 文件：`--cookies .puppeteer/cookies/localhost-8080.json`
+- 脚本目录：`~/scripts/playwright-tools/`
+  - `console-capture.js` - 控制台日志采集
+  - `wp-login.js` - WP 登录生成 storageState
+- 配置：项目级 `.playwright.config.json`，全局 `~/.playwright.config.json`
+- StorageState：项目级 `.playwright/storage-state/` 目录（Playwright 原生格式，独立于 Puppeteer）
+- 登录态获取：`node ~/scripts/playwright-tools/wp-login.js --url <wp-url>`
+- console-capture 使用登录态：`--cookies .playwright/storage-state/localhost-8080.json`
+- **禁止复用 Puppeteer cookies**，两套工具存储格式不同且独立维护
 
 ### 禁止项
 - 禁止在代码/文档中使用 emoji（状态标识除外）

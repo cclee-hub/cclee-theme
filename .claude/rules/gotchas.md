@@ -37,6 +37,12 @@
 - 正确结构：外层 `alignfull`（背景铺满）+ 内层 `alignwide`（内容 1320px 居中）
 - 同理，卡片 group 用 `layout:constrained` 会把内部 columns 压到 `contentSize` 800px；需要 columns 撑满卡片时必须用 `layout:default`
 
+## WooCommerce 示例数据图片
+
+- 示例数据导入会产生 ID 错位：部分商品 `_thumbnail_id` 指向不存在的 ID 或其他商品（而非 `attachment`），导致显示占位图
+- 排查：查 `wp_postmeta._thumbnail_id` → 验证目标 ID 的 `post_type` 是否为 `attachment` → 检查 `_wp_attached_file` 是否有值
+- 修复：删除断裂商品或重建 attachment 记录
+
 ## 调试验证
 
 - 禁止仅凭花括号数量判断 JSON 合法性，必须用 `json.loads()` 验证

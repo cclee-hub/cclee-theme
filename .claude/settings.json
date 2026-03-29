@@ -91,7 +91,15 @@
       "Read(//home/aptop/scripts/playwright-tools/**)",
       "Bash(NODE_PATH=/home/aptop/.nvm/versions/node/v24.13.1/lib/node_modules node -e \":*)",
       "Bash(fuser -v /home/aptop/workspace/yougu)",
-      "Bash(/home/aptop/.claude/mcp-servers/doubao-vision/venv/bin/pip list:*)"
+      "Bash(/home/aptop/.claude/mcp-servers/doubao-vision/venv/bin/pip list:*)",
+      "Bash(NODE_PATH=~/scripts/puppeteer-tools/node_modules node -e \":*)",
+      "Bash(tr '}' '}\\\\n')",
+      "Bash(aspect-ratio)",
+      "Bash(object-fit \")",
+      "Bash(cp single-product.html single-product-default.bak)",
+      "Bash(cp single-product-wide.html single-product.html)",
+      "Read(//usr/bin/**)",
+      "Bash(claude mcp:*)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/wordpress",

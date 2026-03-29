@@ -9,14 +9,14 @@ _Date: 2026-03-29 | Scope: A1-A14 Full Audit | Theme: CCLEE v1.1.1_
 | Metric | Count |
 |--------|-------|
 | Total checks | 84 |
-| PASS | 67 |
+| PASS | 66 |
 | FAIL (blocker) | 1 |
 | FAIL (non-blocker) | 2 |
-| WARN | 4 |
+| WARN | 5 |
 | MANUAL | 10 |
-| **Pass rate** | **79.8% (auto)** / **91.7% (auto+manual)** |
+| **Pass rate** | **78.6% (auto)** / **90.5% (auto+manual)** |
 
-**Blockers: 1** | **Non-blockers: 2** | **Warnings: 4**
+**Blockers: 1** | **Non-blockers: 2** | **Warnings: 5**
 
 ---
 
@@ -40,7 +40,7 @@ _Date: 2026-03-29 | Scope: A1-A14 Full Audit | Theme: CCLEE v1.1.1_
 | 21 | WP built-in libs only | No bundled jQuery/moment/etc |
 | 22 | No PHP errors | Code is clean |
 | 23 | No obfuscated code | No eval/base64/gzinflate |
-| 24 | Strings translatable | All PHP strings in __()/_e() with 'cclee-theme' |
+| 24 | Strings translatable (inc/ only) | All inc/ PHP strings in __()/_e() with 'cclee-theme'; patterns use hardcoded placeholder content |
 | 25 | No CPT/Shortcodes/Blocks | register_post_type/add_shortcode/register_block_type absent |
 | 26 | No Analytics/SEO/Forms | Clean |
 | 27 | No external API calls | file_get_contents only for local SVG; fetch() only to same-origin WC API |
@@ -65,7 +65,7 @@ _Date: 2026-03-29 | Scope: A1-A14 Full Audit | Theme: CCLEE v1.1.1_
 | 47 | No remote resources (except fonts) | Patterns use get_theme_file_uri(); fonts from gstatic allowed |
 | 48 | Line endings consistent | LF throughout |
 | 49 | Template files complete | 23 HTML templates |
-| 50 | Block comments valid | Spot-checked cart.html, checkout.html -- properly paired |
+| 50 | Block comments valid | Spot-checked all 23 templates -- properly paired |
 | 51 | Pattern headers present | All 32 patterns have Title/Slug/Categories |
 | 52 | style.css header only | No CSS rules |
 | 53 | No Site Editor remnants | No wp_global_styles references |
@@ -76,17 +76,17 @@ _Date: 2026-03-29 | Scope: A1-A14 Full Audit | Theme: CCLEE v1.1.1_
 | 58 | No tracking on activation | Clean |
 | 59 | No redirect after activation | wp_redirect absent |
 | 60 | Customizer as only entry | No standalone admin pages |
-| 61 | Front-end max 1 credit link/footer | footer.html + footer-columns.html: 1 link to aidevhub.ai; others: 0 |
+| 61 | Front-end max 1 credit link/footer | Each footer variant has at most 1 external link |
 | 62 | WP.org link optional | footer-simple + footer-newsletter link to wordpress.org |
 | 63 | No SEO spam | readme.txt is clean |
 | 64 | No affiliate links | Clean |
-| 65 | No front-facing upsell | No upgrade/premium/purchase text |
+| 65 | No front-facing upsell | Pricing pattern is demo content; cta-banner mentions theme name |
 | 66 | Cart/Checkout Blocks compat | cart.html + checkout.html use wp:woocommerce/cart and wp:woocommerce/checkout |
 | 67 | HPOS compatible | No direct SQL to orders tables |
 | 69 | WP + Woo versions current | Requires 6.4, Tested 6.7 |
 | 72 | No spam/affiliate | Clean |
 | 73 | No off-site upselling | Clean |
-| 74 | PHP 8.0+ compatible | Requires PHP 8.0, no PHP 8-only features blocking 8.0 |
+| 74 | PHP 8.0+ compatible | Code is PHP 7.0+ compatible; Requires PHP: 8.0 is advisory |
 | 75 | Admin no branding | No admin banners/notices/logos |
 | 79 | Works without plugins | WooCommerce conditionally loaded via function_exists('WC') |
 | 80 | Responsive | Media queries + mobile bottom nav |
@@ -111,6 +111,7 @@ accent (#f59e0b) on white (#ffffff) = **2.9:1** -- fails both:
 | patterns/cta-banner.php | `has-accent-color has-base-background-color` |
 | patterns/hero-simple.php | Same pattern |
 | templates/cart.html | `has-accent-color has-base-background-color` |
+| assets/css/woocommerce.css | Product prices use accent color on white |
 
 **Fix options:**
 
@@ -181,6 +182,14 @@ Same concern as above -- this modifies WooCommerce URL routing which may be seen
 
 `inc/setup.php` line 120-198 creates default nav menus on `after_switch_theme`. While not a violation per se, some reviewers prefer themes to not auto-create content.
 
+### -- Pattern content strings not wrapped in __()
+
+28+ pattern PHP files (`patterns/*.php`) contain hardcoded English strings in HTML content (e.g., "Our Services", "Ready to Get Started?", team names, pricing labels). These are NOT wrapped in `__()`.
+
+For Block Themes, pattern content is considered "placeholder/demo content" editable via Site Editor. Most WP.org reviewers accept this. However, some strict reviewers may request wrapping.
+
+**Recommendation:** Leave as-is for initial submission. If reviewer flags it, wrap the most visible strings (headings, buttons).
+
 ---
 
 ## MANUAL Items
@@ -212,6 +221,7 @@ Same concern as above -- this modifies WooCommerce URL routing which may be seen
 | P2 | Reduce to 2 external fonts for Woo (#76) | Low -- remove JetBrains Mono fontFace |
 | P2 | Remove/optionalize Shop->Products filter for Woo | Low -- wrap in option or remove |
 | P2 | Remove shop URL override for Woo | Low -- delete filter |
+| P3 | Pattern content strings translatable (#24) | Medium -- wrap in __() if reviewer flags |
 | P3 | Run QIT tests (#70) | Medium -- external tool |
 | P3 | Manual accessibility testing (#13) | Medium -- keyboard navigation |
 
@@ -230,6 +240,7 @@ Same concern as above -- this modifies WooCommerce URL routing which may be seen
 - index.php
 - assets/js/theme.js
 - assets/css/custom.css
+- assets/css/woocommerce.css
 - templates/*.html (23 files)
 - parts/*.html (7 files)
 - patterns/*.php (32 files)

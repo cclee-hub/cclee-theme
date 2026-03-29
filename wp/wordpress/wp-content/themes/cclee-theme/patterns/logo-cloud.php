@@ -3,7 +3,7 @@
  * Title: Logo Cloud
  * Slug: cclee-theme/logo-cloud
  * Categories: cclee-theme, featured
- * Description: 合作伙伴/客户Logo展示区块
+ * Description: Partner and client logo showcase
  */
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->

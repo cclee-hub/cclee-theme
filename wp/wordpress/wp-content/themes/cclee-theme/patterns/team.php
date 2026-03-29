@@ -3,11 +3,14 @@
  * Title: Team Members
  * Slug: cclee-theme/team
  * Categories: cclee-theme, featured
- * Description: 团队成员展示区块，四列卡片布局
+ * Description: Team members showcase with four-column card layout
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+
+	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide">
 
 	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
 	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Meet the Team</h2>
@@ -21,8 +24,8 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Alex Morgan avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Alex Morgan avatar" style="border-radius:50px"/></figure>
+				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-1.jpg' ) ); ?>","alt":"Alex Morgan avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
+				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-1.jpg' ) ); ?>" alt="Alex Morgan avatar" style="border-radius:50px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -53,8 +56,8 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Jordan Lee avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Jordan Lee avatar" style="border-radius:50px"/></figure>
+				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-2.jpg' ) ); ?>","alt":"Jordan Lee avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
+				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-2.jpg' ) ); ?>" alt="Jordan Lee avatar" style="border-radius:50px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -85,8 +88,8 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Sam Taylor avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Sam Taylor avatar" style="border-radius:50px"/></figure>
+				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-3.jpg' ) ); ?>","alt":"Sam Taylor avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
+				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-3.jpg' ) ); ?>" alt="Sam Taylor avatar" style="border-radius:50px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -117,8 +120,8 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>","alt":"Casey Kim avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-placeholder.svg' ) ); ?>" alt="Casey Kim avatar" style="border-radius:50px"/></figure>
+				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-4.jpg' ) ); ?>","alt":"Casey Kim avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
+				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-4.jpg' ) ); ?>" alt="Casey Kim avatar" style="border-radius:50px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -146,6 +149,9 @@
 
 	</div>
 	<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->

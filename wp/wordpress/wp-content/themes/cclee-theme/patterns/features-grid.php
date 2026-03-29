@@ -3,7 +3,7 @@
  * Title: Features Grid
  * Slug: cclee-theme/features-grid
  * Categories: cclee-theme, featured
- * Description: 三列特性网格区块
+ * Description: Three-column feature grid
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->

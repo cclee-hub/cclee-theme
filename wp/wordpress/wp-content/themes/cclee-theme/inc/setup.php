@@ -37,6 +37,9 @@ add_action( 'wp_enqueue_scripts', function () {
         $ver,
         true
     );
+    wp_localize_script( 'cclee-theme', 'ccleeTheme', [
+        'restUrl' => esc_url_raw( rest_url() ),
+    ] );
 } );
 
 add_action( 'wp_footer', function() {

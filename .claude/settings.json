@@ -83,7 +83,15 @@
       "Read(//home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/assets/icons/**)",
       "Bash(do php:*)",
       "Bash(/dev/null --prefix ~/scripts/playwright-tools/)",
-      "Bash(node -e ':*)"
+      "Bash(node -e ':*)",
+      "Bash(1 /dev/null)",
+      "Bash(~/.claude/mcp-servers/doubao-vision/venv/bin/python -c \"from mcp.server.fastmcp import FastMCP; import httpx; print\\(''OK''\\)\")",
+      "Bash(2)",
+      "Bash(/home/aptop/.claude/mcp-servers/doubao-vision/venv/bin/python -c \"from mcp.server.fastmcp import FastMCP; import httpx; print\\(''imports OK''\\)\")",
+      "Read(//home/aptop/scripts/playwright-tools/**)",
+      "Bash(NODE_PATH=/home/aptop/.nvm/versions/node/v24.13.1/lib/node_modules node -e \":*)",
+      "Bash(fuser -v /home/aptop/workspace/yougu)",
+      "Bash(/home/aptop/.claude/mcp-servers/doubao-vision/venv/bin/pip list:*)"
     ],
     "additionalDirectories": [
       "/home/aptop/workspace/wordpress",
@@ -103,7 +111,13 @@
       "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/templates",
       "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/patterns",
       "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/templates/.puppeteer",
-      "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/styles"
+      "/home/aptop/workspace/wordpress/wp/wordpress/wp-content/themes/cclee-theme/styles",
+      "/home/aptop/workspace/wordpress/docs/screenshots/woo-check",
+      "/home/aptop/.claude/mcp-servers",
+      "/home/aptop/workspace/wordpress/docs/plans",
+      "/home/aptop/.claude/skills/wp-org-theme",
+      "/home/aptop/.claude/skills/wp-org-plugin",
+      "/home/aptop/workspace/wordpress/docs"
     ]
   },
   "hooks": {

@@ -32,7 +32,7 @@
 | 用途 | 宽度 | theme.json |
 |------|------|------------|
 | 正文内容 | 800px | contentSize |
-| 图片/卡片 | 1200px | wideSize |
+| 图片/卡片 | 1320px | wideSize |
 | Hero/CTA | 100% | 全宽 |
 
 禁止正文全宽（可读性差）

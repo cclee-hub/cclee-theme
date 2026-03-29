@@ -3,11 +3,14 @@
  * Title: Contact Section
  * Slug: cclee-theme/contact
  * Categories: cclee-theme, featured
- * Description: 联系表单区块，包含表单和联系信息
+ * Description: Contact section with form and contact information
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+
+	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide">
 
 	<!-- wp:columns -->
 	<div class="wp-block-columns">
@@ -76,14 +79,6 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-				<!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic"}},"textColor":"neutral-500"} -->
-				<p class="has-neutral-500-color has-text-color" style="font-style:italic">Tip: Use with Contact Form 7 or WPForms plugin.</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:separator {"className":"is-style-wide"} -->
-				<hr class="wp-block-separator is-style-wide"/>
-				<!-- /wp:separator -->
-
 				<!-- wp:paragraph -->
 				<p><strong>Name</strong></p>
 				<!-- /wp:paragraph -->
@@ -120,6 +115,9 @@
 
 	</div>
 	<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
 
 </div>
 <!-- /wp:group -->

@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Header Account & Cart
- * Slug: cclee-theme/header-account-cart
+ * Slug: cclee-theme/header-account
  * Categories: cclee-theme, header
  * Description: Customer account and mini cart icons for header
  */

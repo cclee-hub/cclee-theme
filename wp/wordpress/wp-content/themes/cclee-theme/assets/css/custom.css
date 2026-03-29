@@ -78,7 +78,7 @@
 
 /* Header height variable (dynamic via JS, fallback for SSR) */
 :root {
-    --header-height: 72px;
+    --header-height: 68px;
     --admin-bar-height: 0px;
 }
 .admin-bar {
@@ -149,6 +149,7 @@
 .site-header--transparent .wp-block-site-title,
 .site-header--transparent .wp-block-navigation__container a,
 .site-header--transparent .wp-block-navigation a,
+.site-header--transparent .wp-block-navigation .wp-block-navigation-item__content,
 .site-header--transparent .wp-block-loginout a {
     color: #ffffff;
     text-decoration: none;
@@ -157,6 +158,7 @@
 
 .site-header--transparent .wp-block-site-title a:hover,
 .site-header--transparent .wp-block-navigation a:hover,
+.site-header--transparent .wp-block-navigation .wp-block-navigation-item__content:hover,
 .site-header--transparent .wp-block-loginout a:hover {
     color: var(--wp--preset--color--accent);
 }
@@ -174,6 +176,7 @@
 .site-header--transparent.is-scrolled .wp-block-site-title,
 .site-header--transparent.is-scrolled .wp-block-navigation__container a,
 .site-header--transparent.is-scrolled .wp-block-navigation a,
+.site-header--transparent.is-scrolled .wp-block-navigation .wp-block-navigation-item__content,
 .site-header--transparent.is-scrolled .wp-block-loginout a {
     color: var(--wp--preset--color--primary);
     text-shadow: none;
@@ -181,6 +184,7 @@
 
 .site-header--transparent.is-scrolled .wp-block-site-title a:hover,
 .site-header--transparent.is-scrolled .wp-block-navigation a:hover,
+.site-header--transparent.is-scrolled .wp-block-navigation .wp-block-navigation-item__content:hover,
 .site-header--transparent.is-scrolled .wp-block-loginout a:hover {
     color: var(--wp--preset--color--accent);
 }
@@ -204,12 +208,15 @@
 
 /* Navigation Links - Premium Hover Effect */
 .site-header .wp-block-navigation__container {
-    gap: var(--wp--preset--spacing--20);
+    gap: 24px;
 }
 
-.site-header .wp-block-navigation__container > .wp-block-navigation-item > a {
+.site-header .wp-block-navigation__container > .wp-block-navigation-item > a,
+.site-header .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content {
     position: relative;
-    padding: 8px 4px;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    padding: 8px 2px;
     transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
                 color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
 }
@@ -231,6 +238,19 @@
 
 .site-header .wp-block-navigation__container > .wp-block-navigation-item > a:hover::after {
     width: 100%;
+}
+
+/* Navigation: Active page indicator */
+.site-header .wp-block-navigation__container > .current-menu-item > a::after,
+.site-header .wp-block-navigation__container > .current-menu-parent > a::after,
+.site-header .wp-block-navigation__container > .current_page_item > a::after {
+    width: 100%;
+}
+
+.site-header .wp-block-navigation__container > .current-menu-item > a,
+.site-header .wp-block-navigation__container > .current-menu-parent > a,
+.site-header .wp-block-navigation__container > .current_page_item > a {
+    font-weight: 500;
 }
 
 /* Header: Search variant */
@@ -303,6 +323,94 @@
     color: var(--wp--preset--color--primary);
 }
 
+/* Transparent header: white mini-cart icon */
+.site-header--transparent .woo-cart-icon,
+.site-header--transparent .woo-cart-icon a,
+.site-header--transparent .woo-cart-icon svg {
+    color: rgba(255, 255, 255, 0.9);
+    fill: currentColor;
+}
+
+.site-header--transparent.is-scrolled .woo-cart-icon,
+.site-header--transparent.is-scrolled .woo-cart-icon a,
+.site-header--transparent.is-scrolled .woo-cart-icon svg {
+    color: var(--wp--preset--color--primary);
+}
+
+/* Transparent header: white hamburger button */
+.site-header--transparent .wp-block-navigation__responsive-container-open svg {
+    fill: rgba(255, 255, 255, 0.9);
+}
+
+.site-header--transparent.is-scrolled .wp-block-navigation__responsive-container-open svg {
+    fill: var(--wp--preset--color--primary);
+}
+
+/* Site branding: logo + title */
+.site-branding {
+    gap: 10px;
+}
+.site-branding .wp-block-site-logo img {
+    max-height: 36px;
+    width: auto;
+}
+.site-footer .site-branding .wp-block-site-logo img {
+    max-height: 32px;
+}
+
+/* Footer: breathing room between brand elements */
+.site-footer .wp-block-site-tagline {
+    margin-top: var(--wp--preset--spacing--20);
+    margin-bottom: 0;
+}
+
+/* Header actions group (cart + CTA) */
+.site-header__actions {
+    gap: 12px;
+    align-items: center;
+}
+
+/* Hide WooCommerce account icon on desktop (available in mobile menu) */
+.site-header .wp-block-woocommerce-customer-account {
+    display: none;
+}
+
+@media (max-width: 782px) {
+    .site-header .wp-block-woocommerce-customer-account {
+        display: block;
+    }
+}
+
+/* Header CTA button */
+.cclee-header-cta {
+    margin: 0;
+}
+
+.cclee-header-cta .wp-block-button__link {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+/* Transparent header: CTA button outline style */
+.site-header--transparent .cclee-header-cta .wp-block-button__link {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+}
+
+.site-header--transparent .cclee-header-cta .wp-block-button__link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.site-header--transparent.is-scrolled .cclee-header-cta .wp-block-button__link {
+    background: var(--wp--preset--color--accent);
+    border: 1px solid var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--base);
+}
+
 /* Footer: Newsletter variant */
 .site-footer--newsletter .wp-block-buttons {
     margin-bottom: var(--wp--preset--spacing--60);
@@ -310,17 +418,18 @@
 
 /* Footer: Columns variant */
 .site-footer--columns .wp-block-columns {
-    margin-bottom: var(--wp--preset--spacing--60);
+    margin-bottom: var(--wp--preset--spacing--70);
 }
 
 .site-footer--columns .wp-block-column h4 {
-    margin-bottom: var(--wp--preset--spacing--30);
+    margin-bottom: var(--wp--preset--spacing--40);
 }
 
 .site-footer--columns .wp-block-navigation a {
     color: var(--wp--preset--color--neutral-400);
     text-decoration: none;
-    padding: 4px 0;
+    padding: 6px 0;
+    transition: color var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
 }
 
 .site-footer--columns .wp-block-navigation a:hover {
@@ -328,15 +437,33 @@
 }
 
 .cclee-footer-social {
-    margin-top: var(--wp--preset--spacing--30);
+    margin-top: var(--wp--preset--spacing--50);
 }
 
-.cclee-footer-social a {
+.cclee-footer-social .wp-social-link {
+    width: 44px;
+    height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--wp--preset--color--neutral-700);
+    background: transparent;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+.cclee-footer-social .wp-social-link a {
     color: var(--wp--preset--color--neutral-400);
+    padding: 0;
 }
 
-.cclee-footer-social a:hover {
-    color: var(--wp--preset--color--accent);
+.cclee-footer-social .wp-social-link:hover {
+    background: var(--wp--preset--color--neutral-700);
+    border-color: var(--wp--preset--color--neutral-600);
+}
+
+.cclee-footer-social .wp-social-link:hover a {
+    color: var(--wp--preset--color--neutral-200);
 }
 
 /* Footer paragraph links: inherit parent color, no underline */
@@ -356,7 +483,7 @@ body:has(.site-header) main {
 }
 
 /* Transparent header: Hero section negative margin for overlay */
-body:has(.site-header--transparent) .wp-site-blocks > .wp-block-group.alignfull:first-of-type {
+body:has(.site-header--transparent) .wp-site-blocks > .alignfull:nth-child(2) {
     margin-top: calc(-1 * var(--header-height) - var(--admin-bar-height)) !important;
     padding-top: calc(var(--wp--preset--spacing--80) + var(--header-height) + var(--admin-bar-height)) !important;
 }
@@ -458,9 +585,9 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
 .wp-block-group.is-style-card {
     background-color: var(--wp--preset--color--base);
     border: 1px solid var(--wp--preset--color--neutral-200);
-    border-radius: 8px;
+    border-radius: 12px;
     padding: var(--wp--preset--spacing--40);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* Separator: Thick */
@@ -582,6 +709,12 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
 .is-pattern-pricing .wp-block-column > .wp-block-group,
 .wp-block-columns.is-style-cards .wp-block-column > .wp-block-group {
     height: 100%;
+    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.wp-block-columns.is-style-cards .wp-block-column > .wp-block-group:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Testimonial Cards: Quote decoration */
@@ -692,8 +825,72 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
 }
 .wp-block-group.is-style-card:hover,
 .wp-block-columns .wp-block-column > .wp-block-group:not(.cclee-timeline-dot):hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset hover for inner groups inside post template cards — only the outer card should lift */
+.wp-block-post-template .wp-block-columns .wp-block-column > .wp-block-group {
+    transition: none;
+}
+.wp-block-post-template .wp-block-columns .wp-block-column > .wp-block-group:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Reset hover for sidebar widget groups — informational, not interactive cards */
+.wp-block-columns .wp-block-column > .wp-block-group.has-neutral-200-border-color {
+    transition: none;
+}
+.wp-block-columns .wp-block-column > .wp-block-group.has-neutral-200-border-color:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Reset hover for single post title/nav groups — informational, not interactive cards */
+#main .wp-block-columns .wp-block-column > .wp-block-group {
+    transition: none;
+}
+#main .wp-block-columns .wp-block-column > .wp-block-group:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Reset hover for contact info rows — informational, not interactive cards */
+.wp-block-columns .wp-block-column > .wp-block-group:has(.cclee-contact-icon) {
+    transition: none;
+}
+.wp-block-columns .wp-block-column > .wp-block-group:has(.cclee-contact-icon):hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Reset hover for footer groups — titles are informational, not interactive cards */
+.site-footer .wp-block-columns .wp-block-column > .wp-block-group {
+    transition: none;
+}
+.site-footer .wp-block-columns .wp-block-column > .wp-block-group:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Blog list card (outer bordered group) — hover lift + shadow */
+.wp-block-post-template .wp-block-group.has-border-color {
+    transition:
+        transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+        box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.wp-block-post-template .wp-block-group.has-border-color:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Blog list card image — subtle zoom on hover */
+.wp-block-post-template .wp-block-post-featured-image img {
+    transition: transform var(--wp--custom--transition--slow) var(--wp--custom--easing--default);
+}
+.wp-block-post-template .wp-block-group.has-border-color:hover .wp-block-post-featured-image img {
+    transform: scale(1.03);
 }
 
 /* Button transitions */
@@ -840,13 +1037,6 @@ a {
     background: var(--wp--preset--color--neutral-100);
     color: var(--wp--preset--color--primary);
     flex-shrink: 0;
-    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
-                box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
-}
-
-.cclee-contact-icon:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .cclee-contact-icon svg {
@@ -968,6 +1158,12 @@ a {
 /* ========================================
    Stats Enhancement
    ======================================== */
+
+/* Stats cards: fill column width for even alignment */
+.is-not-stacked-on-mobile > .wp-block-column > .wp-block-group {
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .cclee-stat-number {
     background: linear-gradient(135deg, currentColor 0%, var(--wp--preset--color--neutral-200) 100%);
@@ -1558,4 +1754,82 @@ a {
 .cclee-social-link svg {
 	width: 16px;
 	height: 16px;
+}
+
+/* ========================================
+   Product Cards — ui-ux.md 微交互规范
+   ======================================== */
+
+/* Grid spacing — 呼吸感：元素间 ≥16px */
+.cclee-products-wrapper.is-view-grid .wp-block-post-template {
+	gap: var(--wp--preset--spacing--50);
+}
+
+/* Product image — force square crop regardless of source aspect ratio */
+.cclee-products-wrapper .wp-block-post-featured-image {
+	aspect-ratio: 1;
+	overflow: hidden;
+}
+.cclee-products-wrapper .wp-block-post-featured-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Card hover — translateY(-4px) + shadow deepen */
+.cclee-products-wrapper .wp-block-post-template .wp-block-group.cclee-overflow-hidden {
+	transition:
+		transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+		box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.cclee-products-wrapper .wp-block-post-template .wp-block-group.cclee-overflow-hidden:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--wp--preset--shadow--elevated);
+}
+
+/* Image hover — scale(1.03), clipped by cclee-overflow-hidden */
+.cclee-products-wrapper .wp-block-post-featured-image img {
+	transition: transform var(--wp--custom--transition--slow) var(--wp--custom--easing--default);
+}
+.cclee-products-wrapper .wp-block-group.cclee-overflow-hidden:hover .wp-block-post-featured-image img {
+	transform: scale(1.03);
+}
+
+/* ========================================
+   Blog Card Hover Effects
+   ======================================== */
+
+/* Blog card — smooth lift + shadow on hover */
+.wp-block-query .wp-block-post-template .wp-block-group.cclee-overflow-hidden {
+	transition:
+		transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+		box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.wp-block-query .wp-block-post-template .wp-block-group.cclee-overflow-hidden:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Blog card image — subtle zoom on hover */
+.wp-block-query .wp-block-post-template .cclee-overflow-hidden .wp-block-post-featured-image img {
+	transition: transform var(--wp--custom--transition--slow) var(--wp--custom--easing--default);
+}
+.wp-block-query .wp-block-post-template .cclee-overflow-hidden:hover .wp-block-post-featured-image img {
+	transform: scale(1.03);
+}
+
+/* Blog card title — color transition */
+.wp-block-query .wp-block-post-template .wp-block-post-title a {
+	transition: color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+/* Add to Cart button — hover darken + lift */
+.cclee-products-wrapper .wp-block-button.wp-block-woocommerce-product-button .wp-element-button {
+	transition:
+		transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+		box-shadow var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.cclee-products-wrapper .wp-block-button.wp-block-woocommerce-product-button .wp-element-button:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--wp--preset--shadow--md);
 }

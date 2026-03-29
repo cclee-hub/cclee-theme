@@ -3,7 +3,7 @@
  * Title: Hero Centered
  * Slug: cclee-theme/hero-centered
  * Categories: cclee-theme, featured
- * Description: 居中布局 Hero 区块，用户可在编辑器中自由替换背景图片
+ * Description: Centered hero section with replaceable background image
  */
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-business.jpg","dimRatio":60,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":480,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->

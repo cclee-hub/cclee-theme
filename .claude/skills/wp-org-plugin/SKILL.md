@@ -3,153 +3,214 @@ name: wp-org-plugin
 description: 提交插件到 WordPress.org 前的完整审核。触发词：/wp-plugin-submit、插件上架、wp org plugin submit。仅当明确要提交到官方目录时使用。
 ---
 
-# WordPress.org 插件审核要求
+## 执行流程
 
-## 目标插件
+### Step 1：确定审查范围
 
-| 属性 | 值 |
+使用 AskUserQuestion 依次提问：
+
+**问题 1 -- 插件类型（必须）：**
+
+| 选项 | 适用规范 |
+|------|---------|
+| Standard plugin | B1-B6 全部检查项 |
+| Block-specific plugin | B1-B6 + B7 Block 专项 |
+| Companion plugin for theme | B1-B6 + CP1-CP5 主题关联 |
+| WooCommerce extension | B1-B6 + WC1-WC5 |
+
+**问题 2 -- 检查深度（必须）：**
+
+| 选项 | 说明 |
 |------|------|
-| **插件名称** | CCLEE Toolkit |
-| **Slug** | `cclee-toolkit` |
-| **本地路径** | `wp/wordpress/wp-content/plugins/cclee-toolkit/` |
-| **主文件** | `cclee-toolkit.php` |
-| **Text Domain** | `cclee-toolkit` |
-| **功能定位** | 从 cclee-theme 提取的 plugin-territory 功能（Custom Post Types、Taxonomies、Shortcodes、AI 模块等） |
+| Full audit | 首次提交前全量检查 |
+| Changed files only | 增量修改后复查 |
+| Specific areas | 手动选择检查维度 |
 
-执行此技能时，**默认检查 `cclee-toolkit` 插件**，除非用户明确指定其他插件。
+**问题 3 -- 检查维度（仅 Specific areas 时）：**
 
+```
+多选：
+[ ] B1 Licensing              [ ] B2 Distribution
+[ ] B3 Code Quality           [ ] B4 Business Model
+[ ] B5 User Experience        [ ] B6 Submission
+[ ] B7 Block Plugin           [ ] B8 WooCommerce
+```
 
+### Step 2：定位插件目录
 
-## 基础合规要求
+```bash
+find . -name "*.php" -path "*/plugins/*" -exec grep -l "Plugin Name:" {} \; | head -5
+```
 
-| 规则 | 说明 |
-|------|------|
-| **GPL 兼容许可** | 所有代码、图片、库必须 GPL 兼容，推荐 GPLv2 or later |
-| **代码可读** | 不允许混淆（packer/uglify mangle），需提供源码或构建说明链接 |
-| **功能完整** | 提交时插件必须可用，不接受半成品或仅 sandbox 访问的 API 插件 |
-| **不允许 Trialware** | 不可锁定功能待付费解锁，不可在试用期后禁用功能 |
+确认插件目录路径，从主文件头部读取插件 slug 和基本信息。
 
+### Step 3：执行审查
 
+按下方检查清单逐项执行。
 
-| 文件 | 要求 |
-|------|------|
-| `plugin-slug.php` | 完整头部声明（Plugin Name, Author, Description, Version, Requires at least, Tested up to, Requires PHP, License, Text Domain） |
-| `readme.txt` | 标准格式，含 `== Resources ==` 声明第三方资源 |
+### Step 4：输出报告
 
-## 高风险项（常见被拒原因）
+1. **通过项** -- 列表
+2. **未通过项** -- 文件:行号 + 问题 + 修复建议
+3. **待手动确认** -- 需人工判断的项
+4. **总结** -- 通过率 + blocker 数量
 
-| 风险 | 说明 | 处理 |
-|------|------|------|
-| **代码混淆** | 不允许 packer/uglify mangle 等混淆手段 | 提供可读源码 |
-| **外部资源** | 不允许加载与服务无关的外部资源 | 移除或改为本地 |
-| **框架/库插件** | 不接受纯框架或需其他插件修改才能用的插件 | 将依赖打包进插件 |
-| **重复核心功能** | 不接受 100% 复制他人或核心已有功能 | 确保有差异化价值 |
-| **未声明外部调用** | 外部 API 调用需在 readme.txt 说明 | 添加隐私/数据说明节 |
-| **前缀过短** | 所有 public namespace 最少 4 字母 | 检查函数名/选项名/handle |
-| **slug 含商标词** | 不可使用他人商标（如 woocommerce、acf） | 提交前确认命名 |
-| **前台 "Powered By" 链接** | 前台链接必须默认关闭，用户 opt-in 才能显示 | 提供设置开关 |
-| **后台通知不可关闭** | 全站通知必须可关闭，错误提示需含解决方案 | 添加 dismiss 按钮 |
+报告写入：`docs/review-reports/{YYYY-MM-DD}-plugin-{scope}.md`
 
-## 外部 API / SaaS 特殊规则
+### Step 5：修复指导
 
-> 适用于 `cclee-ai` 类需要第三方 API Key 的插件
+逐项给修复建议（同 wp-org-theme）。
 
-- ✅ 用户主动安装、激活、填写 API Key 后视为授权同意
-- ✅ 通讯必须使用 HTTPS
-- ✅ readme.txt 必须说明调用哪个外部服务、传输哪些数据
-- ❌ 不可在用户未配置前自动发起外部请求
-- ❌ 不可追踪用户行为（追踪须默认关闭，opt-in）
+---
 
-## 前台链接与后台通知规则
+## 检查清单
 
-### 前台 "Powered By" 链接（Rule 10）
+> 来源：WP.org Detailed Plugin Guidelines (18 条) + Block Specific Plugin Guidelines (8 条)
+> 已逐项对照官方文档验证，禁止臆测添加
 
-| 规则 | 说明 |
-|------|------|
-| **默认关闭** | 前台 credit 链接必须默认不显示 |
-| **用户 opt-in** | 必须用户主动开启才能显示 |
-| **不可强制** | 不可要求显示链接才能使用插件功能 |
-| **仅限设置页** | 链接只能出现在插件设置页，不可在前台页面插入 |
+### B1 Licensing
 
-### 后台通知（Rule 11）
+> 来源：Plugin Guidelines #1
 
-| 规则 | 说明 |
-|------|------|
-| **可关闭** | 所有 admin notice 必须可关闭（dismiss） |
-| **自动消失** | 错误提示应在问题解决后自动消失 |
-| **含解决方案** | 错误提示必须告诉用户如何解决问题 |
-| **禁止全站** | 不可显示与当前页面无关的全站通知 |
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 1 | 主文件声明 GPL 兼容许可 | grep | 推荐 GPLv2 or later |
+| 2 | 所有代码、图片、库 GPL 兼容 | 手动 | 包括第三方 |
+| 3 | readme.txt 含 `== Resources ==` | grep | 列明第三方资源 |
+| 4 | 第三方库许可已确认 | 手动 | 无许可的库不可使用 |
 
-## SVN 发布与版本管理
+### B2 Distribution
 
-### SVN 仓库规则（Rule 14）
+> 来源：Plugin Guidelines #3, #14, #15, #16
 
-| 规则 | 说明 |
-|------|------|
-| **SVN 是发布仓库** | 不是开发仓库，避免频繁小改动提交 |
-| **目录结构** | `trunk/`（当前版本）、`tags/`（历史版本）、`assets/`（截图图标） |
-| **禁止删除** | 已发布版本不可从 tags 删除 |
-| **测试后提交** | 确保 trunk 测试通过后再 copy 到 tags |
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 5 | 稳定版本在 SVN 目录中可用 | 手动 | WP.org 只分发目录中的版本 |
+| 6 | 不通过其他渠道独占分发 | 手动 | 目录版本必须与别处同步 |
+| 7 | SVN 提交信息有意义 | 手动 | 禁止 "update"/"cleanup" |
+| 8 | 版本号每次递增 | grep | 主文件 Version + readme Stable tag |
+| 9 | 提交时插件功能完整 | 手动 | 不接受半成品，不可保留名称 |
 
-### 版本号规则（Rule 15）
+### B3 Code Quality
 
-| 规则 | 说明 |
-|------|------|
-| **每次递增** | 每次发布必须递增版本号（主文件头部 + readme.txt stable tag） |
-| **语义化版本** | 推荐 `主版本.功能版本.修复版本`（如 1.2.3） |
-| **同步更新** | 主插件文件 `Version:` 和 readme.txt `Stable tag:` 必须一致 |
+> 来源：Plugin Guidelines #4, #8, #13
 
-## 提交流程与时效
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 10 | 代码可读，无混淆 | grep | 禁止 packer/uglify mangle/不明命名 |
+| 11 | 提供源码或构建说明 | 手动 | readme 链接或内嵌源码 |
+| 12 | 使用 WP 内置库 | grep | 不重复打包 jQuery/PHPMailer 等 |
+| 13 | 前缀 >= 4 字母 | grep | 函数/选项/handle/图片尺寸等 |
+| 14 | 输出 escape | grep | esc_html/esc_attr/esc_url |
+| 15 | 输入 sanitize | grep | sanitize_text_field/absint |
+| 16 | 无 PHP/JS errors/warnings/notices | 半自动 | Plugin Check 扫描 |
+| 17 | 不加载外部可执行代码 | grep | 仅服务型可远程加载，其他禁止 |
+| 18 | JS/CSS 本地包含 | grep | 非服务相关必须本地，字体例外 |
 
-| 阶段 | 时限 | 说明 |
-|------|------|------|
-| **首次审核** | 14 天内 | 提交后审核团队会在 14 天内初审 |
-| **后续回复** | 10 个工作日 | 审核意见发出后 10 个工作日内需回复 |
-| **单次提交限制** | 普通开发者一次只能提交一个插件 | 等当前插件审核完成才能提交下一个 |
-| **zip 大小限制** | < 10MB | 超过 10MB 的 zip 会被拒绝 |
+### B4 Business Model
 
-> **注意**：Plugin Review Team 成员无此限制
+> 来源：Plugin Guidelines #5, #6, #9, #10
 
-## 提交前检查清单
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 19 | 无 Trialware | grep | 禁止功能锁定/试用期/配额限制 |
+| 20 | SaaS 功能有实质（非空壳） | 手动 | readme 说明服务内容 + Terms of Use 链接 |
+| 21 | 无虚假 SaaS（移出代码伪装服务） | 手动 | 禁止把本可本地运行的代码移到服务端 |
+| 22 | 无违法/不诚实行为 | 手动 | 黑帽SEO/虚假评论/sockpuppeting 等 |
+| 23 | 前台链接默认关闭 | grep | "Powered By" 必须 opt-in |
+| 24 | 前台链接不可强制显示 | grep | 不显示也能正常使用 |
+| 25 | 链接仅在设置页配置 | grep | 不可在前台自动插入 |
 
-### 账号
-- [ ] WordPress.org 账号已开启 **2FA**（2024年10月起强制要求）
-- [ ] 以个人账号提交（不可用组织账号代提）
+### B5 User Experience
 
-### 文件
-- [ ] 删除 `.git`、`.svn`、`thumbs.db`、`.DS_Store` 等文件
-- [ ] Minified 文件附带原始文件及构建说明
-- [ ] 无禁止文件（`.sql`、`.sh` 等）
-- [ ] `readme.txt` 格式通过 [Readme Validator](https://wordpress.org/plugins/developers/readme-validator/) 验证
-- [ ] zip 文件 < 10MB
+> 来源：Plugin Guidelines #7, #11, #12
 
-### 代码
-- [ ] 无 PHP/JS errors、warnings、notices
-- [ ] 输入 sanitize，输出 escape
-- [ ] 前缀 ≥ 4 字母（函数名、选项名、handle、图片尺寸名等）
-- [ ] 使用 WP 内置库（jQuery 等），不重复打包
-- [ ] 代码未混淆，源码可读
-- [ ] 通过本地 **Plugin Check** 工具扫描无报错
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 26 | 用户追踪需 opt-in | grep | 禁止未授权收集数据 |
+| 27 | 追踪文档写在 readme | grep | 含隐私政策 |
+| 28 | Admin notices 可关闭 | grep | 必须 dismissible |
+| 29 | 错误提示含解决方案 | 手动 | 且解决后自动消失 |
+| 30 | 无全站通知 | grep | 限定在设置页或上下文 |
+| 31 | Admin 无广告 | 手动 | 追踪推荐链接违反 #7 |
+| 32 | readme 无 spam | grep | 5 tags 以内，无竞品标签，无关键词堆砌 |
+| 33 | Affiliate links 已披露 | grep | 直接链接，禁止跳转/伪装 |
+
+### B6 Submission
+
+> 来源：Plugin Guidelines #2, #17, #18
+
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 34 | 开发者对所有内容负责 | 手动 | 含第三方库许可 |
+| 35 | slug 不含他人商标 | grep | 禁止以他人产品名开头 |
+| 36 | 正确拼写 "WordPress" | grep | W 和 P 大写 |
+| 37 | WordPress.org 账号开 2FA | 手动 | 2024-10 起强制 |
+| 38 | 联系邮箱准确且无自动回复 | 手动 | 不路由到支持系统 |
+| 39 | zip 文件 < 10MB | bash | 超过拒绝 |
+| 40 | 单次只能提交一个插件 | 手动 | 等当前审核完成 |
+
+### B7 Block Plugin (如适用)
+
+> 来源：Block Specific Plugin Guidelines
+
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 41 | 含 block.json | glob | 每个 block 必须有 |
+| 42 | 独立运行，不依赖主题 | 手动 | 任何主题下都能工作 |
+| 43 | 无 wp-admin UX | grep | Block Plugin 禁止自定义 admin 页面 |
+| 44 | PHP 代码最小化 | 手动 | 逻辑优先在 JS/React 中处理 |
+| 45 | 服务端渲染正确 | 手动 | SSR block 的 save 返回 null |
+| 46 | 样式用 block.json / editor style | grep | 不在 PHP 中内联样式 |
+| 47 | 无 `plugin_action_links` 修改 | grep | 不修改插件列表页行为 |
+| 48 | 不依赖特定页面/文章 | 手动 | 任何位置都能渲染 |
+
+### B8 WooCommerce Extension (如适用)
+
+> 来源：Woo Marketplace Standards
+
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| 49 | 兼容最新 2 个 WP + Woo 主版本 | grep | requires/tested 版本号 |
+| 50 | QIT 7 项测试通过 | 手动 | 需外部执行确认 |
+| 51 | HPOS 兼容 | grep | 使用 WC CRUD，不直接操作订单表 |
+| 52 | Cart/Checkout Blocks 兼容 | 手动 | shortcode 需提供 block 版本 |
+| 53 | Freemium 双版本流程正确 | 手动 | 两个独立提交，后续合并为单产品页 |
+
+---
+
+## Companion Plugin 附加检查
+
+> 当选择 "Companion plugin for theme" 时执行
+
+| # | 检查项 | 自动化 | 说明 |
+|---|--------|--------|------|
+| CP1 | 插件 text-domain 与主题独立 | grep | 两个不同 text-domain |
+| CP2 | 主题无插件时不崩溃 | 手动 | 禁用插件后前台正常 |
+| CP3 | 插件无主题时不崩溃 | 手动 | 纯 WP 环境下插件不报错 |
+| CP4 | 功能边界清晰 | 手动 | 主题管展示，插件管功能 |
+| CP5 | 无循环依赖 | grep | 插件不依赖主题函数，反之亦然 |
+
+---
 
 ## Plugin Check CLI 扫描
 
-> 执行 CLI 检查前，确保 Docker 环境已启动
+> 执行前确保 Docker 环境已启动
 
 ```bash
-# 完整检查（默认检查 cclee-toolkit）
-docker exec wp_cli wp plugin check cclee-toolkit --allow-root
+# 完整检查
+docker exec wp_cli wp plugin check <plugin-slug> --allow-root
 
-# 只看错误（忽略警告）
-docker exec wp_cli wp plugin check cclee-toolkit --ignore-warnings --allow-root
+# 只看错误
+docker exec wp_cli wp plugin check <plugin-slug> --ignore-warnings --allow-root
 
-# JSON 输出（便于解析）
-docker exec wp_cli wp plugin check cclee-toolkit --format=json --allow-root
+# JSON 输出
+docker exec wp_cli wp plugin check <plugin-slug> --format=json --allow-root
 
 # 检查特定项
-docker exec wp_cli wp plugin check cclee-toolkit --checks=late_escaping,i18n_usage --allow-root
+docker exec wp_cli wp plugin check <plugin-slug> --checks=late_escaping,i18n_usage --allow-root
 ```
 
-**常见检查项说明：**
 | 检查项 | 说明 |
 |--------|------|
 | `late_escaping` | 输出转义 |
@@ -157,112 +218,14 @@ docker exec wp_cli wp plugin check cclee-toolkit --checks=late_escaping,i18n_usa
 | `plugin_header` | 插件头部规范 |
 | `code_obfuscation` | 代码混淆检测 |
 
-### 功能
-- [ ] 插件功能完整，提交时即可使用（不接受半成品）
-- [ ] 无自动安装其他插件/主题
-- [ ] 外部 API 调用已在 readme.txt 说明
-- [ ] 前台 "Powered By" 链接默认关闭，用户 opt-in 才能显示
-- [ ] 后台通知可关闭（dismiss），错误提示含解决方案
+---
 
-### 版本管理
-- [ ] 每次发布递增版本号
-- [ ] 主插件文件 `Version:` 与 readme.txt `Stable tag:` 一致
-- [ ] SVN trunk 测试通过后再 copy 到 tags
+## 注意事项
 
-### 国际化
-- [ ] PHP 中字符串可翻译（`__()`、`_e()`）
-- [ ] Text Domain = plugin slug
-
-### 隐私
-- [ ] 追踪默认关闭，opt-in
-- [ ] readme.txt 含数据收集/外部服务说明
-
-### 命名与商标
-- [ ] 正确拼写 "WordPress"（W 和 P 大写）
-- [ ] 插件名不含他人商标
-- [ ] Tags ≤ 12 个（仅前 5 个在目录页显示）
-- [ ] Tags 不含竞品名称（如用 "woocommerce" 描述自己插件）
-- [ ] **slug 提交后不可更改**，命名前确认
-
-### 链接
-- [ ] 无 SEO 堆砌、竞品标签
-- [ ] readme 无垃圾外链
-
-## 主插件文件头部模板
-
-```php
-<?php
-/**
- * Plugin Name: Plugin Name
- * Author: wordpress.org-username
- * Author URI: https://example.com
- * Description: Short description. Max 150 chars.
- * Version: 1.0.0
- * Requires at least: 6.4
- * Tested up to: 6.7
- * Requires PHP: 8.0
- * License: GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: plugin-slug
- */
-```
-
-## readme.txt 模板
-
-```
-=== Plugin Name ===
-Contributors: wordpress.org-username
-Tags: tag1, tag2, tag3
-Requires at least: 6.4
-Tested up to: 6.7
-Requires PHP: 8.0
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-Short description. No more than 150 chars.
-
-== Description ==
-Plugin description here.
-
-== External Services ==
-This plugin connects to [Service Name] API.
-- Service URL: https://api.example.com
-- Data sent: user-provided content for processing
-- Privacy policy: https://example.com/privacy
-
-== Changelog ==
-= 1.0.0 =
-* Initial release
-
-== Resources ==
-* LibraryName, Author, License, URL
-```
-
-## 多模块插件合规规则
-
-> 适用于将多个功能合并为单一插件（Suite 模式）
-
-**合规前提：**
-- 所有模块必须服务于同一使用场景（如：B端企业官网工具集）
-- 每个模块可在设置页**独立开关**，不强制捆绑
-- readme.txt 描述中清晰说明各模块用途及关联性
-
-**检查清单：**
-- [ ] 插件描述说明所有模块及其场景关联
-- [ ] 各模块功能可独立启用/禁用
-- [ ] 外部 API 模块（如 AI）未启用时不发起任何外部请求
-- [ ] 单一 Text Domain 覆盖所有模块
-- [ ] 所有模块共用同一前缀（≥ 4 字母）
-
-**目录结构规范：**
-```
-plugin-slug/
-├── plugin-slug.php     # 主入口，唯一插件头部声明
-├── readme.txt
-├── modules/
-│   ├── ai/
-│   ├── seo/
-│   └── case-study/
-└── assets/
-```
+- 插件提交到 WP.org 使用 SVN，不是 git push
+- Block Plugin 要求更严格（PHP 最小化，无 admin UX）
+- Trialware 是最常见的拒绝原因，重点检查
+- Freemium 需两个独立提交（免费版 + 付费版各自 zip）
+- 审查前确认 readme.txt Stable tag 与主文件 Version 一致
+- slug 提交后不可更改，命名前确认
+- 首次审核 14 天内，后续回复 10 个工作日内

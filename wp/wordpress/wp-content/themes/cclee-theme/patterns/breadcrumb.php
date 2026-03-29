@@ -15,11 +15,11 @@
 		<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"left"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--20)"}},"fontSize":"small"} -->
 			<!-- wp:home-link {"label":"Home"} /-->
 			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--neutral-400)"}}},"typography":{"fontStyle":"normal"}},"textColor":"neutral-400","className":"cclee-breadcrumb-separator"} -->
-			<p class="cclee-breadcrumb-separator has-neutral-400-color has-text-color" style="font-style:normal">/</p>
+			<p class="cclee-breadcrumb-separator has-neutral-400-color has-text-color has-link-color" style="font-style:normal">/</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:navigation-link {"label":"Category","url":"#"} /-->
 			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var(--wp--preset--color--neutral-400)"}}},"typography":{"fontStyle":"normal"}},"textColor":"neutral-400","className":"cclee-breadcrumb-separator"} -->
-			<p class="cclee-breadcrumb-separator has-neutral-400-color has-text-color" style="font-style:normal">/</p>
+			<p class="cclee-breadcrumb-separator has-neutral-400-color has-text-color has-link-color" style="font-style:normal">/</p>
 			<!-- /wp:paragraph -->
 			<!-- wp:navigation-link {"label":"Current Page","url":"#","className":"is-active"} /-->
 		<!-- /wp:navigation -->

@@ -3,11 +3,14 @@
  * Title: Timeline Section
  * Slug: cclee-theme/timeline
  * Categories: cclee-theme, featured
- * Description: 公司历程/里程碑时间线区块
+ * Description: Company timeline and milestones
  */
 ?>
-<!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+
+	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignwide">
 
 	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
 	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Our Journey</h2>
@@ -155,6 +158,9 @@
 			<!-- /wp:column -->
 		</div>
 		<!-- /wp:columns -->
+
+	</div>
+	<!-- /wp:group -->
 
 	</div>
 	<!-- /wp:group -->

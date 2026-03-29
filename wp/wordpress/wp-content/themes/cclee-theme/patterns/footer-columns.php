@@ -3,7 +3,7 @@
  * Title: Footer Columns
  * Slug: cclee-theme/footer-columns
  * Categories: cclee-theme, footer
- * Description: 四列页脚区块
+ * Description: Four-column footer section
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"surface","textColor":"base","layout":{"type":"constrained"}} -->

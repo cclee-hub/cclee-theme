@@ -11,14 +11,14 @@
 <div class="wp-block-query alignwide">
 
 	<!-- wp:post-template -->
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"},"margin":{"bottom":"var(--wp--preset--spacing--40)"}},"border":{"radius":"var(--wp--custom--border--radius--lg)","width":"1px","style":"solid"}},"borderColor":"neutral-200","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group has-border-color has-neutral-200-border-color" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--lg);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--50)"},"margin":{"bottom":"var(--wp--preset--spacing--40)"}},"border":{"radius":"var(--wp--custom--border--radius--lg)","width":"1px","style":"solid"}},"borderColor":"neutral-200","layout":{"type":"default"}} -->
+		<div class="wp-block-group has-border-color has-neutral-200-border-color" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--lg);padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--40)">
 
 			<!-- wp:columns {"verticalAlignment":"center"} -->
 			<div class="wp-block-columns are-vertically-aligned-center is-vertically-aligned-center">
 
-				<!-- wp:column {"width":"240px"} -->
-				<div class="wp-block-column" style="flex-basis:240px">
+				<!-- wp:column {"width":"35%"} -->
+				<div class="wp-block-column" style="flex-basis:35%">
 					<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3","style":{"border":{"radius":"var(--wp--custom--border--radius--md)"}}} /-->
 				</div>
 				<!-- /wp:column -->

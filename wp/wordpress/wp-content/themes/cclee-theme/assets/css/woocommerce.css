@@ -751,6 +751,12 @@
 	letter-spacing: 0.05em;
 }
 
+/* Single-image: no thumbnails, reset onsale offset to 12px from left */
+.woocommerce div.product .woocommerce-product-gallery:not(:has(.flex-viewport)) ~ span.onsale,
+.woocommerce div.product .images:not(:has(.flex-viewport)) span.onsale {
+	left: 12px;
+}
+
 /* Thumbnail nav: vertical column on the left */
 .woocommerce div.product ol.flex-control-nav.flex-control-thumbs {
 	display: flex;
@@ -798,10 +804,25 @@
 	position: relative;
 }
 
+/* Single-image fallback: when FlexSlider is not initialized (no gallery images),
+   __wrapper needs to act as positioning context instead of flex-viewport */
+.woocommerce div.product .woocommerce-product-gallery__wrapper:not(:has(.flex-viewport)) {
+	flex: 1;
+	min-width: 0;
+	position: relative;
+}
+
+/* Single-image: constrain __image to match img aspect-ratio so overlays align */
+.woocommerce div.product .woocommerce-product-gallery__wrapper:not(:has(.flex-viewport)) .woocommerce-product-gallery__image {
+	aspect-ratio: 1;
+	max-height: 100%;
+}
+
 /* Force gallery images square via CSS */
 .woocommerce div.product .woocommerce-product-gallery__image img {
 	aspect-ratio: 1;
 	object-fit: cover;
+	width: 100%;
 	border-radius: var(--wp--custom--border--radius--lg);
 }
 
@@ -2101,23 +2122,6 @@
 	box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
 }
 
-/* Hover Image (second gallery image) */
-.cclee-hover-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0;
-	transition: opacity 0.4s ease;
-	z-index: 1;
-}
-
-.cclee-product-card:hover .cclee-hover-image {
-	opacity: 1;
-}
-
 /* Smooth scale on featured image hover */
 .cclee-product-card:hover .cclee-product-card__image > a img {
 	transform: scale(1.03);
@@ -2214,11 +2218,6 @@
 
 	.cclee-product-card__image img {
 		height: auto;
-	}
-
-	.cclee-hover-image {
-		position: static;
-		display: none;
 	}
 
 	.cclee-sale-badge {

@@ -177,19 +177,6 @@ add_filter( 'render_block_core/post-featured-image', function ( $html, $block ) 
 		);
 	}
 
-	// Hover image (second gallery image)
-	$gallery_ids = $product->get_gallery_image_ids();
-	if ( ! empty( $gallery_ids ) ) {
-		$extras .= wp_get_attachment_image(
-			$gallery_ids[0],
-			'woocommerce_thumbnail',
-			false,
-			[
-				'class'   => 'cclee-hover-image',
-				'loading' => 'lazy',
-			]
-		);
-	}
 
 	return $html . $extras;
 }, 10, 2 );

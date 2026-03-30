@@ -26,6 +26,7 @@ cn-site/static/backup/sql/
 
 # Browser automation
 .puppeteer/
+.playwright/
 .playwright.config.json
 test-results/
 
@@ -43,11 +44,8 @@ docs/*.md
 !docs/cclee-theme-dev.md
 !docs/troubleshooting.md
 
-# Claude Code (keep rules, ignore sensitive)
-.claude/credentials.md
-.claude/*.log
-.claude/handover.md
-.claude/memory/
+# Claude Code
+.claude/
 
 # IDE
 .idea/

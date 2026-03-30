@@ -32,12 +32,13 @@ add_action( 'wp_enqueue_scripts', function () {
 		return;
 	}
 
-	$ver = wp_get_theme()->get( 'Version' );
+	$theme_ver = wp_get_theme()->get( 'Version' );
+	$woo_ver   = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/css/woocommerce.css' );
 	wp_enqueue_style(
 		'cclee-woocommerce',
 		get_template_directory_uri() . '/assets/css/woocommerce.css',
 		[ 'cclee-custom' ],
-		$ver
+		$woo_ver
 	);
 } );
 

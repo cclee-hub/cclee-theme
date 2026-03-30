@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Amber",
+	"settings": {
+		"color": {
+			"palette": [
+				{
+					"slug": "accent",
+					"color": "#b45309",
+					"name": "Amber"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "accent",
+					"gradient": "linear-gradient(135deg, var(--wp--preset--color--accent) 0%, #92400e 100%)",
+					"name": "Amber Gradient"
+				}
+			]
+		}
+	}
+}

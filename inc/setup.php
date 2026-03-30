@@ -23,18 +23,20 @@ add_action( 'after_setup_theme', function () {
 } );
 
 add_action( 'wp_enqueue_scripts', function () {
-    $ver = wp_get_theme()->get( 'Version' );
+    $theme_ver = wp_get_theme()->get( 'Version' );
+    $css_ver   = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/css/custom.css' );
+    $js_ver    = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/js/theme.js' );
     wp_enqueue_style(
         'cclee-custom',
         get_template_directory_uri() . '/assets/css/custom.css',
         [],
-        $ver
+        $css_ver
     );
     wp_enqueue_script(
         'cclee-theme',
         get_template_directory_uri() . '/assets/js/theme.js',
         [],
-        $ver,
+        $js_ver,
         true
     );
     wp_localize_script( 'cclee-theme', 'ccleeTheme', [

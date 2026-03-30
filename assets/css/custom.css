@@ -217,6 +217,7 @@
     font-size: 15px;
     letter-spacing: 0.02em;
     padding: 8px 2px;
+    text-decoration: none;
     transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
                 color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
 }
@@ -434,6 +435,8 @@
 
 .site-footer--columns .wp-block-navigation a:hover {
     color: var(--wp--preset--color--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 .cclee-footer-social {
@@ -473,6 +476,8 @@
 }
 .site-footer p a:hover {
     color: var(--wp--preset--color--accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* Adjust main content for fixed header */
@@ -930,9 +935,40 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     height: 200%;
 }
 
-/* Link transitions */
+/* ========================================
+   Link System — Underline Rules
+   ========================================
+
+   Three categories of links:
+
+   1. Content links (paragraphs, lists, comments):
+      Always underlined, color changes on hover.
+      Defined globally in theme.json styles.elements.link.
+
+   2. Title/Navigation links (nav, breadcrumbs, post titles,
+      footer nav, sidebar, landing links):
+      No underline by default; underline appears on hover.
+      Overridden here with text-decoration: none.
+
+   3. Interactive links (buttons, product cards, tags):
+      No underline ever; feedback via color/shadow/movement.
+      Handled in their component-specific rules.
+   ======================================== */
+
+/* Global link transition */
 a {
     transition: color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+/* Content links: refine global underline from theme.json */
+a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
+    text-underline-offset: 2px;
+}
+
+/* Post title links: no underline */
+.wp-block-post-title a,
+.wp-block-post-title a:hover {
+    text-decoration: none;
 }
 
 /* ========================================
@@ -1288,6 +1324,8 @@ a {
 
 .landing-exit-link a:hover {
     color: var(--wp--preset--color--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* Landing Footer */
@@ -1299,6 +1337,8 @@ a {
 
 .landing-footer a:hover {
     color: var(--wp--preset--color--primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 /* Landing Video Container */

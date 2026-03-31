@@ -1,0 +1,22 @@
+{
+    "name": "cclee/cclee-theme",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "cclee",
+            "email": "cclee@users.noreply.github.com"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.13",
+        "wp-coding-standards/wpcs": "^3.3",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "woocommerce/woocommerce-sniffs": "^1.0",
+        "woocommerce/qit-cli": "^1.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

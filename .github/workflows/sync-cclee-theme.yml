@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'wp/wordpress/wp-content/themes/cclee-theme/**'
+      - 'wp/wordpress/wp-content/themes/cclee/**'
   workflow_dispatch:
 
 jobs:
@@ -28,8 +28,8 @@ jobs:
         run: |
           cd cclee-theme-repo
           find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
-          cp -r "$GITHUB_WORKSPACE/wp/wordpress/wp-content/themes/cclee-theme/"* .
-          cp -r "$GITHUB_WORKSPACE/wp/wordpress/wp-content/themes/cclee-theme/".* . 2>/dev/null || true
+          cp -r "$GITHUB_WORKSPACE/wp/wordpress/wp-content/themes/cclee/"* .
+          cp -r "$GITHUB_WORKSPACE/wp/wordpress/wp-content/themes/cclee/".* . 2>/dev/null || true
 
       - name: Commit and push changes
         run: |
@@ -53,8 +53,8 @@ jobs:
           username: ${{ secrets.DEMO_USER }}
           key: ${{ secrets.DEMO_SSH_KEY }}
           script: |
-            git config --global --add safe.directory /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme
-            cd /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme
+            git config --global --add safe.directory /var/www/wp-demo/wordpress/wp-content/themes/cclee
+            cd /var/www/wp-demo/wordpress/wp-content/themes/cclee
             git fetch origin
             git reset --hard origin/main
 

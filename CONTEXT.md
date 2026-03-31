@@ -29,7 +29,7 @@
 | 文件 | 说明 |
 |------|------|
 | `docs/vpn-hysteria2.md` | Hysteria2 VPN 服务配置说明 |
-| `docs/cclee-theme-dev.md` | 主题开发文档 |
+| `docs/cclee-dev.md` | 主题开发文档 |
 | `docs/plans/2026-03-24-woo-templates-design.md` | WooCommerce 模板设计 |
 
 ## 本地环境 (WSL)
@@ -95,7 +95,7 @@
 docker exec wp_cli wp [命令] --allow-root
 ```
 
-主题文件路径：`wp/wordpress/wp-content/themes/cclee-theme/`
+主题文件路径：`wp/wordpress/wp-content/themes/cclee/`
 
 ### 主题
 

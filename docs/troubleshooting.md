@@ -32,7 +32,7 @@ docker logs wp_wordpress --tail=50
 docker exec wp_wordpress cat /var/www/html/wp-content/debug.log
 
 # 3. 检查 PHP 语法
-docker exec wp_wordpress php -l /var/www/html/wp-content/themes/cclee-theme/functions.php
+docker exec wp_wordpress php -l /var/www/html/wp-content/themes/cclee/functions.php
 
 # 4. 临时切换主题排除主题问题
 docker exec wp_cli wp theme activate twentytwentyfour --allow-root
@@ -215,14 +215,14 @@ docker exec wp_wordpress ls -la /var/www/html/wp-content/themes/
 docker compose restart wordpress wpcli
 
 # 重新激活
-docker exec wp_cli wp theme activate cclee-theme --allow-root
+docker exec wp_cli wp theme activate cclee --allow-root
 docker exec wp_cli wp plugin activate woocommerce contact-form-7 --allow-root
 ```
 
 ### Docker 主题消失
 
 ```bash
-docker exec wp_cli wp theme status cclee-theme --allow-root
+docker exec wp_cli wp theme status cclee --allow-root
 ```
 
 ---

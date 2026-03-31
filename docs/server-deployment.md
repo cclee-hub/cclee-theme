@@ -21,14 +21,14 @@ _Last updated: 2026-03-23_
 │   ├── .env
 │   └── wordpress/wp-content/
 │       └── themes/
-│           └── cclee-theme/    # 演示父主题原貌
+│           └── cclee/    # 演示父主题原貌
 │
 └── wp-prod/                    # 正式站（预留）
     ├── docker-compose.yml
     ├── .env
     └── wordpress/wp-content/
         └── themes/
-            ├── cclee-theme/    # 父主题
+            ├── cclee/    # 父主题
             └── client-child/   # 客户定制子主题
 ```
 
@@ -257,7 +257,7 @@ sudo systemctl enable certbot-renew.timer
 
 ```bash
 cd /var/www/wp-demo/wordpress/wp-content/themes
-git clone https://github.com/cclee-hub/cclee-theme.git
+git clone https://github.com/cclee-hub/cclee.git
 ```
 
 ### 正式站（父主题 + 子主题）
@@ -266,14 +266,14 @@ git clone https://github.com/cclee-hub/cclee-theme.git
 cd /var/www/wp-prod/wordpress/wp-content/themes
 
 # 克隆父主题
-git clone https://github.com/cclee-hub/cclee-theme.git
+git clone https://github.com/cclee-hub/cclee.git
 
 # 创建客户定制子主题
 mkdir client-child
 # 创建 style.css、functions.php 等文件
 ```
 
-> 子主题开发流程参考：`docs/cclee-theme-dev.md`
+> 子主题开发流程参考：`docs/cclee-dev.md`
 
 ---
 
@@ -296,11 +296,11 @@ docker-compose restart
 
 ```bash
 # 更新 DEMO 站主题
-cd /var/www/wp-demo/wordpress/wp-content/themes/cclee-theme
+cd /var/www/wp-demo/wordpress/wp-content/themes/cclee
 git pull
 
 # 更新正式站父主题
-cd /var/www/wp-prod/wordpress/wp-content/themes/cclee-theme
+cd /var/www/wp-prod/wordpress/wp-content/themes/cclee
 git pull
 ```
 
@@ -326,5 +326,5 @@ git pull
 - [ ] Nginx 配置正确
 - [ ] SSL 证书已申请
 - [ ] HTTPS 已启用
-- [ ] cclee-theme 已克隆
+- [ ] cclee 已克隆
 - [ ] WP DEBUG 已关闭（生产环境）

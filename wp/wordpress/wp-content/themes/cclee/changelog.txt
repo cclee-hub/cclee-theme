@@ -5,7 +5,7 @@
 * Add GPL copyright notice to style.css
 * Update text domain to match theme slug
 * Translate all code comments to English
-* Update WP compatibility to 6.9
+* Update WP compatibility to 6.9.4
 * Compress screenshot.png
 
 2026-03-20 - version 1.1.1

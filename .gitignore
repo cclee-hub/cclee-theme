@@ -47,6 +47,11 @@ docs/*.md
 # Claude Code
 .claude/
 
+# Dev tools
+vendor/
+composer.lock
+composer.json
+
 # IDE
 .idea/
 .vscode/

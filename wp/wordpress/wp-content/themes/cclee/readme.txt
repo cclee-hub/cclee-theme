@@ -1,7 +1,7 @@
 === CCLEE ===
 Contributors: cclee-hub
 Requires at least: 6.4
-Tested up to: 6.9
+Tested up to: 6.9.4
 Requires PHP: 8.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -65,7 +65,7 @@ full-site-editing, block-themes, custom-colors
 = 1.2.0 =
 * Remove all non-GPL images (Unsplash), replace with CSS gradients and initial avatars
 * Add GPL copyright notice to style.css
-* Update WP compatibility to 6.9
+* Update WP compatibility to 6.9.4
 * Compress screenshot.png
 
 = 1.1.1 =

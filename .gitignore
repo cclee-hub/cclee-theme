@@ -8,6 +8,7 @@ wp/wordpress/wp-content/plugins/*
 !wp/wordpress/wp-content/plugins/cclee-toolkit/
 wp/wordpress/wp-content/themes/*
 !wp/wordpress/wp-content/themes/cclee/
+!wp/wordpress/wp-content/themes/cclee-site/
 wp/wordpress/wp-content/uploads/
 wp/wordpress/wp-content/upgrade/
 wp/wordpress/wp-content/backup/

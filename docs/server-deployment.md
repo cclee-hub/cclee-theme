@@ -23,13 +23,13 @@ _Last updated: 2026-03-23_
 │       └── themes/
 │           └── cclee/    # 演示父主题原貌
 │
-└── wp-prod/                    # 正式站（预留）
+└── wp-prod/                    # 正式站（yougu）
     ├── docker-compose.yml
     ├── .env
     └── wordpress/wp-content/
         └── themes/
-            ├── cclee/    # 父主题
-            └── client-child/   # 客户定制子主题
+            ├── cclee/          # 父主题
+            └── cclee-yougu/    # yougu 子主题
 ```
 
 ---
@@ -269,8 +269,8 @@ cd /var/www/wp-prod/wordpress/wp-content/themes
 git clone https://github.com/cclee-hub/cclee.git
 
 # 创建客户定制子主题
-mkdir client-child
-# 创建 style.css、functions.php 等文件
+mkdir cclee-yougu
+# 上传本地 cclee-yougu/ 内容
 ```
 
 > 子主题开发流程参考：`docs/cclee-dev.md`

@@ -104,13 +104,13 @@
                 backdrop-filter var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
 }
 
-/* Header: Scrolled state (frosted glass effect) */
+/* Header: Scrolled state (frosted glass + shadow) */
 .site-header.is-scrolled {
-    background-color: rgba(255, 255, 255, 0.78);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border-bottom-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    border-bottom-color: transparent;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
 
 /* Header inner container - responsive padding */

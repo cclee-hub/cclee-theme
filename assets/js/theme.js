@@ -21,14 +21,11 @@
 
     /**
      * Header scroll effect
-     * Only headers with site-header--transparent class get transparent → frosted glass effect
+     * All header variants get scroll shadow; transparent variant also gets frosted glass
      */
     function initHeaderScroll() {
         const header = document.querySelector('.site-header');
         if (!header) return;
-
-        // Whitelist: only transparent headers get scroll effect
-        const hasScrollEffect = header.classList.contains('site-header--transparent');
 
         const scrollThreshold = 50;
 

@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: WooCommerce Account Navigation
- * Slug: cclee-theme/woo-account-nav
- * Categories: cclee-theme, woocommerce
+ * Slug: cclee/woo-account-nav
+ * Categories: cclee, woocommerce
  * Description: Account sidebar navigation with icon menu
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--30)"}},"border":{"radius":"var(--wp--custom--border--radius--lg)"}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30);border-radius:var(--wp--custom--border--radius--lg)">

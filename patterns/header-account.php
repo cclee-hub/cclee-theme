@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Header Account & Cart
- * Slug: cclee-theme/header-account
- * Categories: cclee-theme, header
+ * Slug: cclee/header-account
+ * Categories: cclee, header
  * Description: Customer account and mini cart icons for header
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--30)"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group">

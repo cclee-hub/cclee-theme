@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Contact Section
- * Slug: cclee-theme/contact
- * Categories: cclee-theme, featured
+ * Slug: cclee/contact
+ * Categories: cclee, featured
  * Description: Contact section with form and contact information
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
@@ -29,7 +32,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'mail' ); ?></div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'mail' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Email:</strong> hello@example.com</p>
@@ -40,7 +43,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'map-pin' ); ?></div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'map-pin' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Location:</strong> 123 Business Street, City</p>
@@ -51,7 +54,7 @@
 			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--20)">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'clock' ); ?></div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'clock' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Hours:</strong> Mon-Fri 9AM-6PM</p>
@@ -62,7 +65,7 @@
 			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 			<div class="wp-block-group">
 				<!-- wp:html -->
-				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'phone' ); ?></div>
+				<div class="cclee-contact-icon" style="margin-right:12px"><?php echo cclee_svg( 'phone' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:paragraph -->
 				<p><strong>Phone:</strong> +1 (555) 123-4567</p>

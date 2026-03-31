@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Page Header Products
- * Slug: cclee-theme/page-header-products
- * Categories: cclee-theme, featured
+ * Slug: cclee/page-header-products
+ * Categories: cclee, featured
  * Description: Compact page header for product catalog pages
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--60)","bottom":"var(--wp--preset--spacing--60)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">

@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Page Header
- * Slug: cclee-theme/page-header
- * Categories: cclee-theme, featured
+ * Slug: cclee/page-header
+ * Categories: cclee, featured
  * Description: Clean page header with title and subtle background
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">

@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: WooCommerce Progress Steps
- * Slug: cclee-theme/woo-progress-steps
- * Categories: cclee-theme, woocommerce
+ * Slug: cclee/woo-progress-steps
+ * Categories: cclee, woocommerce
  * Description: Checkout progress bar showing Cart, Checkout, and Complete steps
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"neutral-50","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)">

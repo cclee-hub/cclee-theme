@@ -1,15 +1,17 @@
 <?php
 /**
  * Title: Hero Centered
- * Slug: cclee-theme/hero-centered
- * Categories: cclee-theme, featured
- * Description: Centered hero section with replaceable background image
+ * Slug: cclee/hero-centered
+ * Categories: cclee, featured
+ * Description: Centered hero section with gradient background
+ *
+ * @package cclee
  */
+
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-business.jpg","dimRatio":60,"overlayColor":"primary","isUserOverlayColor":true,"minHeight":480,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:cover {"gradient":"hero","dimRatio":100,"minHeight":480,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);min-height:480px">
-	<img class="wp-block-cover__image-background" alt="" src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/hero-business.jpg" data-object-fit="cover"/>
-	<span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim-60 has-background-dim"></span>
+	<span aria-hidden="true" class="wp-block-cover__background has-hero-gradient-background has-background-dim-100 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:paragraph {"textAlign":"center","textColor":"neutral-100","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->

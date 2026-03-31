@@ -1,10 +1,10 @@
 /*
- * custom.css — theme.json 无法覆盖的补充样式
+ * custom.css — Supplemental styles not covered by theme.json.
  *
- * 规范：
- * - 禁止重复定义 theme.json 已控制的属性
- * - 引用设计 token 必须使用 var(--wp--preset--*) 格式
- * - 断点变量：--wp--custom--breakpoints--{mobile|tablet|desktop|wide}
+ * Rules:
+ * - Do not re-declare properties already controlled by theme.json.
+ * - Reference design tokens via var(--wp--preset--*) format.
+ * - Breakpoint variables: --wp--custom--breakpoints--{mobile|tablet|desktop|wide}
  */
 
 /* ========================================
@@ -1487,7 +1487,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
     min-width: 18px;
     height: 18px;
     border-radius: 50%;
-    display: none; /* 默认隐藏，由 JS 控制显示 */
+    display: none; /* Hidden by default, shown via JS */
     align-items: center;
     justify-content: center;
 }
@@ -1534,7 +1534,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 
 /* ========================================
    Pattern Layout Utility Classes
-   用于替代 Pattern 文件中的 inline style
+   Replaces inline styles in Pattern files.
    ======================================== */
 
 /* Section Padding */
@@ -1797,10 +1797,10 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 }
 
 /* ========================================
-   Product Cards — ui-ux.md 微交互规范
+   Product Cards — micro-interaction specs from ui-ux.md
    ======================================== */
 
-/* Grid spacing — 呼吸感：元素间 ≥16px */
+/* Grid spacing — breathing room: elements >= 16px apart */
 .cclee-products-wrapper.is-view-grid .wp-block-post-template {
 	gap: var(--wp--preset--spacing--50);
 }

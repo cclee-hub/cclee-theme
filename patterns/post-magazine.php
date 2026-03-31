@@ -1,11 +1,14 @@
 <?php
 /**
  * Title: Post Magazine Layout
- * Slug: cclee-theme/post-magazine
- * Categories: cclee-theme
+ * Slug: cclee/post-magazine
+ * Categories: cclee
  * Description: Magazine-style archive layout with featured post and grid
  * Keywords: archive, posts, magazine, featured, grid, blog
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:query {"queryId":0,"query":{"perPage":7,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"align":"wide"} -->
 <div class="wp-block-query alignwide">

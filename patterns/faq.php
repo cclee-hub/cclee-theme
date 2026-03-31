@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: FAQ Section
- * Slug: cclee-theme/faq
- * Categories: cclee-theme, featured
+ * Slug: cclee/faq
+ * Categories: cclee, featured
  * Description: Accordion-style frequently asked questions
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">

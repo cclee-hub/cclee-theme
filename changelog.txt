@@ -1,0 +1,21 @@
+*** CCLEE Changelog ***
+
+2026-03-28 - version 1.2.0
+* Remove all non-GPL images (Unsplash), replace with CSS gradients and initial avatars
+* Add GPL copyright notice to style.css
+* Update text domain to match theme slug
+* Translate all code comments to English
+* Update WP compatibility to 6.9.4
+* Compress screenshot.png
+
+2026-03-20 - version 1.1.1
+* Added author archive template and post layout patterns
+* Added WooCommerce cart/checkout templates
+
+2026-03-15 - version 1.1.0
+* Added 5 style variations
+* Added landing page patterns
+* Added WooCommerce progress steps and trust badges patterns
+
+2026-03-01 - version 1.0.0
+* Initial release

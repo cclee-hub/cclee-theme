@@ -1,11 +1,19 @@
 <?php
 /**
- * Pattern 分类注册
- * 具体 pattern 文件放在 patterns/ 目录，WP 自动加载
+ * Pattern category registration.
+ * Individual patterns live in the patterns/ directory and are auto-loaded by WordPress.
+ *
+ * @package cclee
  */
 
-add_action( 'init', function () {
-    register_block_pattern_category( 'cclee-theme', [
-        'label' => __( 'CCLEE Theme', 'cclee-theme' ),
-    ] );
-} );
+add_action(
+	'init',
+	function () {
+		register_block_pattern_category(
+			'cclee',
+			array(
+				'label' => __( 'CCLEE Theme', 'cclee' ),
+			)
+		);
+	}
+);

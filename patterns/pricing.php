@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Pricing Table
- * Slug: cclee-theme/pricing
- * Categories: cclee-theme, featured
+ * Slug: cclee/pricing
+ * Categories: cclee, featured
  * Description: Three-column pricing table
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
@@ -43,9 +46,9 @@
 
 				<!-- wp:html -->
 				<ul class="cclee-check-list has-neutral-600-color has-text-color">
-					<li><?php echo cclee_svg( 'check' ); ?> 5 Projects</li>
-					<li><?php echo cclee_svg( 'check' ); ?> 1GB Storage</li>
-					<li><?php echo cclee_svg( 'check' ); ?> Community Support</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> 5 Projects</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> 1GB Storage</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Community Support</li>
 				</ul>
 				<!-- /wp:html -->
 
@@ -89,11 +92,11 @@
 
 				<!-- wp:html -->
 				<ul class="cclee-check-list">
-					<li><?php echo cclee_svg( 'check' ); ?> Unlimited Projects</li>
-					<li><?php echo cclee_svg( 'check' ); ?> 50GB Storage</li>
-					<li><?php echo cclee_svg( 'check' ); ?> Priority Support</li>
-					<li><?php echo cclee_svg( 'check' ); ?> Advanced Analytics</li>
-					<li><?php echo cclee_svg( 'check' ); ?> API Access</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Unlimited Projects</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> 50GB Storage</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Priority Support</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Advanced Analytics</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> API Access</li>
 				</ul>
 				<!-- /wp:html -->
 
@@ -133,10 +136,10 @@
 
 				<!-- wp:html -->
 				<ul class="cclee-check-list has-neutral-600-color has-text-color">
-					<li><?php echo cclee_svg( 'check' ); ?> Unlimited Everything</li>
-					<li><?php echo cclee_svg( 'check' ); ?> Dedicated Support</li>
-					<li><?php echo cclee_svg( 'check' ); ?> Custom Integrations</li>
-					<li><?php echo cclee_svg( 'check' ); ?> SLA Guarantee</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Unlimited Everything</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Dedicated Support</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> Custom Integrations</li>
+					<li><?php echo cclee_svg( 'check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> SLA Guarantee</li>
 				</ul>
 				<!-- /wp:html -->
 

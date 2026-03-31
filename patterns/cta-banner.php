@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: CTA Banner
- * Slug: cclee-theme/cta-banner
- * Categories: cclee-theme, featured
+ * Slug: cclee/cta-banner
+ * Categories: cclee, featured
  * Description: Full-width call-to-action banner
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"accent","className":"has-dots-pattern","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-dots-pattern has-accent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">

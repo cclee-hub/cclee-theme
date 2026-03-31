@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Features Grid
- * Slug: cclee-theme/features-grid
- * Categories: cclee-theme, featured
+ * Slug: cclee/features-grid
+ * Categories: cclee, featured
  * Description: Three-column feature grid
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
@@ -25,7 +28,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"},"shadow":"0 4px 20px rgba(0,0,0,0.06)"},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 				<!-- wp:html -->
-				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'rocket' ); ?></div>
+				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'rocket' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
 				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Fast Performance</h4>
@@ -43,7 +46,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"},"shadow":"0 4px 20px rgba(0,0,0,0.06)"},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 				<!-- wp:html -->
-				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'palette' ); ?></div>
+				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'palette' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
 				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Flexible Design</h4>
@@ -61,7 +64,7 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"},"shadow":"0 4px 20px rgba(0,0,0,0.06)"},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);box-shadow:0 4px 20px rgba(0,0,0,0.06)">
 				<!-- wp:html -->
-				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'zap' ); ?></div>
+				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'zap' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
 				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Easy to Use</h4>

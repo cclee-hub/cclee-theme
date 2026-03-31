@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Services
- * Slug: cclee-theme/services
- * Categories: cclee-theme
+ * Slug: cclee/services
+ * Categories: cclee
  * Description: Vertical list of services with icons and descriptions
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","backgroundColor":"contrast","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
@@ -37,7 +40,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30)">
 					<!-- wp:html -->
-					<div class="cclee-icon"><?php echo cclee_svg( 'layers' ); ?></div>
+					<div class="cclee-icon"><?php echo cclee_svg( 'layers' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 				</div>
 				<!-- /wp:group -->
@@ -68,7 +71,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30)">
 					<!-- wp:html -->
-					<div class="cclee-icon"><?php echo cclee_svg( 'clock' ); ?></div>
+					<div class="cclee-icon"><?php echo cclee_svg( 'clock' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 				</div>
 				<!-- /wp:group -->
@@ -99,7 +102,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--30)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30)">
 					<!-- wp:html -->
-					<div class="cclee-icon"><?php echo cclee_svg( 'shield' ); ?></div>
+					<div class="cclee-icon"><?php echo cclee_svg( 'shield' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 				</div>
 				<!-- /wp:group -->

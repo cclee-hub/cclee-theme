@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Team Members
- * Slug: cclee-theme/team
- * Categories: cclee-theme, featured
+ * Slug: cclee/team
+ * Categories: cclee, featured
  * Description: Team members showcase with four-column card layout
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
@@ -24,9 +27,9 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-1.jpg' ) ); ?>","alt":"Alex Morgan avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-1.jpg' ) ); ?>" alt="Alex Morgan avatar" style="border-radius:50px"/></figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">AM</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Alex Morgan</h4>
@@ -42,7 +45,7 @@
 
 				<!-- wp:html -->
 				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); ?></a>
+					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<!-- /wp:html -->
 
@@ -56,9 +59,9 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-2.jpg' ) ); ?>","alt":"Jordan Lee avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-2.jpg' ) ); ?>" alt="Jordan Lee avatar" style="border-radius:50px"/></figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">JL</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Jordan Lee</h4>
@@ -74,7 +77,7 @@
 
 				<!-- wp:html -->
 				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); ?></a>
+					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<!-- /wp:html -->
 
@@ -88,9 +91,9 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-3.jpg' ) ); ?>","alt":"Sam Taylor avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-3.jpg' ) ); ?>" alt="Sam Taylor avatar" style="border-radius:50px"/></figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">ST</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Sam Taylor</h4>
@@ -106,7 +109,7 @@
 
 				<!-- wp:html -->
 				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); ?></a>
+					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<!-- /wp:html -->
 
@@ -120,9 +123,9 @@
 			<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group">
 
-				<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-4.jpg' ) ); ?>","alt":"Casey Kim avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--lg cclee-avatar--ring","style":{"border":{"radius":"50px"}}} -->
-				<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--lg cclee-avatar--ring"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-team-4.jpg' ) ); ?>" alt="Casey Kim avatar" style="border-radius:50px"/></figure>
-				<!-- /wp:image -->
+				<!-- wp:html -->
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">CK</div>
+				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Casey Kim</h4>
@@ -138,7 +141,7 @@
 
 				<!-- wp:html -->
 				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); ?></a>
+					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
 				<!-- /wp:html -->
 

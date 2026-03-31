@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Landing Video Hero
- * Slug: cclee-theme/landing-video-hero
- * Categories: cclee-theme, featured
+ * Slug: cclee/landing-video-hero
+ * Categories: cclee, featured
  * Description: Full-screen video background hero, add your own MP4 video
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","className":"landing-video-container","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull landing-video-container has-contrast-background-color has-background">

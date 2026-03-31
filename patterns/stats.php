@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Stats Section
- * Slug: cclee-theme/stats
- * Categories: cclee-theme, featured
+ * Slug: cclee/stats
+ * Categories: cclee, featured
  * Description: Key statistics and achievements showcase
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"hero","textColor":"base","className":"has-dots-pattern","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-dots-pattern has-hero-gradient has-base-color has-hero-gradient-background has-text-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
@@ -21,7 +24,7 @@
 				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
-					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'chart-bar' ); ?></div>
+					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
 					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
@@ -43,7 +46,7 @@
 				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
-					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'star' ); ?></div>
+					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
 					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
@@ -65,7 +68,7 @@
 				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
-					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'layers' ); ?></div>
+					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'layers' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
 					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
@@ -87,7 +90,7 @@
 				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
-					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'headset' ); ?></div>
+					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'headset' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
 					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->

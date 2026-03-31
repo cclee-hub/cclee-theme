@@ -1,22 +1,22 @@
 /*
- * WooCommerce 兼容样式 — 轻电商原则
+ * WooCommerce compatibility styles — lightweight e-commerce approach.
  *
- * 仅覆盖核心元素样式，不重写模板
- * 引用 theme.json 设计 token
+ * Only overrides core element styles; no template rewrites.
+ * References theme.json design tokens.
  *
- * 注意：WooCommerce 通过 WP_Theme_JSON API 注册自己的字号预设，
- * 覆盖 theme.json 的 small(13px)/medium(20px)/large(36px)/x-large(42px)。
- * 因此 Woo 页面内使用 --cclee-* 自定义变量替代被覆盖的预设。
+ * Note: WooCommerce registers its own font size presets via WP_Theme_JSON API,
+ * overriding theme.json's small(13px)/medium(20px)/large(36px)/x-large(42px).
+ * Use --cclee-* custom variables on Woo pages to bypass overridden presets.
  */
 
 :root {
-	--cclee-font-sm: 0.875rem;    /* 14px — Woo 将 small 覆盖为 13px */
-	--cclee-font-md: 1rem;        /* 16px — Woo 将 medium 覆盖为 20px */
-	--cclee-font-lg: 1.125rem;    /* 18px — Woo 将 large 覆盖为 36px */
-	--cclee-font-xl: 1.25rem;     /* 20px — Woo 将 x-large 覆盖为 42px */
+	--cclee-font-sm: 0.875rem;    /* 14px — Woo overrides small to 13px */
+	--cclee-font-md: 1rem;        /* 16px — Woo overrides medium to 20px */
+	--cclee-font-lg: 1.125rem;    /* 18px — Woo overrides large to 36px */
+	--cclee-font-xl: 1.25rem;     /* 20px — Woo overrides x-large to 42px */
 }
 
-/* ===== 按钮统一 - Modern Premium Style ===== */
+/* ===== Buttons — Modern Premium Style ===== */
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
@@ -153,7 +153,7 @@
 	box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 
-/* ===== 产品网格 ===== */
+/* ===== Product Grid ===== */
 .woocommerce ul.products {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -205,7 +205,7 @@
 	font-weight: 600;
 }
 
-/* ===== 单品页 ===== */
+/* ===== Single Product ===== */
 .woocommerce div.product .product_title {
 	font-size: var(--wp--preset--font-size--xx-large);
 	color: var(--wp--preset--color--primary);
@@ -250,7 +250,7 @@
 	text-decoration: underline;
 }
 
-/* ===== 购物车 ===== */
+/* ===== Cart ===== */
 .woocommerce table.shop_table {
 	border-collapse: collapse;
 	width: 100%;
@@ -273,7 +273,7 @@
 	border-radius: 8px;
 }
 
-/* ===== 结账 ===== */
+/* ===== Checkout ===== */
 .woocommerce-checkout .woocommerce-billing-fields h3,
 .woocommerce-checkout .woocommerce-shipping-fields h3,
 .woocommerce-checkout #order_review_heading {
@@ -293,7 +293,7 @@
 	color: var(--wp--preset--color--secondary);
 }
 
-/* ===== 消息提示 ===== */
+/* ===== Notices ===== */
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error {
@@ -314,7 +314,7 @@
 	border-left: 4px solid #c00;
 }
 
-/* ===== 分页 ===== */
+/* ===== Pagination ===== */
 .woocommerce nav.woocommerce-pagination {
 	margin: var(--wp--preset--spacing--60) 0;
 }
@@ -347,7 +347,7 @@
 	border-color: var(--wp--preset--color--accent);
 }
 
-/* ===== 星级评分 — B2B Compact ===== */
+/* ===== Star Ratings — B2B Compact ===== */
 
 /* Rating wrapper: inline compact */
 .woocommerce div.product .woocommerce-product-rating {
@@ -414,7 +414,7 @@
 	color: var(--wp--preset--color--accent);
 }
 
-/* ===== 响应式 ===== */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
 	.woocommerce ul.products {
 		grid-template-columns: repeat(2, 1fr);

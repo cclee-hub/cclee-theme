@@ -1,7 +1,7 @@
 === CCLEE ===
 Contributors: cclee-hub
 Requires at least: 6.4
-Tested up to: 6.7
+Tested up to: 6.9.4
 Requires PHP: 8.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -62,6 +62,12 @@ full-site-editing, block-themes, custom-colors
 
 == Changelog ==
 
+= 1.2.0 =
+* Remove all non-GPL images (Unsplash), replace with CSS gradients and initial avatars
+* Add GPL copyright notice to style.css
+* Update WP compatibility to 6.9.4
+* Compress screenshot.png
+
 = 1.1.1 =
 * Add author archive template and post layout patterns
 * Add WooCommerce cart/checkout templates
@@ -78,15 +84,3 @@ full-site-editing, block-themes, custom-colors
 
 * DM Serif Display font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/DM+Serif+Display
 * Space Grotesk font, Google Fonts, SIL Open Font License, https://fonts.google.com/specimen/Space+Grotesk
-* hero-business.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* portfolio-analytics.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* portfolio-collab.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* portfolio-office.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* portfolio-tech.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-team-1.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-team-2.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-team-3.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-team-4.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-testimonial-1.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-testimonial-2.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)
-* avatar-testimonial-3.jpg, Unsplash License, https://unsplash.com/license (sample content in block patterns)

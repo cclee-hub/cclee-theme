@@ -1,9 +1,12 @@
 <?php
 /**
  * Title: Header Search
- * Slug: cclee-theme/header-search
- * Categories: cclee-theme, header
+ * Slug: cclee/header-search
+ * Categories: cclee, header
  * Description: Search icon for header, expandable on click
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:search {"label":"Search","showLabel":false,"buttonText":"Search","buttonPosition":"button-only","className":"cclee-header-search"} /-->

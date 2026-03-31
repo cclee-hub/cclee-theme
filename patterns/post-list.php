@@ -1,11 +1,14 @@
 <?php
 /**
  * Title: Post List Layout
- * Slug: cclee-theme/post-list
- * Categories: cclee-theme
+ * Slug: cclee/post-list
+ * Categories: cclee
  * Description: List-style post archive layout with left thumbnail and right content
  * Keywords: archive, posts, list, blog
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:query {"queryId":0,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","inherit":true},"displayLayout":{"type":"list"},"align":"wide"} -->
 <div class="wp-block-query alignwide">

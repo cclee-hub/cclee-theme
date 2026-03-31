@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Account User Info
- * Slug: cclee-theme/woo-account-user-info
- * Categories: cclee-theme, woocommerce
+ * Slug: cclee/woo-account-user-info
+ * Categories: cclee, woocommerce
  * Description: User avatar and display name for My Account page
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"var(--wp--custom--border--radius--lg)","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-border-color has-neutral-200-border-color has-contrast-background-color has-background" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--lg);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">

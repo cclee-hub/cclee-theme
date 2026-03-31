@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Testimonials
- * Slug: cclee-theme/testimonial
- * Categories: cclee-theme, featured
+ * Slug: cclee/testimonial
+ * Categories: cclee, featured
  * Description: Customer testimonials with three-column card layout
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-neutral-100-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
@@ -22,7 +25,7 @@
 			<div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);border-radius:12px">
 
 				<!-- wp:html -->
-				<div class="cclee-stars" style="margin-bottom:var(--wp--preset--spacing--20)"><?php echo str_repeat( cclee_svg( 'star' ), 5 ); ?></div>
+				<div class="cclee-stars" style="margin-bottom:var(--wp--preset--spacing--20)"><?php echo str_repeat( cclee_svg( 'star' ), 5 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 
 				<!-- wp:quote {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}},"border":{"left":{"color":"var:preset|color|accent","style":"solid","width":"4px"}}}} -->
@@ -35,9 +38,9 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-1.jpg' ) ); ?>","alt":"Sarah Chen avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
-					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-1.jpg' ) ); ?>" alt="Sarah Chen avatar" style="border-radius:50px"/></figure>
-					<!-- /wp:image -->
+					<!-- wp:html -->
+					<div class="cclee-avatar cclee-avatar--md">SC</div>
+					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:heading {"level":5} -->
@@ -62,7 +65,7 @@
 			<div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);border-radius:12px">
 
 				<!-- wp:html -->
-				<div class="cclee-stars" style="margin-bottom:var(--wp--preset--spacing--20)"><?php echo str_repeat( cclee_svg( 'star' ), 5 ); ?></div>
+				<div class="cclee-stars" style="margin-bottom:var(--wp--preset--spacing--20)"><?php echo str_repeat( cclee_svg( 'star' ), 5 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 
 				<!-- wp:quote {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}},"border":{"left":{"color":"var:preset|color|accent","style":"solid","width":"4px"}}}} -->
@@ -75,9 +78,9 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-2.jpg' ) ); ?>","alt":"Mike Johnson avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
-					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-2.jpg' ) ); ?>" alt="Mike Johnson avatar" style="border-radius:50px"/></figure>
-					<!-- /wp:image -->
+					<!-- wp:html -->
+					<div class="cclee-avatar cclee-avatar--md">MJ</div>
+					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:heading {"level":5} -->
@@ -102,7 +105,7 @@
 			<div class="wp-block-group has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40);border-radius:12px">
 
 				<!-- wp:html -->
-				<div class="cclee-stars" style="margin-bottom:var(--wp--preset--spacing--20)"><?php echo str_repeat( cclee_svg( 'star' ), 5 ); ?></div>
+				<div class="cclee-stars" style="margin-bottom:var(--wp--preset--spacing--20)"><?php echo str_repeat( cclee_svg( 'star' ), 5 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 
 				<!-- wp:quote {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--30)"}},"border":{"left":{"color":"var:preset|color|accent","style":"solid","width":"4px"}}}} -->
@@ -115,9 +118,9 @@
 
 				<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left","verticalAlignment":"center"}} -->
 				<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--30)">
-					<!-- wp:image {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-3.jpg' ) ); ?>","alt":"Emily Davis avatar","sizeSlug":"full","linkDestination":"none","className":"cclee-avatar cclee-avatar--md","style":{"border":{"radius":"50px"}}} -->
-					<figure class="wp-block-image size-full has-custom-border cclee-avatar cclee-avatar--md"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/avatar-testimonial-3.jpg' ) ); ?>" alt="Emily Davis avatar" style="border-radius:50px"/></figure>
-					<!-- /wp:image -->
+					<!-- wp:html -->
+					<div class="cclee-avatar cclee-avatar--md">ED</div>
+					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
 						<!-- wp:heading {"level":5} -->

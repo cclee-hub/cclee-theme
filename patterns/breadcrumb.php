@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Breadcrumb
- * Slug: cclee-theme/breadcrumb
- * Categories: cclee-theme, navigation
+ * Slug: cclee/breadcrumb
+ * Categories: cclee, navigation
  * Description: Breadcrumb navigation with separator icons
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)"}}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">

@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Footer Columns
- * Slug: cclee-theme/footer-columns
- * Categories: cclee-theme, footer
+ * Slug: cclee/footer-columns
+ * Categories: cclee, footer
  * Description: Four-column footer section
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"surface","textColor":"base","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-background-color has-background has-base-color has-text-color" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">

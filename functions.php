@@ -1,8 +1,13 @@
 <?php
 /**
- * CCLEE — functions.php
- * 仅负责加载 inc/ 文件，不直接写功能代码。
+ * Loads inc/ modules only.
+ *
+ * @package cclee
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 require get_template_directory() . '/inc/setup.php';
 require get_template_directory() . '/inc/block-styles.php';

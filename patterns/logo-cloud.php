@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Logo Cloud
- * Slug: cclee-theme/logo-cloud
- * Categories: cclee-theme, featured
+ * Slug: cclee/logo-cloud
+ * Categories: cclee, featured
  * Description: Partner and client logo showcase
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">

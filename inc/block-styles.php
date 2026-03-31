@@ -1,51 +1,76 @@
 <?php
 /**
- * 自定义块样式注册
- * 使用 register_block_style() 扩展核心块的样式变体
+ * Custom block style registrations.
+ * Extends core blocks with additional style variations via register_block_style().
+ *
+ * @package cclee
  */
 
-add_action( 'init', function () {
+add_action(
+	'init',
+	function () {
 
-    // Button: Outline
-    register_block_style( 'core/button', [
-        'name'  => 'outline',
-        'label' => __( 'Outline', 'cclee-theme' ),
-    ] );
+		// Button: Outline style variation.
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'outline',
+				'label' => __( 'Outline', 'cclee' ),
+			)
+		);
 
-    // Group: Card
-    register_block_style( 'core/group', [
-        'name'  => 'card',
-        'label' => __( 'Card', 'cclee-theme' ),
-    ] );
+		// Group: Card style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'card',
+				'label' => __( 'Card', 'cclee' ),
+			)
+		);
 
-    // Separator: Thick
-    register_block_style( 'core/separator', [
-        'name'  => 'thick',
-        'label' => __( 'Thick', 'cclee-theme' ),
-    ] );
+		// Separator: Thick style variation.
+		register_block_style(
+			'core/separator',
+			array(
+				'name'  => 'thick',
+				'label' => __( 'Thick', 'cclee' ),
+			)
+		);
 
-    // Quote: Accent Border
-    register_block_style( 'core/quote', [
-        'name'  => 'accent-border',
-        'label' => __( 'Accent Border', 'cclee-theme' ),
-    ] );
+		// Quote: Accent Border style variation.
+		register_block_style(
+			'core/quote',
+			array(
+				'name'  => 'accent-border',
+				'label' => __( 'Accent Border', 'cclee' ),
+			)
+		);
 
-    // Image: Rounded
-    register_block_style( 'core/image', [
-        'name'  => 'rounded',
-        'label' => __( 'Rounded', 'cclee-theme' ),
-    ] );
+		// Image: Rounded style variation.
+		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'rounded',
+				'label' => __( 'Rounded', 'cclee' ),
+			)
+		);
 
-    // Image: Shadow
-    register_block_style( 'core/image', [
-        'name'  => 'shadow',
-        'label' => __( 'Shadow', 'cclee-theme' ),
-    ] );
+		// Image: Shadow style variation.
+		register_block_style(
+			'core/image',
+			array(
+				'name'  => 'shadow',
+				'label' => __( 'Shadow', 'cclee' ),
+			)
+		);
 
-    // List: Checkmark
-    register_block_style( 'core/list', [
-        'name'  => 'checkmark',
-        'label' => __( 'Checkmark', 'cclee-theme' ),
-    ] );
-
-} );
+		// List: Checkmark style variation.
+		register_block_style(
+			'core/list',
+			array(
+				'name'  => 'checkmark',
+				'label' => __( 'Checkmark', 'cclee' ),
+			)
+		);
+	}
+);

@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Hero Simple
- * Slug: cclee-theme/hero-simple
- * Categories: cclee-theme, featured
+ * Slug: cclee/hero-simple
+ * Categories: cclee, featured
  * Description: Simple hero section with left-aligned layout
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">

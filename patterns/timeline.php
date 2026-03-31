@@ -1,10 +1,13 @@
 <?php
 /**
  * Title: Timeline Section
- * Slug: cclee-theme/timeline
- * Categories: cclee-theme, featured
+ * Slug: cclee/timeline
+ * Categories: cclee, featured
  * Description: Company timeline and milestones
+ *
+ * @package cclee
  */
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
@@ -42,7 +45,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'rocket' ); ?></div>
+					<div style="margin-bottom:8px"><?php echo cclee_svg( 'rocket' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">Company Founded</h4>
@@ -76,7 +79,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'globe' ); ?></div>
+					<div style="margin-bottom:8px"><?php echo cclee_svg( 'globe' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">Global Expansion</h4>
@@ -110,7 +113,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'star' ); ?></div>
+					<div style="margin-bottom:8px"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">Industry Award Winner</h4>
@@ -144,7 +147,7 @@
 				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
 				<div class="wp-block-group has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'chart-bar' ); ?></div>
+					<div style="margin-bottom:8px"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color">500+ Projects Milestone</h4>

@@ -22,8 +22,8 @@
 		<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-h-1-font-size" style="margin-top:var(--wp--preset--spacing--30)">Latest Insights</h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","textColor":"neutral-200","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
-		<p class="has-text-align-center has-neutral-200-color has-text-color" style="margin-top:var(--wp--preset--spacing--30)">Stay updated with the latest trends, tips, and industry news.</p>
+		<!-- wp:paragraph {"align":"center","textColor":"neutral-200","fontSize":"large","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
+		<p class="has-text-align-center has-neutral-200-color has-text-color has-large-font-size" style="margin-top:var(--wp--preset--spacing--30)">Stay updated with the latest trends, tips, and industry news.</p>
 		<!-- /wp:paragraph -->
 
 	</div>

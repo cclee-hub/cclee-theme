@@ -5,6 +5,18 @@
  * - Do not re-declare properties already controlled by theme.json.
  * - Reference design tokens via var(--wp--preset--*) format.
  * - Breakpoint variables: --wp--custom--breakpoints--{mobile|tablet|desktop|wide}
+ *
+ * Section order (append new styles to the matching section):
+ * 1. Base Styles
+ * 2. Block Styles
+ * 3. Pattern-Specific Styles
+ * 4. WP Core Overrides
+ * 5. Component Base (.cclee-card, etc.)
+ * 6. Component Variants & Pattern Exclusives
+ * 7. Interactive States (hover, animation)
+ * 8. Responsive Breakpoints
+ * 9. Page/Template Specific
+ * 10. Utilities
  */
 
 /* ========================================
@@ -608,22 +620,24 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
 }
 
 /* Dark background auto-adapt for outline buttons */
-:is(.has-surface-background-color,
+:is(.wp-block-cover,
+    .has-surface-background-color,
     .has-neutral-800-background-color,
     .has-neutral-900-background-color,
     .has-primary-background-color,
     [class*="has-hero-gradient-background"],
     .has-accent-gradient-background) .wp-block-button.is-style-outline .wp-block-button__link {
-    border-color: var(--wp--preset--color--contrast);
-    color: var(--wp--preset--color--contrast);
+    border-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--base);
 }
-:is(.has-surface-background-color,
+:is(.wp-block-cover,
+    .has-surface-background-color,
     .has-neutral-800-background-color,
     .has-neutral-900-background-color,
     .has-primary-background-color,
     [class*="has-hero-gradient-background"],
     .has-accent-gradient-background) .wp-block-button.is-style-outline .wp-block-button__link:hover {
-    background-color: var(--wp--preset--color--contrast);
+    background-color: var(--wp--preset--color--base);
     color: var(--wp--preset--color--primary);
 }
 

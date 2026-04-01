@@ -352,11 +352,11 @@
     gap: 10px;
 }
 .site-branding .wp-block-site-logo img {
-    max-height: 36px;
+    max-height: 48px;
     width: auto;
 }
 .site-footer .site-branding .wp-block-site-logo img {
-    max-height: 32px;
+    max-height: 40px;
 }
 
 /* Footer: breathing room between brand elements */

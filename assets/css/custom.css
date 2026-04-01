@@ -494,12 +494,9 @@ body:has(.site-header--transparent) .wp-site-blocks > .alignfull:nth-child(2) {
 }
 
 /* Remove blockGap between consecutive full-width sections */
-.wp-site-blocks > .alignfull + .alignfull {
-    margin-top: 0;
-}
-
-/* Adjacent full-width sections with same background: seamless join */
-.wp-site-blocks > .alignfull[style*] + .alignfull[style*] {
+.wp-site-blocks > .alignfull + .alignfull,
+.wp-site-blocks > .alignfull + .wp-block-template-part,
+.wp-site-blocks > .wp-block-template-part + .alignfull {
     margin-top: 0;
 }
 

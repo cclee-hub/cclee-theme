@@ -493,6 +493,16 @@ body:has(.site-header--transparent) .wp-site-blocks > .alignfull:nth-child(2) {
     padding-top: calc(var(--wp--preset--spacing--80) + var(--header-height) + var(--admin-bar-height)) !important;
 }
 
+/* Remove blockGap between consecutive full-width sections */
+.wp-site-blocks > .alignfull + .alignfull {
+    margin-top: 0;
+}
+
+/* Adjacent full-width sections with same background: seamless join */
+.wp-site-blocks > .alignfull[style*] + .alignfull[style*] {
+    margin-top: 0;
+}
+
 /* Hide WooCommerce mini-cart if Woo not active */
 body:not(.woocommerce-active) .woo-cart-icon {
     display: none;

@@ -20,12 +20,12 @@
 	<p class="has-text-align-center has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--60)">Explore our latest projects and see how we deliver excellence.</p>
 	<!-- /wp:paragraph -->
 
-	<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->
-	<div class="wp-block-columns" style="margin-bottom:var(--wp--preset--spacing--40)">
+	<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"is-style-equal-height"} -->
+	<div class="wp-block-columns is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+			<!-- wp:group {"className":"cclee-portfolio-card cclee-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group cclee-portfolio-card cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 				<!-- wp:cover {"gradient":"warm","dimRatio":100,"minHeight":200,"style":{"border":{"radius":{"topLeft":"8px","topRight":"8px","bottomLeft":"0","bottomRight":"0"}}}} -->
 				<div class="wp-block-cover" style="border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0;border-bottom-right-radius:0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-warm-gradient-background has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 				<!-- /wp:cover -->
@@ -56,8 +56,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+			<!-- wp:group {"className":"cclee-portfolio-card cclee-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group cclee-portfolio-card cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 				<!-- wp:cover {"gradient":"cool","dimRatio":100,"minHeight":200,"style":{"border":{"radius":{"topLeft":"8px","topRight":"8px","bottomLeft":"0","bottomRight":"0"}}}} -->
 				<div class="wp-block-cover" style="border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0;border-bottom-right-radius:0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-cool-gradient-background has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 				<!-- /wp:cover -->
@@ -88,12 +88,12 @@
 	</div>
 	<!-- /wp:columns -->
 
-	<!-- wp:columns -->
-	<div class="wp-block-columns" style="margin-bottom:var(--wp--preset--spacing--40)">
+	<!-- wp:columns {"className":"is-style-equal-height"} -->
+	<div class="wp-block-columns is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+			<!-- wp:group {"className":"cclee-portfolio-card cclee-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group cclee-portfolio-card cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 				<!-- wp:cover {"gradient":"primary","dimRatio":100,"minHeight":200,"style":{"border":{"radius":{"topLeft":"8px","topRight":"8px","bottomLeft":"0","bottomRight":"0"}}}} -->
 				<div class="wp-block-cover" style="border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0;border-bottom-right-radius:0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-primary-gradient-background has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 				<!-- /wp:cover -->
@@ -124,8 +124,8 @@
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
-			<!-- wp:group {"className":"cclee-portfolio-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
-			<div class="wp-block-group cclee-portfolio-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+			<!-- wp:group {"className":"cclee-portfolio-card cclee-card","style":{"spacing":{"padding":"0"},"border":{"radius":"8px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group cclee-portfolio-card cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 				<!-- wp:cover {"gradient":"subtle","dimRatio":100,"minHeight":200,"style":{"border":{"radius":{"topLeft":"8px","topRight":"8px","bottomLeft":"0","bottomRight":"0"}}}} -->
 				<div class="wp-block-cover" style="border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0;border-bottom-right-radius:0;min-height:200px"><span aria-hidden="true" class="wp-block-cover__background has-subtle-gradient-background has-background-dim-100 has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 				<!-- /wp:cover -->

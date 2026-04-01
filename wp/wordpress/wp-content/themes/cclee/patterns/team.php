@@ -19,8 +19,8 @@
 	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Meet the Team</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}}} -->
-	<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--50)">
+	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}},"className":"is-style-equal-height"} -->
+	<div class="wp-block-columns is-style-equal-height" style="margin-top:var(--wp--preset--spacing--50)">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">

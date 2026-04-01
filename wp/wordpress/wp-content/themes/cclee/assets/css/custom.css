@@ -526,6 +526,40 @@ body:not(.woocommerce-active) .woo-cart-icon {
     margin: 0;
 }
 
+/* Trust Badges — 4-column grid, responsive 2x2 on tablet */
+.wp-block-group.trust-badges {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--wp--preset--spacing--30);
+}
+.trust-badge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wp--preset--spacing--10);
+}
+.trust-badge .cclee-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+.trust-badge .cclee-icon svg {
+    width: 20px;
+    height: 20px;
+}
+.trust-badge p {
+    margin: 0;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .wp-block-group.trust-badges {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--wp--preset--spacing--20);
+    }
+}
+
 /* Services pattern: bottom border rows */
 .cclee-service-row.has-neutral-200-border-color {
     border-bottom: 1px solid var(--wp--preset--color--neutral-200);
@@ -686,6 +720,12 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     opacity: 0.8;
 }
 
+/* ========================================
+   WP Core Override Block — timeline-dot
+   !important required: overrides .is-layout-constrained + equal-height columns.
+   Do not modify without checking chain: .cclee-timeline-dot → p → :has(.cclee-timeline-dot)
+   ======================================== */
+
 /* Timeline: Fixed circle dot */
 .wp-block-group.cclee-timeline-dot {
     width: 80px !important;
@@ -752,6 +792,14 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     font-style: italic;
     position: relative;
     z-index: 1;
+}
+/* Testimonial Cards: flex column so quote fills space and avatar sticks to bottom */
+.cclee-card:has(.wp-block-quote) {
+    display: flex;
+    flex-direction: column;
+}
+.cclee-card .wp-block-quote {
+    flex: 1;
 }
 
 /* ========================================
@@ -829,63 +877,7 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
    Interactive States
    ======================================== */
 
-/* Card hover effect */
-.wp-block-group.is-style-card,
-.wp-block-columns .wp-block-column > .wp-block-group:not(.cclee-timeline-dot) {
-    height: 100%;
-    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
-                box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
-}
-.wp-block-group.is-style-card:hover,
-.wp-block-columns .wp-block-column > .wp-block-group:not(.cclee-timeline-dot):hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-}
-
-/* Reset hover for inner groups inside post template cards — only the outer card should lift */
-.wp-block-post-template .wp-block-columns .wp-block-column > .wp-block-group {
-    transition: none;
-}
-.wp-block-post-template .wp-block-columns .wp-block-column > .wp-block-group:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-/* Reset hover for sidebar widget groups — informational, not interactive cards */
-.wp-block-columns .wp-block-column > .wp-block-group.has-neutral-200-border-color {
-    transition: none;
-}
-.wp-block-columns .wp-block-column > .wp-block-group.has-neutral-200-border-color:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-/* Reset hover for single post title/nav groups — informational, not interactive cards */
-#main .wp-block-columns .wp-block-column > .wp-block-group {
-    transition: none;
-}
-#main .wp-block-columns .wp-block-column > .wp-block-group:hover {
-    transform: none;
-    box-shadow: none;
-}
-
-/* Reset hover for contact info rows — informational, not interactive cards */
-.wp-block-columns .wp-block-column > .wp-block-group:has(.cclee-contact-icon) {
-    transition: none;
-}
-.wp-block-columns .wp-block-column > .wp-block-group:has(.cclee-contact-icon):hover {
-    transform: none;
-    box-shadow: none;
-}
-
-/* Reset hover for footer groups — titles are informational, not interactive cards */
-.site-footer .wp-block-columns .wp-block-column > .wp-block-group {
-    transition: none;
-}
-.site-footer .wp-block-columns .wp-block-column > .wp-block-group:hover {
-    transform: none;
-    box-shadow: none;
-}
+/* Card hover — unified via .cclee-card base class (see Pattern Layout Utility Classes) */
 
 /* Blog list card (outer bordered group) — hover lift + shadow */
 .wp-block-post-template .wp-block-group.has-border-color {
@@ -1292,6 +1284,48 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 }
 
 /* ========================================
+   Equal-Height Columns (opt-in via is-style-equal-height)
+   ======================================== */
+
+/* Column flex column so children stretch */
+.is-style-equal-height .wp-block-column {
+    display: flex;
+    flex-direction: column;
+}
+.is-style-equal-height .wp-block-column > .wp-block-group {
+    flex: 1;
+}
+/* Desktop (>=782px): CSS Grid for guaranteed equal heights */
+@media screen and (min-width: 782px) {
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        gap: var(--wp--style--block-gap, 2em);
+    }
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        margin-left: 0 !important;
+    }
+}
+/* Mobile/tablet (<=781px): grid with stacking + equal row heights */
+@media screen and (max-width: 781px) {
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: var(--wp--style--block-gap, 2em);
+    }
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        flex-basis: auto !important;
+        margin-left: 0 !important;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 781px) {
+    .is-style-equal-height:not(.is-not-stacked-on-mobile):not(.has-2-columns) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
    Portfolio Card
    ======================================== */
 
@@ -1613,18 +1647,23 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 .cclee-radius--full { border-radius: 50px; }
 .cclee-radius--circle { border-radius: 50%; }
 
-/* Card Style */
+/* Card Style — unified base for all content cards */
 .cclee-card {
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid;
     border-radius: 12px;
     padding: var(--wp--preset--spacing--40);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--wp--preset--shadow--sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cclee-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--wp--preset--shadow--md);
 }
 .cclee-card--bordered {
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 /* Typography */

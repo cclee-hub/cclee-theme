@@ -72,5 +72,14 @@ add_action(
 				'label' => __( 'Checkmark', 'cclee' ),
 			)
 		);
+
+		// Columns: Equal Height style variation.
+		register_block_style(
+			'core/columns',
+			array(
+				'name'  => 'equal-height',
+				'label' => __( 'Equal Height', 'cclee' ),
+			)
+		);
 	}
 );

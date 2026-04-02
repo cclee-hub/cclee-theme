@@ -29,7 +29,7 @@ _Last updated: 2026-03-23_
     └── wordpress/wp-content/
         └── themes/
             ├── cclee/          # 父主题
-            └── cclee-yougu/    # yougu 子主题
+            └── cclee-site/    # yougu 子主题
 ```
 
 ---
@@ -130,7 +130,64 @@ networks:
   demo_network:
 ```
 
-### `/var/www/wp-demo/.env`
+### `/var/www/wp-prod/docker-compose.yml`
+
+```yaml
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: prod_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    networks:
+      - prod_network
+
+  wordpress:
+    image: wordpress:latest
+    container_name: prod_wordpress
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    ports:
+      - "127.0.0.1:8082:80"
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./wordpress/wp-content:/var/www/html/wp-content
+    networks:
+      - prod_network
+
+  wpcli:
+    image: wordpress:cli
+    container_name: prod_cli
+    depends_on:
+      - mysql
+      - wordpress
+    environment:
+      WORDPRESS_DB_HOST: mysql:3306
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - ./wordpress/wp-content:/var/www/html/wp-content
+    networks:
+      - prod_network
+    entrypoint: tail -f /dev/null
+
+networks:
+  prod_network:
+```
+
+### `.env`
 
 ```env
 MYSQL_ROOT_PASSWORD=your_strong_root_password_here
@@ -269,25 +326,30 @@ cd /var/www/wp-prod/wordpress/wp-content/themes
 git clone https://github.com/cclee-hub/cclee.git
 
 # 创建客户定制子主题
-mkdir cclee-yougu
-# 上传本地 cclee-yougu/ 内容
+mkdir cclee-site
+# 上传本地 cclee-site/ 内容
 ```
 
-> 子主题开发流程参考：`docs/cclee-dev.md`
+> 子主题决策见 `.claude/rules/child-theme.md`
 
 ---
 
 ## 7. 常用命令
 
+### DEMO 站
+
 ```bash
-# 查看日志
 docker logs demo_wordpress --tail 50
-
-# WP-CLI 命令
 docker exec demo_cli wp [command] --allow-root
+cd /var/www/wp-demo && docker compose restart
+```
 
-# 重启服务
-docker-compose restart
+### 正式站
+
+```bash
+docker logs prod_wordpress --tail 50
+docker exec prod_cli wp [command] --allow-root
+cd /var/www/wp-prod && docker compose restart
 ```
 
 ---

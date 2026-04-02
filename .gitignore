@@ -48,6 +48,9 @@ docs/*.md
 # Claude Code
 .claude/
 
+# Local assets (hero images, etc.)
+assets/
+
 # Dev tools
 vendor/
 composer.lock

@@ -35,8 +35,8 @@
       }
     },
     "layout": {
-      "contentSize": "800px",
-      "wideSize": "1320px"
+      "contentSize": "100%",
+      "wideSize": "100%"
     },
     "color": {
       "palette": [
@@ -161,6 +161,7 @@
       "customGradient": true
     },
     "typography": {
+      "defaultFontSizes": false,
       "fontFamilies": [
         {
           "slug": "heading",

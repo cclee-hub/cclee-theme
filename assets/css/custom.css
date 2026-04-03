@@ -226,7 +226,7 @@
 .site-header .wp-block-navigation__container > .wp-block-navigation-item > a,
 .site-header .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content {
     position: relative;
-    font-size: 15px;
+    font-size: var(--wp--preset--font-size--small);
     letter-spacing: 0.02em;
     padding: 8px 2px;
     text-decoration: none;
@@ -638,7 +638,7 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     [class*="has-hero-gradient-background"],
     .has-accent-gradient-background) .wp-block-button.is-style-outline .wp-block-button__link:hover {
     background-color: var(--wp--preset--color--base);
-    color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--primary) !important;
 }
 
 /* Group: Card */
@@ -1027,6 +1027,15 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 
 .cclee-avatar--ring {
     box-shadow: 0 0 0 3px var(--wp--preset--color--base), 0 0 0 5px var(--wp--preset--color--accent);
+}
+
+/* Avatar image - for testimonials */
+.cclee-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* Icon container with background — unified with .cclee-icon */
@@ -1680,6 +1689,11 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
     border-radius: 8px;
 }
 
+/* Ensure cover blocks inside cclee-card fill full width */
+.cclee-card > .wp-block-cover {
+    width: 100%;
+}
+
 /* Typography */
 .cclee-text--uppercase {
     text-transform: uppercase;
@@ -1729,7 +1743,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 
 /* Form Card (Hero with Form pattern) */
 .cclee-form-card {
-    border-radius: 12px;
+    border-radius: var(--wp--custom--border--radius--lg);
     padding: var(--wp--preset--spacing--50) var(--wp--preset--spacing--40);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
@@ -1750,7 +1764,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 
 /* Additional utility classes */
 .cclee-radius--md {
-    border-radius: 8px;
+    border-radius: var(--wp--custom--border--radius--md);
 }
 
 .cclee-text--label {
@@ -1771,7 +1785,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 
 /* Hero Simple: Content max-width */
 .cclee-hero-content {
-    max-width: 640px;
+    max-width: var(--wp--style--global--content-size);
 }
 
 /* Single: Comments margin-top */
@@ -1788,7 +1802,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 .cclee-check-list li {
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: var(--wp--preset--spacing--20);
 	padding: 6px 0;
 }
 .cclee-check-list li svg {
@@ -1817,6 +1831,18 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 	justify-content: space-between;
 	cursor: pointer;
 	list-style: none;
+	padding: var(--wp--preset--spacing--20);
+	padding-right: var(--wp--preset--spacing--50);
+}
+.wp-block-details:not([open]) summary {
+	padding-bottom: var(--wp--preset--spacing--20);
+}
+.wp-block-details[open] summary {
+	padding-bottom: var(--wp--preset--spacing--10);
+}
+/* FAQ content area - add horizontal padding */
+.wp-block-details > *:not(summary) {
+	padding-left: var(--wp--preset--spacing--20);
 	padding-right: var(--wp--preset--spacing--20);
 }
 .wp-block-details summary::-webkit-details-marker {

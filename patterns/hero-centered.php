@@ -14,16 +14,16 @@
 	<span aria-hidden="true" class="wp-block-cover__background has-hero-gradient-background has-background-dim-100 has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
-		<!-- wp:paragraph {"textAlign":"center","textColor":"neutral-100","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
-		<p class="has-text-align-center has-neutral-100-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Welcome to CCLEE</p>
+		<!-- wp:paragraph {"textAlign":"center","textColor":"neutral-100","fontSize":"medium","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
+		<p class="has-text-align-center has-neutral-100-color has-text-color has-medium-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Welcome to CCLEE</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"textAlign":"center","level":1,"fontSize":"h1","textColor":"base"} -->
 		<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-h-1-font-size">Build Something Beautiful</h1>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","fontSize":"large","textColor":"neutral-200"} -->
-		<p class="has-text-align-center has-neutral-200-color has-text-color has-large-font-size">A modern WordPress theme built for speed and simplicity.</p>
+		<!-- wp:paragraph {"align":"center","fontSize":"xx-large","textColor":"neutral-200"} -->
+		<p class="has-text-align-center has-neutral-200-color has-text-color has-xx-large-font-size">A modern WordPress theme built for speed and simplicity.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}}} -->

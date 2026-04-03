@@ -18,16 +18,16 @@
 		<!-- wp:group {"className":"cclee-hero-content","layout":{"type":"constrained"}} -->
 		<div class="wp-block-group cclee-hero-content">
 
-			<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em"}}} -->
-			<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.05em">WELCOME</p>
+			<!-- wp:paragraph {"textColor":"primary","fontSize":"medium","style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em"}}} -->
+			<p class="has-primary-color has-text-color has-medium-font-size" style="font-weight:600;letter-spacing:0.05em">WELCOME</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:heading {"level":1,"textColor":"primary","fontSize":"h1"} -->
 			<h1 class="wp-block-heading has-primary-color has-text-color has-h-1-font-size">Your Vision,<br>Our Theme.</h1>
 			<!-- /wp:heading -->
 
-			<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"large","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
-			<p class="has-neutral-500-color has-text-color has-large-font-size" style="margin-top:var(--wp--preset--spacing--30)">Build beautiful, responsive websites with ease. Our theme provides everything you need to create stunning online experiences.</p>
+			<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"xx-large","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
+			<p class="has-neutral-500-color has-text-color has-xx-large-font-size" style="margin-top:var(--wp--preset--spacing--30)">Build beautiful, responsive websites with ease. Our theme provides everything you need to create stunning online experiences.</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:group {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"flex","flexWrap":"wrap"}} -->

@@ -19,8 +19,8 @@
 		<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.05em">CATALOG</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:heading {"level":1,"textColor":"base","fontSize":"h1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
-		<h1 class="wp-block-heading has-base-color has-text-color has-h-1-font-size" style="margin-top:var(--wp--preset--spacing--20)">Products</h1>
+		<!-- wp:heading {"level":1,"textColor":"base","fontSize":"heading-1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
+		<h1 class="wp-block-heading has-base-color has-text-color has-heading-1-font-size" style="margin-top:var(--wp--preset--spacing--20)">Products</h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"textColor":"neutral-400","fontSize":"medium","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->

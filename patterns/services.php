@@ -16,12 +16,12 @@
 	<div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
 	<!-- /wp:spacer -->
 
-	<!-- wp:heading {"textAlign":"center","fontSize":"h2"} -->
-	<h2 class="wp-block-heading has-text-align-center has-h-2-font-size">Our Services</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-heading-2-font-size">Our Services</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->
-	<p class="has-text-align-center has-neutral-500-color has-text-color">Professional solutions tailored to your business needs</p>
+	<!-- wp:paragraph {"align":"center","textColor":"neutral-300"} -->
+	<p class="has-text-align-center has-neutral-300-color has-text-color">Professional solutions tailored to your business needs</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:spacer {"height":"var:preset|spacing|60"} -->
@@ -47,8 +47,8 @@
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-left:var(--wp--preset--spacing--50)">
-					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
-					<h3 class="wp-block-heading has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20)">Custom Manufacturing</h3>
+					<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
+					<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">Custom Manufacturing</h3>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-600"} -->
 					<p class="has-neutral-600-color has-text-color">Tailored manufacturing solutions designed to meet your specific requirements and industry standards.</p>
@@ -78,8 +78,8 @@
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-left:var(--wp--preset--spacing--50)">
-					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
-					<h3 class="wp-block-heading has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20)">Fast Delivery</h3>
+					<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
+					<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">Fast Delivery</h3>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-600"} -->
 					<p class="has-neutral-600-color has-text-color">Quick turnaround times without compromising on quality or precision in every project.</p>
@@ -109,8 +109,8 @@
 
 				<!-- wp:group {"style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
 				<div class="wp-block-group" style="padding-left:var(--wp--preset--spacing--50)">
-					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
-					<h3 class="wp-block-heading has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20)">Quality Assurance</h3>
+					<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
+					<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">Quality Assurance</h3>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-600"} -->
 					<p class="has-neutral-600-color has-text-color">Rigorous testing and inspection processes ensure every product meets the highest standards.</p>

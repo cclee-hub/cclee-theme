@@ -27,13 +27,13 @@
 				},
 				{
 					"slug": "contrast",
-					"color": "#f8fafc",
+					"color": "#0f172a",
 					"name": "Contrast"
 				},
 				{
-					"slug": "surface",
-					"color": "#0f172a",
-					"name": "Surface"
+					"slug": "success",
+					"color": "#16a34a",
+					"name": "Success"
 				},
 				{
 					"slug": "neutral-50",

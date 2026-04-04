@@ -47,8 +47,8 @@
 					<!-- wp:html -->
 					<div style="margin-bottom:8px"><?php echo cclee_svg( 'rocket' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
-					<!-- wp:heading {"level":4,"textColor":"primary"} -->
-					<h4 class="wp-block-heading has-primary-color has-text-color">Company Founded</h4>
+					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
+					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">Company Founded</h4>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-500"} -->
 					<p class="has-neutral-500-color has-text-color">Started with a vision to revolutionize the industry with innovative solutions and exceptional service.</p>
@@ -81,8 +81,8 @@
 					<!-- wp:html -->
 					<div style="margin-bottom:8px"><?php echo cclee_svg( 'globe' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
-					<!-- wp:heading {"level":4,"textColor":"primary"} -->
-					<h4 class="wp-block-heading has-primary-color has-text-color">Global Expansion</h4>
+					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
+					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">Global Expansion</h4>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-500"} -->
 					<p class="has-neutral-500-color has-text-color">Opened offices in 5 new countries, establishing our presence as a global leader in the market.</p>
@@ -115,8 +115,8 @@
 					<!-- wp:html -->
 					<div style="margin-bottom:8px"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
-					<!-- wp:heading {"level":4,"textColor":"primary"} -->
-					<h4 class="wp-block-heading has-primary-color has-text-color">Industry Award Winner</h4>
+					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
+					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">Industry Award Winner</h4>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-500"} -->
 					<p class="has-neutral-500-color has-text-color">Recognized with multiple industry awards for innovation, quality, and customer excellence.</p>
@@ -149,8 +149,8 @@
 					<!-- wp:html -->
 					<div style="margin-bottom:8px"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
-					<!-- wp:heading {"level":4,"textColor":"primary"} -->
-					<h4 class="wp-block-heading has-primary-color has-text-color">500+ Projects Milestone</h4>
+					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
+					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">500+ Projects Milestone</h4>
 					<!-- /wp:heading -->
 					<!-- wp:paragraph {"textColor":"neutral-500"} -->
 					<p class="has-neutral-500-color has-text-color">Celebrated delivering our 500th project, a testament to our team's dedication and client trust.</p>

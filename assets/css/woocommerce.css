@@ -536,7 +536,7 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	gap: var(--wp--preset--spacing--15);
+	gap: var(--wp--preset--spacing--20);
 }
 
 /* Place Order Button */
@@ -546,7 +546,7 @@
 
 .cclee-checkout .woocommerce-checkout-payment .button {
 	width: 100%;
-	padding: var(--wp--preset--spacing--15) var(--wp--preset--spacing--30);
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
 	font-size: var(--cclee-font-md);
 	font-weight: 600;
 }
@@ -554,7 +554,7 @@
 /* Mobile Cart/Checkout */
 @media (max-width: 768px) {
 	.woo-progress-steps {
-		gap: var(--wp--preset--spacing--15);
+		gap: var(--wp--preset--spacing--20);
 	}
 
 	.woo-progress-steps .wp-block-separator {
@@ -1469,7 +1469,7 @@
 		-webkit-overflow-scrolling: touch;
 		scroll-snap-type: x mandatory;
 		scroll-padding-left: 0;
-		gap: var(--wp--preset--spacing--15);
+		gap: var(--wp--preset--spacing--20);
 		padding-bottom: var(--wp--preset--spacing--10);
 	}
 

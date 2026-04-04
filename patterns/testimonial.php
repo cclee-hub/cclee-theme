@@ -12,8 +12,8 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"neutral-100","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-neutral-100-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">What Our Users Say</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"primary","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-2-font-size">What Our Users Say</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}},"className":"is-style-equal-height"} -->
@@ -43,8 +43,8 @@
 					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
-						<!-- wp:heading {"level":5} -->
-						<h5 class="wp-block-heading">Sarah Chen</h5>
+						<!-- wp:heading {"level":5,"textColor":"primary","fontSize":"heading-5"} -->
+						<h5 class="wp-block-heading has-primary-color has-text-color has-heading-5-font-size">Sarah Chen</h5>
 						<!-- /wp:heading -->
 						<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
 						<p class="has-neutral-500-color has-text-color has-small-font-size">Product Manager</p>
@@ -83,8 +83,8 @@
 					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
-						<!-- wp:heading {"level":5} -->
-						<h5 class="wp-block-heading">Mike Johnson</h5>
+						<!-- wp:heading {"level":5,"textColor":"primary","fontSize":"heading-5"} -->
+						<h5 class="wp-block-heading has-primary-color has-text-color has-heading-5-font-size">Mike Johnson</h5>
 						<!-- /wp:heading -->
 						<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
 						<p class="has-neutral-500-color has-text-color has-small-font-size">Marketing Director</p>
@@ -123,8 +123,8 @@
 					<!-- /wp:html -->
 					<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"}} -->
 					<div class="wp-block-group">
-						<!-- wp:heading {"level":5} -->
-						<h5 class="wp-block-heading">Emily Davis</h5>
+						<!-- wp:heading {"level":5,"textColor":"primary","fontSize":"heading-5"} -->
+						<h5 class="wp-block-heading has-primary-color has-text-color has-heading-5-font-size">Emily Davis</h5>
 						<!-- /wp:heading -->
 						<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
 						<p class="has-neutral-500-color has-text-color has-small-font-size">Startup Founder</p>

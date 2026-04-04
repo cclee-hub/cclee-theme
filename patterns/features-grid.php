@@ -30,8 +30,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'rocket' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Fast Performance</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Fast Performance</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color">Lightning-fast load times for the best user experience.</p>
@@ -48,8 +48,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'palette' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Flexible Design</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Flexible Design</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color">Customize every aspect to match your brand perfectly.</p>
@@ -66,8 +66,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--30);text-align:center"><?php echo cclee_svg( 'zap' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Easy to Use</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Easy to Use</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color">No coding required. Build beautiful sites with ease.</p>

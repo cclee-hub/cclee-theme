@@ -31,9 +31,9 @@
 						<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained"}} -->
 						<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-							<!-- wp:post-terms {"term":"category","textColor":"accent","fontSize":"small","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} /-->
+							<!-- wp:post-terms {"term":"category","textColor":"primary","fontSize":"small","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} /-->
 
-							<!-- wp:post-title {"isLink":true,"textColor":"primary","fontSize":"h3","style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} /-->
+							<!-- wp:post-title {"isLink":true,"textColor":"primary","fontSize":"heading-3","style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} /-->
 
 							<!-- wp:post-excerpt {"moreText":"Read more","showMoreOnNewLine":false,"textColor":"neutral-600"} /-->
 
@@ -55,7 +55,7 @@
 				<!-- wp:column {"width":"40%","style":{"spacing":{"padding":{"left":"var(--wp--preset--spacing--40)"}}}} -->
 				<div class="wp-block-column" style="padding-left:var(--wp--preset--spacing--40);flex-basis:40%">
 
-					<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--30)"}}}} -->
+					<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"heading-3","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--30)"}}}} -->
 					<h3 class="wp-block-heading has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--30)">Latest Posts</h3>
 					<!-- /wp:heading -->
 
@@ -116,7 +116,7 @@
 
 	<!-- /wp:post-template -->
 
-	<!-- wp:heading {"level":3,"textColor":"primary","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->
+	<!-- wp:heading {"level":3,"textColor":"primary","fontSize":"heading-3","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->
 	<h3 class="wp-block-heading has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--40)">More Articles</h3>
 	<!-- /wp:heading -->
 

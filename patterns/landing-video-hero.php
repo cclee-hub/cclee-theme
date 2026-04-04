@@ -23,8 +23,8 @@
 				<p class="has-text-align-center has-neutral-200-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Welcome to the Future</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"textAlign":"center","level":1,"textColor":"base","fontSize":"h1"} -->
-				<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-h-1-font-size">Experience Innovation</h1>
+				<!-- wp:heading {"textAlign":"center","level":1,"textColor":"base","fontSize":"heading-1"} -->
+				<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-heading-1-font-size">Experience Innovation</h1>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-200","fontSize":"large","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--50)"}}}} -->

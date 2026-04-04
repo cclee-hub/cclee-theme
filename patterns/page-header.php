@@ -19,8 +19,8 @@
 		<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Legal</p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:heading {"level":1,"textAlign":"center","textColor":"primary","fontSize":"h1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
-		<h1 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-h-1-font-size" style="margin-top:var(--wp--preset--spacing--30)">Page Title</h1>
+		<!-- wp:heading {"level":1,"textAlign":"center","textColor":"primary","fontSize":"heading-1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
+		<h1 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-1-font-size" style="margin-top:var(--wp--preset--spacing--30)">Page Title</h1>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"large","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->

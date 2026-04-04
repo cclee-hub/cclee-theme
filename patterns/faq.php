@@ -12,8 +12,8 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Frequently Asked Questions</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"primary","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-2-font-size">Frequently Asked Questions</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"neutral-500","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--50)"}}}} -->

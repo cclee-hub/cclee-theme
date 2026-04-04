@@ -12,12 +12,12 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Everything You Need</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-heading-2-font-size">Everything You Need</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center","textColor":"neutral-500","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--60)"}}}} -->
-	<p class="has-text-align-center has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--60)">Powerful features to help you build amazing websites.</p>
+	<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--60)"}}}} -->
+	<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="margin-bottom:var(--wp--preset--spacing--60)">Powerful features to help you build amazing websites.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--60)"}}},"className":"is-style-cards is-style-equal-height"} -->

@@ -15,12 +15,12 @@
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Our Journey</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-heading-2-font-size">Our Journey</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center","textColor":"neutral-500","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--60)"}}}} -->
-	<p class="has-text-align-center has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--60)">Key milestones that shaped who we are today.</p>
+	<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--60)"}}}} -->
+	<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="margin-bottom:var(--wp--preset--spacing--60)">Key milestones that shaped who we are today.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:group {"style":{"spacing":{"padding":{"right":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained","wideSize":"800px"}} -->

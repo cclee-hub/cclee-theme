@@ -15,12 +15,12 @@
 	<!-- wp:group {"className":"cta-inner-group","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group cta-inner-group">
 
-		<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"h2"} -->
-		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-h-2-font-size">Ready to Get Started?</h2>
+		<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"heading-2"} -->
+		<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-heading-2-font-size">Ready to Get Started?</h2>
 		<!-- /wp:heading -->
 
-		<!-- wp:paragraph {"align":"center","textColor":"neutral-100","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
-		<p class="has-text-align-center has-neutral-100-color has-text-color" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--50)">Join thousands of users building with CCLEE Theme.</p>
+		<!-- wp:paragraph {"align":"center","textColor":"neutral-100","fontSize":"x-large","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--50)"}}}} -->
+		<p class="has-text-align-center has-neutral-100-color has-text-color has-x-large-font-size" style="margin-top:var(--wp--preset--spacing--30);margin-bottom:var(--wp--preset--spacing--50)">Join thousands of users building with CCLEE Theme.</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->

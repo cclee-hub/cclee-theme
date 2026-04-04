@@ -27,8 +27,8 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
-					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-h-2-font-size" style="font-weight:700;line-height:1">500+</p>
+					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">500+</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -49,8 +49,8 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
-					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-h-2-font-size" style="font-weight:700;line-height:1">98%</p>
+					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">98%</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -71,8 +71,8 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'layers' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
-					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-h-2-font-size" style="font-weight:700;line-height:1">15+</p>
+					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">15+</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -93,8 +93,8 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'headset' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 
-					<!-- wp:paragraph {"align":"center","fontSize":"h2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-h-2-font-size" style="font-weight:700;line-height:1">24/7</p>
+					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">24/7</p>
 					<!-- /wp:paragraph -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->

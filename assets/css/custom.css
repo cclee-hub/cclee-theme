@@ -368,26 +368,37 @@
 .site-branding {
     gap: 10px;
 }
-.site-branding .wp-block-site-logo img {
-    max-height: 48px;
-    width: auto;
+
+/* Site header - logo sizing */
+.site-header .wp-block-site-logo img,
+.site-header .site-branding .wp-block-site-logo img,
+.site-header .custom-logo {
+    max-height: var(--wp--custom--logo--header) !important;
+    width: auto !important;
 }
 
 /* Site footer - base container */
 .site-footer {
     color: var(--wp--preset--color--base);
 }
-.site-footer .site-branding .wp-block-site-logo img {
-    max-height: 40px;
+.site-footer .wp-block-site-logo img,
+.site-footer .site-branding .wp-block-site-logo img,
+.site-footer .custom-logo {
+    max-height: var(--wp--custom--logo--footer) !important;
+    width: auto !important;
 }
 
-/* Mobile: logo 15-20% smaller */
+/* Mobile: logo smaller */
 @media (max-width: 781px) {
-    .site-header .site-branding .wp-block-site-logo img {
-        max-height: 40px;
+    .site-header .wp-block-site-logo img,
+    .site-header .site-branding .wp-block-site-logo img,
+    .site-header .custom-logo {
+        max-height: var(--wp--custom--logo--header-mobile) !important;
     }
-    .site-footer .site-branding .wp-block-site-logo img {
-        max-height: 32px;
+    .site-footer .wp-block-site-logo img,
+    .site-footer .site-branding .wp-block-site-logo img,
+    .site-footer .custom-logo {
+        max-height: var(--wp--custom--logo--footer-mobile) !important;
     }
 }
 

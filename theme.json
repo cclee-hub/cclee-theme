@@ -32,6 +32,12 @@
       "easing": {
         "default": "cubic-bezier(0.4, 0, 0.2, 1)",
         "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+      },
+      "logo": {
+        "header": "28px",
+        "headerMobile": "22px",
+        "footer": "24px",
+        "footerMobile": "19px"
       }
     },
     "layout": {

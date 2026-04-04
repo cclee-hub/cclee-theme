@@ -15,8 +15,8 @@
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Meet the Team</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"primary","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-2-font-size">Meet the Team</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}},"className":"is-style-equal-height"} -->
@@ -31,8 +31,8 @@
 				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">AM</div>
 				<!-- /wp:html -->
 
-				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
-				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Alex Morgan</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size" style="margin-top:var(--wp--preset--spacing--20)">Alex Morgan</h4>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
@@ -63,8 +63,8 @@
 				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">JL</div>
 				<!-- /wp:html -->
 
-				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
-				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Jordan Lee</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size" style="margin-top:var(--wp--preset--spacing--20)">Jordan Lee</h4>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
@@ -95,8 +95,8 @@
 				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">ST</div>
 				<!-- /wp:html -->
 
-				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
-				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Sam Taylor</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size" style="margin-top:var(--wp--preset--spacing--20)">Sam Taylor</h4>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->
@@ -127,8 +127,8 @@
 				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">CK</div>
 				<!-- /wp:html -->
 
-				<!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
-				<h4 class="wp-block-heading has-text-align-center" style="margin-top:var(--wp--preset--spacing--20)">Casey Kim</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size" style="margin-top:var(--wp--preset--spacing--20)">Casey Kim</h4>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small"} -->

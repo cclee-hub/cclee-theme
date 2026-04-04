@@ -21,8 +21,8 @@
 		<!-- wp:column {"width":"50%"} -->
 		<div class="wp-block-column" style="flex-basis:50%">
 
-			<!-- wp:heading {"textColor":"primary"} -->
-			<h2 class="wp-block-heading has-primary-color has-text-color">Get in Touch</h2>
+			<!-- wp:heading {"textColor":"primary","fontSize":"heading-2"} -->
+			<h2 class="wp-block-heading has-primary-color has-text-color has-heading-2-font-size">Get in Touch</h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"textColor":"neutral-500","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}}} -->

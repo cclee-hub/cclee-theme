@@ -12,12 +12,12 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Simple, Transparent Pricing</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"base","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-base-color has-text-color has-heading-2-font-size">Simple, Transparent Pricing</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:paragraph {"align":"center","textColor":"neutral-500","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--50)"}}}} -->
-	<p class="has-text-align-center has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--50)">No hidden fees. Cancel anytime.</p>
+	<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--50)"}}}} -->
+	<p class="has-text-align-center has-neutral-300-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--50)">No hidden fees. Cancel anytime.</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--60)"}}},"className":"is-style-equal-height"} -->
@@ -28,12 +28,12 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","className":"cclee-card","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Starter</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Starter</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","fontSize":"h2","textColor":"primary"} -->
-				<p class="has-text-align-center has-primary-color has-text-color has-h-2-font-size">$0</p>
+				<!-- wp:paragraph {"align":"center","fontSize":"heading-2","textColor":"primary"} -->
+				<p class="has-text-align-center has-primary-color has-text-color has-heading-2-font-size">$0</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->
@@ -74,12 +74,12 @@
 				<p class="has-text-align-center has-primary-color has-text-color has-base-background-color has-background has-small-font-size" style="margin-top:calc(-1 * var(--wp--preset--spacing--50));margin-bottom:var(--wp--preset--spacing--30);font-weight:600;text-transform:uppercase;letter-spacing:0.1em">Most Popular</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:heading {"textAlign":"center","level":4} -->
-				<h4 class="wp-block-heading has-text-align-center">Pro</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-heading-4-font-size">Pro</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","fontSize":"h2"} -->
-				<p class="has-text-align-center has-h-2-font-size">$29/mo</p>
+				<!-- wp:paragraph {"align":"center","fontSize":"heading-2"} -->
+				<p class="has-text-align-center has-heading-2-font-size">$29/mo</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--20)"}}}} -->
@@ -118,12 +118,12 @@
 			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--40)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","className":"cclee-card","layout":{"type":"constrained"}} -->
 			<div class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40)">
 
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Enterprise</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Enterprise</h4>
 				<!-- /wp:heading -->
 
-				<!-- wp:paragraph {"align":"center","fontSize":"h2","textColor":"primary"} -->
-				<p class="has-text-align-center has-primary-color has-text-color has-h-2-font-size">Custom</p>
+				<!-- wp:paragraph {"align":"center","fontSize":"heading-2","textColor":"primary"} -->
+				<p class="has-text-align-center has-primary-color has-text-color has-heading-2-font-size">Custom</p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500"} -->

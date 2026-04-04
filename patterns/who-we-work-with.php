@@ -12,8 +12,8 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"surface","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-surface-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-	<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Who We Work With</h2>
+	<!-- wp:heading {"textAlign":"center","textColor":"primary","fontSize":"heading-2"} -->
+	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-2-font-size">Who We Work With</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--60)"}}},"className":"is-style-equal-height"} -->
@@ -26,8 +26,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--20);text-align:center"><?php echo cclee_svg( 'wrench' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Repair Shops</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Repair Shops</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Quality replacement parts and accessories</p>
@@ -44,8 +44,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--20);text-align:center"><?php echo cclee_svg( 'factory' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Factories</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Factories</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Reliable volume supply with stable lead times</p>
@@ -62,8 +62,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--20);text-align:center"><?php echo cclee_svg( 'package' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Distributors</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Distributors</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Private label and bulk supply solutions</p>
@@ -80,8 +80,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--20);text-align:center"><?php echo cclee_svg( 'tag' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Brand Partners</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Brand Partners</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Custom manufacturing from concept to delivery</p>
@@ -98,8 +98,8 @@
 				<!-- wp:html -->
 				<div class="cclee-icon-box cclee-icon-box--accent" style="margin-bottom:var(--wp--preset--spacing--20);text-align:center"><?php echo cclee_svg( 'shopping-cart' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary"} -->
-				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color">Retail Buyers</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
+				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Retail Buyers</h4>
 				<!-- /wp:heading -->
 				<!-- wp:paragraph {"align":"center","textColor":"neutral-500","fontSize":"small"} -->
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Ready-to-ship products with fast delivery</p>

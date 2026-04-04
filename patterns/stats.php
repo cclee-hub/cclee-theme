@@ -20,8 +20,8 @@
 
 			<!-- wp:column {"width":"25%"} -->
 			<div class="wp-block-column" style="flex-basis:25%">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"rgba(255,255,255,0.05)","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
@@ -42,8 +42,8 @@
 
 			<!-- wp:column {"width":"25%"} -->
 			<div class="wp-block-column" style="flex-basis:25%">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"rgba(255,255,255,0.05)","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
@@ -64,8 +64,8 @@
 
 			<!-- wp:column {"width":"25%"} -->
 			<div class="wp-block-column" style="flex-basis:25%">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"rgba(255,255,255,0.05)","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'layers' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
@@ -86,8 +86,8 @@
 
 			<!-- wp:column {"width":"25%"} -->
 			<div class="wp-block-column" style="flex-basis:25%">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"rgba(255,255,255,0.05)","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
-				<div class="wp-block-group has-rgba-255-255-255-0-05-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
+				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--40)"}},"border":{"radius":"12px"}},"backgroundColor":"neutral-100","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+				<div class="wp-block-group has-neutral-100-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)">
 
 					<!-- wp:html -->
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center"><?php echo cclee_svg( 'headset' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>

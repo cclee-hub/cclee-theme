@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"accent","className":"has-dots-pattern","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-dots-pattern has-accent-gradient-background has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"gradient":"accent","textColor":"base","className":"has-dots-pattern","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-dots-pattern has-accent-gradient-background has-background has-base-color has-text-color" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
 	<!-- wp:group {"className":"cta-inner-group","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 	<div class="wp-block-group cta-inner-group">

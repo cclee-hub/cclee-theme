@@ -201,6 +201,11 @@
     color: var(--wp--preset--color--accent);
 }
 
+/* Scrolled hamburger icon: dark color */
+.site-header--transparent.is-scrolled .wp-block-navigation__responsive-container-open svg {
+    fill: var(--wp--preset--color--primary);
+}
+
 /* Header: Centered Logo variant */
 .site-header--centered .site-header__inner .alignwide {
     justify-content: center;
@@ -363,12 +368,38 @@
 .site-branding {
     gap: 10px;
 }
-.site-branding .wp-block-site-logo img {
-    max-height: 48px;
-    width: auto;
+
+/* Site header - logo sizing */
+.site-header .wp-block-site-logo img,
+.site-header .site-branding .wp-block-site-logo img,
+.site-header .custom-logo {
+    max-height: var(--wp--custom--logo--header) !important;
+    width: auto !important;
 }
-.site-footer .site-branding .wp-block-site-logo img {
-    max-height: 40px;
+
+/* Site footer - base container */
+.site-footer {
+    color: var(--wp--preset--color--base);
+}
+.site-footer .wp-block-site-logo img,
+.site-footer .site-branding .wp-block-site-logo img,
+.site-footer .custom-logo {
+    max-height: var(--wp--custom--logo--footer) !important;
+    width: auto !important;
+}
+
+/* Mobile: logo smaller */
+@media (max-width: 781px) {
+    .site-header .wp-block-site-logo img,
+    .site-header .site-branding .wp-block-site-logo img,
+    .site-header .custom-logo {
+        max-height: var(--wp--custom--logo--header-mobile) !important;
+    }
+    .site-footer .wp-block-site-logo img,
+    .site-footer .site-branding .wp-block-site-logo img,
+    .site-footer .custom-logo {
+        max-height: var(--wp--custom--logo--footer-mobile) !important;
+    }
 }
 
 /* Footer: breathing room between brand elements */
@@ -518,12 +549,45 @@ body:not(.woocommerce-active) .woo-cart-icon {
 }
 
 /* WooCommerce Progress Steps */
+.woo-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--wp--preset--spacing--10);
+}
 .woo-progress-step > .wp-block-group:first-child {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.woo-progress-step--active {
+    font-weight: 600;
+}
+
+/* WooCommerce Account Navigation */
+.woo-account-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wp--preset--spacing--10);
+}
+.woo-account-nav-item {
+    display: flex;
+    align-items: center;
+    padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+    border-radius: var(--wp--custom--border--radius--md);
+    color: var(--wp--preset--color--neutral-600);
+    transition: all var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.woo-account-nav-item:hover {
+    background: var(--wp--preset--color--neutral-100);
+    color: var(--wp--preset--color--primary);
+}
+.woo-account-nav-item.is-active {
+    background: var(--wp--preset--color--neutral-100);
+    color: var(--wp--preset--color--primary);
+    font-weight: 600;
 }
 
 /* WooCommerce Trust Badges */
@@ -573,8 +637,132 @@ body:not(.woocommerce-active) .woo-cart-icon {
 }
 
 /* Services pattern: bottom border rows */
+.cclee-service-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
 .cclee-service-row.has-neutral-200-border-color {
     border-bottom: 1px solid var(--wp--preset--color--neutral-200);
+}
+
+/* Social Links Group */
+.cclee-social-links {
+    display: flex;
+    gap: var(--wp--preset--spacing--20);
+    justify-content: center;
+}
+
+/* View Toggle (Grid/List) */
+.cclee-view-toggle {
+    display: flex;
+    gap: var(--wp--preset--spacing--10);
+}
+.cclee-view-toggle__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--wp--preset--color--neutral-200);
+    border-radius: var(--wp--custom--border--radius--md);
+    background: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--neutral-500);
+    cursor: pointer;
+    transition: all var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.cclee-view-toggle__btn:hover,
+.cclee-view-toggle__btn.is-active {
+    background: var(--wp--preset--color--primary);
+    border-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+}
+.cclee-view-toggle__btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Product Toolbar */
+.cclee-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--wp--preset--spacing--30);
+}
+
+/* Filter Toggle */
+.cclee-filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--wp--preset--spacing--10);
+    cursor: pointer;
+}
+.cclee-filter-toggle__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.cclee-filter-toggle__btn {
+    display: flex;
+    align-items: center;
+    gap: var(--wp--preset--spacing--10);
+    padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+    border: 1px solid var(--wp--preset--color--neutral-200);
+    border-radius: var(--wp--custom--border--radius--md);
+    background: var(--wp--preset--color--base);
+    transition: all var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.cclee-filter-toggle__btn:hover {
+    border-color: var(--wp--preset--color--primary);
+}
+.cclee-filter-toggle__input:checked + .cclee-filter-toggle__btn {
+    background: var(--wp--preset--color--neutral-100);
+}
+.cclee-filter-toggle__text {
+    font-weight: 600;
+    color: var(--wp--preset--color--primary);
+}
+
+/* Filter Panel */
+.cclee-filter-panel {
+    display: none;
+    flex-wrap: wrap;
+    gap: var(--wp--preset--spacing--20);
+    padding: var(--wp--preset--spacing--30) 0;
+}
+.cclee-filter-toggle__input:checked ~ .cclee-filter-panel {
+    display: flex;
+}
+.cclee-filter-panel__item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--wp--preset--spacing--10);
+}
+
+/* Products Wrapper */
+.cclee-products-wrapper {
+    width: 100%;
+}
+
+/* Product Card */
+.cclee-product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--wp--preset--color--base);
+}
+.cclee-product-card__image {
+    position: relative;
+    overflow: hidden;
+}
+.cclee-product-card__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wp--preset--spacing--20);
+    margin-top: auto;
 }
 
 /* WooCommerce Sticky Sidebar */

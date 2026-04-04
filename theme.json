@@ -32,6 +32,12 @@
       "easing": {
         "default": "cubic-bezier(0.4, 0, 0.2, 1)",
         "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+      },
+      "logo": {
+        "header": "28px",
+        "headerMobile": "22px",
+        "footer": "24px",
+        "footerMobile": "19px"
       }
     },
     "layout": {
@@ -69,6 +75,11 @@
           "slug": "surface",
           "color": "#0f172a",
           "name": "Surface"
+        },
+        {
+          "slug": "success",
+          "color": "#16a34a",
+          "name": "Success"
         },
         {
           "slug": "neutral-50",
@@ -366,34 +377,42 @@
       "presets": [
         {
           "slug": "sm",
+          "name": "Small",
           "shadow": "0 1px 2px 0 rgb(0 0 0 / 0.05)"
         },
         {
           "slug": "md",
+          "name": "Medium",
           "shadow": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
         },
         {
           "slug": "lg",
+          "name": "Large",
           "shadow": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
         },
         {
           "slug": "soft",
+          "name": "Soft",
           "shadow": "0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)"
         },
         {
           "slug": "elevated",
+          "name": "Elevated",
           "shadow": "0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 4px 6px -4px rgba(0, 0, 0, 0.05)"
         },
         {
           "slug": "card",
+          "name": "Card",
           "shadow": "0 1px 3px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.06)"
         },
         {
           "slug": "glow",
+          "name": "Glow",
           "shadow": "0 0 20px rgba(245, 158, 11, 0.3)"
         },
         {
           "slug": "inner-glow",
+          "name": "Inner Glow",
           "shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.1)"
         }
       ]
@@ -441,7 +460,7 @@
   },
   "styles": {
     "color": {
-      "background": "var(--wp--preset--color--base)",
+      "background": "var(--wp--preset--color--neutral-50)",
       "text": "var(--wp--preset--color--primary)"
     },
     "typography": {
@@ -569,7 +588,7 @@
       },
       "button": {
         "color": {
-          "background": "var(--wp--preset--color--primary)",
+          "background": "var(--wp--preset--color--contrast)",
           "text": "var(--wp--preset--color--base)"
         },
         "typography": {

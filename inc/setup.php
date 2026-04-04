@@ -17,6 +17,23 @@ add_action(
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'custom-logo' );
 
+		// Default logo fallback when user hasn't set one.
+		add_filter(
+			'render_block_core/site-logo',
+			function ( $block_content ) {
+				if ( empty( $block_content ) && ! get_theme_mod( 'custom_logo' ) ) {
+					$logo_url = get_template_directory_uri() . '/assets/images/logo.png';
+					$block_content = sprintf(
+						'<a href="%s" class="wp-block-site-logo__link" rel="home"><img src="%s" alt="%s" class="custom-logo" /></a>',
+						esc_url( home_url( '/' ) ),
+						esc_url( $logo_url ),
+						esc_attr( get_bloginfo( 'name' ) )
+					);
+				}
+				return $block_content;
+			}
+		);
+
 		// Load editor styles for front-end/back-end consistency.
 		add_editor_style( 'assets/css/custom.css' );
 

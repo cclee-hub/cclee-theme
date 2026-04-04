@@ -381,6 +381,16 @@
     max-height: 40px;
 }
 
+/* Mobile: logo 15-20% smaller */
+@media (max-width: 781px) {
+    .site-header .site-branding .wp-block-site-logo img {
+        max-height: 40px;
+    }
+    .site-footer .site-branding .wp-block-site-logo img {
+        max-height: 32px;
+    }
+}
+
 /* Footer: breathing room between brand elements */
 .site-footer .wp-block-site-tagline {
     margin-top: var(--wp--preset--spacing--20);

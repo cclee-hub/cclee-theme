@@ -1,5 +1,7 @@
 *** CCLEE Changelog ***
 
+2026-04-06 - version 1.4.0
+
 2026-03-28 - version 1.2.0
 * Remove all non-GPL images (Unsplash), replace with CSS gradients and initial avatars
 * Add GPL copyright notice to style.css

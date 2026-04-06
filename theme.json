@@ -295,6 +295,11 @@
           "slug": "description",
           "size": "1.5rem",
           "name": "Description (24px)"
+        },
+        {
+          "slug": "footer-brand",
+          "size": "clamp(1rem, 1.5vw, 1.125rem)",
+          "name": "Footer Brand"
         }
       ],
       "lineHeight": false,

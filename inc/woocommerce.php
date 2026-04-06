@@ -245,6 +245,104 @@ add_filter(
 );
 
 /**
+ * Dynamic product-categories-woo pattern.
+ *
+ * The pattern file in patterns/ provides static placeholder markup so it
+ * registers correctly at theme load. This render_block callback replaces
+ * the entire columns + buttons section with dynamically queried terms.
+ */
+add_filter(
+	'render_block',
+	function ( $content, $block ) {
+		static $replaced = false;
+
+		if ( $replaced || 'core/pattern' !== $block['blockName'] ) {
+			return $content;
+		}
+
+		if ( ( $block['attrs']['slug'] ?? '' ) !== 'cclee/product-categories-woo' ) {
+			return $content;
+		}
+
+		$replaced = true;
+
+		$terms = get_terms( array(
+			'taxonomy'   => 'product_cat',
+			'hide_empty' => false,
+			'exclude'    => absint( get_option( 'default_product_cat', 0 ) ),
+			'number'     => 6,
+			'orderby'    => 'menu_order',
+		) );
+
+		if ( is_wp_error( $terms ) || empty( $terms ) ) {
+			return '';
+		}
+
+		$rows = '';
+		$chunks = array_chunk( $terms, 3 );
+		foreach ( $chunks as $chunk ) {
+			$row_cards = '';
+			foreach ( $chunk as $term ) {
+				$thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
+				$term_link    = get_term_link( $term );
+
+				$image_html = $thumbnail_id
+					? wp_get_attachment_image( absint( $thumbnail_id ), 'medium', false, array(
+						'style' => 'border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0;border-bottom-right-radius:0',
+					) )
+					: '<div class="cclee-category-placeholder" style="border-top-left-radius:8px;border-top-right-radius:8px"></div>';
+
+				$desc_html = $term->description
+					? sprintf(
+						'<p class="has-neutral-500-color has-text-color has-small-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</p>',
+						esc_html( $term->description )
+					)
+					: '';
+
+				$row_cards .= sprintf(
+					'<div class="wp-block-column" style="flex-basis:33.33%%">
+						<a href="%s" class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;display:block;text-decoration:none;color:inherit">
+							%s
+							<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+								<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</h3>
+								%s
+							</div>
+						</a>
+					</div>',
+					esc_url( $term_link ),
+					$image_html,
+					esc_html( $term->name ),
+					$desc_html
+				);
+			}
+			$rows .= '<div class="wp-block-columns is-style-equal-height">' . $row_cards . '</div>';
+		}
+
+		$shop_url = function_exists( 'wc_get_page_permalink' )
+			? esc_url( wc_get_page_permalink( 'shop' ) )
+			: esc_url( get_permalink( wc_get_page_id( 'shop' ) ) );
+
+		return sprintf(
+			'<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+				<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-2-font-size">%s</h2>
+				<p class="has-text-align-center has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--60)">%s</p>
+				%s
+				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
+					<div class="wp-block-button"><a href="%s" class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:8px">%s</a></div>
+				</div>
+			</div>',
+			esc_html__( 'Product Categories', 'cclee' ),
+			esc_html__( 'Explore our full range of products and solutions.', 'cclee' ),
+			$rows,
+			$shop_url,
+			esc_html__( 'Browse All Products', 'cclee' )
+		);
+	},
+	10,
+	2
+);
+
+/**
  * Quantity stepper JS — +/- buttons for single product page
  *
  * Uses CSS pseudo-elements (::before/::after) for the visual buttons,

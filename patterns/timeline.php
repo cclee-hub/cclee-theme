@@ -9,8 +9,8 @@
  */
 
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"surface","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-surface-background-color has-base-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
 
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group alignwide">
@@ -30,7 +30,7 @@
 		<div class="wp-block-columns cclee-timeline-item is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
 				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2010</p>
@@ -64,7 +64,7 @@
 		<div class="wp-block-columns cclee-timeline-item is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
 				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2015</p>
@@ -98,7 +98,7 @@
 		<div class="wp-block-columns cclee-timeline-item is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
 				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2020</p>
@@ -132,7 +132,7 @@
 		<div class="wp-block-columns cclee-timeline-item is-style-equal-height">
 			<!-- wp:column {"width":"100px"} -->
 			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
 				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
 					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
 					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2024</p>

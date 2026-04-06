@@ -9,11 +9,11 @@
  */
 
 ?>
-<!-- wp:group {"className":"trust-badges","style":{"spacing":{"blockGap":"var(--wp--preset--spacing--40)"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
-<div class="wp-block-group trust-badges">
+<!-- wp:group {"className":"is-style-trust-badges","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"},"blockGap":"var(--wp--preset--spacing--40)"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+<div class="wp-block-group is-style-trust-badges" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
-	<!-- wp:group {"className":"trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group trust-badge">
+	<!-- wp:group {"className":"is-style-trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group is-style-trust-badge">
 		<!-- wp:html -->
 		<div class="cclee-icon cclee-icon--accent"><?php echo cclee_svg( 'clock' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 		<!-- /wp:html -->
@@ -23,8 +23,8 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group trust-badge">
+	<!-- wp:group {"className":"is-style-trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group is-style-trust-badge">
 		<!-- wp:html -->
 		<div class="cclee-icon cclee-icon--accent"><?php echo cclee_svg( 'factory' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 		<!-- /wp:html -->
@@ -34,8 +34,8 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group trust-badge">
+	<!-- wp:group {"className":"is-style-trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group is-style-trust-badge">
 		<!-- wp:html -->
 		<div class="cclee-icon cclee-icon--accent"><?php echo cclee_svg( 'layers' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 		<!-- /wp:html -->
@@ -45,8 +45,8 @@
 	</div>
 	<!-- /wp:group -->
 
-	<!-- wp:group {"className":"trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-	<div class="wp-block-group trust-badge">
+	<!-- wp:group {"className":"is-style-trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group is-style-trust-badge">
 		<!-- wp:html -->
 		<div class="cclee-icon cclee-icon--accent"><?php echo cclee_svg( 'shield-check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 		<!-- /wp:html -->

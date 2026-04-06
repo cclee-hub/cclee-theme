@@ -81,5 +81,68 @@ add_action(
 				'label' => __( 'Equal Height', 'cclee' ),
 			)
 		);
+
+		// Group: Portfolio Card style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'portfolio-card',
+				'label' => __( 'Portfolio Card', 'cclee' ),
+			)
+		);
+
+		// Group: Trust Badges style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'trust-badges',
+				'label' => __( 'Trust Badges', 'cclee' ),
+			)
+		);
+
+		// Group: Trust Badge style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'trust-badge',
+				'label' => __( 'Trust Badge', 'cclee' ),
+			)
+		);
+
+		// Group: Logo Item style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'logo-item',
+				'label' => __( 'Logo Item', 'cclee' ),
+			)
+		);
+
+		// Group: CTA Inner style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'cta-inner',
+				'label' => __( 'CTA Inner', 'cclee' ),
+			)
+		);
+
+		// Group: Dots Pattern style variation.
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'dots-pattern',
+				'label' => __( 'Dots Pattern', 'cclee' ),
+			)
+		);
+
+		// Button: CTA Button style variation.
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'cta-button',
+				'label' => __( 'CTA Button', 'cclee' ),
+			)
+		);
 	}
 );

@@ -27,7 +27,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":5,"fontSize":"heading-5"} -->
-			<h5 class="wp-block-heading">Product</h5>
+			<h5 class="wp-block-heading has-heading-5-font-size">Product</h5>
 			<!-- /wp:heading -->
 			<!-- wp:list -->
 			<ul>
@@ -43,7 +43,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":5,"fontSize":"heading-5"} -->
-			<h5 class="wp-block-heading">Company</h5>
+			<h5 class="wp-block-heading has-heading-5-font-size">Company</h5>
 			<!-- /wp:heading -->
 			<!-- wp:list -->
 			<ul>
@@ -59,7 +59,7 @@
 		<!-- wp:column -->
 		<div class="wp-block-column">
 			<!-- wp:heading {"level":5,"fontSize":"heading-5"} -->
-			<h5 class="wp-block-heading">Newsletter</h5>
+			<h5 class="wp-block-heading has-heading-5-font-size">Newsletter</h5>
 			<!-- /wp:heading -->
 			<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
 			<p class="has-neutral-500-color has-text-color has-small-font-size">Stay updated with our latest news and updates.</p>

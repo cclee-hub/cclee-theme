@@ -11,7 +11,7 @@
  * 2. Block Styles
  * 3. Pattern-Specific Styles
  * 4. WP Core Overrides
- * 5. Component Base (.cclee-card, etc.)
+ * 5. Component Base (.is-style-card, .is-style-portfolio-card, etc.)
  * 6. Component Variants & Pattern Exclusives
  * 7. Interactive States (hover, animation)
  * 8. Responsive Breakpoints
@@ -603,34 +603,34 @@ body:not(.woocommerce-active) .woo-cart-icon {
 }
 
 /* Trust Badges — 4-column grid, responsive 2x2 on tablet */
-.wp-block-group.trust-badges {
+.wp-block-group.is-style-trust-badges {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--wp--preset--spacing--30);
 }
-.trust-badge {
+.is-style-trust-badge {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: var(--wp--preset--spacing--10);
 }
-.trust-badge .cclee-icon {
+.is-style-trust-badge .cclee-icon {
     width: 40px;
     height: 40px;
     margin-bottom: 0;
     flex-shrink: 0;
 }
-.trust-badge .cclee-icon svg {
+.is-style-trust-badge .cclee-icon svg {
     width: 20px;
     height: 20px;
 }
-.trust-badge p {
+.is-style-trust-badge p {
     margin: 0;
     white-space: nowrap;
 }
 @media (max-width: 768px) {
-    .wp-block-group.trust-badges {
+    .wp-block-group.is-style-trust-badges {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--wp--preset--spacing--20);
     }
@@ -863,6 +863,24 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     border-radius: var(--wp--custom--border--radius--lg);
 }
 
+/* Card: Image fill */
+.cclee-card .wp-block-image {
+    min-height: 200px;
+    background: var(--wp--preset--color--neutral-100);
+}
+.cclee-card .wp-block-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card: Category placeholder (no thumbnail) */
+.cclee-category-placeholder {
+    height: 200px;
+    background: var(--wp--preset--color--neutral-100);
+}
+
 /* Image: Shadow */
 .wp-block-image.is-style-shadow img {
     box-shadow: var(--wp--preset--shadow--card);
@@ -902,16 +920,16 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
    ======================================== */
 
 /* CTA Banner: Inner group z-index for pattern overlay */
-.cta-inner-group {
+.is-style-cta-inner {
     position: relative;
     z-index: 1;
 }
 
 /* CTA Banner: Button glow */
-.cta-button .wp-block-button__link {
+.is-style-cta-button .wp-block-button__link {
     box-shadow: var(--wp--preset--shadow--glow);
 }
-.cta-button .wp-block-button__link:hover {
+.is-style-cta-button .wp-block-button__link:hover {
     box-shadow: 0 0 30px color-mix(in srgb, var(--wp--preset--color--accent) 40%, transparent),
                 var(--wp--preset--shadow--md);
 }
@@ -996,11 +1014,11 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
     z-index: 1;
 }
 /* Testimonial Cards: flex column so quote fills space and avatar sticks to bottom */
-.cclee-card:has(.wp-block-quote) {
+.is-style-card:has(.wp-block-quote) {
     display: flex;
     flex-direction: column;
 }
-.cclee-card .wp-block-quote {
+.is-style-card .wp-block-quote {
     flex: 1;
 }
 
@@ -1079,7 +1097,18 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
    Interactive States
    ======================================== */
 
-/* Card hover — unified via .cclee-card base class (see Pattern Layout Utility Classes) */
+/* Card hover — unified via .is-style-card base class (see Pattern Layout Utility Classes) */
+
+/* Product category card — hover lift + shadow */
+.cclee-card {
+    transition:
+        transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+        box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.cclee-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
 
 /* Blog list card (outer bordered group) — hover lift + shadow */
 .wp-block-post-template .wp-block-group.has-border-color {
@@ -1483,13 +1512,13 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
    Logo Cloud Enhancement
    ======================================== */
 
-.cclee-logo-item {
+.is-style-logo-item {
     transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
                 opacity var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
     opacity: 0.6;
 }
 
-.cclee-logo-item:hover {
+.is-style-logo-item:hover {
     transform: scale(1.05);
     opacity: 1;
 }
@@ -1541,16 +1570,16 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
    ======================================== */
 
 /* Portfolio Card Hover Effect */
-.cclee-portfolio-card {
+.is-style-portfolio-card {
     transition: box-shadow var(--wp--custom--transition--normal);
 }
-.cclee-portfolio-card:hover {
+.is-style-portfolio-card:hover {
     box-shadow: var(--wp--preset--shadow--lg);
 }
-.cclee-portfolio-card img {
+.is-style-portfolio-card img {
     transition: transform var(--wp--custom--transition--normal);
 }
-.cclee-portfolio-card:hover img {
+.is-style-portfolio-card:hover img {
     transform: scale(1.02);
 }
 
@@ -1757,10 +1786,10 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
    Decorative Pattern Classes
    ======================================== */
 
-.has-dots-pattern {
+.is-style-dots-pattern {
     position: relative;
 }
-.has-dots-pattern::before {
+.is-style-dots-pattern::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -1859,7 +1888,7 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 .cclee-radius--circle { border-radius: 50%; }
 
 /* Card Style — unified base for all content cards */
-.cclee-card {
+.is-style-card {
     border: 1px solid;
     border-radius: 12px;
     padding: var(--wp--preset--spacing--40);
@@ -1869,16 +1898,16 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
     height: 100%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.cclee-card:hover {
+.is-style-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--wp--preset--shadow--md);
 }
-.cclee-card--bordered {
+.is-style-card--bordered {
     border-radius: 8px;
 }
 
-/* Ensure cover blocks inside cclee-card fill full width */
-.cclee-card > .wp-block-cover {
+/* Ensure cover blocks inside is-style-card fill full width */
+.is-style-card > .wp-block-cover {
     width: 100%;
 }
 

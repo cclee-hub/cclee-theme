@@ -55,7 +55,7 @@ add_action(
 		wp_enqueue_style(
 			'cclee-custom',
 			get_template_directory_uri() . '/assets/css/custom.css',
-			array( 'cclee-style' ),
+			array(),
 			$css_ver
 		);
 		wp_enqueue_script(

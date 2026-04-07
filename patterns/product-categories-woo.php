@@ -85,8 +85,8 @@
 
 	<!-- wp:buttons {"layout":{"type":"constrained","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}}} -->
 	<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
-		<!-- wp:button {"backgroundColor":"accent","textColor":"base","style":{"border":{"radius":"8px"}}} -->
-		<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:8px"><?php esc_html_e( 'Browse All Products', 'cclee' ); ?></a></div>
+		<!-- wp:button {"backgroundColor":"accent","textColor":"base","fontSize":"small","style":{"border":{"radius":"var(--wp--custom--border--radius--md)"}}} -->
+		<div class="wp-block-button has-small-font-size"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button" style="border-radius:var(--wp--custom--border--radius--md)"><?php esc_html_e( 'Browse All Products', 'cclee' ); ?></a></div>
 		<!-- /wp:button -->
 	</div>
 	<!-- /wp:buttons -->

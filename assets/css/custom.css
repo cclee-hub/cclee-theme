@@ -1257,7 +1257,8 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 }
 
 /* Icon container with background — unified with .cclee-icon */
-.wp-block-html:has(.cclee-icon-box) {
+.wp-block-html:has(.cclee-icon-box),
+.wp-block-html:has(.cclee-icon) {
     display: flex;
 }
 

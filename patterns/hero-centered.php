@@ -31,8 +31,8 @@
 			<!-- wp:button {"backgroundColor":"accent","textColor":"base"} -->
 			<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button">Get Started</a></div>
 			<!-- /wp:button -->
-			<!-- wp:button {"textColor":"base","className":"is-style-outline"} -->
-			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color wp-element-button">Learn More</a></div>
+			<!-- wp:button {"textColor":"base","className":"is-style-outline","fontSize":"medium"} -->
+			<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-base-color has-text-color has-medium-font-size has-custom-font-size wp-element-button">Learn More</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->

@@ -607,6 +607,7 @@ body:not(.woocommerce-active) .woo-cart-icon {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--wp--preset--spacing--30);
+    justify-content: center;
 }
 .is-style-trust-badge {
     display: flex;

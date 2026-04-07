@@ -9,7 +9,7 @@
  */
 
 ?>
-<!-- wp:group {"className":"is-style-trust-badges","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"},"blockGap":"var(--wp--preset--spacing--40)"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+<!-- wp:group {"className":"is-style-trust-badges","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"},"blockGap":"var(--wp--preset--spacing--40)"}},"layout":{"type":"grid","justifyContent":"center"}} -->
 <div class="wp-block-group is-style-trust-badges" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
 
 	<!-- wp:group {"className":"is-style-trust-badge","layout":{"type":"flex","flexWrap":"nowrap"}} -->

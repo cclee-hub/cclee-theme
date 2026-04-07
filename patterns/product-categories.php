@@ -40,11 +40,11 @@
 					<!-- /wp:paragraph -->
 					<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"flex","flexWrap":"wrap","gap":"var(--wp--preset--spacing--10)"}} -->
 					<div class="wp-block-group" style="margin-top:0">
-						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"4px","right":"8px","bottom":"4px","left":"8px"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
-						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:4px;padding-right:8px;padding-bottom:4px;padding-left:8px">Featured</p>
+						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--10)","right":"var(--wp--preset--spacing--20)","bottom":"var(--wp--preset--spacing--10)","left":"var(--wp--preset--spacing--20)"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
+						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--20)">Featured</p>
 						<!-- /wp:paragraph -->
-						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"4px","right":"8px","bottom":"4px","left":"8px"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
-						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:4px;padding-right:8px;padding-bottom:4px;padding-left:8px">Best Seller</p>
+						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--10)","right":"var(--wp--preset--spacing--20)","bottom":"var(--wp--preset--spacing--10)","left":"var(--wp--preset--spacing--20)"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
+						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--20)">Best Seller</p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:group -->
@@ -72,11 +72,11 @@
 					<!-- /wp:paragraph -->
 					<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"flex","flexWrap":"wrap","gap":"var(--wp--preset--spacing--10)"}} -->
 					<div class="wp-block-group" style="margin-top:0">
-						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"4px","right":"8px","bottom":"4px","left":"8px"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
-						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:4px;padding-right:8px;padding-bottom:4px;padding-left:8px">OEM Ready</p>
+						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--10)","right":"var(--wp--preset--spacing--20)","bottom":"var(--wp--preset--spacing--10)","left":"var(--wp--preset--spacing--20)"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
+						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--20)">OEM Ready</p>
 						<!-- /wp:paragraph -->
-						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"4px","right":"8px","bottom":"4px","left":"8px"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
-						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:4px;padding-right:8px;padding-bottom:4px;padding-left:8px">Stock Ready</p>
+						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--10)","right":"var(--wp--preset--spacing--20)","bottom":"var(--wp--preset--spacing--10)","left":"var(--wp--preset--spacing--20)"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
+						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--20)">Stock Ready</p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:group -->
@@ -104,11 +104,11 @@
 					<!-- /wp:paragraph -->
 					<!-- wp:group {"style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"flex","flexWrap":"wrap","gap":"var(--wp--preset--spacing--10)"}} -->
 					<div class="wp-block-group" style="margin-top:0">
-						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"4px","right":"8px","bottom":"4px","left":"8px"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
-						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:4px;padding-right:8px;padding-bottom:4px;padding-left:8px">Professional</p>
+						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--10)","right":"var(--wp--preset--spacing--20)","bottom":"var(--wp--preset--spacing--10)","left":"var(--wp--preset--spacing--20)"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
+						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--20)">Professional</p>
 						<!-- /wp:paragraph -->
-						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"4px","right":"8px","bottom":"4px","left":"8px"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
-						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:4px;padding-right:8px;padding-bottom:4px;padding-left:8px">Industrial</p>
+						<!-- wp:paragraph {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--10)","right":"var(--wp--preset--spacing--20)","bottom":"var(--wp--preset--spacing--10)","left":"var(--wp--preset--spacing--20)"}},"border":{"radius":"4px"}},"backgroundColor":"neutral-100","fontSize":"small"} -->
+						<p class="has-neutral-100-background-color has-background has-small-font-size" style="border-radius:4px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--20)">Industrial</p>
 						<!-- /wp:paragraph -->
 					</div>
 					<!-- /wp:group -->

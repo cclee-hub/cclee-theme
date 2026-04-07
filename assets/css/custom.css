@@ -605,7 +605,7 @@ body:not(.woocommerce-active) .woo-cart-icon {
 /* Trust Badges — 4-column grid, responsive 2x2 on tablet */
 .wp-block-group.is-style-trust-badges {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     gap: var(--wp--preset--spacing--30);
     justify-content: center;
 }
@@ -632,7 +632,7 @@ body:not(.woocommerce-active) .woo-cart-icon {
 }
 @media (max-width: 768px) {
     .wp-block-group.is-style-trust-badges {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, auto);
         gap: var(--wp--preset--spacing--20);
     }
 }

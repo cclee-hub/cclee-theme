@@ -866,6 +866,8 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
 
 /* Card: Image fill */
 .cclee-card .wp-block-image {
+    display: flex;
+    justify-content: center;
     min-height: 200px;
     background: var(--wp--preset--color--neutral-100);
 }
@@ -1260,6 +1262,12 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 .wp-block-html:has(.cclee-icon-box),
 .wp-block-html:has(.cclee-icon) {
     display: flex;
+    justify-content: center;
+}
+
+/* Card icon-box: center icon container within card */
+.cclee-card .wp-block-html:has(.cclee-icon-box) {
+    justify-content: center;
 }
 
 .cclee-icon-box {

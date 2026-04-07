@@ -865,17 +865,12 @@ body.page-template-coming-soon .wp-block-button__link.has-accent-background-colo
 }
 
 /* Card: Image fill */
-.cclee-card .wp-block-image {
-    display: flex;
-    justify-content: center;
-    min-height: 200px;
-    background: var(--wp--preset--color--neutral-100);
-}
-.cclee-card .wp-block-image img {
+.cclee-card img {
+    display: block;
+    margin: 0 auto;
     width: 100%;
     height: 200px;
     object-fit: cover;
-    display: block;
 }
 
 /* Card: Category placeholder (no thumbnail) */
@@ -1259,14 +1254,14 @@ a[href]:not(.wp-element-button):not(.wp-block-button__link):not(.button) {
 }
 
 /* Icon container with background — unified with .cclee-icon */
-.wp-block-html:has(.cclee-icon-box),
-.wp-block-html:has(.cclee-icon) {
+.wp-block-group:has(.cclee-icon-box),
+.wp-block-group:has(.cclee-icon) {
     display: flex;
     justify-content: center;
 }
 
 /* Card icon-box: center icon container within card */
-.cclee-card .wp-block-html:has(.cclee-icon-box) {
+.cclee-card .wp-block-group:has(.cclee-icon-box) {
     justify-content: center;
 }
 

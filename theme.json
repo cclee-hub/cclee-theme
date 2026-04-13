@@ -31,10 +31,10 @@
         "bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
       },
       "logo": {
-        "header": "28px",
-        "headerMobile": "22px",
-        "footer": "24px",
-        "footerMobile": "19px"
+        "header": "44px",
+        "headerMobile": "32px",
+        "footer": "36px",
+        "footerMobile": "28px"
       },
       "white-30": "rgba(255, 255, 255, 0.3)",
       "white-20": "rgba(255, 255, 255, 0.2)"

@@ -196,7 +196,6 @@
 .site-header .wp-block-navigation__container > .wp-block-navigation-item > a,
 .site-header .wp-block-navigation__container > .wp-block-navigation-item > .wp-block-navigation-item__content {
     position: relative;
-    font-size: var(--wp--preset--font-size--small);
     letter-spacing: 0.02em;
     padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--10);
     text-decoration: none;

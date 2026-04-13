@@ -1348,8 +1348,6 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: var(--wp--preset--spacing--30);
-	border-bottom: 1px solid var(--wp--preset--color--neutral-300);
-	box-shadow: var(--wp--preset--shadow--sm);
 }
 
 .cclee-toolbar > .alignwide {
@@ -1672,7 +1670,7 @@
 	display: flex;
 	gap: 0;
 	border: 1px solid var(--wp--preset--color--neutral-200);
-	border-radius: var(--wp--custom--border--radius--full);
+	border-radius: var(--wp--custom--border--radius--md);
 	overflow: hidden;
 	background: var(--wp--preset--color--neutral-50);
 	transition: all var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
@@ -1688,8 +1686,11 @@
 	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
 	border: none;
 	font-size: var(--cclee-font-sm);
+	line-height: 1.5;
 	background: transparent;
 	min-width: 240px;
+	height: 38px;
+	box-sizing: border-box;
 	color: var(--wp--preset--color--neutral-700);
 	flex-grow: 1;
 }
@@ -1725,6 +1726,7 @@
 .cclee-toolbar .woocommerce-result-count {
 	color: var(--wp--preset--color--neutral-400);
 	font-size: var(--cclee-font-sm);
+	margin-left: var(--wp--preset--spacing--30);
 }
 
 /* ========================================
@@ -1734,10 +1736,13 @@
 .cclee-toolbar select.orderby {
 	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--60) var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
 	border: 1px solid var(--wp--preset--color--neutral-200);
-	border-radius: var(--wp--custom--border--radius--sm);
+	border-radius: var(--wp--custom--border--radius--md);
 	background: var(--wp--preset--color--base);
 	color: var(--wp--preset--color--neutral-600);
 	font-size: var(--cclee-font-sm);
+	line-height: 1.5;
+	height: 38px;
+	box-sizing: border-box;
 	appearance: none;
 	-webkit-appearance: none;
 	/* 特殊：SVG data URI 内 stroke 无法引用变量，值对应 neutral-500 */
@@ -1783,32 +1788,22 @@
    Product Card Enhancement
    ======================================== */
 
-/* Category tag overlay on product image */
-.cclee-product-card__image .wp-block-post-terms {
-	position: absolute;
-	bottom: 12px;
-	left: 12px;
-	z-index: 3;
+/* B2B: hide sale badge in product collection */
+.cclee-product-card__image .cclee-sale-badge {
+	display: none;
 }
 
-.cclee-product-card__image .wp-block-post-terms a {
-	display: inline-block;
-	background: color-mix(in srgb, var(--wp--preset--color--primary) 70%, transparent);
-	color: var(--wp--preset--color--base);
-	font-size: var(--cclee-font-sm);
-	font-weight: 600;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
-	border-radius: var(--wp--custom--border--radius--sm);
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
-	transition: background var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+/* Image container: position context for absolute-positioned children */
+.cclee-product-card__image {
+	position: relative;
+	overflow: hidden;
 }
 
-.cclee-product-card__image .wp-block-post-terms a:hover {
-	background: color-mix(in srgb, var(--wp--preset--color--primary) 90%, transparent);
+
+.cclee-product-card__image > figure.wp-block-post-featured-image {
+	margin: 0;
+	aspect-ratio: 1 / 1;
+	overflow: hidden;
 }
 
 .cclee-product-card__image > a {
@@ -1817,6 +1812,9 @@
 }
 
 .cclee-product-card__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	transition: transform var(--wp--custom--transition--slow) var(--wp--custom--easing--default);
 }
 
@@ -1843,15 +1841,29 @@
 }
 
 /* ========================================
-   Product Card — Equal Height & Button Align
+   Product Card — Equal Height
    ======================================== */
 
-/* Grid rows stretch to equal height */
-.is-view-grid .wp-block-post-template.is-flex-container {
+/* Grid rows stretch cards to equal height */
+.wc-block-product-template.is-flex-container {
 	align-items: stretch;
 }
 
-/* Card: flex column so content can push button to bottom */
+/* Card: flex column, full height */
+.cclee-product-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* Content area: flex-grow fills remaining space */
+.cclee-product-card > .wp-block-group:not(.cclee-product-card__image) {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
 /* ========================================
    Product Filters — Toolbar integration
    ======================================== */
@@ -1931,6 +1943,13 @@
 /* 特殊：sale badge absolute 定位基准修正 — 直接选择器确保 offsetParent 正确 */
 .cclee-product-card {
 	position: relative;
+	transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+	            box-shadow var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+.cclee-product-card:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--wp--preset--shadow--lg);
 }
 
 /* ========================================

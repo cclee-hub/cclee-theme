@@ -1,51 +1,23 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-primary-background-color has-background cclee-min-height--360" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)">
+<!-- wp:group {"align":"full","backgroundColor":"base","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}},"border":{"bottom":{"color":"var(--wp--preset--color--neutral-200)","style":"solid","width":"1px"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="border-bottom:1px solid var(--wp--preset--color--neutral-200);padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50)">
 
-	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"center"}} -->
-	<div class="wp-block-group alignwide">
-
-		<!-- wp:paragraph {"align":"center","textColor":"neutral-100","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
-		<p class="has-text-align-center has-neutral-100-color has-text-color has-small-font-size cclee-text--label">Catalog</p>
-		<!-- /wp:paragraph -->
-
-		<!-- wp:query-title {"type":"archive","textAlign":"center","textColor":"base","fontSize":"heading-1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} /-->
-
-		<!-- wp:woocommerce/category-description {"textAlign":"center","textColor":"neutral-300","fontSize":"medium","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} /-->
-
-	</div>
-	<!-- /wp:group -->
-
-</div>
-<!-- /wp:group -->
-
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50)">
+	<!-- Row 1: Breadcrumb -->
 	<!-- wp:group {"align":"wide","layout":{"type":"flex","alignItems":"center"}} -->
 	<div class="wp-block-group alignwide">
 		<!-- wp:woocommerce/breadcrumbs {"fontSize":"small"} /-->
 	</div>
 	<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
 
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--50)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"backgroundColor":"base","layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50)">
-
-	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-	<div class="wp-block-group alignwide">
+	<!-- Search + Sort + Categories (unified toolbar) -->
+	<!-- wp:group {"align":"wide","className":"cclee-toolbar","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"center"}} -->
+	<div class="wp-block-group alignwide cclee-toolbar" style="margin-top:var(--wp--preset--spacing--30)">
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center"}} -->
 		<div class="wp-block-group">
 
-			<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--20)","right":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--20)","left":"var(--wp--preset--spacing--30)"},"margin":{"right":"var(--wp--preset--spacing--30)"}},"border":{"radius":"var(--wp--custom--border--radius--md)","width":"1px","style":"solid"},"elements":{"button":{"color":{"text":"var(--wp--preset--color--neutral-500)"}}}},"borderColor":"neutral-200","backgroundColor":"base","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-			<div class="wp-block-group has-base-background-color has-background has-border-color has-neutral-200-border-color" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--md);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--30);margin-right:var(--wp--preset--spacing--30)">
-
-				<!-- wp:woocommerce/product-search {"fontSize":"small"} /-->
-
-			</div>
-			<!-- /wp:group -->
+			<!-- wp:woocommerce/product-search {"fontSize":"small"} /-->
 
 			<!-- wp:woocommerce/product-results-count {"textColor":"neutral-500","fontSize":"small"} /-->
 
@@ -60,16 +32,20 @@
 		</div>
 		<!-- /wp:group -->
 
+		<!-- wp:group {"className":"cclee-category-section","layout":{"type":"flex","orientation":"vertical"}} -->
+		<div class="wp-block-group cclee-category-section">
+		<!-- wp:paragraph {"align":"center","fontSize":"small","textColor":"neutral-400","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"500"},"spacing":{"margin":{"top":"0","bottom":"var(--wp--preset--spacing--20)"}}}} -->
+		<p class="has-text-align-center has-neutral-400-color has-text-color has-small-font-size" style="font-weight:500;letter-spacing:0.05em;text-transform:uppercase;margin-top:0;margin-bottom:var(--wp--preset--spacing--20)">Product Categories</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:navigation {"ref":"2140","overlayMenu":"never","fontSize":"small","className":"cclee-category-nav","layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap","justifyContent":"center"}} -->
+		<!-- /wp:navigation -->
+		</div>
+		<!-- /wp:group -->
+
 	</div>
 	<!-- /wp:group -->
 
-</div>
-<!-- /wp:group -->
-
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"backgroundColor":"neutral-50","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-neutral-50-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50)">
-	<!-- wp:navigation {"ref":"2140","align":"wide","overlayMenu":"never","fontSize":"small","className":"cclee-category-nav","layout":{"type":"flex","orientation":"horizontal","flexWrap":"wrap"}} -->
-	<!-- /wp:navigation -->
 </div>
 <!-- /wp:group -->
 
@@ -83,12 +59,10 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}},"border":{"radius":"var(--wp--custom--border--radius--lg)","width":"1px","style":"solid"}},"borderColor":"neutral-200","layout":{"type":"default"},"className":"cclee-product-card"} -->
 	<div class="wp-block-group cclee-product-card has-border-color has-neutral-200-border-color cclee-p--0" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--lg)">
 
-	<!-- wp:group {"layout":{"type":"default"}} -->
-	<div class="wp-block-group">
+	<!-- wp:group {"className":"cclee-product-card__image","layout":{"type":"default"}} -->
+	<div class="wp-block-group cclee-product-card__image">
 
-	<!-- wp:post-featured-image {"isLink":true,"sizeSlug":"woocommerce_thumbnail","style":{"border":{"radius":"0px"}}} /-->
-
-	<!-- wp:post-terms {"term":"product_cat","fontSize":"small","style":{"typography":{"fontStyle":"normal","fontWeight":"500","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base"} /-->
+	<!-- wp:post-featured-image {"isLink":true,"sizeSlug":"woocommerce_thumbnail"} /-->
 
 	</div>
 	<!-- /wp:group -->
@@ -99,20 +73,6 @@
 	<!-- wp:post-title {"isLink":true,"textColor":"primary","fontSize":"medium","style":{"typography":{"fontStyle":"normal","fontWeight":"600"}}} /-->
 
 	<!-- wp:post-excerpt {"fontSize":"small","textColor":"neutral-500","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--10)"}}},"excerptLength":15,"moreText":""} /-->
-
-	<!-- wp:woocommerce/product-sku {"fontSize":"small"} /-->
-
-	<!-- wp:group {"layout":{"type":"default"}} -->
-	<div class="wp-block-group">
-
-	<!-- wp:woocommerce/product-price {"isDesc":false,"textAlign":"left","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
-	<div class="is-loading"></div>
-	<!-- /wp:woocommerce/product-price -->
-
-	<!-- wp:woocommerce/product-button {"textAlign":"center","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} /-->
-
-	</div>
-	<!-- /wp:group -->
 
 	</div>
 	<!-- /wp:group -->
@@ -145,6 +105,8 @@
 
 </main>
 <!-- /wp:group -->
+
+<!-- wp:pattern {"slug":"cclee/woo-trust-badges"} /-->
 
 <!-- wp:pattern {"slug":"cclee/cta-product-help"} /-->
 

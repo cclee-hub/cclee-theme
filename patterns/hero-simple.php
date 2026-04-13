@@ -9,9 +9,9 @@
  */
 
 ?>
-<!-- wp:cover {"gradient":"hero","dimRatio":100,"minHeight":480,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-base-color has-text-color" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);min-height:480px">
-	<span aria-hidden="true" class="wp-block-cover__background has-hero-gradient-background has-background-dim-100 has-background-dim"></span>
+<!-- wp:cover {"gradient":"hero","dimRatio":100,"backgroundColor":"contrast","minHeight":480,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-base-color has-text-color has-contrast-background-color" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);min-height:480px">
+	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:group {"align":"wide","className":"has-grid-pattern","layout":{"type":"constrained","justifyContent":"left"}} -->
@@ -38,7 +38,7 @@
 					<div class="wp-block-button"><a class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button">Start Building</a></div>
 					<!-- /wp:button -->
 					<!-- wp:paragraph {"style":{"spacing":{"margin":{"left":"var(--wp--preset--spacing--30)"}}}} -->
-					<p style="margin-left:var(--wp--preset--spacing--30)"><a href="#">View Demo</a></p>
+					<p style="margin-left:var(--wp--preset--spacing--30)"><a href="#" style="color:var(--wp--preset--color--base)">View Demo</a></p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->

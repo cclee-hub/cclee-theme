@@ -19,42 +19,42 @@
 	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--60)"}}} -->
 	<div class="wp-block-group">
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"className":"is-style-logo-item","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
-			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
-			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">TECHCORP</p>
+		<!-- wp:group {"className":"is-style-logo-item","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-style-logo-item cclee-box--px-50-py-40">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","className":"cclee-text--badge"} -->
+			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size cclee-text--badge">TECHCORP</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"className":"is-style-logo-item","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
-			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
-			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">INNOVATE</p>
+		<!-- wp:group {"className":"is-style-logo-item","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-style-logo-item cclee-box--px-50-py-40">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","className":"cclee-text--badge"} -->
+			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size cclee-text--badge">INNOVATE</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"className":"is-style-logo-item","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
-			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
-			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">NEXUS</p>
+		<!-- wp:group {"className":"is-style-logo-item","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-style-logo-item cclee-box--px-50-py-40">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","className":"cclee-text--badge"} -->
+			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size cclee-text--badge">NEXUS</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"className":"is-style-logo-item","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
-			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
-			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">VERTEX</p>
+		<!-- wp:group {"className":"is-style-logo-item","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-style-logo-item cclee-box--px-50-py-40">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","className":"cclee-text--badge"} -->
+			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size cclee-text--badge">VERTEX</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"className":"is-style-logo-item","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-style-logo-item" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--50)">
-			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","style":{"typography":{"fontWeight":"700","letterSpacing":"0.05em"}}} -->
-			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size" style="font-weight:700;letter-spacing:0.05em">PULSE</p>
+		<!-- wp:group {"className":"is-style-logo-item","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--30)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--30)","left":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-style-logo-item cclee-box--px-50-py-40">
+			<!-- wp:paragraph {"align":"center","textColor":"neutral-300","fontSize":"x-large","className":"cclee-text--badge"} -->
+			<p class="has-text-align-center has-neutral-300-color has-text-color has-x-large-font-size cclee-text--badge">PULSE</p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->

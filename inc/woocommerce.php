@@ -288,9 +288,9 @@ add_filter(
 
 				$image_html = $thumbnail_id
 					? wp_get_attachment_image( absint( $thumbnail_id ), 'medium', false, array(
-						'style' => 'border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:0;border-bottom-right-radius:0',
+						'style' => 'border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md);border-bottom-left-radius:0;border-bottom-right-radius:0',
 					) )
-					: '<div class="cclee-category-placeholder" style="border-top-left-radius:8px;border-top-right-radius:8px"></div>';
+					: '<div class="cclee-category-placeholder" style="border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md)"></div>';
 
 				$desc_html = $term->description
 					? sprintf(
@@ -301,7 +301,7 @@ add_filter(
 
 				$row_cards .= sprintf(
 					'<div class="wp-block-column" style="flex-basis:33.33%%">
-						<a href="%s" class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:8px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;display:block;text-decoration:none;color:inherit">
+						<a href="%s" class="wp-block-group is-style-product-card cclee-hover-lift has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--md);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;display:block;text-decoration:none;color:inherit">
 							%s
 							<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
 								<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</h3>
@@ -328,7 +328,7 @@ add_filter(
 				<p class="has-text-align-center has-neutral-500-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--60)">%s</p>
 				%s
 				<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--50)">
-					<div class="wp-block-button"><a href="%s" class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:8px">%s</a></div>
+					<div class="wp-block-button"><a href="%s" class="wp-block-button__link has-base-color has-accent-background-color has-text-color has-background wp-element-button" style="border-radius:var(--wp--custom--border--radius--md)">%s</a></div>
 				</div>
 			</div>',
 			esc_html__( 'Product Categories', 'cclee' ),

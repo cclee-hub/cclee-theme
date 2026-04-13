@@ -9,14 +9,16 @@
  */
 
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"backgroundColor":"contrast","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:cover {"gradient":"hero","dimRatio":100,"backgroundColor":"contrast","minHeight":320,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)"}}},"textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-base-color has-text-color has-contrast-background-color" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);min-height:320px">
+	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
+	<div class="wp-block-cover__inner-container">
 
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"800px","justifyContent":"center"}} -->
 	<div class="wp-block-group alignwide">
 
-		<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
-		<p class="has-primary-color has-text-color has-small-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Legal</p>
+		<!-- wp:paragraph {"textColor":"base","fontSize":"small","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
+		<p class="has-base-color has-text-color has-small-font-size cclee-text--label">Legal</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"level":1,"textAlign":"center","textColor":"primary","fontSize":"heading-1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->
@@ -29,6 +31,7 @@
 
 	</div>
 	<!-- /wp:group -->
+	</div>
 
-</div>
-<!-- /wp:group -->
+	</div>
+	<!-- /wp:cover -->

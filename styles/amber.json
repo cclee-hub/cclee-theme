@@ -2,6 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Amber",
+	"stylesheet": "styles/amber.css",
 	"settings": {
 		"color": {
 			"palette": [
@@ -21,11 +22,6 @@
 					"name": "Amber"
 				},
 				{
-					"slug": "base",
-					"color": "#ffffff",
-					"name": "Base"
-				},
-				{
 					"slug": "contrast",
 					"color": "#0f172a",
 					"name": "Contrast"
@@ -34,11 +30,6 @@
 					"slug": "success",
 					"color": "#16a34a",
 					"name": "Success"
-				},
-				{
-					"slug": "neutral-50",
-					"color": "#fafafa",
-					"name": "Neutral 50"
 				},
 				{
 					"slug": "neutral-100",
@@ -69,6 +60,16 @@
 					"slug": "neutral-600",
 					"color": "#525252",
 					"name": "Neutral 600"
+				},
+				{
+					"slug": "base",
+					"color": "#ffffff",
+					"name": "Base"
+				},
+				{
+					"slug": "neutral-50",
+					"color": "#fafafa",
+					"name": "Neutral 50"
 				},
 				{
 					"slug": "neutral-700",

@@ -11,7 +11,7 @@
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var(--wp--preset--spacing--30)"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group">
-	<!-- wp:woocommerce/customer-account {"className":"cclee-account-icon"} /-->
-	<!-- wp:woocommerce/mini-cart {"className":"woo-cart-icon"} /-->
+	<!-- wp:woocommerce/customer-account {"displayStyle":"icon_only"} /-->
+	<!-- wp:woocommerce/mini-cart /-->
 </div>
 <!-- /wp:group -->

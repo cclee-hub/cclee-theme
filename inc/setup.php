@@ -35,7 +35,7 @@ add_action(
 		);
 
 		// Load editor styles for front-end/back-end consistency.
-		add_editor_style( 'assets/css/custom.css' );
+		add_editor_style( 'assets/css/global.css' );
 
 		register_nav_menus(
 			array(
@@ -50,12 +50,30 @@ add_action(
 	'wp_enqueue_scripts',
 	function () {
 		$theme_ver = wp_get_theme()->get( 'Version' );
-		$css_ver   = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/css/custom.css' );
+		$css_ver   = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/css/components.css' );
 		$js_ver    = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/js/theme.js' );
 		wp_enqueue_style(
-			'cclee-custom',
-			get_template_directory_uri() . '/assets/css/custom.css',
+			'cclee-global',
+			get_template_directory_uri() . '/assets/css/global.css',
 			array(),
+			$css_ver
+		);
+		wp_enqueue_style(
+			'cclee-components',
+			get_template_directory_uri() . '/assets/css/components.css',
+			array( 'cclee-global' ),
+			$css_ver
+		);
+		wp_enqueue_style(
+			'cclee-utilities',
+			get_template_directory_uri() . '/assets/css/utilities.css',
+			array( 'cclee-components' ),
+			$css_ver
+		);
+		wp_enqueue_style(
+			'cclee-woocommerce',
+			get_template_directory_uri() . '/assets/css/woocommerce.css',
+			array( 'cclee-utilities' ),
 			$css_ver
 		);
 		wp_enqueue_script(
@@ -90,7 +108,7 @@ add_action(
 
 /**
  * Render mobile bottom navigation in footer.
- * Styles are defined in assets/css/custom.css.
+ * Styles are defined in assets/css/global.css (base), assets/css/components.css (components), and assets/css/woocommerce.css.
  */
 add_action(
 	'wp_footer',
@@ -166,7 +184,7 @@ function cclee_svg( $name ) {
 		'svg'      => array(
 			'class'           => true,
 			'aria-hidden'     => true,
-			'viewBox'         => true,
+			'viewbox'         => true,
 			'xmlns'           => true,
 			'width'           => true,
 			'height'          => true,

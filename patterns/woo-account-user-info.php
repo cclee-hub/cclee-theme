@@ -20,8 +20,8 @@
 		<!-- wp:group {"style":{"spacing":{"margin":{"left":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group" style="margin-left:var(--wp--preset--spacing--30)">
 
-			<!-- wp:paragraph {"textColor":"primary","fontSize":"medium","style":{"typography":{"fontWeight":"600"}}} -->
-			<p class="has-primary-color has-text-color has-medium-font-size" style="font-weight:600">Hello, User</p>
+			<!-- wp:paragraph {"textColor":"base","fontSize":"medium","style":{"typography":{"fontWeight":"600"}}} -->
+			<p class="has-base-color has-text-color has-medium-font-size cclee-text--600">Hello, User</p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
@@ -38,7 +38,7 @@
 	<hr class="wp-block-separator has-text-color has-neutral-200-color has-alpha-channel-opacity has-neutral-200-background-color has-background has-css-opacity" style="margin-top:var(--wp--preset--spacing--40)"/>
 	<!-- /wp:separator -->
 
-	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"spaceBetween"}} -->
 	<div class="wp-block-group">
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -48,15 +48,15 @@
 			<p class="has-neutral-500-color has-text-color has-small-font-size">Role:</p>
 			<!-- /wp:paragraph -->
 
-			<!-- wp:paragraph {"textColor":"primary","fontSize":"small","style":{"spacing":{"margin":{"left":"var(--wp--preset--spacing--10)"}}}} -->
-			<p class="has-primary-color has-text-color has-small-font-size" style="margin-left:var(--wp--preset--spacing--10)">Customer</p>
+			<!-- wp:paragraph {"textColor":"base","fontSize":"small","style":{"spacing":{"margin":{"left":"var(--wp--preset--spacing--10)"}}}} -->
+			<p class="has-base-color has-text-color has-small-font-size" style="margin-left:var(--wp--preset--spacing--10)">Customer</p>
 			<!-- /wp:paragraph -->
 
 		</div>
 		<!-- /wp:group -->
 
-		<!-- wp:paragraph {"textColor":"neutral-500","fontSize":"small"} -->
-		<p class="has-neutral-500-color has-text-color has-small-font-size"><a href="#">Logout</a></p>
+		<!-- wp:paragraph {"textColor":"neutral-300","fontSize":"small"} -->
+		<p class="has-neutral-300-color has-text-color has-small-font-size"><a href="#" style="color:var(--wp--preset--color--base)">Logout</a></p>
 		<!-- /wp:paragraph -->
 
 	</div>

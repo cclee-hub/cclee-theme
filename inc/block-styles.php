@@ -144,5 +144,14 @@ add_action(
 				'label' => __( 'CTA Button', 'cclee' ),
 			)
 		);
+
+		// Button: Inverse style variation.
+		register_block_style(
+			'core/button',
+			array(
+				'name'  => 'inverse',
+				'label' => __( 'Inverse', 'cclee' ),
+			)
+		);
 	}
 );

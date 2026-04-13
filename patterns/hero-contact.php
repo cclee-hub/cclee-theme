@@ -9,13 +9,13 @@
  */
 
 ?>
-<!-- wp:cover {"gradient":"hero","dimRatio":100,"minHeight":360,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-base-color has-text-color" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);min-height:360px">
-	<span aria-hidden="true" class="wp-block-cover__background has-hero-gradient-background has-background-dim-100 has-background-dim"></span>
+<!-- wp:cover {"gradient":"hero","dimRatio":100,"backgroundColor":"contrast","minHeight":360,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--80)","bottom":"var(--wp--preset--spacing--80)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-base-color has-text-color has-contrast-background-color" style="padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);min-height:360px">
+	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
 	<div class="wp-block-cover__inner-container">
 
 		<!-- wp:paragraph {"textAlign":"center","textColor":"neutral-100","fontSize":"medium","style":{"typography":{"fontWeight":"600","letterSpacing":"0.1em","textTransform":"uppercase"}}} -->
-		<p class="has-text-align-center has-neutral-100-color has-text-color has-medium-font-size" style="font-weight:600;letter-spacing:0.1em;text-transform:uppercase">Contact</p>
+		<p class="has-text-align-center has-neutral-100-color has-text-color has-medium-font-size cclee-text--label">Contact</p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:heading {"textAlign":"center","level":1,"textColor":"base","fontSize":"heading-1","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}}} -->

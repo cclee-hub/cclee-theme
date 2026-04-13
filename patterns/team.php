@@ -19,8 +19,8 @@
 	<h2 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-2-font-size">Meet the Team</h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}},"className":"is-style-equal-height"} -->
-	<div class="wp-block-columns is-style-equal-height" style="margin-top:var(--wp--preset--spacing--50)">
+	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--50)"}}} -->
+	<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--50)">
 
 		<!-- wp:column -->
 		<div class="wp-block-column">
@@ -28,7 +28,7 @@
 			<div class="wp-block-group">
 
 				<!-- wp:html -->
-				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">AM</div>
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--accent">AM</div>
 				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -43,13 +43,7 @@
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Visionary leader with 15+ years of industry experience.</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:html -->
-				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
-				<!-- /wp:html -->
-
-			</div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
@@ -60,7 +54,7 @@
 			<div class="wp-block-group">
 
 				<!-- wp:html -->
-				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">JL</div>
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--accent">JL</div>
 				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -75,13 +69,7 @@
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Tech innovator driving our product development forward.</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:html -->
-				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
-				<!-- /wp:html -->
-
-			</div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
@@ -92,7 +80,7 @@
 			<div class="wp-block-group">
 
 				<!-- wp:html -->
-				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">ST</div>
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--accent">ST</div>
 				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -107,13 +95,7 @@
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Creative mind behind our brand and user experience.</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:html -->
-				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
-				<!-- /wp:html -->
-
-			</div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->
@@ -124,7 +106,7 @@
 			<div class="wp-block-group">
 
 				<!-- wp:html -->
-				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--ring">CK</div>
+				<div class="cclee-avatar cclee-avatar--lg cclee-avatar--accent">CK</div>
 				<!-- /wp:html -->
 
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
@@ -139,13 +121,7 @@
 				<p class="has-text-align-center has-neutral-500-color has-text-color has-small-font-size">Strategic thinker growing our market presence globally.</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:html -->
-				<div class="cclee-social-links" style="margin-top:var(--wp--preset--spacing--20);display:flex;gap:8px;justify-content:center">
-					<a href="#" class="cclee-social-link" aria-label="LinkedIn"><?php echo cclee_svg( 'external-link' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				</div>
-				<!-- /wp:html -->
-
-			</div>
 			<!-- /wp:group -->
 		</div>
 		<!-- /wp:column -->

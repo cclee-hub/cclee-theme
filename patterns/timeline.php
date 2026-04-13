@@ -26,14 +26,14 @@
 	<!-- wp:group {"style":{"spacing":{"padding":{"right":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--40)"}}},"layout":{"type":"constrained","wideSize":"800px"}} -->
 	<div class="wp-block-group" style="padding-right:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
-		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item is-style-equal-height"} -->
-		<div class="wp-block-columns cclee-timeline-item is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
-			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
-					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2010</p>
+			<div class="wp-block-column">
+				<!-- wp:group {"style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background">
+					<!-- wp:paragraph {"align":"center","fontSize":"small","className":"cclee-text--700"} -->
+					<p class="has-text-align-center has-small-font-size cclee-text--700">2010</p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -42,10 +42,10 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","className":"cclee-card","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
+				<!-- wp:group {"backgroundColor":"base","className":"is-style-card","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group is-style-card has-base-background-color has-background">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'rocket' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+					<div class="cclee-flex--center has-neutral-100-background-color has-background has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20);width:fit-content;margin-left:auto;margin-right:auto;border-radius:var(--wp--custom--border--radius--lg);padding:var(--wp--preset--spacing--30)"><?php echo cclee_svg( 'rocket' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">Company Founded</h4>
@@ -60,14 +60,14 @@
 		</div>
 		<!-- /wp:columns -->
 
-		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item is-style-equal-height"} -->
-		<div class="wp-block-columns cclee-timeline-item is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
-			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
-					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2015</p>
+			<div class="wp-block-column">
+				<!-- wp:group {"style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background">
+					<!-- wp:paragraph {"align":"center","fontSize":"small","className":"cclee-text--700"} -->
+					<p class="has-text-align-center has-small-font-size cclee-text--700">2015</p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -76,10 +76,10 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","className":"cclee-card","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
+				<!-- wp:group {"backgroundColor":"base","className":"is-style-card","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group is-style-card has-base-background-color has-background">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'globe' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+					<div class="cclee-flex--center has-neutral-100-background-color has-background has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20);width:fit-content;margin-left:auto;margin-right:auto;border-radius:var(--wp--custom--border--radius--lg);padding:var(--wp--preset--spacing--30)"><?php echo cclee_svg( 'globe' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">Global Expansion</h4>
@@ -94,14 +94,14 @@
 		</div>
 		<!-- /wp:columns -->
 
-		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item is-style-equal-height"} -->
-		<div class="wp-block-columns cclee-timeline-item is-style-equal-height" style="margin-bottom:var(--wp--preset--spacing--40)">
+		<!-- wp:columns {"style":{"spacing":{"margin":{"bottom":"var(--wp--preset--spacing--40)"}}},"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item" style="margin-bottom:var(--wp--preset--spacing--40)">
 			<!-- wp:column {"width":"100px"} -->
-			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
-					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2020</p>
+			<div class="wp-block-column">
+				<!-- wp:group {"style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background">
+					<!-- wp:paragraph {"align":"center","fontSize":"small","className":"cclee-text--700"} -->
+					<p class="has-text-align-center has-small-font-size cclee-text--700">2020</p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -110,10 +110,10 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","className":"cclee-card","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
+				<!-- wp:group {"backgroundColor":"base","className":"is-style-card","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group is-style-card has-base-background-color has-background">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+					<div class="cclee-flex--center has-neutral-100-background-color has-background has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20);width:fit-content;margin-left:auto;margin-right:auto;border-radius:var(--wp--custom--border--radius--lg);padding:var(--wp--preset--spacing--30)"><?php echo cclee_svg( 'star' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">Industry Award Winner</h4>
@@ -128,14 +128,14 @@
 		</div>
 		<!-- /wp:columns -->
 
-		<!-- wp:columns {"className":"cclee-timeline-item is-style-equal-height"} -->
-		<div class="wp-block-columns cclee-timeline-item is-style-equal-height">
+		<!-- wp:columns {"className":"cclee-timeline-item"} -->
+		<div class="wp-block-columns cclee-timeline-item">
 			<!-- wp:column {"width":"100px"} -->
-			<div class="wp-block-column" style="flex-basis:100px">
-				<!-- wp:group {"className":"cclee-timeline-dot","style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
-				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background" style="border-radius:50%">
-					<!-- wp:paragraph {"align":"center","fontSize":"small","style":{"typography":{"fontWeight":"700"}}} -->
-					<p class="has-text-align-center has-small-font-size" style="font-weight:700">2024</p>
+			<div class="wp-block-column">
+				<!-- wp:group {"style":{"border":{"radius":"50%"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"accent","textColor":"base","layout":{"type":"default"}} -->
+				<div class="wp-block-group cclee-timeline-dot has-accent-background-color has-base-color has-text-color has-background">
+					<!-- wp:paragraph {"align":"center","fontSize":"small","className":"cclee-text--700"} -->
+					<p class="has-text-align-center has-small-font-size cclee-text--700">2024</p>
 					<!-- /wp:paragraph -->
 				</div>
 				<!-- /wp:group -->
@@ -144,10 +144,10 @@
 
 			<!-- wp:column -->
 			<div class="wp-block-column">
-				<!-- wp:group {"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--40)","right":"var(--wp--preset--spacing--50)","bottom":"var(--wp--preset--spacing--40)","left":"var(--wp--preset--spacing--50)"}},"border":{"radius":"12px","width":"1px","style":"solid"}},"borderColor":"neutral-200","backgroundColor":"base","className":"cclee-card","layout":{"type":"constrained"}} -->
-				<div class="wp-block-group cclee-card has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--50)">
+				<!-- wp:group {"backgroundColor":"base","className":"is-style-card","layout":{"type":"constrained"}} -->
+				<div class="wp-block-group is-style-card has-base-background-color has-background">
 					<!-- wp:html -->
-					<div style="margin-bottom:8px"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
+					<div class="cclee-flex--center has-neutral-100-background-color has-background has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--20);width:fit-content;margin-left:auto;margin-right:auto;border-radius:var(--wp--custom--border--radius--lg);padding:var(--wp--preset--spacing--30)"><?php echo cclee_svg( 'chart-bar' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:heading {"level":4,"textColor":"primary","fontSize":"heading-4"} -->
 					<h4 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size">500+ Projects Milestone</h4>

@@ -1,0 +1,36 @@
+/**
+ * styles/amber.css — Amber Style Variation
+ *
+ * Overrides data URI SVG stroke colors for selectors that use
+ * hardcoded hex values (data URI cannot reference CSS variables).
+ *
+ * Base values and their amber equivalents:
+ * global.css:690    neutral-700 #71717a → amber neutral-700  #404040
+ * woocommerce.css:523  neutral-500 #737373 → amber neutral-500 #737373
+ * woocommerce.css:780  secondary   #334155 → amber secondary   #334155
+ * woocommerce.css:1738 neutral-600-ish #78716c → amber neutral-600 #525252
+ */
+
+/* ========================================
+   data URI SVG stroke overrides
+   ======================================== */
+
+/**
+ * global.css:690 — 20x20 chevron, stroke-width 1.5
+ * woocommerce.css:523 — 16x16 chevron, stroke-width 2
+ * Both apply to .woocommerce-ordering select.orderby (woocommerce overrides global).
+ * Use woocommerce.css values as the effective one.
+ */
+.woocommerce-ordering select.orderby {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23737373' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* woocommerce.css:780 — variations table select */
+.woocommerce div.product table.variations td.value select {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+}
+
+/* woocommerce.css:1738 — .cclee-toolbar select.orderby (12x12 check icon) */
+.cclee-toolbar select.orderby {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23525252' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5'/%3E%3C/svg%3E");
+}

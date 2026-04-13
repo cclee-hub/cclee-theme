@@ -170,11 +170,14 @@ function cclee_svg( $name ) {
 	}
 
 	$filesystem = cclee_get_filesystem();
-	if ( ! $filesystem ) {
-		return '';
+	$svg        = '';
+	if ( $filesystem ) {
+		$svg = $filesystem->get_contents( $path );
 	}
-
-	$svg = $filesystem->get_contents( $path );
+	// Fallback when WP_Filesystem uses a non-local adapter (e.g. ftpsockets).
+	if ( ! $svg && is_readable( $path ) ) {
+		$svg = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+	}
 	// Remove XML declaration if present.
 	$svg = preg_replace( '/<\?xml[^?]*\?>\s*/', '', $svg );
 	// Hide decorative icons from screen readers.

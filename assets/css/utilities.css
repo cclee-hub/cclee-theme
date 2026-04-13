@@ -1,0 +1,129 @@
+/*
+ * utilities.css — Utility classes: spacing, margin, padding, border-radius, typography, column width, flex, shadow, overflow.
+ *
+ * This file is part of a 3-file CSS architecture:
+ * - global.css    : Base + utilities
+ * - components.css: All .cclee-* components + .is-style-* block styles
+ * - woocommerce.css: WooCommerce-specific styles
+ * - utilities.css : All utility classes (this file)
+ */
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+
+/* Section Padding — migrated to components.css (multi-property) */
+/* .cclee-section--py-70, .cclee-section--py-80, .cclee-section--py-60, .cclee-section--py-50 */
+
+/* Min Height */
+.cclee-min-height--200 { min-height: 200px; }
+.cclee-min-height--360 { min-height: 360px; }
+
+/* Button Reset — migrated to components.css (multi-property) */
+/* .cclee-btn--reset */
+
+/* Card/Box Padding */
+.cclee-box--p-30 {
+    padding: var(--wp--preset--spacing--30);
+}
+.cclee-box--p-40 {
+    padding: var(--wp--preset--spacing--40);
+}
+.cclee-box--p-50 {
+    padding: var(--wp--preset--spacing--50);
+}
+/* Box px+py combos — migrated to components.css (multi-property) */
+.cclee-p--0 { padding: 0; }
+/* .cclee-box--px-40-py-30, .cclee-box--px-50-py-40, .cclee-box--px-40-py-50 */
+
+/* Margin Utilities */
+.cclee-mr--12 { margin-right: 12px; }
+.cclee-mt--0 { margin-top: 0; }
+.cclee-mt-20 { margin-top: var(--wp--preset--spacing--20); }
+.cclee-mt-30 { margin-top: var(--wp--preset--spacing--30); }
+.cclee-mt-40 { margin-top: var(--wp--preset--spacing--40); }
+.cclee-mt-50 { margin-top: var(--wp--preset--spacing--50); }
+.cclee-mt-60 { margin-top: var(--wp--preset--spacing--60); }
+
+.cclee-mb--8 { margin-bottom: 8px; }
+.cclee-mb-20 { margin-bottom: var(--wp--preset--spacing--20); }
+.cclee-mb-30 { margin-bottom: var(--wp--preset--spacing--30); }
+.cclee-mb-40 { margin-bottom: var(--wp--preset--spacing--40); }
+.cclee-mb-50 { margin-bottom: var(--wp--preset--spacing--50); }
+.cclee-mb-60 { margin-bottom: var(--wp--preset--spacing--60); }
+
+/* Border Radius */
+.cclee-radius--sm { border-radius: var(--wp--custom--border--radius--sm); }
+.cclee-radius--md { border-radius: var(--wp--custom--border--radius--md); }
+.cclee-radius--lg { border-radius: var(--wp--custom--border--radius--lg); }
+.cclee-radius--full { border-radius: var(--wp--custom--border--radius--full); }
+
+/* Typography */
+.cclee-text--600 { font-weight: 600; }
+.cclee-text--700 { font-weight: 700; }
+
+.cclee-text--italic {
+    font-style: italic;
+}
+.cclee-text--normal {
+    font-style: normal;
+}
+.cclee-text--lh-1 {
+    line-height: 1;
+}
+
+/* Column Width — custom property consumed by high-specificity override below */
+.cclee-col--25 { --cclee-col-w: 25%; }
+.cclee-col--30 { --cclee-col-w: 30%; }
+.cclee-col--33 { --cclee-col-w: 33.33%; }
+.cclee-col--35 { --cclee-col-w: 35%; }
+.cclee-col--40 { --cclee-col-w: 40%; }
+.cclee-col--50 { --cclee-col-w: 50%; }
+.cclee-col--60 { --cclee-col-w: 60%; }
+.cclee-col--65 { --cclee-col-w: 65%; }
+.cclee-col--70 { --cclee-col-w: 70%; }
+.cclee-col--75 { --cclee-col-w: 75%; }
+/* Override WP core equal-split: specificity (0,3,1) > WP's (0,3,0) */
+.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[class*="cclee-col--"] {
+	flex-basis: var(--cclee-col-w);
+	flex-grow: 0 !important;
+}
+
+/* Flex Utilities — migrated to components.css (multi-property) */
+/* .cclee-flex--center, .cclee-flex--row-center */
+
+/* Shadow Utilities */
+.cclee-shadow--elevated {
+    box-shadow: var(--wp--preset--shadow--elevated);
+}
+.cclee-shadow--lg {
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+
+/* Column with padding — migrated to components.css (multi-property) */
+/* .cclee-col--60-pr */
+/* Columns container with top padding */
+.cclee-columns--pt-40 {
+    padding-top: var(--wp--preset--spacing--40);
+}
+
+/* Overflow Utility */
+.cclee-overflow-hidden {
+    overflow: hidden;
+}
+
+/* Grid Pattern */
+.has-grid-pattern {
+    position: relative;
+}
+.has-grid-pattern::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+}
+

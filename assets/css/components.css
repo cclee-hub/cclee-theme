@@ -1,0 +1,1133 @@
+/*
+ * components.css — All .cclee-* components, .is-style-* block styles, and interactive elements.
+ *
+ * This file is part of a 3-file CSS architecture:
+ * - global.css    : Base + utilities
+ * - components.css: All .cclee-* components + .is-style-* block styles (this file)
+ * - woocommerce.css: WooCommerce-specific styles
+ *
+ * Section order:
+ * 1. Icon Components (.cclee-icon, .cclee-icon--*, dark background auto-adapt)
+ * 2. Header Components (.cclee-header-search, .cclee-header-social, .cclee-account-icon, .cclee-header-cta)
+ * 3. Footer Components (.cclee-footer-social)
+ * 4. Mobile Bottom Nav Children (.cclee-mobile-bottom-nav__item*)
+ * 5. Avatar & Icon Components (.cclee-avatar*, .cclee-maintenance-icon)
+ * 6. Card Components (.cclee-card, .is-style-card, .is-style-portfolio-card, .is-style-trust-badge, .is-style-trust-badges)
+ * 7. Glassmorphism (.cclee-glass, .cclee-glass--dark)
+ * 8. Timeline (.cclee-timeline-item, .cclee-timeline-dot)
+ * 9. Stats (.cclee-stat-number)
+ * 10. Decorative Elements (.cclee-hero-deco*, .cclee-dots-pattern, .cclee-grid-pattern, .is-style-dots-pattern)
+ * 11. Animation Classes (.cclee-animate-*, .cclee-hover-lift, .cclee-hover-lift--sm)
+ * 12. Price Gradient Text (.cclee-price-gradient)
+ * 13. Logo Cloud (.is-style-logo-item)
+ * 14. Equal-Height Columns (.is-style-equal-height)
+ * 15. CTA Styles (.is-style-cta-inner, .is-style-cta-button)
+ * 16. Landing Page Styles (.cclee-landing-video*, .cclee-landing-countdown*, .cclee-landing-trust-logo, .cclee-landing-form)
+ * 17. Block Style Components (.wp-block-group.is-style-card, .wp-block-image.is-style-rounded, .wp-block-image.is-style-shadow, .wp-block-quote.is-style-accent-border, .wp-block-separator.is-style-thick)
+ * 18. Button Styles (.wp-block-button.is-style-outline, .wp-block-button__link*)
+ * 19. List Styles (.wp-block-list.is-style-checkmark)
+ * 20. FAQ / Details (.wp-block-details)
+ * 21. Checklist & Stars (.cclee-check-list, .cclee-stars)
+ * 22. Comments (.wp-block-comments)
+ * 23. Social Links (.cclee-social-links, .cclee-social-link)
+ * 24. Product Cards (.cclee-products-wrapper, .cclee-product-card*)
+ * 25. Blog Card Effects
+ * 26. Service Row (.cclee-service-row)
+ * 27. Countdown Box (.cclee-countdown-box)
+ * 28. Sticky Sidebar (.cclee-sticky-sidebar)
+ * 29. Form Card (.cclee-form-card)
+ * 30. Utility Classes (section padding, box padding, margin, border-radius, typography, column width, flex, shadow, overflow)
+ */
+
+/* ========================================
+   Icon Components
+   ======================================== */
+
+/* Icon Styles — unified soft-block container */
+.cclee-icon {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 56px;
+	height: 56px;
+	border-radius: var(--wp--custom--border--radius--lg);
+	background: var(--wp--preset--color--neutral-100);
+	color: var(--wp--preset--color--primary);
+	margin-bottom: var(--wp--preset--spacing--30);
+	transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+	            box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.cclee-icon:hover {
+	transform: translateY(-2px);
+	box-shadow: var(--wp--preset--shadow--sm);
+}
+.cclee-icon svg {
+	width: 24px;
+	height: 24px;
+	color: inherit;
+	transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.cclee-icon:hover svg {
+	transform: scale(1.08);
+}
+/* Accent tint variant */
+.cclee-icon--accent {
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 10%, transparent);
+	color: var(--wp--preset--color--accent);
+}
+/* Dark background auto-adapt — unified for .cclee-icon and all its modifiers */
+:is(.has-surface-background-color,
+    .has-neutral-800-background-color,
+    .has-neutral-900-background-color) > :is(.cclee-icon, .cclee-icon--accent, p .cclee-icon, p .cclee-icon--accent) {
+	background: color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent);
+	color: var(--wp--preset--color--contrast);
+}
+:is(.has-surface-background-color,
+    .has-neutral-800-background-color,
+    .has-neutral-900-background-color) > :is(.cclee-icon--accent, p .cclee-icon--accent) {
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 15%, transparent);
+	color: var(--wp--preset--color--accent);
+}
+
+/* ========================================
+   Header Components
+   ======================================== */
+
+/* Header: Social Icons - Premium Style */
+/* Header CTA button */
+.cclee-header-cta {
+    margin: 0;
+}
+
+.cclee-header-cta .wp-block-button__link {
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+/* Transparent header: CTA button outline style */
+.site-header--transparent .cclee-header-cta .wp-block-button__link {
+    background: color-mix(in srgb, var(--wp--preset--color--base) 15%, transparent);
+    border: 1px solid color-mix(in srgb, var(--wp--preset--color--base) 40%, transparent);
+    color: var(--wp--preset--color--base);
+}
+
+.site-header--transparent .cclee-header-cta .wp-block-button__link:hover {
+    background: color-mix(in srgb, var(--wp--preset--color--base) 25%, transparent);
+    border-color: color-mix(in srgb, var(--wp--preset--color--base) 60%, transparent);
+}
+
+.site-header--transparent.is-scrolled .cclee-header-cta .wp-block-button__link {
+    background: var(--wp--preset--color--accent);
+    border: 1px solid var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--base);
+}
+
+/* Header: Search - Replace native icon with theme SVG, expandable */
+.cclee-header-search {
+    display: flex;
+    align-items: center;
+    color: var(--wp--preset--color--primary);
+}
+
+.site-header--transparent .cclee-header-search {
+    color: var(--wp--preset--color--base);
+}
+
+.site-header--transparent.is-scrolled .cclee-header-search {
+    color: var(--wp--preset--color--primary);
+}
+
+.cclee-header-search .wp-block-search__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    color: inherit;
+    min-width: var(--wp--custom--spacing--search, 44px);
+    min-height: var(--wp--custom--spacing--search, 44px);
+}
+
+/* Hide native SVG icon */
+.cclee-header-search .wp-block-search__button svg {
+    display: none;
+}
+
+/* Show theme SVG via mask-image (keeps color inheritance) */
+.cclee-header-search .wp-block-search__button {
+    -webkit-mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>');
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>');
+    -webkit-mask-size: 20px 20px;
+    mask-size: 20px;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: currentColor;
+}
+
+/* Expandable search input - hidden by default */
+.cclee-header-search .wp-block-search__input {
+    width: 0;
+    opacity: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* Expand when focused */
+.cclee-header-search:focus-within .wp-block-search__input {
+    width: 180px;
+    opacity: 1;
+    border-bottom: 1px solid currentColor;
+    padding: 4px 8px;
+}
+
+/* ========================================
+   Footer Components
+   ======================================== */
+
+.cclee-footer-social {
+    margin-top: var(--wp--preset--spacing--50);
+}
+
+.cclee-footer-social .wp-social-link {
+    width: 44px;
+    height: 44px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--wp--custom--border--radius--md);
+    border: 1px solid var(--wp--preset--color--neutral-700);
+    background: transparent;
+    transition: background var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+                border-color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+.cclee-footer-social .wp-social-link a {
+    color: var(--wp--preset--color--neutral-400);
+    padding: 0;
+}
+
+.cclee-footer-social .wp-social-link:hover {
+    background: var(--wp--preset--color--neutral-700);
+    border-color: var(--wp--preset--color--neutral-600);
+}
+
+.cclee-footer-social .wp-social-link:hover a {
+    color: var(--wp--preset--color--neutral-200);
+}
+
+/* ========================================
+   Mobile Bottom Nav Children
+   ======================================== */
+
+.cclee-mobile-bottom-nav__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    color: var(--wp--preset--color--neutral-600);
+    text-decoration: none;
+    font-size: 11px;
+    transition: color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+    padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+    min-width: 60px;
+}
+
+.cclee-mobile-bottom-nav__item:hover,
+.cclee-mobile-bottom-nav__item:focus {
+    color: var(--wp--preset--color--accent);
+}
+
+.cclee-mobile-bottom-nav__item svg {
+    width: 22px;
+    height: 22px;
+}
+
+.cclee-mobile-bottom-nav__item--cart {
+    position: relative;
+}
+
+.cclee-mobile-bottom-nav__cart-count {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    background: var(--wp--preset--color--accent);
+    color: var(--wp--preset--color--base);
+    font-size: 10px;
+    font-weight: 600;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.cclee-mobile-bottom-nav__cart-count.is-visible {
+    display: flex;
+}
+
+
+/* ========================================
+   Avatar & Icon Components
+   ======================================== */
+
+/* Avatar with initials - replaces emoji placeholders */
+.cclee-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--wp--preset--color--neutral-200) 0%, var(--wp--preset--color--neutral-300) 100%);
+    color: var(--wp--preset--color--primary);
+    box-shadow: var(--wp--preset--shadow--card);
+}
+
+.cclee-avatar--lg {
+    width: 80px;
+    height: 80px;
+    font-size: var(--wp--preset--font-size--heading-3);
+}
+
+.cclee-avatar--md {
+    width: 48px;
+    height: 48px;
+    font-size: var(--wp--preset--font-size--medium);
+}
+
+.cclee-avatar--sm {
+    width: 32px;
+    height: 32px;
+    font-size: var(--wp--preset--font-size--small);
+}
+
+.cclee-avatar--accent {
+    background: var(--wp--preset--gradient--accent);
+    color: var(--wp--preset--color--base);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--wp--preset--color--accent) 30%, transparent);
+}
+
+/* Avatar: Primary color variant (team pattern) */
+.cclee-avatar--primary {
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+    font-size: var(--wp--preset--font-size--heading-4);
+    font-weight: 700;
+}
+
+/* Avatar: MD with primary color (testimonial pattern) */
+.cclee-avatar--md.cclee-avatar--primary {
+    margin-right: var(--wp--preset--spacing--20);
+}
+
+.cclee-avatar--ring {
+    box-shadow: 0 0 0 3px var(--wp--preset--color--base), 0 0 0 5px var(--wp--preset--color--accent);
+}
+
+/* Avatar image - for testimonials */
+.cclee-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--wp--preset--shadow--sm);
+}
+
+/* ========================================
+   Card Components
+   ======================================== */
+
+/* Trust Badges — 4-column grid, responsive 2x2 on tablet */
+.wp-block-group.is-style-trust-badges {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: var(--wp--preset--spacing--30);
+    justify-content: center;
+}
+.is-style-trust-badge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--wp--preset--spacing--10);
+}
+.is-style-trust-badge .cclee-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+.is-style-trust-badge .cclee-icon svg {
+    width: 20px;
+    height: 20px;
+}
+.is-style-trust-badge p {
+    margin: 0;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .wp-block-group.is-style-trust-badges {
+        grid-template-columns: repeat(2, auto);
+        gap: var(--wp--preset--spacing--20);
+    }
+}
+
+/* Card: Image fill */
+.cclee-card img {
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+}
+
+/* Card: Category placeholder (no thumbnail) */
+.cclee-category-placeholder {
+    height: 200px;
+    background: var(--wp--preset--color--neutral-100);
+}
+
+/* Card Style — unified base for all content cards */
+.is-style-card {
+    border: 1px solid;
+    border-radius: var(--wp--custom--border--radius--lg);
+    padding: var(--wp--preset--spacing--40);
+    box-shadow: var(--wp--preset--shadow--sm);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.is-style-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+.is-style-card--bordered {
+    border-radius: var(--wp--custom--border--radius--md);
+}
+
+/* Ensure cover blocks inside is-style-card fill full width */
+.is-style-card > .wp-block-cover {
+    width: 100%;
+}
+
+/* Group: Card */
+.wp-block-group.is-style-card {
+    background-color: var(--wp--preset--color--base);
+    border: 1px solid var(--wp--preset--color--neutral-200);
+    border-radius: var(--wp--custom--border--radius--lg);
+    padding: var(--wp--preset--spacing--40);
+    box-shadow: var(--wp--preset--shadow--card);
+    transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.wp-block-group.is-style-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+/* 修饰符：纵向加宽 padding */
+.wp-block-group.is-style-card.is-style-card--spacious {
+    padding-top: var(--wp--preset--spacing--50);
+    padding-bottom: var(--wp--preset--spacing--50);
+}
+/* 修饰符：透明无边框卡片（services 等横向布局） */
+.wp-block-group.is-style-card.is-style-card--ghost {
+    background-color: transparent;
+    box-shadow: none;
+    padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--50);
+    flex-direction: row;
+}
+.wp-block-group.is-style-card.is-style-card--ghost:hover {
+    border-color: var(--wp--preset--color--neutral-300);
+    transform: translateY(-2px);
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+
+/* Card: Client showcase (who-we-work-with) */
+.wp-block-group.is-style-client-card {
+    background-color: var(--wp--preset--color--base);
+    border: 1px solid var(--wp--preset--color--neutral-200);
+    border-radius: var(--wp--custom--border--radius--lg);
+    padding: var(--wp--preset--spacing--40) var(--wp--preset--spacing--30);
+    box-shadow: var(--wp--preset--shadow--soft);
+    transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.wp-block-group.is-style-client-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+
+/* Card: Product category (product-categories) */
+.wp-block-group.is-style-product-card {
+    background-color: var(--wp--preset--color--base);
+    border: 1px solid var(--wp--preset--color--neutral-200);
+    border-radius: var(--wp--custom--border--radius--md);
+    padding: 0;
+    transition: transform var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+                box-shadow var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.wp-block-group.is-style-product-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+
+/* ========================================
+   Timeline
+   ======================================== */
+
+.wp-block-group.cclee-timeline-dot {
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+    flex-shrink: 0 !important;
+    aspect-ratio: unset !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+.wp-block-group.cclee-timeline-dot p {
+    margin: 0 !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+    overflow: visible !important;
+}
+
+.wp-block-columns .wp-block-column:has(.cclee-timeline-dot) {
+    flex: 0 0 100px !important;
+    max-width: 100px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Timeline Enhancement */
+.cclee-timeline-item {
+    position: relative;
+}
+
+.cclee-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 49px;
+    top: 0;
+    bottom: -24px;
+    width: 2px;
+    background: var(--wp--preset--color--neutral-200);
+}
+
+.cclee-timeline-item:first-child::before {
+    top: 50%;
+    height: auto;
+}
+
+.cclee-timeline-item:last-child::before {
+    bottom: 50%;
+    height: auto;
+}
+
+/* ========================================
+   Stats
+   ======================================== */
+
+/* Stats cards: fill column width for even alignment */
+.is-not-stacked-on-mobile > .wp-block-column > .wp-block-group {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cclee-stat-number {
+    background: linear-gradient(135deg, currentColor 0%, var(--wp--preset--color--neutral-200) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   Logo Cloud
+   ======================================== */
+
+.is-style-logo-item {
+    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default),
+                opacity var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+    opacity: 0.6;
+}
+
+.is-style-logo-item:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* ========================================
+   Equal-Height Columns
+   ======================================== */
+
+/* Column flex column so children stretch */
+.is-style-equal-height .wp-block-column {
+    display: flex;
+    flex-direction: column;
+}
+.is-style-equal-height .wp-block-column > .wp-block-group {
+    flex: 1;
+}
+/* Buttons align to bottom in equal-height columns */
+.is-style-equal-height .wp-block-column > .wp-block-group > .wp-block-buttons {
+    margin-top: auto !important;
+}
+/* Desktop (>=782px): CSS Grid for guaranteed equal heights */
+@media screen and (min-width: 782px) {
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        gap: var(--wp--style--block-gap, 2em);
+    }
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        margin-left: 0 !important;
+    }
+}
+/* Mobile/tablet (<=781px): grid with stacking + equal row heights */
+@media screen and (max-width: 781px) {
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: var(--wp--style--block-gap, 2em);
+    }
+    .is-style-equal-height:not(.is-not-stacked-on-mobile) > .wp-block-column {
+        flex-basis: auto !important;
+        margin-left: 0 !important;
+    }
+}
+@media screen and (min-width: 640px) and (max-width: 781px) {
+    .is-style-equal-height:not(.is-not-stacked-on-mobile):not(.has-2-columns) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ========================================
+   CTA Styles
+   ======================================== */
+
+/* CTA Banner: Inner group z-index for pattern overlay */
+.is-style-cta-inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Button: Base */
+/* .wp-block-button__link — 已迁移至 global.css */
+
+/* Button: Outline */
+.wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: transparent;
+    border: 2px solid currentColor;
+    color: currentColor;
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: currentColor;
+    color: var(--wp--preset--color--base);
+}
+
+/* Dark background auto-adapt for outline buttons */
+:is(.wp-block-cover,
+    .has-surface-background-color,
+    .has-neutral-800-background-color,
+    .has-neutral-900-background-color,
+    .has-primary-background-color,
+    [class*="has-hero-gradient-background"],
+    .has-accent-gradient-background) .wp-block-button.is-style-outline .wp-block-button__link {
+    border-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--base);
+}
+:is(.wp-block-cover,
+    .has-surface-background-color,
+    .has-neutral-800-background-color,
+    .has-neutral-900-background-color,
+    .has-primary-background-color,
+    [class*="has-hero-gradient-background"],
+    .has-accent-gradient-background) .wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--primary) !important;
+}
+
+/* CTA Banner: Button glow */
+.is-style-cta-button .wp-block-button__link {
+	box-shadow: var(--wp--preset--shadow--glow);
+}
+.is-style-cta-button .wp-block-button__link:hover {
+	box-shadow: 0 0 30px color-mix(in srgb, var(--wp--preset--color--accent) 40%, transparent),
+				var(--wp--preset--shadow--elevated);
+}
+
+/* Button: Inverse — base bg + primary text, hover becomes neutral-100 bg */
+.wp-block-button.is-style-inverse .wp-block-button__link {
+	background-color: var(--wp--preset--color--base);
+	color: var(--wp--preset--color--primary);
+}
+.wp-block-button.is-style-inverse .wp-block-button__link:hover {
+	background-color: var(--wp--preset--color--neutral-100) !important;
+	transform: translateY(-2px);
+	box-shadow: var(--wp--preset--shadow--elevated);
+}
+.wp-block-button.is-style-inverse .wp-block-button__link:active {
+	transform: translateY(0) scale(0.98);
+	box-shadow: var(--wp--preset--shadow--sm);
+}
+
+/* ========================================
+   Block Style Components
+   ======================================== */
+
+/* ========================================
+   Button Styles
+   ======================================== */
+
+/* ========================================
+   List Styles
+   ======================================== */
+
+/* Pricing Cards */
+.wp-block-columns .wp-block-column .wp-block-group.has-accent-background-color {
+    position: relative;
+    box-shadow: var(--wp--preset--shadow--md);
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+/* ========================================
+   FAQ / Details
+   ======================================== */
+
+/* ========================================
+   Checklist & Stars
+   ======================================== */
+
+/* Check List (Pricing) */
+.cclee-check-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.cclee-check-list li {
+	display: flex;
+	align-items: center;
+	gap: var(--wp--preset--spacing--20);
+	padding: var(--wp--preset--spacing--20) 0;
+}
+.cclee-check-list li svg {
+	flex-shrink: 0;
+	width: 18px;
+	height: 18px;
+	/* color inherited from parent li via currentColor */
+}
+
+/* Star Rating (Testimonial) */
+.cclee-stars {
+	display: flex;
+	gap: 2px;
+}
+.cclee-stars svg {
+	width: 16px;
+	height: 16px;
+	/* color & fill inherited from parent via currentColor */
+	fill: currentColor;
+}
+
+/* ========================================
+   Comments
+   ======================================== */
+
+/* ========================================
+   Social Links
+   ======================================== */
+
+/* Social Links Group */
+.cclee-social-links {
+    display: flex;
+    gap: var(--wp--preset--spacing--20);
+    justify-content: center;
+}
+
+/* Social Links (Team) */
+.cclee-social-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	color: var(--wp--preset--color--neutral-400);
+	transition: color var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+                background-color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+.cclee-social-link:hover {
+	color: var(--wp--preset--color--accent);
+	background-color: var(--wp--preset--color--neutral-100);
+}
+.cclee-social-link svg {
+	width: 16px;
+	height: 16px;
+}
+
+/* Social link: Primary color variant */
+.cclee-social-link--primary {
+	color: var(--wp--preset--color--primary);
+}
+
+/* ========================================
+   Blog Card Effects
+   ======================================== */
+
+/* Blog card image — subtle zoom on hover */
+/* ========================================
+   Service Row
+   ======================================== */
+
+.cclee-service-row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.cclee-service-row.has-neutral-200-border-color {
+    border-bottom: 1px solid var(--wp--preset--color--neutral-200);
+}
+
+/* ========================================
+   Portfolio Card
+   ======================================== */
+
+/* Portfolio Card Hover Effect */
+.is-style-portfolio-card {
+    transition: box-shadow var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.is-style-portfolio-card:hover {
+    box-shadow: var(--wp--preset--shadow--lg);
+}
+.is-style-portfolio-card img {
+    transition: transform var(--wp--custom--transition--normal) var(--wp--custom--easing--default);
+}
+.is-style-portfolio-card:hover img {
+    transform: scale(1.02);
+}
+
+/* Portfolio Card: Cover block with asymmetric border-radius and min-height */
+.is-style-portfolio-card > .wp-block-cover {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    min-height: 200px;
+}
+
+/* Product Card: Image with asymmetric border-radius */
+.wp-block-group.is-style-product-card > .wp-block-image {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* ========================================
+   Testimonial Cards
+   ======================================== */
+
+.wp-block-columns .wp-block-column .wp-block-group.has-base-background-color .wp-block-quote {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.wp-block-columns .wp-block-column .wp-block-group.has-base-background-color .wp-block-quote::before {
+    content: '"';
+    position: absolute;
+    top: -0.3em;
+    left: -0.1em;
+    font-size: var(--wp--preset--font-size--heading-1);
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--wp--preset--color--accent);
+    opacity: 0.2;
+    line-height: 1;
+    pointer-events: none;
+}
+.wp-block-columns .wp-block-column .wp-block-group.has-base-background-color .wp-block-quote p {
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+/* Testimonial Cards: flex column so quote fills space and avatar sticks to bottom */
+.is-style-card:has(.wp-block-quote) {
+    display: flex;
+    flex-direction: column;
+}
+.is-style-card .wp-block-quote {
+    flex: 1;
+}
+
+/* Features Grid: Card style for columns */
+.is-pattern-pricing .wp-block-column > .wp-block-group {
+    height: 100%;
+}
+
+/* ========================================
+   Quote Accent Border
+   ======================================== */
+.cclee-quote--accent-border {
+	border-left: 4px solid var(--wp--preset--color--accent);
+	padding-left: var(--wp--preset--spacing--30);
+}
+
+/* ========================================
+   Mobile Bottom Nav (migrated from global.css)
+   ======================================== */
+
+.cclee-mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0 env(safe-area-inset-bottom, 8px);
+    background: var(--wp--preset--color--base);
+    border-top: 1px solid var(--wp--preset--color--neutral-200);
+    box-shadow: var(--wp--preset--shadow--sm);
+}
+
+/* ========================================
+   WooCommerce 场景主题组件 (migrated from global.css)
+   ======================================== */
+
+/* WooCommerce Progress Steps */
+.woo-progress-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--wp--preset--spacing--10);
+}
+.woo-progress-step > .wp-block-group:first-child {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.woo-progress-step--active {
+    font-weight: 600;
+}
+
+/* WooCommerce Account Navigation - migrated to woocommerce.css */
+
+/* ========================================
+   Semantic Spacing/Layout Combos (migrated from utilities.css)
+   ======================================== */
+
+/* Section Padding */
+.cclee-section--py-70 {
+    padding-top: var(--wp--preset--spacing--70);
+    padding-bottom: var(--wp--preset--spacing--70);
+}
+.cclee-section--py-80 {
+    padding-top: var(--wp--preset--spacing--80);
+    padding-bottom: var(--wp--preset--spacing--80);
+}
+.cclee-section--py-60 {
+    padding-top: var(--wp--preset--spacing--60);
+    padding-bottom: var(--wp--preset--spacing--60);
+}
+.cclee-section--py-50 {
+    padding-top: var(--wp--preset--spacing--50);
+    padding-bottom: var(--wp--preset--spacing--50);
+}
+
+/* Box Padding Combos */
+.cclee-box--px-40-py-30 {
+    padding-top: var(--wp--preset--spacing--30);
+    padding-right: var(--wp--preset--spacing--40);
+    padding-bottom: var(--wp--preset--spacing--30);
+    padding-left: var(--wp--preset--spacing--40);
+}
+.cclee-box--px-50-py-40 {
+    padding-top: var(--wp--preset--spacing--40);
+    padding-right: var(--wp--preset--spacing--50);
+    padding-bottom: var(--wp--preset--spacing--40);
+    padding-left: var(--wp--preset--spacing--50);
+}
+.cclee-box--px-40-py-50 {
+    padding-top: var(--wp--preset--spacing--50);
+    padding-right: var(--wp--preset--spacing--40);
+    padding-bottom: var(--wp--preset--spacing--50);
+    padding-left: var(--wp--preset--spacing--40);
+}
+
+/* Flex Combos */
+.cclee-flex--center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cclee-flex--row-center {
+    display: flex;
+    align-items: center;
+    gap: var(--wp--preset--spacing--10);
+}
+
+/* Column with padding */
+.cclee-col--60-pr {
+    flex-basis: 60%;
+    padding-right: var(--wp--preset--spacing--60);
+}
+
+/* Button Reset */
+.cclee-btn--reset {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* ========================================
+   Semantic Text Combos (migrated from utilities.css)
+   ======================================== */
+
+.cclee-text--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.cclee-text--badge {
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+.cclee-text--badge-md {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.cclee-text--badge-sm {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.cclee-text--label {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   Category Navigation (.cclee-category-nav)
+   ======================================== */
+
+.cclee-category-nav {
+	gap: var(--wp--preset--spacing--20);
+	overflow-x: auto;
+	flex-wrap: nowrap !important;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+}
+
+.cclee-category-nav::-webkit-scrollbar {
+	display: none;
+}
+
+.cclee-category-nav .wp-block-navigation__container {
+	flex-wrap: nowrap !important;
+	gap: var(--wp--preset--spacing--20);
+}
+
+.cclee-category-nav .wp-block-navigation-item {
+	flex-shrink: 0;
+}
+
+/* WP flex layout defaults to align-items:flex-start, which shrinks children
+   to content width and breaks text-align/justify-content centering. */
+.cclee-category-section {
+	align-items: stretch;
+	overflow: hidden;
+}
+
+/* Force category row to take full width inside cclee-toolbar flex container */
+.cclee-toolbar > .cclee-category-section {
+	flex-basis: 100%;
+}
+
+/* ========================================
+   Button Group Full Width (.cclee-btn-group--full)
+   ======================================== */
+
+.cclee-btn-group--full {
+	width: 100%;
+}
+
+.cclee-btn-group--full .wp-block-button {
+	flex: 1;
+}
+
+.cclee-category-nav .wp-block-navigation-item a {
+	background-color: var(--wp--preset--color--neutral-100);
+	border: none;
+	color: var(--wp--preset--color--primary);
+	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+	border-radius: var(--wp--custom--border--radius--md);
+	white-space: nowrap;
+	flex-shrink: 0;
+	transition: background-color var(--wp--custom--transition--fast) var(--wp--custom--easing--default),
+	            color var(--wp--custom--transition--fast) var(--wp--custom--easing--default);
+}
+
+.cclee-category-nav .wp-block-navigation-item a:hover {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+}
+
+.cclee-category-nav .wp-block-navigation-item.current-menu-item a {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
+}
+
+/* ========================================
+   Pricing Card (.cclee-pricing-card)
+   ======================================== */
+
+/* WP flex layout defaults to align-items:flex-start, which shrinks children
+   to content width and breaks text-align:center. Stretch fixes it. */
+.cclee-pricing-card {
+	align-items: stretch;
+}
+
+.cclee-pricing-card .wp-block-separator {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.cclee-pricing-card .wp-block-buttons {
+	display: flex;
+	width: 100%;
+}
+
+.cclee-pricing-card .wp-block-button {
+	flex: 1;
+	width: 100%;
+}
+.cclee-pricing-card .wp-block-button .wp-block-button__link {
+	width: 100%;
+}

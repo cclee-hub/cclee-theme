@@ -837,7 +837,10 @@
 }
 
 /* Product Card: Image with asymmetric border-radius */
-.wp-block-group.is-style-product-card > .wp-block-image {
+.wp-block-group.is-style-product-card > .wp-block-image,
+.wp-block-group.is-style-product-card > img:first-child {
+    width: 100% !important;
+    height: auto !important;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-left-radius: 0;

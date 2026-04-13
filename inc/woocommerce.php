@@ -278,45 +278,41 @@ add_filter(
 			return '';
 		}
 
-		$rows = '';
-		$chunks = array_chunk( $terms, 3 );
-		foreach ( $chunks as $chunk ) {
-			$row_cards = '';
-			foreach ( $chunk as $term ) {
-				$thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
-				$term_link    = get_term_link( $term );
+		$cards = '';
+		foreach ( $terms as $term ) {
+			$thumbnail_id = get_term_meta( $term->term_id, 'thumbnail_id', true );
+			$term_link    = get_term_link( $term );
 
-				$image_html = $thumbnail_id
-					? wp_get_attachment_image( absint( $thumbnail_id ), 'medium', false, array(
-						'style' => 'border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md);border-bottom-left-radius:0;border-bottom-right-radius:0',
-					) )
-					: '<div class="cclee-category-placeholder" style="border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md)"></div>';
+			$image_html = $thumbnail_id
+				? wp_get_attachment_image( absint( $thumbnail_id ), 'medium', false, array(
+					'style' => 'border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md);border-bottom-left-radius:0;border-bottom-right-radius:0',
+				) )
+				: '<div class="cclee-category-placeholder" style="border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md)"></div>';
 
-				$desc_html = $term->description
-					? sprintf(
-						'<p class="has-neutral-500-color has-text-color has-small-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</p>',
-						esc_html( $term->description )
-					)
-					: '';
+			$desc_html = $term->description
+				? sprintf(
+					'<p class="has-neutral-500-color has-text-color has-small-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</p>',
+					esc_html( $term->description )
+				)
+				: '';
 
-				$row_cards .= sprintf(
-					'<div class="wp-block-column" style="flex-basis:33.33%%">
-						<a href="%s" class="wp-block-group is-style-product-card cclee-hover-lift has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--md);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;display:block;text-decoration:none;color:inherit">
+			$cards .= sprintf(
+				'<div class="wp-block-column" style="flex-basis:33.33%%">
+					<a href="%s" class="wp-block-group is-style-product-card cclee-hover-lift has-border-color has-neutral-200-border-color has-base-background-color has-background" style="border-style:solid;border-width:1px;border-radius:var(--wp--custom--border--radius--md);padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;display:block;text-decoration:none;color:inherit">
+						%s
+						<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
+							<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</h3>
 							%s
-							<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
-								<h3 class="wp-block-heading has-primary-color has-text-color has-heading-4-font-size" style="margin-bottom:var(--wp--preset--spacing--20)">%s</h3>
-								%s
-							</div>
-						</a>
-					</div>',
-					esc_url( $term_link ),
-					$image_html,
-					esc_html( $term->name ),
-					$desc_html
-				);
-			}
-			$rows .= '<div class="wp-block-columns is-style-equal-height">' . $row_cards . '</div>';
+						</div>
+					</a>
+				</div>',
+				esc_url( $term_link ),
+				$image_html,
+				esc_html( $term->name ),
+				$desc_html
+			);
 		}
+		$rows = '<div class="wp-block-columns is-style-equal-height">' . $cards . '</div>';
 
 		$shop_url = function_exists( 'wc_get_page_permalink' )
 			? esc_url( wc_get_page_permalink( 'shop' ) )

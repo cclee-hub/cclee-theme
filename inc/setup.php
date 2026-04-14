@@ -46,6 +46,39 @@ add_action(
 	}
 );
 
+/**
+ * Output placeholder image when a blog post has no featured image.
+ *
+ * The FSE post-featured-image block renders empty when no image is set,
+ * causing card height collapse in archive layouts.
+ *
+ * @param string $html     The post thumbnail HTML.
+ * @param int    $post_id  The post ID.
+ * @return string
+ */
+add_filter(
+	'post_thumbnail_html',
+	function ( $html, $post_id ) {
+		if ( $html || get_post_type( $post_id ) !== 'post' ) {
+			return $html;
+		}
+
+		$dir = get_template_directory();
+		$uri = get_template_directory_uri();
+		$webp = $dir . '/assets/images/placeholder-blog.webp';
+		$src  = file_exists( $webp )
+			? $uri . '/assets/images/placeholder-blog.webp'
+			: $uri . '/assets/images/placeholder-blog.jpg';
+		return sprintf(
+			'<img src="%s" alt="%s" loading="lazy" decoding="async" style="width:100%%;height:100%%;object-fit:cover;">',
+			esc_url( $src ),
+			esc_attr( get_the_title( $post_id ) )
+		);
+	},
+	10,
+	2
+);
+
 add_action(
 	'wp_enqueue_scripts',
 	function () {

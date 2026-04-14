@@ -34,8 +34,8 @@
 				<!-- wp:html -->
 				<div class="cclee-mr--12 has-primary-color has-text-color"><?php echo cclee_svg( 'mail' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:paragraph -->
-				<p><strong>Email:</strong> hello@example.com</p>
+				<!-- wp:paragraph {"textColor":"neutral-700"} -->
+				<p class="has-neutral-700-color has-text-color"><strong>Email:</strong> hello@example.com</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -45,8 +45,8 @@
 				<!-- wp:html -->
 				<div class="cclee-mr--12 has-primary-color has-text-color"><?php echo cclee_svg( 'map-pin' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:paragraph -->
-				<p><strong>Location:</strong> 123 Business Street, City</p>
+				<!-- wp:paragraph {"textColor":"neutral-700"} -->
+				<p class="has-neutral-700-color has-text-color"><strong>Location:</strong> 123 Business Street, City</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -56,8 +56,8 @@
 				<!-- wp:html -->
 				<div class="cclee-mr--12 has-primary-color has-text-color"><?php echo cclee_svg( 'clock' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:paragraph -->
-				<p><strong>Hours:</strong> Mon-Fri 9AM-6PM</p>
+				<!-- wp:paragraph {"textColor":"neutral-700"} -->
+				<p class="has-neutral-700-color has-text-color"><strong>Hours:</strong> Mon-Fri 9AM-6PM</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -67,8 +67,8 @@
 				<!-- wp:html -->
 				<div class="cclee-mr--12 has-primary-color has-text-color"><?php echo cclee_svg( 'phone' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
-				<!-- wp:paragraph -->
-				<p><strong>Phone:</strong> +1 (555) 123-4567</p>
+				<!-- wp:paragraph {"textColor":"neutral-700"} -->
+				<p class="has-neutral-700-color has-text-color"><strong>Phone:</strong> +1 (555) 123-4567</p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->

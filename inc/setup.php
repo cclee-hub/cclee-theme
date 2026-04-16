@@ -109,6 +109,17 @@ add_action(
 			array( 'cclee-utilities' ),
 			$css_ver
 		);
+
+		// Case Study block styles (conditional).
+		if ( is_singular( 'case-study' ) ) {
+			wp_enqueue_style(
+				'cclee-case-study',
+				get_template_directory_uri() . '/assets/css/case-study.css',
+				array( 'cclee-utilities' ),
+				$theme_ver . '.' . filemtime( get_template_directory() . '/assets/css/case-study.css' )
+			);
+		}
+
 		wp_enqueue_script(
 			'cclee',
 			get_template_directory_uri() . '/assets/js/theme.js',

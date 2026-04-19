@@ -28,6 +28,29 @@ add_action(
 );
 
 /**
+ * Remove loading="lazy" from product gallery images.
+ *
+ * WordPress core adds loading="lazy" to images below the initial viewport.
+ * WooCommerce FlexSlider keeps all slides in the DOM (display:block) but
+ * offsets non-visible slides via CSS transform, so the browser's
+ * IntersectionObserver never triggers loading for them — images beyond the
+ * first few never load.
+ *
+ * Letting FlexSlider manage visibility itself avoids the conflict.
+ */
+add_filter(
+	'wp_get_attachment_image_attributes',
+	function ( $attr, $attachment, $size ) {
+		if ( 'woocommerce_single' === $size ) {
+			unset( $attr['loading'] );
+		}
+		return $attr;
+	},
+	10,
+	3
+);
+
+/**
  * Load WooCommerce compatibility styles.
  * Only loaded on WooCommerce-related pages.
  */

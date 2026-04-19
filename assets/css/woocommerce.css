@@ -974,6 +974,16 @@
 	margin-top: var(--wp--preset--spacing--30);
 }
 
+/* Description images — constrain width, center, prevent blurry upscaling */
+.woocommerce div.product .woocommerce-Tabs-panel--description img {
+	max-width: 800px;
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /* Additional information table */
 .woocommerce div.product .woocommerce-tabs table.shop_attributes {
 	width: 100%;

@@ -58,7 +58,7 @@ add_action(
 	'wp_enqueue_scripts',
 	function () {
 		// Remove optional styles (keep general styles). Preserved.
-		if ( ! function_exists( 'is_woocommerce' ) || ! ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) ) {
+		if ( ! function_exists( 'is_woocommerce' ) || ! ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() || is_order_received_page() ) ) {
 			return;
 		}
 
@@ -67,7 +67,7 @@ add_action(
 		wp_enqueue_style(
 			'cclee-woocommerce',
 			get_template_directory_uri() . '/assets/css/woocommerce.css',
-			array( 'cclee-custom' ),
+			array( 'cclee-utilities' ),
 			$woo_ver
 		);
 	}

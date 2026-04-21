@@ -362,69 +362,6 @@ add_filter(
 );
 
 /**
- * Dynamic account navigation: show endpoint links for logged-in users, hide for guests.
- *
- * Replaces the static wp:pattern {"slug":"cclee/woo-account-nav"} block output
- * with dynamically generated WooCommerce account menu links.
- */
-add_filter(
-	'render_block_core/pattern',
-	function ( $content, $block ) {
-		if ( ( $block['attrs']['slug'] ?? '' ) !== 'cclee/woo-account-nav' ) {
-			return $content;
-		}
-
-		// Guest: suppress the hardcoded links; the login form is shown in the main area.
-		if ( ! is_user_logged_in() ) {
-			return '';
-		}
-
-		$menu_items = array(
-			'dashboard'    => __( 'Dashboard', 'woocommerce' ),
-			'orders'       => __( 'Orders', 'woocommerce' ),
-			'downloads'     => __( 'Downloads', 'woocommerce' ),
-			'edit-address' => __( 'Addresses', 'woocommerce' ),
-			'edit-account' => __( 'Account Details', 'woocommerce' ),
-		);
-
-		$dashboard_url = wc_get_page_permalink( 'myaccount' );
-		$li_items     = '';
-
-		foreach ( $menu_items as $endpoint => $label ) {
-			$url = ( 'dashboard' === $endpoint )
-				? $dashboard_url
-				: wc_get_account_endpoint_url( $endpoint );
-
-			$li_items .= sprintf(
-				'<li class="wp-block-navigation-item woo-account-nav-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="%s"><span class="wp-block-navigation-item__label">%s</span></a></li>',
-				esc_url( $url ),
-				esc_html( $label )
-			);
-		}
-
-		// Logout link.
-		$li_items .= sprintf(
-			'<li class="wp-block-navigation-item woo-account-nav-item wp-block-navigation-link"><a class="wp-block-navigation-item__content" href="%s"><span class="wp-block-navigation-item__label">%s</span></a></li>',
-			esc_url( wc_logout_url() ),
-			esc_html__( 'Logout', 'woocommerce' )
-		);
-
-		return sprintf(
-			'<div class="wp-block-group has-neutral-50-background-color has-background woo-account-nav-menu has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30);border-radius:var(--wp--custom--border--radius--md)">
-				<h3 class="wp-block-heading has-neutral-500-color has-text-color has-eyebrow-font-size" style="margin-bottom:var(--wp--preset--spacing--30)">%s</h3>
-				<nav class="is-vertical wp-block-navigation is-layout-flex wp-block-navigation-is-layout-flex">
-					<ul class="wp-block-navigation__container is-vertical wp-block-navigation">%s</ul>
-				</nav>
-			</div>',
-			esc_html__( 'My Account', 'cclee' ),
-			$li_items
-		);
-	},
-	10,
-	2
-);
-
-/**
  * Quantity stepper JS — +/- buttons for single product page
  *
  * Uses CSS pseudo-elements (::before/::after) for the visual buttons,
@@ -459,4 +396,21 @@ add_action(
 </script>
 		<?php
 	}
+);
+
+/**
+ * Remove <br> from WooCommerce account navigation.
+ *
+ * wpautop inserts <br> inside anchor elements, breaking flexbox layout.
+ * CSS hides the leftover <br>; this filter removes wpautop on account pages.
+ */
+add_filter(
+	'the_content',
+	function ( $content ) {
+		if ( is_account_page() ) {
+			remove_filter( 'the_content', 'wpautop' );
+		}
+		return $content;
+	},
+	1
 );

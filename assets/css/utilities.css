@@ -83,10 +83,15 @@
 .cclee-col--65 { --cclee-col-w: 65%; }
 .cclee-col--70 { --cclee-col-w: 70%; }
 .cclee-col--75 { --cclee-col-w: 75%; }
+.cclee-col--full { --cclee-col-w: 100%; }
 /* Override WP core equal-split: specificity (0,3,1) > WP's (0,3,0) */
 .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column[class*="cclee-col--"] {
 	flex-basis: var(--cclee-col-w);
 	flex-grow: 0 !important;
+}
+/* cclee-col--full: single column fills entire row */
+.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column.cclee-col--full {
+	flex-grow: 1 !important;
 }
 
 /* Flex Utilities — migrated to components.css (multi-property) */

@@ -930,8 +930,8 @@ body.woocommerce-account .woocommerce-MyAccount-content {
 	padding-top: var(--wp--preset--spacing--30);
 	border-top: 1px solid var(--wp--preset--color--neutral-200);
 	display: flex;
-	flex-wrap: wrap;
-	gap: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--10);
 }
 
 .woocommerce div.product .product_meta span {

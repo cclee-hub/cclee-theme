@@ -1,5 +1,10 @@
 *** CCLEE Changelog ***
 
+2026-04-26 - version 1.4.2
+* Tweak - Update Tested up to 6.9.4 in style.css for Woo Marketplace compliance
+* Dev - Move inline quantity stepper script to enqueued JS file
+* Tweak - Exclude vendor/ from submission package
+
 2026-04-26 - version 1.4.1
 * Add WooCommerce product categories and trust badges patterns
 * Add contact page hero pattern and images

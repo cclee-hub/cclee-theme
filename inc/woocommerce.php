@@ -369,39 +369,27 @@ add_filter(
 );
 
 /**
- * Quantity stepper JS — +/- buttons for single product page
+ * Quantity stepper JS — +/- buttons for single product page.
  *
- * Uses CSS pseudo-elements (::before/::after) for the visual buttons,
- * this script wires up click events to increment/decrement the input.
+ * Uses CSS pseudo-elements (::before/::after) for the visual buttons;
+ * assets/js/woo-quantity.js wires up click events to increment/decrement.
  */
 add_action(
-	'wp_footer',
+	'wp_enqueue_scripts',
 	function () {
 		if ( ! is_product() ) {
 			return;
 		}
-		?>
-<script>
-(function(){
-	document.addEventListener('click',function(e){
-		var qtyWrap=e.target.closest&&e.target.closest('.quantity');
-		if(!qtyWrap)return;
-		var input=qtyWrap.querySelector('.qty');
-		if(!input)return;
-		var min=parseFloat(input.min)||0,max=parseFloat(input.max)||Infinity,step=parseFloat(input.step)||1,val=parseFloat(input.value)||0;
-		var rect=qtyWrap.getBoundingClientRect();
-		var x=e.clientX-rect.left;
-		if(x<40){
-			val=Math.max(min,val-step);
-		}else if(x>rect.width-40){
-			val=Math.min(max,val+step);
-		}else{return;}
-		input.value=val;
-		input.dispatchEvent(new Event('change',{bubbles:true}));
-	});
-})();
-</script>
-		<?php
+
+		$theme_ver = wp_get_theme()->get( 'Version' );
+		$js_ver    = $theme_ver . '.' . filemtime( get_template_directory() . '/assets/js/woo-quantity.js' );
+		wp_enqueue_script(
+			'cclee-woo-quantity',
+			get_template_directory_uri() . '/assets/js/woo-quantity.js',
+			array(),
+			$js_ver,
+			true
+		);
 	}
 );
 

@@ -1,0 +1,25 @@
+# Development tools
+vendor/
+composer.json
+composer.lock
+phpcs.xml.dist
+phpcs.xml
+
+# Version control
+.git/
+.gitignore
+.svn/
+.hg/
+.bzr/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Theme audit reports (not for distribution)
+docs/
+
+# Build config
+.distignore

@@ -22,7 +22,7 @@ add_action(
 			'render_block_core/site-logo',
 			function ( $block_content ) {
 				if ( empty( $block_content ) && ! get_theme_mod( 'custom_logo' ) ) {
-					$logo_url = get_template_directory_uri() . '/assets/images/logo.png';
+					$logo_url      = get_template_directory_uri() . '/assets/images/logo.png';
 					$block_content = sprintf(
 						'<a href="%s" class="wp-block-site-logo__link" rel="home"><img src="%s" alt="%s" class="custom-logo" /></a>',
 						esc_url( home_url( '/' ) ),
@@ -63,8 +63,8 @@ add_filter(
 			return $html;
 		}
 
-		$dir = get_template_directory();
-		$uri = get_template_directory_uri();
+		$dir  = get_template_directory();
+		$uri  = get_template_directory_uri();
 		$webp = $dir . '/assets/images/placeholder-blog.webp';
 		$src  = file_exists( $webp )
 			? $uri . '/assets/images/placeholder-blog.webp'

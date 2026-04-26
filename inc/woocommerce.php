@@ -202,7 +202,7 @@ add_filter( 'woocommerce_helper_suppress_admin_notice', '__return_true' );
  */
 add_filter(
 	'render_block_core/post-featured-image',
-	function ( $html, $block ) {
+	function ( $html ) {
 		// Only apply on non-single product pages.
 		if ( is_singular( 'product' ) ) {
 			return $html;
@@ -231,7 +231,7 @@ add_filter(
 		return $html . $extras;
 	},
 	10,
-	2
+	1
 );
 
 /**
@@ -289,13 +289,15 @@ add_filter(
 
 		$replaced = true;
 
-		$terms = get_terms( array(
-			'taxonomy'   => 'product_cat',
-			'hide_empty' => false,
-			'exclude'    => absint( get_option( 'default_product_cat', 0 ) ),
-			'number'     => 6,
-			'orderby'    => 'menu_order',
-		) );
+		$terms = get_terms(
+			array(
+				'taxonomy'   => 'product_cat',
+				'hide_empty' => false,
+				'exclude'    => absint( get_option( 'default_product_cat', 0 ) ),
+				'number'     => 6,
+				'orderby'    => 'menu_order',
+			)
+		);
 
 		if ( is_wp_error( $terms ) || empty( $terms ) ) {
 			return '';
@@ -307,9 +309,14 @@ add_filter(
 			$term_link    = get_term_link( $term );
 
 			$image_html = $thumbnail_id
-				? wp_get_attachment_image( absint( $thumbnail_id ), 'medium', false, array(
-					'style' => 'border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md);border-bottom-left-radius:0;border-bottom-right-radius:0',
-				) )
+				? wp_get_attachment_image(
+					absint( $thumbnail_id ),
+					'medium',
+					false,
+					array(
+						'style' => 'border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md);border-bottom-left-radius:0;border-bottom-right-radius:0',
+					)
+				)
 				: '<div class="cclee-category-placeholder" style="border-top-left-radius:var(--wp--custom--border--radius--md);border-top-right-radius:var(--wp--custom--border--radius--md)"></div>';
 
 			$desc_html = $term->description
@@ -401,7 +408,7 @@ add_action(
 /**
  * Remove <br> from WooCommerce account navigation.
  *
- * wpautop inserts <br> inside anchor elements, breaking flexbox layout.
+ * Wpautop inserts <br> inside anchor elements, breaking flexbox layout.
  * CSS hides the leftover <br>; this filter removes wpautop on account pages.
  */
 add_filter(

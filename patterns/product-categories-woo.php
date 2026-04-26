@@ -9,8 +9,8 @@
  */
 
 $categories = get_terms(
-	'product_cat',
 	array(
+		'taxonomy'   => 'product_cat',
 		'number'     => 6,
 		'hide_empty' => true,
 		'orderby'    => 'count',
@@ -38,8 +38,8 @@ $categories = get_terms(
 			<?php
 			$thumbnail_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
 			$image_url    = $thumbnail_id ? wp_get_attachment_image_url( $thumbnail_id, 'medium' ) : '';
-			$link         = get_term_link( $category );
-			if ( is_wp_error( $link ) ) {
+			$term_link    = get_term_link( $category );
+			if ( is_wp_error( $term_link ) ) {
 				continue;
 			}
 			?>

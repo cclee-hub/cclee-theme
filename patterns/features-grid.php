@@ -64,7 +64,7 @@
 			<!-- wp:group {"className":"is-style-card is-style-card--spacious","backgroundColor":"base","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
 			<div class="wp-block-group is-style-card is-style-card--spacious has-base-background-color has-background">
 				<!-- wp:html -->
-				<div class="cclee-flex--center has-neutral-100-background-color has-background has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--30);width:fit-content;margin-left:auto;margin-right:auto;border-radius:var(--wp--custom--border--radius--lg);padding:var(--wp--preset--spacing--30)"><?php echo cclee_svg( 'zap' ); // phpcs:ignore WordPress.SecurityEscapeOutput.OutputNotEscaped ?></div>
+				<div class="cclee-flex--center has-neutral-100-background-color has-background has-primary-color has-text-color" style="margin-bottom:var(--wp--preset--spacing--30);width:fit-content;margin-left:auto;margin-right:auto;border-radius:var(--wp--custom--border--radius--lg);padding:var(--wp--preset--spacing--30)"><?php echo cclee_svg( 'zap' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped, WooCommerce.Security.EscapeOutput.OutputNotEscaped ?></div>
 				<!-- /wp:html -->
 				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"primary","fontSize":"heading-4"} -->
 				<h4 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-heading-4-font-size">Easy to Use</h4>

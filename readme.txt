@@ -58,9 +58,33 @@ CCLEE uses B2B-friendly terminology by default. The "Shop" label is replaced wit
 CCLEE does not collect, store, or transmit any user data. No cookies are set by the theme. No tracking, analytics, or external API calls are made. The theme is fully GDPR-compliant out of the box.
 
 == Tags ==
-full-site-editing, block-themes, custom-colors
+full-site-editing, custom-colors
 
 == Changelog ==
+
+= 1.4.1 =
+* Add WooCommerce product categories and trust badges patterns
+* Add contact page hero pattern and images
+* Fix my-account page layout and login form rendering
+* Fix cart and checkout page rendering
+* Load woocommerce.css conditionally (WooCommerce pages only)
+* Add blog post placeholder image for missing featured images
+* Refine pattern block style variations and FSE compliance
+* Improve product archive toolbar for B2B coherence
+
+= 1.4.0 =
+* Lock down design system with CSS variables (theme.json tokens)
+* Set layout to 100% fullwidth and disable default font sizes
+* Normalize font size presets to heading-{N} naming convention
+* Add default logo fallback and footer branding vertical layout
+* Standardize footer parts for FSE compliance
+* Fix text contrast issues on dark backgrounds
+* Fix outline button visibility in cover blocks
+
+= 1.3.0 =
+* Normalize patterns with cclee-card and equal-height cards
+* Add who-we-work-with pattern
+* Correct contrast color from near-white to dark blue (#0f172a)
 
 = 1.2.0 =
 * Remove all non-GPL images (Unsplash), replace with CSS gradients and initial avatars

@@ -62,6 +62,12 @@ full-site-editing, custom-colors
 
 == Changelog ==
 
+= 1.4.2 =
+* Sync flex layout classes with block attributes in header parts and templates
+* Pattern audit — remove footer-columns-alt and placeholder stats, add contact-cta
+* Resolve 4 audit blockers for WP.org + Woo Marketplace submission
+* Update WooCommerce tested up to 10.7.0
+
 = 1.4.1 =
 * Add WooCommerce product categories and trust badges patterns
 * Add contact page hero pattern and images

@@ -34,7 +34,7 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center;margin-bottom:var(--wp--preset--spacing--20)"><?php echo cclee_svg( 'factory' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">500+</p>
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">000+</p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 					<p class="has-text-align-center has-neutral-300-color has-text-color" style="text-transform:uppercase;letter-spacing:0.1em;margin-top:var(--wp--preset--spacing--20)">Products Delivered</p>
@@ -52,7 +52,7 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center;margin-bottom:var(--wp--preset--spacing--20)"><?php echo cclee_svg( 'users' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">200+</p>
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">000+</p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 					<p class="has-text-align-center has-neutral-300-color has-text-color" style="text-transform:uppercase;letter-spacing:0.1em;margin-top:var(--wp--preset--spacing--20)">Team Members</p>
@@ -70,7 +70,7 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center;margin-bottom:var(--wp--preset--spacing--20)"><?php echo cclee_svg( 'globe' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">50+</p>
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">00+</p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 					<p class="has-text-align-center has-neutral-300-color has-text-color" style="text-transform:uppercase;letter-spacing:0.1em;margin-top:var(--wp--preset--spacing--20)">Countries Served</p>
@@ -88,7 +88,7 @@
 					<div class="cclee-icon-box cclee-icon-box--accent" style="text-align:center;margin-bottom:var(--wp--preset--spacing--20)"><?php echo cclee_svg( 'shield-check' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>
 					<!-- /wp:html -->
 					<!-- wp:paragraph {"align":"center","fontSize":"heading-2","style":{"typography":{"fontWeight":"700","lineHeight":"1"}}} -->
-					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">15+</p>
+					<p class="has-text-align-center has-heading-2-font-size" style="font-weight:700;line-height:1">00+</p>
 					<!-- /wp:paragraph -->
 					<!-- wp:paragraph {"align":"center","textColor":"neutral-300","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.1em"},"spacing":{"margin":{"top":"var(--wp--preset--spacing--20)"}}}} -->
 					<p class="has-text-align-center has-neutral-300-color has-text-color" style="text-transform:uppercase;letter-spacing:0.1em;margin-top:var(--wp--preset--spacing--20)">Years Experience</p>

@@ -12,7 +12,7 @@
 
 	<!-- Search + Sort + Categories (unified toolbar) -->
 	<!-- wp:group {"align":"wide","className":"cclee-toolbar","style":{"spacing":{"margin":{"top":"var(--wp--preset--spacing--30)"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"center"}} -->
-	<div class="wp-block-group alignwide cclee-toolbar" style="margin-top:var(--wp--preset--spacing--30)">
+	<div class="wp-block-group alignwide cclee-toolbar is-content-justification-space-between" style="margin-top:var(--wp--preset--spacing--30)">
 
 		<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center"}} -->
 		<div class="wp-block-group">
@@ -33,7 +33,7 @@
 		<!-- /wp:group -->
 
 		<!-- wp:group {"className":"cclee-category-section","layout":{"type":"flex","orientation":"vertical"}} -->
-		<div class="wp-block-group cclee-category-section">
+		<div class="wp-block-group cclee-category-section is-vertical">
 		<!-- wp:paragraph {"align":"center","fontSize":"small","textColor":"neutral-400","style":{"typography":{"textTransform":"uppercase","letterSpacing":"0.05em","fontWeight":"500"},"spacing":{"margin":{"top":"0","bottom":"var(--wp--preset--spacing--20)"}}}} -->
 		<p class="has-text-align-center has-neutral-400-color has-text-color has-small-font-size" style="font-weight:500;letter-spacing:0.05em;text-transform:uppercase;margin-top:0;margin-bottom:var(--wp--preset--spacing--20)">Product Categories</p>
 		<!-- /wp:paragraph -->
@@ -50,7 +50,7 @@
 <!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","anchor":"main","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--70)","bottom":"var(--wp--preset--spacing--70)","left":"var(--wp--preset--spacing--50)","right":"var(--wp--preset--spacing--50)"}}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50)">
+<main class="wp-block-group alignfull" id="main" tabindex="-1" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50)">
 
 	<!-- wp:woocommerce/product-collection {"namespace":"woocommerce/product-collection","queryId":0,"query":{"perPage":12,"pages":0,"offset":0,"postType":"product","order":"desc","orderBy":"date","inherit":true},"displayLayout":{"type":"flex","columns":4},"align":"wide"} -->
 	<div class="wp-block-woocommerce-product-collection alignwide">
@@ -89,7 +89,7 @@
 
 	<!-- wp:woocommerce/product-collection-no-results -->
 	<!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"},"style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--60)","bottom":"var(--wp--preset--spacing--60)"}}}} -->
-	<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+	<div class="wp-block-group is-content-justification-center is-vertical" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
 	<!-- wp:paragraph {"align":"center","fontSize":"medium","style":{"typography":{"fontWeight":"600"}}} -->
 	<p class="has-text-align-center has-medium-font-size cclee-text--600">No products found</p>
 	<!-- /wp:paragraph -->

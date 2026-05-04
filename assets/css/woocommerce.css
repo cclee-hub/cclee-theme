@@ -221,7 +221,7 @@
 
 .woocommerce ul.products li.product .price {
 	font-size: var(--cclee-font-md);
-	color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--primary);
 	font-weight: 600;
 }
 
@@ -247,7 +247,7 @@
 }
 
 .woocommerce div.product .price del {
-	color: var(--wp--preset--color--neutral-400);
+	color: var(--wp--preset--color--neutral-500);
 	font-weight: 400;
 }
 

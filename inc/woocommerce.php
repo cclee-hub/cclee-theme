@@ -377,7 +377,7 @@ add_filter(
 add_action(
 	'wp_enqueue_scripts',
 	function () {
-		if ( ! is_product() ) {
+		if ( ! class_exists( 'WooCommerce' ) || ! is_product() ) {
 			return;
 		}
 
@@ -402,7 +402,7 @@ add_action(
 add_filter(
 	'the_content',
 	function ( $content ) {
-		if ( is_account_page() ) {
+		if ( class_exists( 'WooCommerce' ) && is_account_page() ) {
 			remove_filter( 'the_content', 'wpautop' );
 		}
 		return $content;

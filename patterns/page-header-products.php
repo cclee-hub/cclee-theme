@@ -10,8 +10,8 @@
 
 ?>
 <!-- wp:cover {"gradient":"hero","dimRatio":100,"backgroundColor":"contrast","minHeight":280,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var(--wp--preset--spacing--60)","bottom":"var(--wp--preset--spacing--60)"}}},"textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover alignfull has-base-color has-text-color has-contrast-background-color" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);min-height:280px">
-	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim"></span>
+<div class="wp-block-cover alignfull has-base-color has-contrast-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);min-height:280px">
+	<span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-100 has-background-dim has-background-gradient has-hero-gradient-background"></span>
 	<div class="wp-block-cover__inner-container">
 
 	<!-- wp:group {"align":"wide","layout":{"type":"constrained","justifyContent":"left"}} -->

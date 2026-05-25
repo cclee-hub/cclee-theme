@@ -1,7 +1,7 @@
 === CCLEE ===
 Contributors: cclee-hub
 Requires at least: 6.4
-Tested up to: 6.9.4
+Tested up to: 7.0
 Requires PHP: 8.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,9 @@ CCLEE does not collect, store, or transmit any user data. No cookies are set by 
 full-site-editing, custom-colors
 
 == Changelog ==
+
+= 1.4.3 =
+* Add WooCommerce activation guard for is_product() and is_account_page()
 
 = 1.4.2 =
 * Sync flex layout classes with block attributes in header parts and templates
